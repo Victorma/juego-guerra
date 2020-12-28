@@ -1,33 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment> Project Configuration </comment>
-<entry key="Chapter0.InitialScene.X">-278</entry>
-<entry key="Chapter0.InitialScene.Y">22</entry>
-<entry key="Chapter0.InitialScene1.X">-142</entry>
-<entry key="Chapter0.InitialScene1.Y">140</entry>
-<entry key="Chapter0.InitialScene2.X">125</entry>
-<entry key="Chapter0.InitialScene2.Y">142</entry>
-<entry key="Chapter0.EscenaMapaFrente.X">-144</entry>
-<entry key="Chapter0.EscenaMapaFrente.Y">14</entry>
-<entry key="Chapter0.EscenaPabellonFilosofia.X">7</entry>
-<entry key="Chapter0.EscenaPabellonFilosofia.Y">25</entry>
-<entry key="Chapter0.EscenaEstatuaVelazquez.X">178</entry>
-<entry key="Chapter0.EscenaEstatuaVelazquez.Y">27</entry>
-<entry key="Chapter0.EscenaEscuelaArquitectura.X">331</entry>
-<entry key="Chapter0.EscenaEscuelaArquitectura.Y">29</entry>
-<entry key="Chapter0.EscenaFacultadMedicina.X">472</entry>
-<entry key="Chapter0.EscenaFacultadMedicina.Y">2</entry>
-<entry key="Chapter0.EscenaSoldadoMedicina.X">114</entry>
-<entry key="Chapter0.EscenaSoldadoMedicina.Y">357</entry>
-<entry key="Chapter0.FotoFacultadMedicina.X">472</entry>
-<entry key="Chapter0.FotoFacultadMedicina.Y">7</entry>
-<entry key="Chapter0.FotoMapaFrente.X">-186</entry>
-<entry key="Chapter0.FotoMapaFrente.Y">0</entry>
-<entry key="Chapter0.FotoPabellonFilosofia.X">312</entry>
-<entry key="Chapter0.FotoPabellonFilosofia.Y">25</entry>
-<entry key="Chapter0.FotoEstatuaVelazquez.X">-6</entry>
-<entry key="Chapter0.FotoEstatuaVelazquez.Y">21</entry>
-<entry key="Chapter0.FotoEscuelaArquitectura.X">149</entry>
-<entry key="Chapter0.FotoEscuelaArquitectura.Y">22</entry>
 </properties>
 
