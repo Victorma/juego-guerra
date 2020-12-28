@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<animation id="FinalAnim.eaa.xml" usetransitions="yes" slides="yes">
+  <documentation />
+  <transition type="0" time="0" />
+  <frame uri="assets/animation/Creditos1.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="1" time="100" />
+  <frame uri="assets/animation/Creditos2.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="0" time="0" />
+</animation>

@@ -1,0 +1,2903 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<eAdventure version="2">
+  <player>
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/special/EmptyAnimation" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="yes" bubbleBkgColor="#A7FFEB" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+  </player>
+  <character id="GuiaJugador" behaviour="normal">
+    <resources name="No name">
+      <asset type="standup" uri="assets/animation/GuiaJugadorAnim.eaa.xml" />
+      <asset type="standdown" uri="assets/special/EmptyAnimation" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <documentation>Created with target conversation: PruebaConversacion</documentation>
+        <effect>
+          <trigger-conversation idTarget="PruebaConversacion" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
+  </character>
+  <character id="SoldadoMedicina" behaviour="normal">
+    <resources name="No name">
+      <asset type="standup" uri="assets/animation/AnimSoldadoMedicina.eaa.xml" />
+      <asset type="standdown" uri="assets/special/EmptyAnimation" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <documentation>Created with target conversation: ConversacionSoldadoMedicina</documentation>
+        <condition>
+          <active flag="SoldadoMedicinaVisitado" />
+        </condition>
+        <effect>
+          <trigger-conversation idTarget="ConversacionSoldadoMedicina" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
+  </character>
+  <character id="RiosCapape" behaviour="normal">
+    <resources name="No name">
+      <asset type="standup" uri="assets/animation/UpCapape.eaa.xml" />
+      <asset type="standdown" uri="assets/special/EmptyAnimation" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <documentation>Created with target conversation: Conversacion_Arquitectura</documentation>
+        <condition>
+          <inactive flag="FinCapape" />
+        </condition>
+        <effect>
+          <trigger-conversation idTarget="Conversacion_Arquitectura" />
+          <condition />
+        </effect>
+      </talk-to>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <documentation>Created with target conversation: Conversacion_Arquitectura_Fin</documentation>
+        <condition>
+          <active flag="FinCapape" />
+        </condition>
+        <effect>
+          <trigger-conversation idTarget="Conversacion_Arquitectura_Fin" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
+  </character>
+  <character id="NinyoMedicina" behaviour="normal">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/AnimNinyoMedicina.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <documentation>Created with target conversation: ConversacionNinyoMedicina</documentation>
+        <effect>
+          <trigger-conversation idTarget="ConversacionNinyoMedicina" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
+  </character>
+  <character id="Polono_Velazquez" behaviour="normal">
+    <resources name="No name">
+      <asset type="standup" uri="assets/animation/Polono.eaa.xml" />
+      <asset type="standdown" uri="assets/special/EmptyAnimation" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <documentation>Created with target conversation: Conversacion_Velazquez</documentation>
+        <effect>
+          <trigger-conversation idTarget="Conversacion_Velazquez" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
+  </character>
+  <character id="SoldadoComunista" behaviour="normal">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/AnimSoldadoComunista.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <documentation>Created with target conversation: ConversacionSoldadoComunista</documentation>
+        <effect>
+          <trigger-conversation idTarget="ConversacionSoldadoComunista" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
+  </character>
+  <character id="Soldado_Perdido" behaviour="normal">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/special/EmptyAnimation" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <documentation>Created with target conversation: Soldado_Perdido_Conversacion</documentation>
+        <effect>
+          <trigger-conversation idTarget="Soldado_Perdido_Conversacion" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
+  </character>
+  <character id="PasajeroCInformacion" behaviour="normal">
+    <resources name="No name">
+      <asset type="standup" uri="assets/animation/SoldadoCInformacionAnim.eaa.xml" />
+      <asset type="standdown" uri="assets/special/EmptyAnimation" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-conversation idTarget="ConversationCInformatica" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
+  </character>
+  <character id="ChicaFilosofia" behaviour="normal">
+    <resources name="No name">
+      <condition>
+        <active flag="EntrandoFilosofia" />
+      </condition>
+      <asset type="standup" uri="assets/animation/ChicaFiloAnim.eaa.xml" />
+      <asset type="standdown" uri="assets/animation/ChicaFiloAnim.eaa.xml" />
+      <asset type="standright" uri="assets/animation/ChicaFiloAnim.eaa.xml" />
+      <asset type="standleft" uri="assets/animation/ChicaFiloAnim.eaa.xml" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="EntrandoFilosofia" />
+        </condition>
+        <effect>
+          <trigger-conversation idTarget="ConversationFilosofia" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
+  </character>
+  <character id="ChicoMates" behaviour="normal">
+    <resources name="No name">
+      <asset type="standup" uri="assets/animation/ChicoCienciaAnim.eaa.xml" />
+      <asset type="standdown" uri="assets/special/EmptyAnimation" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-conversation idTarget="ConversacionMatematica" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
+  </character>
+  <map-scene id="MapaJugable" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40,4364545764484 -3,74027609825133 0,0185015955099104 0,0219297409057417" center="(40.44256246179, -3.72694283723927)" zoom="17" start="no">
+    <map-element targetId="FacultadMedicina" layer="0" scale="1" orientation="2">
+      <condition />
+    </map-element>
+    <map-element targetId="PuntoInteres" layer="0" scale="1" orientation="2">
+      <condition />
+    </map-element>
+    <map-element targetId="GuiaJugador" layer="0" scale="0.2174702" orientation="0">
+      <condition />
+      <ext-elem-ref transformManager="uAdventure.Geo.ScreenDescriptor">
+        <param name="Position">(35.02824, 752.9675)</param>
+        <param name="Rotation">0</param>
+        <actions>
+          <enter-action>
+            <effect>
+              <speak-char idTarget="GuiaJugador">Esto es una prueba de dialogo</speak-char>
+              <condition />
+            </effect>
+            <only-from-outside>True</only-from-outside>
+          </enter-action>
+        </actions>
+      </ext-elem-ref>
+    </map-element>
+    <map-element targetId="EscuelaArquitectura" layer="0" scale="1" orientation="2">
+      <condition />
+    </map-element>
+    <map-element targetId="CasaDeVelazquez" layer="0" scale="1" orientation="2">
+      <condition />
+    </map-element>
+    <map-element targetId="StartingPosition" layer="0" scale="1" orientation="2">
+      <condition />
+    </map-element>
+    <map-element targetId="SoldadoMedicina" layer="0" scale="0.1194849" orientation="0">
+      <condition />
+      <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4422073364258, -3.72698044776917)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">25.34</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="Hint">False</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+        <actions>
+          <enter-action>
+            <condition>
+              <inactive flag="SoldadoMedicinaVisitado" />
+            </condition>
+            <effect>
+              <speak-char idTarget="SoldadoMedicina">¡Eh tú! ¿Pero qué haces allí al descubierto? ¿Es que quieres morir?</speak-char>
+              <condition />
+              <trigger-scene idTarget="EscenaSoldadoMedicina" x="640" y="540" transitionTime="1000" transitionType="5" />
+              <condition />
+              <trigger-conversation idTarget="ConversacionSoldadoMedicina" />
+              <condition />
+            </effect>
+            <only-from-outside>True</only-from-outside>
+          </enter-action>
+        </actions>
+      </ext-elem-ref>
+    </map-element>
+    <map-element targetId="RiosCapape" layer="0" scale="0.3805234" orientation="0">
+      <condition />
+      <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.440013885498, -3.73116993904114)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">100</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="Hint">False</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+        <actions>
+          <enter-action>
+            <effect>
+              <trigger-conversation idTarget="Conversacion_Arquitectura" />
+              <condition />
+            </effect>
+            <only-from-outside>True</only-from-outside>
+          </enter-action>
+        </actions>
+      </ext-elem-ref>
+    </map-element>
+    <map-element targetId="NinyoMedicina" layer="0" scale="0.1593944" orientation="2">
+      <condition />
+      <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4441986083984, -3.72692942619324)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">25</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="Hint">True</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+        <actions />
+      </ext-elem-ref>
+    </map-element>
+    <map-element targetId="SoldadoComunista" layer="0" scale="0.08613304" orientation="2">
+      <condition />
+      <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4433059692383, -3.7275812625885)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">25</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="Hint">False</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+        <actions />
+      </ext-elem-ref>
+    </map-element>
+    <map-element targetId="Polono_Velazquez" layer="0" scale="0.5186755" orientation="0">
+      <condition />
+      <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4412612915039, -3.73042154312134)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">69.9</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="Hint">False</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+        <actions />
+      </ext-elem-ref>
+    </map-element>
+    <map-element targetId="Naranjero" layer="0" scale="0.03791257" orientation="2">
+      <condition />
+      <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4430465698242, -3.728276014328)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">26.3</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="Hint">False</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+        <actions />
+      </ext-elem-ref>
+    </map-element>
+    <map-element targetId="Soldado_Perdido" layer="0" scale="1" orientation="2">
+      <condition />
+      <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4421310424805, -3.72927379608154)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">25</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="Hint">False</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+        <actions />
+      </ext-elem-ref>
+    </map-element>
+    <map-element targetId="ChicoMates" layer="0" scale="0.2690932" orientation="0">
+      <condition />
+      <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4490699768066, -3.72729682922363)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">40</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="Hint">False</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+        <actions />
+      </ext-elem-ref>
+    </map-element>
+    <map-element targetId="PasajeroCInformacion" layer="0" scale="0.2708103" orientation="0">
+      <condition />
+      <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4459953308105, -3.72796750068665)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">50</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="Hint">False</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+        <actions />
+      </ext-elem-ref>
+    </map-element>
+    <map-element targetId="ChicaFilosofia" layer="0" scale="0.3322488" orientation="2">
+      <condition />
+      <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4492797851563, -3.73057723045349)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">50</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="Hint">False</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+        <actions />
+      </ext-elem-ref>
+    </map-element>
+    <map-element targetId="FacultadMates" layer="0" scale="1" orientation="2">
+      <condition />
+    </map-element>
+    <map-element targetId="FacultadFilosofias" layer="0" scale="1" orientation="2">
+      <condition />
+    </map-element>
+  </map-scene>
+  <geoelement id="FacultadMedicina">
+    <description>
+      <name>Facultad de Medicina</name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <description>
+      <name>test</name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="0">
+        <Polygon>
+          <exterior>
+            <LinearRing>
+              <posList>40,4421297039156 -3,726623654366 40,4420562167582 -3,72731029987381 40,4425134696384 -3,72737467289017 40,4425747082969 -3,7266987562184</posList>
+            </LinearRing>
+          </exterior>
+        </Polygon>
+      </geometry>
+    </geometries>
+    <actions />
+  </geoelement>
+  <geoelement id="EscuelaArquitectura">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="0">
+        <Polygon>
+          <exterior>
+            <LinearRing>
+              <posList>40,440574016062 -3,73075296523877 40,4409235988455 -3,73109192940302 40,4410664940722 -3,73182149030681 40,4406418902091 -3,73200388051985 40,4397130599088 -3,73204411365505 40,4395824102695 -3,73042405935832 40,4399171996048 -3,73039455505916 40,4399580273339 -3,73082102629253</posList>
+            </LinearRing>
+          </exterior>
+        </Polygon>
+      </geometry>
+    </geometries>
+    <actions />
+  </geoelement>
+  <geoelement id="PuntoInteres">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="0">
+        <Polygon>
+          <exterior>
+            <LinearRing>
+              <posList>40,4416244724775 -3,73004883527792 40,4412754021816 -3,72960090637243 40,4408916268988 -3,72978866100347 40,4409834882032 -3,73030632734336 40,4412325337746 -3,7314489483837 40,4420654008042 -3,73105198144956</posList>
+            </LinearRing>
+          </exterior>
+        </Polygon>
+      </geometry>
+    </geometries>
+    <actions />
+  </geoelement>
+  <geoelement id="CasaDeVelazquez">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="0">
+        <Point>
+          <pos>
+          </pos>
+        </Point>
+      </geometry>
+    </geometries>
+    <actions />
+  </geoelement>
+  <geoelement id="StartingPosition">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="0">
+        <Point>
+          <pos>40,4437987940793 -3,72606228822173</pos>
+        </Point>
+      </geometry>
+    </geometries>
+    <actions />
+  </geoelement>
+  <geoelement id="FacultadFilosofias">
+    <description>
+      <name>Facultad de Filosofía y filología</name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="20">
+        <Polygon>
+          <exterior>
+            <LinearRing>
+              <posList>40,4490826513225 -3,72973917223115 40,4485621649915 -3,72964797712466 40,4483927509862 -3,73121170498023 40,4489111974469 -3,73131362892289</posList>
+            </LinearRing>
+          </exterior>
+        </Polygon>
+      </geometry>
+    </geometries>
+    <actions>
+      <enter-action>
+        <effect>
+          <activate flag="EntrandoFilosofia" />
+          <condition />
+        </effect>
+        <only-from-outside>True</only-from-outside>
+      </enter-action>
+      <exit-action>
+        <effect>
+          <deactivate flag="EntrandoFilosofia" />
+          <condition />
+        </effect>
+        <only-from-inside>True</only-from-inside>
+      </exit-action>
+    </actions>
+  </geoelement>
+  <geoelement id="FacultadMates">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="20">
+        <Polygon>
+          <exterior>
+            <LinearRing>
+              <posList>40,4484498351692 -3,72685696052892 40,4493684754788 -3,72703935074192 40,4495725857227 -3,72486041214823 40,4486539482032 -3,72473166611551</posList>
+            </LinearRing>
+          </exterior>
+        </Polygon>
+      </geometry>
+    </geometries>
+    <actions />
+  </geoelement>
+  <scene id="InitialScene1" hideInventory="no" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/FondoInicio1.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <active-areas>
+      <active-area id="TriggerDialogoInicial" rectangular="yes" x="1" y="-2" width="1078" height="608" hasInfluenceArea="no" behaviour="first-action">
+        <description>
+          <name>
+          </name>
+          <brief>
+          </brief>
+          <detailed>
+          </detailed>
+        </description>
+        <actions>
+          <examine needsGoTo="no" keepDistance="0" not-effects="no">
+            <effect>
+              <trigger-conversation idTarget="ConversacionInicial" />
+              <condition />
+            </effect>
+          </examine>
+        </actions>
+      </active-area>
+    </active-areas>
+  </scene>
+  <scene id="InitialScene2" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/FondoInicio2.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <objects>
+      <object-ref idTarget="MapaFrente" x="324" y="287" scale="0.3817941" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="ImagenPabellonFilosofia" x="360" y="457" scale="0.4391662" layer="2" hasInfluenceArea="no" />
+      <object-ref idTarget="ImagenEstatuaVelazquez" x="657" y="234" scale="0.4302026" layer="4" hasInfluenceArea="no" />
+      <object-ref idTarget="ImagenEscuelaArquitectura" x="790" y="377" scale="0.479534" layer="3" hasInfluenceArea="no" />
+      <object-ref idTarget="ImagenFacultadMedicina" x="686" y="506" scale="0.2481309" layer="1" hasInfluenceArea="no" />
+    </objects>
+  </scene>
+  <scene id="FotoMapaFrente" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/MapaFrente.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <objects>
+      <object-ref idTarget="BackArrow" x="537" y="440" scale="0.1006896" layer="0" hasInfluenceArea="no" />
+    </objects>
+  </scene>
+  <scene id="FotoPabellonFilosofia" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/PabellonFilosofia.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <objects>
+      <object-ref idTarget="BackArrow" x="511" y="344" scale="0.0956567" layer="0" hasInfluenceArea="no" />
+    </objects>
+  </scene>
+  <scene id="FotoEstatuaVelazquez" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/EstatuaVelazquez.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <objects>
+      <object-ref idTarget="BackArrow" x="452" y="360" scale="0.1138697" layer="0" hasInfluenceArea="no" />
+    </objects>
+  </scene>
+  <scene id="FotoEscuelaArquitectura" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/EscuelaArquitectura.jpg" />
+      <asset type="foreground" uri="" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <objects>
+      <object-ref idTarget="BackArrow" x="457" y="372" scale="0.1441839" layer="0" hasInfluenceArea="no" />
+    </objects>
+  </scene>
+  <scene id="FotoFacultadMedicina" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/FacultadMedicina.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <objects>
+      <object-ref idTarget="BackArrow" x="906" y="656" scale="0.2374621" layer="0" hasInfluenceArea="no" />
+    </objects>
+  </scene>
+  <scene id="EscenaSoldadoMedicina" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/FondoMedicina.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <characters>
+      <character-ref idTarget="SoldadoMedicina" x="666" y="721" scale="0.6399145" orientation="0" layer="0" hasInfluenceArea="no" />
+    </characters>
+  </scene>
+  <graph-conversation id="PruebaConversacion">
+    <dialogue-node nodeindex="0" editor-x="187" editor-y="55">
+      <speak-char idTarget="GuiaJugador">
+        <resources name="No name" />
+        <text>Hola</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Hola 1</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" preListening="yes" editor-x="611" editor-y="38" x="611" y="38">
+      <speak-player>
+        <text>1</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>2</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="831" editor-y="38">
+      <speak-player>
+        <resources name="No name" />
+        <text>Pretaste 1</text>
+      </speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="831" editor-y="229">
+      <speak-player>
+        <resources name="No name" />
+        <text>Pretaste 2</text>
+      </speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="Conversacion_FacultadInformatica">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>
+        <resources name="No name">
+          <asset type="image" uri="" />
+        </resources>
+        <text>#O </text>
+      </speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="ConversacionInicial">
+    <option-node nodeindex="0" preListening="yes" editor-x="73" editor-y="108" x="73" y="108">
+      <speak-player>
+        <text>Hacer la introducción</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+      <speak-player>
+        <text>Saltarse la introducción</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+    </option-node>
+    <dialogue-node nodeindex="1" editor-x="384" editor-y="101">
+      <speak-player>
+        <resources name="No name" />
+        <text>Al fin has llegado...</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Hoy no es un día normal en la Universidad Complutense. Hoy has venido con un objetivo muy distinto al de otros días.</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Al rebuscar entre las cosas de tu difunto abuelo, has encontrado un libro bastante peculiar.</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Tu abuelo, al igual que múchos jóvenes en su época, participó en la Guerra Civil.</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>En su caso le tocó pelear en el frente de la Ciudad Universitaria. No es que sepa demasiado del tema, pero he venido aquí para intentar aprender más sobre ello.</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>En este libro escribió su experiencia sobre el conflicto. Sin embargo, el paso de los años no le ha sentado nada bien.</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Las páginas son frágiles y han tomado un color amarillento. Es prácticamente ilegible.</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name">
+          <asset type="image" uri="" />
+        </resources>
+        <text>Sin embargo, hay 5 fotografías escondidas entre las páginas que se han conservado sorprendentemente bien.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <effect>
+        <trigger-scene idTarget="InitialScene2" x="537" y="450" transitionTime="100" transitionType="5" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="2" editor-x="350" editor-y="556">
+      <end-conversation>
+        <effect>
+          <generate-object idTarget="MapaFrente" />
+          <condition />
+          <generate-object idTarget="ImagenEstatuaVelazquez" />
+          <condition />
+          <generate-object idTarget="ImagenPabellonFilosofia" />
+          <condition />
+          <generate-object idTarget="ImagenEscuelaArquitectura" />
+          <condition />
+          <generate-object idTarget="ImagenFacultadMedicina" />
+          <condition />
+          <activate flag="IntroductionFinished" />
+          <condition />
+          <trigger-scene idTarget="MapaJugable" x="539" y="455" transitionTime="1000" transitionType="5" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="616" editor-y="86">
+      <speak-player>
+        <resources name="No name" />
+        <text>Primero, una foto del frente de la Ciudad Universitaria.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+      <effect>
+        <generate-object idTarget="MapaFrente" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="886" editor-y="87">
+      <speak-player>
+        <resources name="No name" />
+        <text>Después, una fotografía de lo que parece un pabellón lleno de escombros.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="5" />
+      <effect>
+        <generate-object idTarget="ImagenPabellonFilosofia" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="5" editor-x="601" editor-y="372">
+      <speak-player>
+        <resources name="No name" />
+        <text>En esta imágen se ve una estatua de un caballo al borde de caerse al suelo.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="6" />
+      <effect>
+        <generate-object idTarget="ImagenEstatuaVelazquez" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="6" editor-x="858" editor-y="370">
+      <speak-player>
+        <resources name="No name" />
+        <text>En esta, se aprecia una vista aérea de un edificio...</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="7" />
+      <effect>
+        <generate-object idTarget="ImagenEscuelaArquitectura" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="7" editor-x="1133" editor-y="370">
+      <speak-player>
+        <resources name="No name" />
+        <text>Y por último, una foto de unos edificios tomada desde el otro lado de la calle.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="8" />
+      <effect>
+        <generate-object idTarget="ImagenFacultadMedicina" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="8" editor-x="1368" editor-y="370">
+      <speak-player>
+        <resources name="No name" />
+        <text>Mi objetivo es localizar estos escenarios en la Ciudad Universitaria.</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Me he guardado las fotografías en la mochila, si quiero verlas más de cerca solo tendré que rebuscar dentro.</text>
+      </speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <trigger-scene idTarget="MapaJugable" x="285" y="345" transitionTime="1000" transitionType="5" />
+          <condition />
+          <activate flag="IntroductionFinished" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="ConversacionSoldadoMedicina">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="SoldadoMedicina">
+        <resources name="No name" />
+        <text>¿Pero qué haces caminando en tierra de nadie? ¿No sabes que te pueden disparar?</text>
+      </speak-char>
+      <condition>
+        <inactive flag="SoldadoMedicinaVisitado" />
+      </condition>
+      <speak-player>
+        <resources name="No name" />
+        <text>#O Este está más perdido que yo...</text>
+      </speak-player>
+      <condition>
+        <inactive flag="SoldadoMedicinaVisitado" />
+      </condition>
+      <speak-player>
+        <resources name="No name" />
+        <text>Hola, gracias por la ayuda, pero la guerra ya acabó.</text>
+      </speak-player>
+      <condition>
+        <inactive flag="SoldadoMedicinaVisitado" />
+      </condition>
+      <speak-char idTarget="SoldadoMedicina">
+        <resources name="No name" />
+        <text>#! ¿ Qué ?</text>
+      </speak-char>
+      <condition>
+        <inactive flag="SoldadoMedicinaVisitado" />
+      </condition>
+      <speak-char idTarget="SoldadoMedicina">
+        <resources name="No name" />
+        <text>Ah si, es verdad... A veces me cuesta recordar.</text>
+      </speak-char>
+      <condition>
+        <inactive flag="SoldadoMedicinaVisitado" />
+      </condition>
+      <speak-player>
+        <resources name="No name" />
+        <text>No pasa nada. ¿Qué pasó aquí?</text>
+      </speak-player>
+      <condition>
+        <inactive flag="SoldadoMedicinaVisitado" />
+      </condition>
+      <speak-char idTarget="SoldadoMedicina">
+        <resources name="No name" />
+        <text>Tras cruzar el Manzanares en Noviembre del 36, los Sublevados tomaron varios edificios del campus, incluida la Escuela de Agronomos.</text>
+      </speak-char>
+      <condition>
+        <inactive flag="SoldadoMedicinaVisitado" />
+      </condition>
+      <speak-char idTarget="SoldadoMedicina">
+        <resources name="No name" />
+        <text>Sin embargo, los Republicanos consiguieron mantener la facultad de Odontología.</text>
+      </speak-char>
+      <condition>
+        <inactive flag="SoldadoMedicinaVisitado" />
+      </condition>
+      <speak-char idTarget="SoldadoMedicina">
+        <resources name="No name" />
+        <text>Separados por poco más de 80 metros durante los 4 años que se mantuvo el frente... Ya te puedes imaginar el horror que tuvo lugar aquí.</text>
+      </speak-char>
+      <condition>
+        <inactive flag="SoldadoMedicinaVisitado" />
+      </condition>
+      <speak-char idTarget="SoldadoMedicina">
+        <resources name="No name" />
+        <text>Bueno... ¿Tienes alguna pregunta?</text>
+      </speak-char>
+      <condition>
+        <inactive flag="SoldadoMedicinaVisitado" />
+      </condition>
+      <speak-char idTarget="SoldadoMedicina">
+        <resources name="No name" />
+        <text>#! ¡¡HOLA!!</text>
+      </speak-char>
+      <condition>
+        <active flag="SoldadoMedicinaVisitado" />
+      </condition>
+      <child nodeindex="1" />
+      <effect>
+        <activate flag="SoldadoMedicinaVisitado" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <option-node nodeindex="1" preListening="yes" editor-x="589" editor-y="60" x="589" y="60">
+      <speak-player>
+        <text>¿Por qué se mantuvo el frente de esta manera?</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>¿Cual es tu historia?</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>
+        <text>Creo que debería irme.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+      <speak-player>
+        <text>¿Te suena esta foto?</text>
+        <resources name="No name">
+          <asset type="image" uri="assets/image/FacultadMedicina.png" />
+        </resources>
+      </speak-player>
+      <condition>
+        <inactive flag="FotoAgronomosEnsenyada" />
+      </condition>
+      <child nodeindex="5" />
+      <speak-player>
+        <text>¿Y esta?</text>
+        <resources name="No name">
+          <asset type="image" uri="assets/image/PabellonFilosofia.jpg" />
+        </resources>
+      </speak-player>
+      <condition />
+      <child nodeindex="6" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="1155" editor-y="0">
+      <speak-char idTarget="SoldadoMedicina">
+        <resources name="No name" />
+        <text> Los sublevados no tenían los recursos necesarios para tomar Mardid. Aun así, lo intentaron.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="SoldadoMedicina">
+        <resources name="No name" />
+        <text> Entre sus múltiples intentos,  cruzaron el Manzanares y atacaron la Ciudad Universitaria. </text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="SoldadoMedicina">
+        <resources name="No name" />
+        <text>Ante la imposibilidad de tomar la capital, Franco detuvo el avance y desvió sus tropas a Toledo.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="SoldadoMedicina">
+        <resources name="No name" />
+        <text>Sin embargo, el frente de la Ciudad Universitaria se mantuvo inmovil. Se convirtió en un símbolo de la lucha en Madrid.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="SoldadoMedicina">
+        <resources name="No name" />
+        <text>Para los republicanos, se convirtió en el símbolo del "No Pasarán", y para los sublevados, el de "No nos echarán".</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="SoldadoMedicina">
+        <resources name="No name" />
+        <text>Fue un escenario realmente dramático.</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="1137" editor-y="355">
+      <speak-char idTarget="SoldadoMedicina">
+        <resources name="No name" />
+        <text>Me llamo Hugo Martinez. Al estallar la guerra, tomé las armas para defender Madrid contra los sublevados.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="SoldadoMedicina">
+        <resources name="No name" />
+        <text>Formé parte de la Columna Durruti, dirigida por... Bueno, por Buenaventura Durruti. </text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="SoldadoMedicina">
+        <resources name="No name" />
+        <text>Fue una de las personas más importantes de la CNT y del anarquismo español.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="SoldadoMedicina">
+        <resources name="No name" />
+        <text>El 19 de Noviembre de 1936, una bala fascista le atravesó el pecho en la calle Isaac Peral, cerca del Clínico.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="SoldadoMedicina">
+        <resources name="No name" />
+        <text>Su cuerpo fue embalsado y trasladado a Barcelona. ¡A su funeral acudieron miles de personas!</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="SoldadoMedicina">
+        <resources name="No name" />
+        <text>Seguro que por aquí encuentras a mas personas que te contarán cosas interesantes sobre él.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="SoldadoComunista">
+        <resources name="No name" />
+        <text>Pero... No le preguntes a un tal Pedro... No tiene ni idea de lo que habla.</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+      <effect>
+        <activate flag="DurrutiPresentado" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="1150" editor-y="689">
+      <speak-char idTarget="SoldadoMedicina">
+        <resources name="No name" />
+        <text>Entendido, estaré por aquí si me buscas.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="SoldadoMedicina">
+        <resources name="No name" />
+        <text>Intentaré no gritarte la próxima vez.</text>
+      </speak-char>
+      <condition />
+      <end-conversation>
+        <effect>
+          <trigger-scene idTarget="MapaJugable" x="539" y="455" transitionTime="1000" transitionType="5" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="5" editor-x="459" editor-y="670">
+      <speak-player>
+        <resources name="No name" />
+        <text>Mira, he encontrado esta foto en el diario de mi abuelo. ¿Te suena?</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="SoldadoMedicina">
+        <resources name="No name">
+          <asset type="image" uri="" />
+        </resources>
+        <text>¡Anda! Justo como lo recordada.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="SoldadoMedicina">
+        <resources name="No name" />
+        <text>¡Pero bueno! Está sacada desde aquí mismo, desde agrónomos, mirando hacia Odontología.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="SoldadoMedicina">
+        <resources name="No name" />
+        <text>¿Oye, esta foto la sacó tu abuelo?</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>No lo sé...</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="SoldadoMedicina">
+        <resources name="No name" />
+        <text>Pues la tomó desde el lado sublevado... ¡¿No será un franquista?!</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>No tengo ni idea...</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="SoldadoMedicina">
+        <resources name="No name" />
+        <text>Bueno, espero que lo consigas averiguar. ¡Mucha suerte!</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="SoldadoMedicina">
+        <resources name="No name" />
+        <text>¿Tienes alguna pregunta más?</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>#O Bien. Una foto menos que tengo que localizar.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+      <effect>
+        <activate flag="FotoAgronomosEnsenyada" />
+        <condition />
+        <increment var="Fotografias" value="1" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="6" editor-x="1101" editor-y="905">
+      <speak-char idTarget="SoldadoMedicina">
+        <resources name="No name" />
+        <text>¡Pues claro! Aquí mismo estudié.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="SoldadoMedicina">
+        <resources name="No name" />
+        <text>¿Sabes? Me vas a hacer un favor.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>#O Oh no...</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="SoldadoMedicina">
+        <resources name="No name" />
+        <text>Llevo unos días buscando mi "Naranjero". Así llamábamos a el modelo de subfusil que usábamos.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="SoldadoMedicina">
+        <resources name="No name" />
+        <text>Ya te habrás dado cuenta que la memoria no es lo mío... Búscalo y te diré dónde sacaron esta fotografía.</text>
+      </speak-char>
+      <condition />
+      <end-conversation>
+        <effect>
+          <activate flag="QuestNaranjeroActivada" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="ConversacionNinyoMedicina">
+    <dialogue-node nodeindex="0" editor-x="59" editor-y="53">
+      <speak-player>
+        <resources name="No name" />
+        <text>Disculpa. ¿Tienes un momento?</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="NinyoMedicina">
+        <resources name="No name" />
+        <text>¡Anda! ¿Estás vivo?</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Pues si...</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="NinyoMedicina">
+        <resources name="No name" />
+        <text>Curioso... Rompes la monotonía. Aquí todo el mundo está chiflado.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="NinyoMedicina">
+        <resources name="No name" />
+        <text>¿Necesitas algo?</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" preListening="yes" editor-x="643" editor-y="62" x="643" y="62">
+      <speak-player>
+        <text>¿Te suena esta foto?</text>
+        <resources name="No name">
+          <asset type="image" uri="assets/image/EstatuaVelazquez.png" />
+        </resources>
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>¿Y esta?</text>
+        <resources name="No name">
+          <asset type="image" uri="assets/image/PabellonFilosofia.jpg" />
+        </resources>
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>
+        <text>Debería irme.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="980" editor-y="14">
+      <speak-char idTarget="NinyoMedicina">
+        <resources name="No name" />
+        <text>Si claro, estamos aquí mism... Oh espera...</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Que va, la estatua de la foto no es la de esta plaza.</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="NinyoMedicina">
+        <resources name="No name" />
+        <text>No recuerdo exáctamente el nombre del edificio...</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="NinyoMedicina">
+        <resources name="No name" />
+        <text>¿Hogar Goya... Villa Picasso... Casa...?</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>#O Supongo que será algo de un pintor...</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>#O Debería mirar el mapa, seguro que encuentro algo.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="974" editor-y="358">
+      <speak-char idTarget="NinyoMedicina">
+        <resources name="No name" />
+        <text>A ver a ver...</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="NinyoMedicina">
+        <resources name="No name" />
+        <text>¡Madre mia, menudo destrozo!</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="NinyoMedicina">
+        <resources name="No name" />
+        <text>Esto saca pinta de ser un pabellón de una facultad.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="NinyoMedicina">
+        <resources name="No name" />
+        <text>Lo siento, no puedo decirte nada más sobre el tema.</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="960" editor-y="621">
+      <speak-char idTarget="NinyoMedicina">
+        <resources name="No name" />
+        <text>¡Nos vemos!</text>
+      </speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="Conversacion_Arquitectura">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="RiosCapape">
+        <resources name="No name" />
+        <text>¡Alto!, ¿quién te envía?</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>¿Usted es...?</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="RiosCapape">
+        <resources name="No name" />
+        <text>Rios Capapé, y esto es el puesto de mando de la escuela de Arquitectura.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="RiosCapape">
+        <resources name="No name" />
+        <text>Ahora, ¿qué ocurre?, ¿otra vez han atacado la pasarela de la muerte o estas aqui para relevar a los soldados?</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" keepShowing="yes" preListening="yes" editor-x="562" editor-y="125" x="562" y="125">
+      <speak-player>
+        <text>¿Pasarela de la Muerte?</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>La guerra ya acabó.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition>
+        <inactive flag="MuertoCapape" />
+      </condition>
+      <child nodeindex="3" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="1027" editor-y="101">
+      <speak-char idTarget="RiosCapape">
+        <resources name="No name" />
+        <text>La pasarela que nos une con el Puente de los Franceses, la usamos para aprovisionarnos.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="RiosCapape">
+        <resources name="No name" />
+        <text>Pero basta de chachara. Ve a la biblioteca y trae libros, después si quieres te puedes ir al hogar del combatiente a descansar.</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="4" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="671" editor-y="578">
+      <speak-char idTarget="RiosCapape">
+        <resources name="No name" />
+        <text>¿Qué?, ¿Cuándo?, ¿Hemos ganado?</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Mas o menos, la cosa es que usted está muerto.</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="RiosCapape">
+        <resources name="No name" />
+        <text>Entiendo, eso explica un par de cosas.</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+      <effect>
+        <activate flag="MuertoCapape" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <option-node nodeindex="4" preListening="yes" editor-x="1777" editor-y="334" x="1777" y="334">
+      <speak-player>
+        <text>¿Libros?</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="5" />
+      <speak-player>
+        <text>¿Hogar del combatiente?</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="6" />
+      <speak-player>
+        <text>¿Te suena esta foto?</text>
+        <resources name="No name">
+          <asset type="image" uri="assets/image/EscuelaArquitectura.jpg" />
+        </resources>
+      </speak-player>
+      <condition />
+      <child nodeindex="7" />
+    </option-node>
+    <dialogue-node nodeindex="5" editor-x="1786" editor-y="0">
+      <speak-char idTarget="RiosCapape">
+        <resources name="No name" />
+        <text>Si, los usamos para las barricadas. Una pena que se echen a perder, pero la situacion lo requiere.</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="4" />
+    </dialogue-node>
+    <dialogue-node nodeindex="6" editor-x="2140" editor-y="322">
+      <speak-char idTarget="RiosCapape">
+        <resources name="No name" />
+        <text>Si, el bar que tenemos aqui. Los soldados en relevos descansan ahi.</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="4" />
+    </dialogue-node>
+    <dialogue-node nodeindex="7" editor-x="1955" editor-y="803">
+      <speak-char idTarget="RiosCapape">
+        <resources name="No name" />
+        <text>Claro, si es este lugar, mira, ahi abajo a la derecha se ve la pasarela de la muerte y todo.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>#O Una foto menos.</text>
+      </speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <activate flag="FinCapape" />
+          <condition />
+          <increment var="Fotografias" value="1" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="ConversacionNinyoMedicina">
+    <dialogue-node nodeindex="0" editor-x="59" editor-y="53">
+      <speak-player>
+        <resources name="No name" />
+        <text>Disculpa. ¿Tienes un momento?</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="NinyoMedicina">
+        <resources name="No name" />
+        <text>¡Anda! ¿Estás vivo?</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Pues si...</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="NinyoMedicina">
+        <resources name="No name" />
+        <text>Curioso... Rompes la monotonía. Aquí todo el mundo está chiflado.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="NinyoMedicina">
+        <resources name="No name" />
+        <text>¿Necesitas algo?</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" preListening="yes" editor-x="643" editor-y="62" x="643" y="62">
+      <speak-player>
+        <text>¿Te suena esta foto?</text>
+        <resources name="No name">
+          <asset type="image" uri="assets/image/EstatuaVelazquez.png" />
+        </resources>
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>¿Y esta?</text>
+        <resources name="No name">
+          <asset type="image" uri="assets/image/PabellonFilosofia.jpg" />
+        </resources>
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>
+        <text>Debería irme.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="980" editor-y="14">
+      <speak-char idTarget="NinyoMedicina">
+        <resources name="No name" />
+        <text>Si claro, estamos aquí mism... Oh espera...</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Que va, la estatua de la foto no es la de esta plaza.</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="NinyoMedicina">
+        <resources name="No name" />
+        <text>No recuerdo exáctamente el nombre del edificio...</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="NinyoMedicina">
+        <resources name="No name" />
+        <text>¿Hogar Goya... Villa Picasso... Casa...?</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>#O Supongo que será algo de un pintor...</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>#O Debería mirar el mapa, seguro que encuentro algo.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="974" editor-y="358">
+      <speak-char idTarget="NinyoMedicina">
+        <resources name="No name" />
+        <text>A ver a ver...</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="NinyoMedicina">
+        <resources name="No name" />
+        <text>¡Madre mia, menudo destrozo!</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="NinyoMedicina">
+        <resources name="No name" />
+        <text>Esto saca pinta de ser un pabellón de una facultad.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="NinyoMedicina">
+        <resources name="No name" />
+        <text>Lo siento, no puedo decirte nada más sobre el tema.</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="960" editor-y="621">
+      <speak-char idTarget="NinyoMedicina">
+        <resources name="No name" />
+        <text>¡Nos vemos!</text>
+      </speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="ConversacionSoldadoComunista">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>
+        <resources name="No name" />
+        <text>¿Hola?</text>
+      </speak-player>
+      <condition>
+        <inactive flag="SoldadoComunistaIntroducido" />
+      </condition>
+      <speak-char idTarget="SoldadoComunista">
+        <resources name="No name" />
+        <text>¿Puedes verme? ¡Menuda sorpresa!</text>
+      </speak-char>
+      <condition>
+        <inactive flag="SoldadoComunistaIntroducido" />
+      </condition>
+      <speak-char idTarget="SoldadoComunista">
+        <resources name="No name" />
+        <text>¿Se puede saber qué se te ha perdido por aquí?</text>
+      </speak-char>
+      <condition>
+        <inactive flag="SoldadoComunistaIntroducido" />
+      </condition>
+      <speak-player>
+        <resources name="No name" />
+        <text>Estoy buscando el lugar donde se tomaron unas fotografías de mi abuelo.</text>
+      </speak-player>
+      <condition>
+        <inactive flag="SoldadoComunistaIntroducido" />
+      </condition>
+      <speak-char idTarget="SoldadoComunista">
+        <resources name="No name" />
+        <text>¡Fascinante! ¿Podría verlas?</text>
+      </speak-char>
+      <condition>
+        <inactive flag="SoldadoComunistaIntroducido" />
+      </condition>
+      <speak-player>
+        <resources name="No name" />
+        <text>¡Volviste! ¿Necesitas algo?</text>
+      </speak-player>
+      <condition>
+        <active flag="SoldadoComunistaIntroducido" />
+      </condition>
+      <child nodeindex="1" />
+      <effect>
+        <activate flag="SoldadoComunistaIntroducido" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <option-node nodeindex="1" preListening="yes" editor-x="474" editor-y="85" x="474" y="85">
+      <speak-player>
+        <text>¿Cuál es tu historia?</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>¿Te suena esta fotografía?</text>
+        <resources name="No name">
+          <asset type="image" uri="assets/image/EscuelaArquitectura.jpg" />
+        </resources>
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>
+        <text>Un anarquista me dijo que no te preguntara sobre Durruti.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition>
+        <active flag="SoldadoComunistaPresentado" />
+        <active flag="DurrutiPresentado" />
+      </condition>
+      <child nodeindex="4" />
+      <speak-player>
+        <text>Debería irme.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="5" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="926" editor-y="3">
+      <speak-char idTarget="SoldadoComunista">
+        <resources name="No name" />
+        <text>Me llamo Perdo Gómez, y fuí militante en el Partido Comunista Español.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="SoldadoComunista">
+        <text>Al estallar la guerra, tomé las armas contra los fascistas para defender la capital de la república.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="SoldadoComunista">
+        <resources name="No name" />
+        <text>Yo participé en la defensa del hospital clínico, más hacia el este, y allí es donde fallecí.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="SoldadoComunista">
+        <resources name="No name" />
+        <text>Tras cruzar el Manzanares, los sublevados ocuparon prácticamente la mitad de Ciudad Universitaria. Incluído el Hospital Clínico.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="SoldadoComunista">
+        <resources name="No name" />
+        <text>Se lo conseguimos arrebatar brevemente, pero en cuestión de días lo retomaron de nuevo.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="SoldadoComunista">
+        <resources name="No name" />
+        <text>Intentamos sacarles de allí de cualquier manera. Intentamos derruir el edificio múltiples veces. Minas, granadas, bombas... Lo intentamos todo.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="SoldadoComunista">
+        <resources name="No name">
+          <asset type="image" uri="assets/image/HospitalClinico.jpg" />
+        </resources>
+        <text>¡Mira en qué estado se quedó!</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+      <effect>
+        <activate flag="SoldadoComunistaPresentado" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="1029" editor-y="360">
+      <speak-char idTarget="SoldadoComunista">
+        <resources name="No name" />
+        <text>Este edificio... No estoy seguro de cuál es exáctamente...</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="SoldadoComunista">
+        <resources name="No name" />
+        <text>Estoy seguro que el edificio que tiene a su lado es la Casa de Velazquez.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="SoldadoComunista">
+        <resources name="No name" />
+        <text>Ese edificio fue defendido por unos compañeros polacos de las Brigadas Internacionales.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="SoldadoComunista">
+        <resources name="No name" />
+        <text>Deberías echar un vistazo por allí.</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="941" editor-y="639">
+      <speak-char idTarget="SoldadoComunista">
+        <resources name="No name" />
+        <text>¡JA! ¿Es ese Hugo verdad?</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="SoldadoComunista">
+        <resources name="No name" />
+        <text>Mira, nuestra relacion con los anarquistas nunca ha sido buena.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="SoldadoComunista">
+        <resources name="No name" />
+        <text>Si, en un principio la CNT era mucho más popular que el PCE, y podía movilizar a más personas...</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="SoldadoComunista">
+        <resources name="No name" />
+        <text>¡Pero hacían lo que les daba la gana! Si no fuera por nosotros, los comunistas, los soviéticos no nos hubieran ayudado.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="SoldadoComunista">
+        <resources name="No name" />
+        <text>Nunca sabremos lo que realmente le ocurrió a Durruti. Si me preguntas a mí, lo más seguro es que lo asesinara uno de los suyos.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="SoldadoComunista">
+        <resources name="No name" />
+        <text>Igual fue uno de sus compañeros anarquistas, o un desertor, o un trotskysta.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="SoldadoComunista">
+        <resources name="No name" />
+        <text>#! ¡Malditos trotskystas!</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="SoldadoComunista">
+        <resources name="No name" />
+        <text>Disculpa, ya ves que la unidad no era lo nuestro...</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>#O Eso explica bastantes cosas...</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <dialogue-node nodeindex="5" editor-x="951" editor-y="974">
+      <speak-char idTarget="SoldadoComunista">
+        <resources name="No name" />
+        <text>¡Suerte camarada!</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="SoldadoComunista">
+        <resources name="No name">
+          <asset type="image" uri="" />
+        </resources>
+        <text>Por cierto... ¿Alguna vez te has fijado en este monumento?</text>
+      </speak-char>
+      <condition>
+        <inactive flag="MonBrigadasInternacionalesPresentado" />
+      </condition>
+      <speak-char idTarget="SoldadoComunista">
+        <resources name="No name">
+          <asset type="image" uri="assets/image/MonumentoBrigadasInternacionales.jpg" />
+        </resources>
+        <text>Conmemora a nuestros compañeros de las brigadas internacionales.</text>
+      </speak-char>
+      <condition>
+        <inactive flag="MonBrigadasInternacionalesPresentado" />
+      </condition>
+      <speak-char idTarget="SoldadoComunista">
+        <resources name="No name" />
+        <text>Bueno, no te quiero entretener más. ¡Que vaya bien!</text>
+      </speak-char>
+      <condition>
+        <active flag="MonBrigadasInternacionalesPresentado" />
+      </condition>
+      <end-conversation>
+        <effect>
+          <activate flag="MonBrigadasInternacionalesPresentado" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="EncuentroNaranjero">
+    <option-node nodeindex="0" preListening="yes" editor-x="79" editor-y="61" x="79" y="61">
+      <speak-player>
+        <text>¡Genial! Esto debe ser el naranjero.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition>
+        <active flag="QuestNaranjeroActivada" />
+      </condition>
+      <child nodeindex="1" />
+      <speak-player>
+        <text>Pero... ¿Quién deja esto al aire libre? La dejaré aquí...</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition>
+        <inactive flag="QuestNaranjeroActivada" />
+      </condition>
+      <child nodeindex="2" />
+    </option-node>
+    <dialogue-node nodeindex="1" editor-x="767" editor-y="61">
+      <speak-player>
+        <resources name="No name" />
+        <text>Debería volver con Pedro.</text>
+      </speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <generate-object idTarget="Naranjero" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="2" editor-x="767" editor-y="252">
+      <speak-player>
+        <resources name="No name" />
+        <text>
+        </text>
+      </speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="Conversacion_Arquitectura_Fin">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>
+        <resources name="No name" />
+        <text>Ahora mismo estoy ocupado.</text>
+      </speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="Conversacion_Velazquez">
+    <dialogue-node nodeindex="0" editor-x="13358" editor-y="89">
+      <speak-player>
+        <resources name="No name" />
+        <text>Hola, ¿puedes ayudarme?</text>
+      </speak-player>
+      <condition>
+        <inactive flag="Fin_Polono" />
+      </condition>
+      <speak-char idTarget="Polono_Velazquez">
+        <resources name="No name" />
+        <text>Cześć, ¿qué haces por aqui?</text>
+      </speak-char>
+      <condition>
+        <inactive flag="Fin_Polono" />
+      </condition>
+      <speak-char idTarget="Polono_Velazquez">
+        <resources name="No name" />
+        <text>No suelo tener la oportunidad de hablar con gente viva, por aquí solo quedan chiflados.</text>
+      </speak-char>
+      <condition>
+        <inactive flag="Fin_Polono" />
+      </condition>
+      <speak-char idTarget="Polono_Velazquez">
+        <resources name="No name" />
+        <text>Entonces, ¿quieres algo?</text>
+      </speak-char>
+      <condition>
+        <inactive flag="Fin_Polono" />
+      </condition>
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" preListening="yes" editor-x="15046" editor-y="92" x="15046" y="92">
+      <speak-player>
+        <text>¿Qué pasó aquí?</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>¿Quién eres?</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>
+        <text>¿Te suena esta foto?</text>
+        <resources name="No name">
+          <asset type="image" uri="assets/image/EstatuaVelazquez.png" />
+        </resources>
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+      <speak-player>
+        <text>No necesito nada.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="5" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="16867" editor-y="225">
+      <speak-char idTarget="Polono_Velazquez">
+        <resources name="No name" />
+        <text>Esto de aqui es la Casa de Velazquez.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Polono_Velazquez">
+        <resources name="No name" />
+        <text>Cuando los sublevados cruzaron el Manzanares en noviembre del 36, primero tomaron este edificio y después siguieron con su avance.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Polono_Velazquez">
+        <resources name="No name" />
+        <text>La batalla fue horrible, no los conseguimos parar... </text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Polono_Velazquez">
+        <resources name="No name" />
+        <text>Durante la guerra este edificio fue completamente destrozado. Poco después de ser tomada, sufrió un incendio que la dejó destorzada.</text>
+      </speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="16872" editor-y="491">
+      <speak-char idTarget="Polono_Velazquez">
+        <resources name="No name" />
+        <text>Soy Kacper Kowalski, vine desde Polonia en defensa de la república como brigadista al comienzo de la guerra.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Polono_Velazquez">
+        <resources name="No name" />
+        <text>Forme parte del Batallón Dabrowski. Nos establecimos en esta posición dos dias antes del ataque de los sublevados.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Polono_Velazquez">
+        <resources name="No name" />
+        <text>Defendimos esta posición hasta nuestro último aliento.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Polono_Velazquez">
+        <resources name="No name" />
+        <text>Dos tercios de nuestros compañeros cayeron. Despúes de cinco horas de combate, solo quedaban en pie seis hombres entre los cuales me encontraba.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Polono_Velazquez">
+        <resources name="No name" />
+        <text>Yo cai en combate y terminamos perdiendo la posición.</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="16874" editor-y="749">
+      <speak-player>
+        <resources name="No name" />
+        <text>Me la encontre en el diario de mi abuelo. Participó en la guerra.</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="Polono_Velazquez">
+        <resources name="No name" />
+        <text>A ver...</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Polono_Velazquez">
+        <resources name="No name" />
+        <text>...</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Polono_Velazquez">
+        <resources name="No name" />
+        <text>Anda si es el caballo de la Casa de Velzaquez. Lleva aqui mucho tiempo. Milagrosamente consiguio sobrevivir a la guerra, aun que acabó un poco torcida.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Polono_Velazquez">
+        <resources name="No name" />
+        <text>Menuda tristeza ver el sitio de esta manera. ¿Sabes?, aquello que se ve al fondo es la escuela de Arquitectura.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Polono_Velazquez">
+        <resources name="No name" />
+        <text>También la mantuvieron los franquistas durante toda la guerra. Ve a echar un vistazo, seguro que te necuentras algún charlatán.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>#O Perfecto, ya me queda una foto menos.</text>
+      </speak-player>
+      <condition>
+        <inactive flag="Foto_Polono" />
+      </condition>
+      <child nodeindex="1" />
+      <effect>
+        <consume-object idTarget="ImagenEstatuaVelazquez" />
+        <condition />
+        <activate flag="Foto_Polono" />
+        <condition />
+        <increment var="Fotografias" value="1" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="5" editor-x="17895" editor-y="2036">
+      <speak-player>
+        <resources name="No name" />
+        <text>Do Widzenia, espero volver a vernos.</text>
+      </speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <activate flag="Fin_Polono" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="Soldado_Perdido_Conversacion">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>
+        <resources name="No name" />
+        <text>Hola</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="Soldado_Perdido">
+        <resources name="No name" />
+        <text>Hola, ¿necesitas ayuda?</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" preListening="yes" editor-x="1059" editor-y="51" x="1059" y="51">
+      <speak-player>
+        <text>¿Sabes que es esto?</text>
+        <resources name="No name">
+          <asset type="image" uri="assets/image/PabellonFilosofia.jpg" />
+        </resources>
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>Estoy bien, gracias.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="1484" editor-y="139">
+      <speak-char idTarget="Soldado_Perdido">
+        <resources name="No name" />
+        <text>Por supuesto, es lo que nos ordenaron atacar. </text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Yo no conseguí llegar a Filosofía, pero creo que el resto si.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="1433" editor-y="716">
+      <speak-player>
+        <resources name="No name" />
+        <text>Hasta luego entonces.</text>
+      </speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="ConversationCInformatica">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>
+        <resources name="No name" />
+        <text>Hola...... hooolaaa!</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="PasajeroCInformacion">
+        <resources name="No name" />
+        <text>Ho..la, disculpe, llevo mucho tiempo sin hablar con gente</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" preListening="yes" editor-x="466" editor-y="355" x="466" y="355">
+      <speak-player>
+        <text>¿Quién eres y qué haces aquí?</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>¿Te suena este foto?</text>
+        <resources name="No name">
+          <asset type="image" uri="assets/image/PabellonFilosofia.jpg" />
+        </resources>
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>
+        <text>Gracias, adios</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="792" editor-y="1">
+      <speak-char idTarget="PasajeroCInformacion">
+        <resources name="No name" />
+        <text>Soy Vitores Rosales, un soldado de la II República.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="PasajeroCInformacion">
+        <resources name="No name" />
+        <text>Participó en la guerra civil, y murio en este frente de batalla-</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>¿Frente de batalla?</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="PasajeroCInformacion">
+        <resources name="No name" />
+        <text>Si, antes aquí era un espacio abierto, y un arroyo del río manzanares. Detenemos a los franquistas en este frente con una forma de cuña.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name">
+          <asset type="image" uri="assets/image/MapaFrente.png" />
+        </resources>
+        <text>Es este foto</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="PasajeroCInformacion">
+        <resources name="No name">
+          <asset type="image" uri="assets/image/Nuevo proyecto (3).png" />
+        </resources>
+        <text>Si mira que estamos aquí.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="PasajeroCInformacion">
+        <resources name="No name" />
+        <text>Este frente que dividía a los dos bandos, por tan sólo 50 metros, y pasó a ser el teatro de una guerra de desgaste.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="PasajeroCInformacion">
+        <resources name="No name" />
+        <text>Bueno, ya sabes mucho de aquí.</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="973" editor-y="416">
+      <speak-char idTarget="PasajeroCInformacion">
+        <resources name="No name" />
+        <text>Emmm, no conozco, pero me acuerda que en el año 36 solo existía la facultad de letra y de ciencias</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="PasajeroCInformacion">
+        <resources name="No name" />
+        <text>Uno está a la izquierda y otro a la derecha de esa rodonda.</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+      <effect>
+        <trigger-cutscene idTarget="PistaFacultadCInformacion" />
+        <condition />
+        <generate-object idTarget="PistaLetraCiencia" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="788" editor-y="618">
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="ConversationFilosofia">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="53">
+      <speak-player>
+        <resources name="No name" />
+        <text>Hola, es aquí la facultad de Letra en el año 36.</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="ChicaFilosofia">
+        <resources name="No name" />
+        <text>Si, aquí lo es.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Gracias.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" preListening="yes" editor-x="325" editor-y="52" x="325" y="52">
+      <speak-player>
+        <text>¿ cómo te llamas, por qué estás aquí?</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>¿Conoces a esta foto?</text>
+        <resources name="No name">
+          <asset type="image" uri="assets/image/PabellonFilosofia.jpg" />
+        </resources>
+      </speak-player>
+      <condition>
+        <inactive flag="usadoFilosofia" />
+      </condition>
+      <child nodeindex="3" />
+      <speak-player>
+        <text>Encanta conocerte, adios.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="854" editor-y="0">
+      <speak-char idTarget="ChicaFilosofia">
+        <resources name="No name" />
+        <text>Soy una estudiante de esta facultad.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="ChicaFilosofia">
+        <resources name="No name" />
+        <text>También soy una miliciana de la república.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>¿Miliciana?</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="ChicaFilosofia">
+        <resources name="No name" />
+        <text>Las milicianas fueron mujeres que lucharon en la Guerra Civil. </text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="ChicaFilosofia">
+        <resources name="No name" />
+        <text>Estamos defendiendo a la II República y a la igualdad de nosotros.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="ChicaFilosofia">
+        <resources name="No name" />
+        <text>Porque el gobierno amplió los derechos de las mujeres, entre ellos el derecho a voto, a divorciarse, a ir a la escuela y a presentarse a las elecciones.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="ChicaFilosofia">
+        <resources name="No name" />
+        <text>Pero la victoria de Franco constató el regreso de los papeles de género tradicionales en España, entre ellos el rechazo de las mujeres combatientes en el ejército.</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="5" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="1109" editor-y="335">
+      <speak-char idTarget="ChicaFilosofia">
+        <resources name="No name" />
+        <text>Es la aula Magna de la facultad.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="ChicaFilosofia">
+        <resources name="No name" />
+        <text>Esta facultad inauguró en el año 1933 del proyecto universitario, contaba con las Facultades de Ciencias, Medicina, Farmacia, y la propia Filosofía.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="ChicaFilosofia">
+        <resources name="No name" />
+        <text>El noviembre de 1936, estalló la batalla. La irrupción de los sublevados por la Casa de Campo desembocó en un duro enfrentamiento en las inmediaciones del Hospital Clínico.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="ChicaFilosofia">
+        <resources name="No name" />
+        <text>Los republicanos establecieron este campus como su base de operaciones, está rodeada de extensas trincheras.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>#O Vale, me queda una foto menos.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+      <effect>
+        <activate flag="usadoFilosofia" />
+        <condition />
+        <consume-object idTarget="ImagenPabellonFilosofia" />
+        <condition />
+        <show-text x="300" y="300" frontColor="#FFFFFFFF" borderColor="#000000FF" uri="">Encontrado, es la Aula Magna de la facultad de Filosofía</show-text>
+        <condition />
+        <increment var="Fotografias" value="1" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="763" editor-y="595">
+      <end-conversation />
+    </dialogue-node>
+    <dialogue-node nodeindex="5" editor-x="1459" editor-y="86">
+      <speak-player>
+        <resources name="No name" />
+        <text>Me puedes contar un poco de su historia.</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="ChicaFilosofia">
+        <resources name="No name" />
+        <text>Esta facultad se inaugura el año 1933,  el proyecto universitario, contaba con las Facultades de Ciencias, Medicina, Farmacia, y la propia Filosofía.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="ChicaFilosofia">
+        <resources name="No name" />
+        <text>El noviembre de 1936, estalló la batalla. La irrupción de los sublevados por la Casa de Campo desembocó en un duro enfrentamiento en las inmediaciones del Hospital Clínico, lo que se tradujo en una gran ofensiva que hizo temblar los cimientos del bando republicano. Como la Facultad de Medicina, el edificio de Filosofía y Letras fue uno de los puntos clave donde los republicanos establecieron su base de operaciones, está rodeada de extensas trincheras</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="ConversacionMatematica">
+    <dialogue-node nodeindex="0" editor-x="52" editor-y="47">
+      <speak-player>
+        <resources name="No name" />
+        <text>Hola</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="ChicoMates">
+        <resources name="No name" />
+        <text>Hola</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Te quería pregunta una cosa</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="ChicoMates">
+        <resources name="No name" />
+        <text>Me estás hablando? a mi?</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Si te estoy hablando.</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="ChicoMates">
+        <resources name="No name" />
+        <text>Oh my god, como puedes verme, estamos en dos mundo diferente, ahora mismo soy una energía como la luz, no puedes percibir con los ojos........</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Emmm. Te veo porque tengo este diario.</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="ChicoMates">
+        <resources name="No name" />
+        <text>Diario, dejame investigar un momento, este diario actua como un agujero negro que abre la conección entre dos mundo.....</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" preListening="yes" editor-x="202" editor-y="397" x="202" y="397">
+      <speak-player>
+        <text>Una pregunta, conoces este foto?</text>
+        <resources name="No name">
+          <asset type="image" uri="assets/image/PabellonFilosofia.jpg" />
+        </resources>
+      </speak-player>
+      <condition>
+        <inactive flag="usadoFilosofia" />
+      </condition>
+      <child nodeindex="2" />
+      <speak-player>
+        <text>Tengo que irme, me encanta conocerte.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="720" editor-y="390">
+      <speak-char idTarget="ChicoMates">
+        <resources name="No name" />
+        <text>No</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>¿Y estos?</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="ChicoMates">
+        <resources name="No name" />
+        <text>Tampoco, vete a la facultad de enfrente, allí puede ser.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="ChicoMates">
+        <resources name="No name" />
+        <text>Pero puedes regalarme este diario, creo que tiene una energía muy  potente, incluso puede .........</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Diculpe, lo necesito para encontrar a mi abuelo.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="642" editor-y="701">
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <object id="TestItem" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/1PAiTuL.jpg" />
+      <asset type="icon" uri="assets/icon/1534522432321.jpg" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <speak-player>Mmmmm rico...</speak-player>
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </object>
+  <object id="MapaFrente" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/MapaFrente.png" />
+      <asset type="icon" uri="assets/icon/MapaFrente.png" />
+      <asset type="imageover" uri="" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no">
+        <condition>
+          <active flag="IntroductionFinished" />
+        </condition>
+        <effect>
+          <trigger-scene idTarget="FotoMapaFrente" x="285" y="345" transitionTime="500" transitionType="5" />
+          <condition />
+        </effect>
+      </examine>
+    </actions>
+  </object>
+  <object id="BackArrow" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/BackArrow.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <documentation>Vuelve a la escena anterior</documentation>
+        <effect>
+          <trigger-scene idTarget="MapaJugable" x="539" y="455" transitionTime="1000" transitionType="5" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </object>
+  <object id="ImagenEstatuaVelazquez" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/EstatuaVelazquez.png" />
+      <asset type="icon" uri="assets/icon/EstatuaVelazquez.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no">
+        <condition>
+          <active flag="IntroductionFinished" />
+        </condition>
+        <effect>
+          <trigger-scene idTarget="FotoEstatuaVelazquez" x="250" y="273" transitionTime="500" transitionType="5" />
+          <condition />
+        </effect>
+      </examine>
+    </actions>
+  </object>
+  <object id="ImagenPabellonFilosofia" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/PabellonFilosofia.jpg" />
+      <asset type="icon" uri="assets/icon/PabellonFilosofia.jpg" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no">
+        <condition>
+          <active flag="IntroductionFinished" />
+        </condition>
+        <effect>
+          <trigger-scene idTarget="FotoPabellonFilosofia" x="309" y="261" transitionTime="500" transitionType="5" />
+          <condition />
+        </effect>
+      </examine>
+    </actions>
+  </object>
+  <object id="ImagenEscuelaArquitectura" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/EscuelaArquitectura.jpg" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <trigger-scene idTarget="FotoEscuelaArquitectura" x="250" y="281" transitionTime="500" transitionType="5" />
+          <condition />
+        </effect>
+      </examine>
+    </actions>
+  </object>
+  <object id="ImagenFacultadMedicina" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/FacultadMedicina.png" />
+      <asset type="icon" uri="assets/icon/FacultadMedicina.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no">
+        <condition>
+          <active flag="IntroductionFinished" />
+        </condition>
+        <effect>
+          <trigger-scene idTarget="FotoFacultadMedicina" x="490" y="499" transitionTime="500" transitionType="5" />
+          <condition />
+        </effect>
+      </examine>
+    </actions>
+  </object>
+  <object id="Naranjero" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/Naranjero.jpg" />
+      <asset type="icon" uri="assets/icon/Naranjero.jpg" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <trigger-conversation idTarget="EncuentroNaranjero" />
+          <condition />
+        </effect>
+      </examine>
+    </actions>
+  </object>
+  <object id="PistaLetraCiencia" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/pista1.PNG" />
+      <asset type="icon" uri="assets/icon/pista1.PNG" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <slidescene id="PistaFacultadCInformacion" start="no" next="go-back" class="accesible" type="cutscene">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="slides" uri="assets/animation/PistaCInformacion.eaa.xml" />
+    </resources>
+    <name>
+    </name>
+  </slidescene>
+  <slidescene id="Final" start="no" next="go-back" class="accesible" type="cutscene">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="slides" uri="assets/animation/FinalAnim.eaa.xml" />
+    </resources>
+    <name>
+    </name>
+  </slidescene>
+</eAdventure>
