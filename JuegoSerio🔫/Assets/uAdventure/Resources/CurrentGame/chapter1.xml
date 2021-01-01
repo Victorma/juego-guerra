@@ -63,9 +63,14 @@
     <voice name="" synthesizeAlways="no" />
     <actions>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
-        <documentation>Created with target conversation: PruebaConversacion</documentation>
+        <documentation>Created with target conversation: IntroduccionGuia</documentation>
+        <condition>
+          <inactive flag="IntroduccionGuia" />
+        </condition>
         <effect>
-          <trigger-conversation idTarget="PruebaConversacion" />
+          <trigger-scene idTarget="PresentacionGuia" x="576" y="540" transitionTime="1000" transitionType="5" />
+          <condition />
+          <trigger-conversation idTarget="IntroduccionGuia" />
           <condition />
         </effect>
       </talk-to>
@@ -450,7 +455,7 @@
       </talk-to>
     </actions>
   </character>
-  <map-scene id="MapaJugable" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40,4364545764484 -3,74027609825133 0,0185015955099104 0,0219297409057417" center="(40.44256246179, -3.72694283723927)" zoom="17" start="no">
+  <map-scene id="MapaJugable" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40,4364545764484 -3,74027609825133 0,0185015955099104 0,0219297409057417" center="(40.4486371346988, -3.72677117586244)" zoom="15" start="no">
     <map-element targetId="FacultadMedicina" layer="0" scale="1" orientation="2">
       <condition />
     </map-element>
@@ -630,6 +635,20 @@
     </map-element>
     <map-element targetId="FacultadFilosofias" layer="0" scale="1" orientation="2">
       <condition />
+    </map-element>
+  </map-scene>
+  <map-scene id="MapaIntroduccion" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40,436450958252 -3,74027609825134 0,0199999995529652 0,0199999995529652" center="(40.4434790056127, -3.72578144073551)" zoom="18" start="no">
+    <map-element targetId="GuiaJugador" layer="0" scale="0.03484683" orientation="0">
+      <condition />
+      <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4435691833496, -3.72683548927307)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">33.57</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="Hint">False</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+        <actions />
+      </ext-elem-ref>
     </map-element>
   </map-scene>
   <geoelement id="FacultadMedicina">
@@ -925,6 +944,19 @@
       <character-ref idTarget="SoldadoMedicina" x="666" y="721" scale="0.6399145" orientation="0" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
+  <scene id="PresentacionGuia" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/FondoParque.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <characters>
+      <character-ref idTarget="GuiaJugador" x="540" y="810" scale="0.3252032" orientation="0" layer="0" hasInfluenceArea="no" />
+    </characters>
+  </scene>
   <graph-conversation id="PruebaConversacion">
     <dialogue-node nodeindex="0" editor-x="187" editor-y="55">
       <speak-char idTarget="GuiaJugador">
@@ -1060,7 +1092,7 @@
           <condition />
           <activate flag="IntroductionFinished" />
           <condition />
-          <trigger-scene idTarget="MapaJugable" x="539" y="455" transitionTime="1000" transitionType="5" />
+          <trigger-scene idTarget="MapaIntroduccion" x="539" y="455" transitionTime="1000" transitionType="5" />
           <condition />
         </effect>
       </end-conversation>
@@ -1138,7 +1170,7 @@
       <condition />
       <end-conversation>
         <effect>
-          <trigger-scene idTarget="MapaJugable" x="285" y="345" transitionTime="1000" transitionType="5" />
+          <trigger-scene idTarget="MapaIntroduccion" x="285" y="345" transitionTime="1000" transitionType="5" />
           <condition />
           <activate flag="IntroductionFinished" />
           <condition />
@@ -2676,6 +2708,178 @@
     </dialogue-node>
     <dialogue-node nodeindex="3" editor-x="642" editor-y="701">
       <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="IntroduccionGuia">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>
+        <resources name="No name" />
+        <text>#O Madre mia... ¿Y las pintas de este señor?</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Hola... ¿Cómo es que vas vestido así?</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="GuiaJugador">
+        <resources name="No name" />
+        <text>#! ¡Diablos! ¿Cómo es que puedes hablar conmigo?</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="GuiaJugador">
+        <resources name="No name" />
+        <text>¡Hace poco menos de 100 años que no hablo con nadie vivo!</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="GuiaJugador">
+        <resources name="No name" />
+        <text>Por tu expresión diría que tampoco tienes ni idea de cómo es que puedes hablar conmigo...</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="GuiaJugador">
+        <resources name="No name" />
+        <text>Verás... Yo fallecí en este mismo campus. En 1936, justo al final de la Guerra Civil.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="GuiaJugador">
+        <resources name="No name" />
+        <text>He estado vagando estas calles por décadas, viendo su reconstrucción y su evolución...</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="GuiaJugador">
+        <resources name="No name" />
+        <text>Dime. ¿Has venido aquí por algo en especial?</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Mi abuelo luchó aquí en la guerra y tenía guardadas 5 fotos tomadas aquí. He venido a averiguar dónde fueron tomadas.</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="GuiaJugador">
+        <resources name="No name" />
+        <text>A ver a ver... ¡Relámpagos! Que recuerdos... Mira, te puedo ayudar a encontrarlas. Nos lo pasaremos bien.</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" preListening="yes" editor-x="1021" editor-y="50" x="1021" y="50">
+      <speak-player>
+        <text>¿Por qué no me díces dónde están?</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>De acuerdo.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="1415" editor-y="27">
+      <speak-char idTarget="GuiaJugador">
+        <resources name="No name" />
+        <text>¿Y qué gracia tendría eso?</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="GuiaJugador">
+        <resources name="No name" />
+        <text>Mira, llevo poco menos de 100 años sin hablar con alguien vivo.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="GuiaJugador">
+        <resources name="No name" />
+        <text>No te vas a desprender de mí tán fácilmente.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>De acuerdo...</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="1043" editor-y="408">
+      <speak-player>
+        <resources name="No name" />
+        <text>¿Por dónde debería empezar?</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="GuiaJugador">
+        <resources name="No name" />
+        <text>Deberías preguntar a la gente de por aquí. A estas horas deberían estar levantándose...</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="4" />
+    </dialogue-node>
+    <option-node nodeindex="4" keepShowing="yes" preListening="yes" editor-x="1871" editor-y="408" x="1871" y="408">
+      <speak-player>
+        <text>¿Estudiantes?</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="5" />
+      <speak-player>
+        <text>¿Hay más como tú?</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="6" />
+    </option-node>
+    <dialogue-node nodeindex="5" editor-x="2146" editor-y="293">
+      <speak-char idTarget="GuiaJugador">
+        <resources name="No name" />
+        <text>¡Claro que no!</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="GuiaJugador">
+        <resources name="No name" />
+        <text>Eres el primero de esta época con el que hablo, pero os conozco bién.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="GuiaJugador">
+        <resources name="No name" />
+        <text>Algunos no sabéis ni ataros los cordones... ¡Cómo para orientaros con las fotografías!</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="GuiaJugador">
+        <resources name="No name" />
+        <text>Mira, hay más gente como yo.</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="6" />
+    </dialogue-node>
+    <dialogue-node nodeindex="6" editor-x="2235" editor-y="635">
+      <speak-char idTarget="GuiaJugador">
+        <resources name="No name" />
+        <text>Y de todos los aspectos. Tanto republicanos como sublevados.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="GuiaJugador">
+        <resources name="No name" />
+        <text>Civiles, soldados, ricos y pobres. Intenta buscarles por el campus. Pregúntales por las fotografías y seguro que te ayudan.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="GuiaJugador">
+        <resources name="No name" />
+        <text>Yo te acompañaré. Si tienes alguna duda o te pierdes por el camino no dudes en preguntarme.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>De acuerdo.</text>
+      </speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <activate flag="IntroduccionGuia" />
+          <condition />
+          <trigger-scene idTarget="MapaJugable" x="539" y="455" transitionTime="1000" transitionType="5" />
+          <condition />
+        </effect>
+      </end-conversation>
     </dialogue-node>
   </graph-conversation>
   <object id="TestItem" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
