@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment> Project Configuration </comment>
+<entry key="Chapter0.InitialScene1.X">-210</entry>
+<entry key="Chapter0.InitialScene1.Y">107</entry>
+<entry key="Chapter0.InitialScene2.X">-1</entry>
+<entry key="Chapter0.InitialScene2.Y">163</entry>
+<entry key="Chapter0.FotoMapaFrente.X">-56</entry>
+<entry key="Chapter0.FotoMapaFrente.Y">254</entry>
+<entry key="Chapter0.FotoPabellonFilosofia.X">-9</entry>
+<entry key="Chapter0.FotoPabellonFilosofia.Y">188</entry>
+<entry key="Chapter0.FotoFacultadMedicina.X">-10</entry>
+<entry key="Chapter0.FotoFacultadMedicina.Y">163</entry>
+<entry key="Chapter0.FotoEstatuaVelazquez.X">-51</entry>
+<entry key="Chapter0.FotoEstatuaVelazquez.Y">204</entry>
+<entry key="Chapter0.EscenaSoldadoMedicina.X">-57</entry>
+<entry key="Chapter0.EscenaSoldadoMedicina.Y">197</entry>
+<entry key="Chapter0.PresentacionGuia.X">-66</entry>
+<entry key="Chapter0.PresentacionGuia.Y">240</entry>
+<entry key="Chapter0.Filosofia.X">296</entry>
+<entry key="Chapter0.Filosofia.Y">249</entry>
 </properties>
 

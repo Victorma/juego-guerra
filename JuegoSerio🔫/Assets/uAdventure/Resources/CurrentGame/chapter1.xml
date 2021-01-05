@@ -373,9 +373,6 @@
   </character>
   <character id="ChicaFilosofia" behaviour="normal">
     <resources name="No name">
-      <condition>
-        <active flag="EntrandoFilosofia" />
-      </condition>
       <asset type="standup" uri="assets/animation/ChicaFiloAnim.eaa.xml" />
       <asset type="standdown" uri="assets/animation/ChicaFiloAnim.eaa.xml" />
       <asset type="standright" uri="assets/animation/ChicaFiloAnim.eaa.xml" />
@@ -406,10 +403,9 @@
     <voice name="" synthesizeAlways="no" />
     <actions>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
-        <condition>
-          <active flag="EntrandoFilosofia" />
-        </condition>
         <effect>
+          <trigger-scene idTarget="Filosofia" x="400" y="450" transitionTime="1000" transitionType="5" />
+          <condition />
           <trigger-conversation idTarget="ConversationFilosofia" />
           <condition />
         </effect>
@@ -455,7 +451,7 @@
       </talk-to>
     </actions>
   </character>
-  <map-scene id="MapaJugable" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40,4364545764484 -3,74027609825133 0,0185015955099104 0,0219297409057417" center="(40.4486371346988, -3.72677117586244)" zoom="15" start="no">
+  <map-scene id="MapaJugable" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40,4364545764484 -3,74027609825133 0,0185015955099104 0,0219297409057417" center="(40.4485942709869, -3.72919589281178)" zoom="17" start="no">
     <map-element targetId="FacultadMedicina" layer="0" scale="1" orientation="2">
       <condition />
     </map-element>
@@ -618,12 +614,12 @@
         <actions />
       </ext-elem-ref>
     </map-element>
-    <map-element targetId="ChicaFilosofia" layer="0" scale="0.3322488" orientation="2">
+    <map-element targetId="ChicaFilosofia" layer="0" scale="0.2461715" orientation="2">
       <condition />
       <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4492797851563, -3.73057723045349)</param>
+        <param name="Position">(40.4491386413574, -3.73054504394531)</param>
         <param name="Rotation">0</param>
-        <param name="InteractionRange">50</param>
+        <param name="InteractionRange">42.29</param>
         <param name="RevealOnlyOnRange">True</param>
         <param name="Hint">False</param>
         <param name="RevealParticleTexture">leaf_particle.png</param>
@@ -633,11 +629,8 @@
     <map-element targetId="FacultadMates" layer="0" scale="1" orientation="2">
       <condition />
     </map-element>
-    <map-element targetId="FacultadFilosofias" layer="0" scale="1" orientation="2">
-      <condition />
-    </map-element>
   </map-scene>
-  <map-scene id="MapaIntroduccion" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40,436450958252 -3,74027609825134 0,0199999995529652 0,0199999995529652" center="(40.4434790056127, -3.72578144073551)" zoom="18" start="no">
+  <map-scene id="MapaIntroduccion" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40,436450958252 -3,74027609825134 0,0199999995529652 0,0199999995529652" center="(40.4472185359692, -3.72719764709527)" zoom="18" start="no">
     <map-element targetId="GuiaJugador" layer="0" scale="0.03484683" orientation="0">
       <condition />
       <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
@@ -955,6 +948,20 @@
     <default-initial-position x="400" y="450" />
     <characters>
       <character-ref idTarget="GuiaJugador" x="540" y="810" scale="0.3252032" orientation="0" layer="0" hasInfluenceArea="no" />
+    </characters>
+  </scene>
+  <scene id="Filosofia" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/FondoFilosofia.png" />
+      <asset type="foreground" uri="" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <characters>
+      <character-ref idTarget="ChicaFilosofia" x="513" y="592" scale="1.436908" orientation="2" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
   <graph-conversation id="PruebaConversacion">
@@ -2477,143 +2484,197 @@
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="ConversationFilosofia">
-    <dialogue-node nodeindex="0" editor-x="50" editor-y="53">
+    <dialogue-node nodeindex="0" editor-x="29" editor-y="52">
       <speak-player>
         <resources name="No name" />
-        <text>Hola, es aquí la facultad de Letra en el año 36.</text>
+        <text>¿Hola?</text>
       </speak-player>
       <condition />
       <speak-char idTarget="ChicaFilosofia">
         <resources name="No name" />
-        <text>Si, aquí lo es.</text>
+        <text>¡Menuda sorpresa! ¿Cómo puedes verme?</text>
       </speak-char>
       <condition />
       <speak-player>
         <resources name="No name" />
-        <text>Gracias.</text>
+        <text>Ni idea... Estoy buscando unas fotos que pertenecían a mi abuelo.</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>¡Pues bienvenido a la facultad de Filosofía! A ver si te puedo ayudar.</text>
       </speak-player>
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" preListening="yes" editor-x="325" editor-y="52" x="325" y="52">
+    <option-node nodeindex="1" preListening="yes" editor-x="524" editor-y="22" x="524" y="22">
       <speak-player>
-        <text>¿ cómo te llamas, por qué estás aquí?</text>
+        <text>¿Cual es tu historia?</text>
       </speak-player>
       <condition />
       <child nodeindex="2" />
       <speak-player>
-        <text>¿Conoces a esta foto?</text>
+        <text>¿Cual es la historia de este lugar?</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>
+        <text>¿Reconoces esta fotografía?</text>
         <resources name="No name">
           <asset type="image" uri="assets/image/PabellonFilosofia.jpg" />
         </resources>
       </speak-player>
+      <condition />
+      <child nodeindex="4" />
+      <speak-player>
+        <text>Debería irme.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="5" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="984" editor-y="1">
+      <speak-char idTarget="ChicaFilosofia">
+        <resources name="No name" />
+        <text>Me llamo Carla. Soy de Madrid y estudié aquí mismo, en la facultad de Filosofía.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="ChicaFilosofia">
+        <resources name="No name" />
+        <text>Esta universidad era un centro muy moderno para la época.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="ChicaFilosofia">
+        <resources name="No name" />
+        <text>En aquel entonces la Unión Soviética tenía poco menos de 15 años, había un ambiente muy izquierdista en esta facultad.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="ChicaFilosofia">
+        <resources name="No name" />
+        <text>Y cuando llegó la guerra... Ya te puedes imaginar que lado escogí.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="ChicaFilosofia">
+        <resources name="No name" />
+        <text>Defendí la facultad junto a mis compañeros durante la duración de toda la guerra como miliciana.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="ChicaFilosofia">
+        <resources name="No name" />
+        <text>Estábamos muy pero que muy desorganizados al principio, pero el ejército se fue formalizando durante el transcurso de la guerra.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="ChicaFilosofia">
+        <resources name="No name" />
+        <text>Y bueno... Finalmente una bomba acabó con mi vida en el 39...</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="1007" editor-y="314">
+      <speak-char idTarget="ChicaFilosofia">
+        <resources name="No name" />
+        <text>La facultad empezó su construcción bajo el reinado de Alfonso XIII.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="ChicaFilosofia">
+        <resources name="No name" />
+        <text>Tras su exilio, y la declaración de la segunda república, su desarrollo se impulsó enormemente.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="ChicaFilosofia">
+        <resources name="No name" />
+        <text>Este sitio era... Algo especial. Muy especial. ¡Clases mixtas! Era increíble para la época.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="ChicaFilosofia">
+        <resources name="No name">
+          <asset type="image" uri="assets/image/ClaseFilosofia.jpg" />
+        </resources>
+        <text>Mira esta foto. Para vosotros os puede parecer algo banal, pero esto era realmente inspirador para las mujeres de la época.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="ChicaFilosofia">
+        <resources name="No name" />
+        <text>Y bueno, con la guerra, todo se fue al garete... Este edificio se convirtió en el centro de operaciones republicano durante la guerra.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="ChicaFilosofia">
+        <resources name="No name" />
+        <text>Conseguimos mantener la facultad durante toda la guerra, pero eso no significa que no viviera durísimos bombardeos y tiroteos.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="ChicaFilosofia">
+        <resources name="No name" />
+        <text>Tras la guerra decidieron reconstruir el campus. Tuvieron que tirar prácticamente todo el edificio...</text>
+      </speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="1063" editor-y="658">
+      <speak-char idTarget="ChicaFilosofia">
+        <resources name="No name" />
+        <text>Esto esto... ¡Madre mía! Esto es... Era el aula magna de esta facultad.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="ChicaFilosofia">
+        <resources name="No name" />
+        <text>Mira en qué estado más lamentable quedó... La de libros que se perdieron...</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="ChicaFilosofia">
+        <resources name="No name" />
+        <text>¿Sabes? Al ganar los nacionales la guerra, consideraron dejar el campus tal cual, completamente destruido.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="ChicaFilosofia">
+        <resources name="No name" />
+        <text>De esta manera dejarían el campus como símbolo de su victoria, y memorial de la guerra.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="ChicaFilosofia">
+        <resources name="No name" />
+        <text>#! ¡Menuda estupidez!</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="ChicaFilosofia">
+        <resources name="No name" />
+        <text>Que aburrida estaría aquí, entre ruinas... Menos mal que lo reconstruyeron...</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="ChicaFilosofia">
+        <resources name="No name" />
+        <text>Disculpa, espero no haberte dado demasiado la chapa. Espero haberte ayudado con la foto.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>#O Genial, una foto menos...</text>
+      </speak-player>
       <condition>
         <inactive flag="usadoFilosofia" />
       </condition>
-      <child nodeindex="3" />
-      <speak-player>
-        <text>Encanta conocerte, adios.</text>
-        <resources name="No name" />
-      </speak-player>
-      <condition />
-      <child nodeindex="4" />
-    </option-node>
-    <dialogue-node nodeindex="2" editor-x="854" editor-y="0">
-      <speak-char idTarget="ChicaFilosofia">
-        <resources name="No name" />
-        <text>Soy una estudiante de esta facultad.</text>
-      </speak-char>
-      <condition />
-      <speak-char idTarget="ChicaFilosofia">
-        <resources name="No name" />
-        <text>También soy una miliciana de la república.</text>
-      </speak-char>
-      <condition />
-      <speak-player>
-        <resources name="No name" />
-        <text>¿Miliciana?</text>
-      </speak-player>
-      <condition />
-      <speak-char idTarget="ChicaFilosofia">
-        <resources name="No name" />
-        <text>Las milicianas fueron mujeres que lucharon en la Guerra Civil. </text>
-      </speak-char>
-      <condition />
-      <speak-char idTarget="ChicaFilosofia">
-        <resources name="No name" />
-        <text>Estamos defendiendo a la II República y a la igualdad de nosotros.</text>
-      </speak-char>
-      <condition />
-      <speak-char idTarget="ChicaFilosofia">
-        <resources name="No name" />
-        <text>Porque el gobierno amplió los derechos de las mujeres, entre ellos el derecho a voto, a divorciarse, a ir a la escuela y a presentarse a las elecciones.</text>
-      </speak-char>
-      <condition />
-      <speak-char idTarget="ChicaFilosofia">
-        <resources name="No name" />
-        <text>Pero la victoria de Franco constató el regreso de los papeles de género tradicionales en España, entre ellos el rechazo de las mujeres combatientes en el ejército.</text>
-      </speak-char>
-      <condition />
-      <child nodeindex="5" />
-    </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="1109" editor-y="335">
-      <speak-char idTarget="ChicaFilosofia">
-        <resources name="No name" />
-        <text>Es la aula Magna de la facultad.</text>
-      </speak-char>
-      <condition />
-      <speak-char idTarget="ChicaFilosofia">
-        <resources name="No name" />
-        <text>Esta facultad inauguró en el año 1933 del proyecto universitario, contaba con las Facultades de Ciencias, Medicina, Farmacia, y la propia Filosofía.</text>
-      </speak-char>
-      <condition />
-      <speak-char idTarget="ChicaFilosofia">
-        <resources name="No name" />
-        <text>El noviembre de 1936, estalló la batalla. La irrupción de los sublevados por la Casa de Campo desembocó en un duro enfrentamiento en las inmediaciones del Hospital Clínico.</text>
-      </speak-char>
-      <condition />
-      <speak-char idTarget="ChicaFilosofia">
-        <resources name="No name" />
-        <text>Los republicanos establecieron este campus como su base de operaciones, está rodeada de extensas trincheras.</text>
-      </speak-char>
-      <condition />
-      <speak-player>
-        <resources name="No name" />
-        <text>#O Vale, me queda una foto menos.</text>
-      </speak-player>
-      <condition />
       <child nodeindex="1" />
       <effect>
         <activate flag="usadoFilosofia" />
-        <condition />
-        <consume-object idTarget="ImagenPabellonFilosofia" />
-        <condition />
-        <show-text x="300" y="300" frontColor="#FFFFFFFF" borderColor="#000000FF" uri="">Encontrado, es la Aula Magna de la facultad de Filosofía</show-text>
         <condition />
         <increment var="Fotografias" value="1" />
         <condition />
       </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="4" editor-x="763" editor-y="595">
-      <end-conversation />
-    </dialogue-node>
-    <dialogue-node nodeindex="5" editor-x="1459" editor-y="86">
-      <speak-player>
-        <resources name="No name" />
-        <text>Me puedes contar un poco de su historia.</text>
-      </speak-player>
-      <condition />
+    <dialogue-node nodeindex="5" editor-x="612" editor-y="642">
       <speak-char idTarget="ChicaFilosofia">
         <resources name="No name" />
-        <text>Esta facultad se inaugura el año 1933,  el proyecto universitario, contaba con las Facultades de Ciencias, Medicina, Farmacia, y la propia Filosofía.</text>
+        <text>De acuerdo. ¡Nos vemos!</text>
       </speak-char>
       <condition />
-      <speak-char idTarget="ChicaFilosofia">
-        <resources name="No name" />
-        <text>El noviembre de 1936, estalló la batalla. La irrupción de los sublevados por la Casa de Campo desembocó en un duro enfrentamiento en las inmediaciones del Hospital Clínico, lo que se tradujo en una gran ofensiva que hizo temblar los cimientos del bando republicano. Como la Facultad de Medicina, el edificio de Filosofía y Letras fue uno de los puntos clave donde los republicanos establecieron su base de operaciones, está rodeada de extensas trincheras</text>
-      </speak-char>
-      <condition />
-      <child nodeindex="1" />
+      <end-conversation>
+        <effect>
+          <trigger-scene idTarget="MapaJugable" x="539" y="455" transitionTime="1000" transitionType="5" />
+          <condition />
+        </effect>
+      </end-conversation>
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="ConversacionMatematica">
