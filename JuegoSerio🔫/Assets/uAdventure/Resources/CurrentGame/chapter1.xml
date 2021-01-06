@@ -2384,7 +2384,7 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" preListening="yes" editor-x="466" editor-y="355" x="466" y="355">
+    <option-node nodeindex="1" preListening="yes" editor-x="638" editor-y="163" x="638" y="163">
       <speak-player>
         <text>¿Quién eres y qué haces aquí?</text>
         <resources name="No name" />
@@ -2612,7 +2612,7 @@
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="ConversacionMatematica">
-    <dialogue-node nodeindex="0" editor-x="0" editor-y="515">
+    <dialogue-node nodeindex="0" editor-x="165" editor-y="145">
       <speak-player>
         <resources name="No name" />
         <text>Hola</text>
@@ -2635,7 +2635,7 @@
       <condition />
       <speak-player>
         <resources name="No name" />
-        <text>Si te estoy hablando.</text>
+        <text>Si, te estoy hablando.</text>
       </speak-player>
       <condition />
       <speak-char idTarget="ChicoMates">
@@ -2686,17 +2686,17 @@
       <condition />
       <speak-player>
         <resources name="No name" />
-        <text>¿Y estos?</text>
+        <text>¿Y estas?</text>
       </speak-player>
       <condition />
       <speak-char idTarget="ChicoMates">
         <resources name="No name" />
-        <text>Tampoco, vete a la facultad de enfrente, allí puede ser.</text>
+        <text>Tampoco, vete a la facultad de enfrente, allí puede ser que sepan algo.</text>
       </speak-char>
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="1144" editor-y="434">
+    <dialogue-node nodeindex="3" editor-x="1353" editor-y="458">
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
