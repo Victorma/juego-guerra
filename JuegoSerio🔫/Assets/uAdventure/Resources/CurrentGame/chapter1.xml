@@ -153,7 +153,7 @@
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
         <documentation>Created with target conversation: Conversacion_Arquitectura</documentation>
         <condition>
-          <inactive flag="FinCapape" />
+          <inactive flag="usadoArquitectura" />
         </condition>
         <effect>
           <trigger-conversation idTarget="Conversacion_Arquitectura" />
@@ -163,7 +163,7 @@
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
         <documentation>Created with target conversation: Conversacion_Arquitectura_Fin</documentation>
         <condition>
-          <active flag="FinCapape" />
+          <active flag="usadoArquitectura" />
         </condition>
         <effect>
           <trigger-conversation idTarget="Conversacion_Arquitectura_Fin" />
@@ -451,7 +451,7 @@
       </talk-to>
     </actions>
   </character>
-  <map-scene id="MapaJugable" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4364545764484 -3.74027609825133 0.0185015955099104 0.0219297409057417" center="(40.4485942709869, -3.72919589281178)" zoom="17" start="no">
+  <map-scene id="MapaJugable" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4364545764484 -3.74027609825133 0.0185015955099104 0.0219297409057417" center="(40.4481697146484, -3.72956067323779)" zoom="17" start="no">
     <map-element targetId="FacultadMedicina" layer="0">
       <condition />
     </map-element>
@@ -1009,18 +1009,6 @@
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="Conversacion_FacultadInformatica">
-    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
-      <speak-player>
-        <resources name="No name">
-          <asset type="image" uri="" />
-        </resources>
-        <text>#O </text>
-      </speak-player>
-      <condition />
-      <end-conversation />
-    </dialogue-node>
-  </graph-conversation>
   <graph-conversation id="ConversacionInicial">
     <option-node nodeindex="0" preListening="yes" editor-x="73" editor-y="108" x="73" y="108">
       <speak-player>
@@ -1185,6 +1173,18 @@
       </end-conversation>
     </dialogue-node>
   </graph-conversation>
+  <graph-conversation id="Conversacion_FacultadInformatica">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>
+        <resources name="No name">
+          <asset type="image" uri="" />
+        </resources>
+        <text>#O </text>
+      </speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
   <graph-conversation id="ConversacionSoldadoMedicina">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
       <speak-char idTarget="SoldadoMedicina">
@@ -1295,9 +1295,7 @@
           <asset type="image" uri="assets/image/FacultadMedicina.png" />
         </resources>
       </speak-player>
-      <condition>
-        <inactive flag="FotoAgronomosEnsenyada" />
-      </condition>
+      <condition />
       <child nodeindex="5" />
       <speak-player>
         <text>¿Y esta?</text>
@@ -1456,10 +1454,16 @@
       <condition />
       <child nodeindex="1" />
       <effect>
-        <activate flag="FotoAgronomosEnsenyada" />
+        <activate flag="usadoAgronomos" />
         <condition />
-        <increment var="Fotografias" value="1" />
-        <condition />
+        <trigger-cutscene idTarget="Final" />
+        <condition>
+          <active flag="usadoAgronomos" />
+          <active flag="usadoArquitectura" />
+          <inactive flag="usadoClinica" />
+          <active flag="usadoFilosofia" />
+          <active flag="usadoVelazquez" />
+        </condition>
       </effect>
     </dialogue-node>
     <dialogue-node nodeindex="6" editor-x="1101" editor-y="905">
@@ -1858,10 +1862,16 @@
       <condition />
       <end-conversation>
         <effect>
-          <activate flag="FinCapape" />
+          <activate flag="usadoArquitectura" />
           <condition />
-          <increment var="Fotografias" value="1" />
-          <condition />
+          <trigger-cutscene idTarget="Final" />
+          <condition>
+            <active flag="usadoAgronomos" />
+            <active flag="usadoArquitectura" />
+            <active flag="usadoClinica" />
+            <active flag="usadoFilosofia" />
+            <active flag="usadoVelazquez" />
+          </condition>
         </effect>
       </end-conversation>
     </dialogue-node>
@@ -2143,7 +2153,7 @@
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="Conversacion_Arquitectura_Fin">
-    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+    <dialogue-node nodeindex="0" editor-x="206" editor-y="58">
       <speak-player>
         <resources name="No name" />
         <text>Ahora mismo estoy ocupado.</text>
@@ -2184,7 +2194,7 @@
       </condition>
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" preListening="yes" editor-x="15046" editor-y="92" x="15046" y="92">
+    <option-node nodeindex="1" preListening="yes" editor-x="15091" editor-y="114" x="15091" y="114">
       <speak-player>
         <text>¿Qué pasó aquí?</text>
         <resources name="No name" />
@@ -2299,19 +2309,25 @@
         <text>#O Perfecto, ya me queda una foto menos.</text>
       </speak-player>
       <condition>
-        <inactive flag="Foto_Polono" />
+        <inactive flag="usadoVelazquez" />
       </condition>
       <child nodeindex="1" />
       <effect>
         <consume-object idTarget="ImagenEstatuaVelazquez" />
         <condition />
-        <activate flag="Foto_Polono" />
+        <activate flag="usadoVelazquez" />
         <condition />
-        <increment var="Fotografias" value="1" />
-        <condition />
+        <trigger-cutscene idTarget="Final" />
+        <condition>
+          <active flag="usadoAgronomos" />
+          <active flag="usadoArquitectura" />
+          <active flag="usadoClinica" />
+          <active flag="usadoFilosofia" />
+          <active flag="usadoVelazquez" />
+        </condition>
       </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="5" editor-x="17895" editor-y="2036">
+    <dialogue-node nodeindex="5" editor-x="17615" editor-y="1796">
       <speak-player>
         <resources name="No name" />
         <text>Do Widzenia, espero volver a vernos.</text>
@@ -2764,8 +2780,14 @@
       <effect>
         <activate flag="usadoFilosofia" />
         <condition />
-        <increment var="Fotografias" value="1" />
-        <condition />
+        <trigger-cutscene idTarget="Final" />
+        <condition>
+          <active flag="usadoFilosofia" />
+          <active flag="usadoVelazquez" />
+          <active flag="usadoArquitectura" />
+          <active flag="usadoAgronomos" />
+          <active flag="usadoClinica" />
+        </condition>
       </effect>
     </dialogue-node>
     <dialogue-node nodeindex="5" editor-x="612" editor-y="642">
