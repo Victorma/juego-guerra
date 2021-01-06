@@ -1614,6 +1614,124 @@
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
+  <graph-conversation id="ConversacionNinyoMedicina">
+    <dialogue-node nodeindex="0" editor-x="59" editor-y="53">
+      <speak-player>
+        <resources name="No name" />
+        <text>Disculpa. ¿Tienes un momento?</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="NinyoMedicina">
+        <resources name="No name" />
+        <text>¡Anda! ¿Estás vivo?</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Pues si...</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="NinyoMedicina">
+        <resources name="No name" />
+        <text>Curioso... Rompes la monotonía. Aquí todo el mundo está chiflado.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="NinyoMedicina">
+        <resources name="No name" />
+        <text>¿Necesitas algo?</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" preListening="yes" editor-x="643" editor-y="62" x="643" y="62">
+      <speak-player>
+        <text>¿Te suena esta foto?</text>
+        <resources name="No name">
+          <asset type="image" uri="assets/image/EstatuaVelazquez.png" />
+        </resources>
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>¿Y esta?</text>
+        <resources name="No name">
+          <asset type="image" uri="assets/image/PabellonFilosofia.jpg" />
+        </resources>
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>
+        <text>Debería irme.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="980" editor-y="14">
+      <speak-char idTarget="NinyoMedicina">
+        <resources name="No name" />
+        <text>Si claro, estamos aquí mism... Oh espera...</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Que va, la estatua de la foto no es la de esta plaza.</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="NinyoMedicina">
+        <resources name="No name" />
+        <text>No recuerdo exáctamente el nombre del edificio...</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="NinyoMedicina">
+        <resources name="No name" />
+        <text>¿Hogar Goya... Villa Picasso... Casa...?</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>#O Supongo que será algo de un pintor...</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>#O Debería mirar el mapa, seguro que encuentro algo.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="974" editor-y="358">
+      <speak-char idTarget="NinyoMedicina">
+        <resources name="No name" />
+        <text>A ver a ver...</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="NinyoMedicina">
+        <resources name="No name" />
+        <text>¡Madre mia, menudo destrozo!</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="NinyoMedicina">
+        <resources name="No name" />
+        <text>Esto saca pinta de ser un pabellón de una facultad.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="NinyoMedicina">
+        <resources name="No name" />
+        <text>Lo siento, no puedo decirte nada más sobre el tema.</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="960" editor-y="621">
+      <speak-char idTarget="NinyoMedicina">
+        <resources name="No name" />
+        <text>¡Nos vemos!</text>
+      </speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
   <graph-conversation id="Conversacion_Arquitectura">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
       <speak-char idTarget="RiosCapape">
@@ -1746,124 +1864,6 @@
           <condition />
         </effect>
       </end-conversation>
-    </dialogue-node>
-  </graph-conversation>
-  <graph-conversation id="ConversacionNinyoMedicina">
-    <dialogue-node nodeindex="0" editor-x="59" editor-y="53">
-      <speak-player>
-        <resources name="No name" />
-        <text>Disculpa. ¿Tienes un momento?</text>
-      </speak-player>
-      <condition />
-      <speak-char idTarget="NinyoMedicina">
-        <resources name="No name" />
-        <text>¡Anda! ¿Estás vivo?</text>
-      </speak-char>
-      <condition />
-      <speak-player>
-        <resources name="No name" />
-        <text>Pues si...</text>
-      </speak-player>
-      <condition />
-      <speak-char idTarget="NinyoMedicina">
-        <resources name="No name" />
-        <text>Curioso... Rompes la monotonía. Aquí todo el mundo está chiflado.</text>
-      </speak-char>
-      <condition />
-      <speak-char idTarget="NinyoMedicina">
-        <resources name="No name" />
-        <text>¿Necesitas algo?</text>
-      </speak-char>
-      <condition />
-      <child nodeindex="1" />
-    </dialogue-node>
-    <option-node nodeindex="1" preListening="yes" editor-x="643" editor-y="62" x="643" y="62">
-      <speak-player>
-        <text>¿Te suena esta foto?</text>
-        <resources name="No name">
-          <asset type="image" uri="assets/image/EstatuaVelazquez.png" />
-        </resources>
-      </speak-player>
-      <condition />
-      <child nodeindex="2" />
-      <speak-player>
-        <text>¿Y esta?</text>
-        <resources name="No name">
-          <asset type="image" uri="assets/image/PabellonFilosofia.jpg" />
-        </resources>
-      </speak-player>
-      <condition />
-      <child nodeindex="3" />
-      <speak-player>
-        <text>Debería irme.</text>
-        <resources name="No name" />
-      </speak-player>
-      <condition />
-      <child nodeindex="4" />
-    </option-node>
-    <dialogue-node nodeindex="2" editor-x="980" editor-y="14">
-      <speak-char idTarget="NinyoMedicina">
-        <resources name="No name" />
-        <text>Si claro, estamos aquí mism... Oh espera...</text>
-      </speak-char>
-      <condition />
-      <speak-player>
-        <resources name="No name" />
-        <text>Que va, la estatua de la foto no es la de esta plaza.</text>
-      </speak-player>
-      <condition />
-      <speak-char idTarget="NinyoMedicina">
-        <resources name="No name" />
-        <text>No recuerdo exáctamente el nombre del edificio...</text>
-      </speak-char>
-      <condition />
-      <speak-char idTarget="NinyoMedicina">
-        <resources name="No name" />
-        <text>¿Hogar Goya... Villa Picasso... Casa...?</text>
-      </speak-char>
-      <condition />
-      <speak-player>
-        <resources name="No name" />
-        <text>#O Supongo que será algo de un pintor...</text>
-      </speak-player>
-      <condition />
-      <speak-player>
-        <resources name="No name" />
-        <text>#O Debería mirar el mapa, seguro que encuentro algo.</text>
-      </speak-player>
-      <condition />
-      <child nodeindex="1" />
-    </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="974" editor-y="358">
-      <speak-char idTarget="NinyoMedicina">
-        <resources name="No name" />
-        <text>A ver a ver...</text>
-      </speak-char>
-      <condition />
-      <speak-char idTarget="NinyoMedicina">
-        <resources name="No name" />
-        <text>¡Madre mia, menudo destrozo!</text>
-      </speak-char>
-      <condition />
-      <speak-char idTarget="NinyoMedicina">
-        <resources name="No name" />
-        <text>Esto saca pinta de ser un pabellón de una facultad.</text>
-      </speak-char>
-      <condition />
-      <speak-char idTarget="NinyoMedicina">
-        <resources name="No name" />
-        <text>Lo siento, no puedo decirte nada más sobre el tema.</text>
-      </speak-char>
-      <condition />
-      <child nodeindex="1" />
-    </dialogue-node>
-    <dialogue-node nodeindex="4" editor-x="960" editor-y="621">
-      <speak-char idTarget="NinyoMedicina">
-        <resources name="No name" />
-        <text>¡Nos vemos!</text>
-      </speak-char>
-      <condition />
-      <end-conversation />
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="ConversacionSoldadoComunista">
@@ -2489,23 +2489,42 @@
         <resources name="No name" />
         <text>¿Hola?</text>
       </speak-player>
-      <condition />
+      <condition>
+        <inactive flag="FilosofiaPresentada" />
+      </condition>
       <speak-char idTarget="ChicaFilosofia">
         <resources name="No name" />
         <text>¡Menuda sorpresa! ¿Cómo puedes verme?</text>
       </speak-char>
-      <condition />
+      <condition>
+        <inactive flag="FilosofiaPresentada" />
+      </condition>
       <speak-player>
         <resources name="No name" />
         <text>Ni idea... Estoy buscando unas fotos que pertenecían a mi abuelo.</text>
       </speak-player>
-      <condition />
+      <condition>
+        <inactive flag="FilosofiaPresentada" />
+      </condition>
       <speak-player>
         <resources name="No name" />
         <text>¡Pues bienvenido a la facultad de Filosofía! A ver si te puedo ayudar.</text>
       </speak-player>
-      <condition />
+      <condition>
+        <inactive flag="FilosofiaPresentada" />
+      </condition>
+      <speak-char idTarget="ChicaFilosofia">
+        <resources name="No name" />
+        <text>¡Hola de nuevo!</text>
+      </speak-char>
+      <condition>
+        <active flag="FilosofiaPresentada" />
+      </condition>
       <child nodeindex="1" />
+      <effect>
+        <activate flag="FilosofiaPresentada" />
+        <condition />
+      </effect>
     </dialogue-node>
     <option-node nodeindex="1" preListening="yes" editor-x="524" editor-y="22" x="524" y="22">
       <speak-player>
@@ -2572,7 +2591,7 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="1007" editor-y="314">
+    <dialogue-node nodeindex="3" editor-x="1180" editor-y="331">
       <speak-char idTarget="ChicaFilosofia">
         <resources name="No name" />
         <text>La facultad empezó su construcción bajo el reinado de Alfonso XIII.</text>
@@ -2610,7 +2629,7 @@
         <text>Tras la guerra decidieron reconstruir el campus. Tuvieron que tirar prácticamente todo el edificio...</text>
       </speak-char>
       <condition />
-      <end-conversation />
+      <child nodeindex="1" />
     </dialogue-node>
     <dialogue-node nodeindex="4" editor-x="1063" editor-y="658">
       <speak-char idTarget="ChicaFilosofia">
@@ -2772,7 +2791,20 @@
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="IntroduccionGuia">
-    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+    <option-node nodeindex="0" preListening="yes" editor-x="44" editor-y="85" x="44" y="85">
+      <speak-player>
+        <text>Hacer la introduccion</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+      <speak-player>
+        <text>Saltarse la introduccion</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+    </option-node>
+    <dialogue-node nodeindex="1" editor-x="492" editor-y="88">
       <speak-player>
         <resources name="No name" />
         <text>#O Madre mia... ¿Y las pintas de este señor?</text>
@@ -2823,23 +2855,33 @@
         <text>A ver a ver... ¡Relámpagos! Que recuerdos... Mira, te puedo ayudar a encontrarlas. Nos lo pasaremos bien.</text>
       </speak-char>
       <condition />
-      <child nodeindex="1" />
+      <child nodeindex="3" />
     </dialogue-node>
-    <option-node nodeindex="1" preListening="yes" editor-x="1021" editor-y="50" x="1021" y="50">
+    <dialogue-node nodeindex="2" editor-x="264" editor-y="420">
+      <end-conversation>
+        <effect>
+          <activate flag="IntroduccionGuia" />
+          <condition />
+          <trigger-scene idTarget="MapaJugable" x="539" y="455" transitionTime="1000" transitionType="5" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <option-node nodeindex="3" preListening="yes" editor-x="1021" editor-y="50" x="1021" y="50">
       <speak-player>
         <text>¿Por qué no me díces dónde están?</text>
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="2" />
+      <child nodeindex="4" />
       <speak-player>
         <text>De acuerdo.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="3" />
+      <child nodeindex="5" />
     </option-node>
-    <dialogue-node nodeindex="2" editor-x="1415" editor-y="27">
+    <dialogue-node nodeindex="4" editor-x="1415" editor-y="27">
       <speak-char idTarget="GuiaJugador">
         <resources name="No name" />
         <text>¿Y qué gracia tendría eso?</text>
@@ -2860,9 +2902,9 @@
         <text>De acuerdo...</text>
       </speak-player>
       <condition />
-      <child nodeindex="3" />
+      <child nodeindex="5" />
     </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="1043" editor-y="408">
+    <dialogue-node nodeindex="5" editor-x="1043" editor-y="408">
       <speak-player>
         <resources name="No name" />
         <text>¿Por dónde debería empezar?</text>
@@ -2873,23 +2915,23 @@
         <text>Deberías preguntar a la gente de por aquí. A estas horas deberían estar levantándose...</text>
       </speak-char>
       <condition />
-      <child nodeindex="4" />
+      <child nodeindex="6" />
     </dialogue-node>
-    <option-node nodeindex="4" keepShowing="yes" preListening="yes" editor-x="1871" editor-y="408" x="1871" y="408">
+    <option-node nodeindex="6" keepShowing="yes" preListening="yes" editor-x="1871" editor-y="408" x="1871" y="408">
       <speak-player>
         <text>¿Estudiantes?</text>
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="5" />
+      <child nodeindex="7" />
       <speak-player>
         <text>¿Hay más como tú?</text>
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="6" />
+      <child nodeindex="8" />
     </option-node>
-    <dialogue-node nodeindex="5" editor-x="2146" editor-y="293">
+    <dialogue-node nodeindex="7" editor-x="2146" editor-y="293">
       <speak-char idTarget="GuiaJugador">
         <resources name="No name" />
         <text>¡Claro que no!</text>
@@ -2910,9 +2952,9 @@
         <text>Mira, hay más gente como yo.</text>
       </speak-char>
       <condition />
-      <child nodeindex="6" />
+      <child nodeindex="8" />
     </dialogue-node>
-    <dialogue-node nodeindex="6" editor-x="2235" editor-y="635">
+    <dialogue-node nodeindex="8" editor-x="2235" editor-y="635">
       <speak-char idTarget="GuiaJugador">
         <resources name="No name" />
         <text>Y de todos los aspectos. Tanto republicanos como sublevados.</text>
