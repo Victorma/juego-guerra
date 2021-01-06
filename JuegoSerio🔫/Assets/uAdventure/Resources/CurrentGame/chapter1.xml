@@ -2381,12 +2381,12 @@
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
       <speak-player>
         <resources name="No name" />
-        <text>Hola...... hooolaaa!</text>
+        <text>¿Hola?</text>
       </speak-player>
       <condition />
       <speak-char idTarget="PasajeroCInformacion">
         <resources name="No name" />
-        <text>Ho..la, disculpe, llevo mucho tiempo sin hablar con gente</text>
+        <text>Hola, disculpa, llevo mucho tiempo sin hablar con gente.</text>
       </speak-char>
       <condition />
       <child nodeindex="1" />
@@ -2399,7 +2399,7 @@
       <condition />
       <child nodeindex="2" />
       <speak-player>
-        <text>¿Te suena este foto?</text>
+        <text>¿Te suena esta foto?</text>
         <resources name="No name">
           <asset type="image" uri="assets/image/PabellonFilosofia.jpg" />
         </resources>
@@ -2413,7 +2413,7 @@
       <condition />
       <child nodeindex="4" />
     </option-node>
-    <dialogue-node nodeindex="2" editor-x="792" editor-y="1">
+    <dialogue-node nodeindex="2" editor-x="1077" editor-y="15">
       <speak-char idTarget="PasajeroCInformacion">
         <resources name="No name" />
         <text>Soy Vitores Rosales, un soldado de la II República.</text>
@@ -2421,7 +2421,7 @@
       <condition />
       <speak-char idTarget="PasajeroCInformacion">
         <resources name="No name" />
-        <text>Participó en la guerra civil, y murio en este frente de batalla-</text>
+        <text>Participé en la guerra civil, y morí en este frente de batalla.</text>
       </speak-char>
       <condition />
       <speak-player>
@@ -2431,14 +2431,14 @@
       <condition />
       <speak-char idTarget="PasajeroCInformacion">
         <resources name="No name" />
-        <text>Si, antes aquí era un espacio abierto, y un arroyo del río manzanares. Detenemos a los franquistas en este frente con una forma de cuña.</text>
+        <text>Si, antes esto era un espacio abierto y un arroyo del río manzanares. Detuvimos a los franquistas en este frente.</text>
       </speak-char>
       <condition />
       <speak-player>
         <resources name="No name">
           <asset type="image" uri="assets/image/MapaFrente.png" />
         </resources>
-        <text>Es este foto</text>
+        <text>¿Es esta foto?</text>
       </speak-player>
       <condition />
       <speak-char idTarget="PasajeroCInformacion">
@@ -2453,22 +2453,17 @@
         <text>Este frente que dividía a los dos bandos, por tan sólo 50 metros, y pasó a ser el teatro de una guerra de desgaste.</text>
       </speak-char>
       <condition />
-      <speak-char idTarget="PasajeroCInformacion">
-        <resources name="No name" />
-        <text>Bueno, ya sabes mucho de aquí.</text>
-      </speak-char>
-      <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="973" editor-y="416">
+    <dialogue-node nodeindex="3" editor-x="1193" editor-y="414">
       <speak-char idTarget="PasajeroCInformacion">
         <resources name="No name" />
-        <text>Emmm, no conozco, pero me acuerda que en el año 36 solo existía la facultad de letra y de ciencias</text>
+        <text>Emmm, no me suena, pero me recuerdo que en el año 36 solo existía la facultad de letra y de ciencias</text>
       </speak-char>
       <condition />
       <speak-char idTarget="PasajeroCInformacion">
         <resources name="No name" />
-        <text>Uno está a la izquierda y otro a la derecha de esa rodonda.</text>
+        <text>Uno está a la izquierda y otro a la derecha de esa rotonda.</text>
       </speak-char>
       <condition />
       <child nodeindex="1" />
@@ -2479,7 +2474,98 @@
         <condition />
       </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="4" editor-x="788" editor-y="618">
+    <dialogue-node nodeindex="4" editor-x="1677" editor-y="749">
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="ConversacionMatematica">
+    <dialogue-node nodeindex="0" editor-x="52" editor-y="47">
+      <speak-player>
+        <resources name="No name" />
+        <text>Hola</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="ChicoMates">
+        <resources name="No name" />
+        <text>Hola</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Te quería pregunta una cosa</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="ChicoMates">
+        <resources name="No name" />
+        <text>¿Me estás hablando a mi?</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Si te estoy hablando.</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="ChicoMates">
+        <resources name="No name" />
+        <text>¿Cómo puedes verme?</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Emmm. Te veo porque tengo este diario.</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="ChicoMates">
+        <resources name="No name" />
+        <text>¿Diario?, dejame investigar un momento.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="ChicoMates">
+        <resources name="No name" />
+        <text>Ni idea de por que funciona.</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" preListening="yes" editor-x="367" editor-y="119" x="367" y="119">
+      <speak-player>
+        <text>Una pregunta, ¿Conoces esta foto?</text>
+        <resources name="No name">
+          <asset type="image" uri="assets/image/PabellonFilosofia.jpg" />
+        </resources>
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>Tengo que irme, encantado de conocerte.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="827" editor-y="48">
+      <speak-char idTarget="ChicoMates">
+        <resources name="No name" />
+        <text>No</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="ChicoMates">
+        <resources name="No name" />
+        <text>¿Y estos?</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="ChicoMates">
+        <resources name="No name" />
+        <text>Tampoco, vete a la facultad de enfrente, allí puede ser.</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="887" editor-y="395">
+      <speak-char idTarget="ChicoMates">
+        <resources name="No name" />
+        <text>Adios</text>
+      </speak-char>
+      <condition />
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
@@ -2694,100 +2780,6 @@
           <condition />
         </effect>
       </end-conversation>
-    </dialogue-node>
-  </graph-conversation>
-  <graph-conversation id="ConversacionMatematica">
-    <dialogue-node nodeindex="0" editor-x="52" editor-y="47">
-      <speak-player>
-        <resources name="No name" />
-        <text>Hola</text>
-      </speak-player>
-      <condition />
-      <speak-char idTarget="ChicoMates">
-        <resources name="No name" />
-        <text>Hola</text>
-      </speak-char>
-      <condition />
-      <speak-player>
-        <resources name="No name" />
-        <text>Te quería pregunta una cosa</text>
-      </speak-player>
-      <condition />
-      <speak-char idTarget="ChicoMates">
-        <resources name="No name" />
-        <text>Me estás hablando? a mi?</text>
-      </speak-char>
-      <condition />
-      <speak-player>
-        <resources name="No name" />
-        <text>Si te estoy hablando.</text>
-      </speak-player>
-      <condition />
-      <speak-char idTarget="ChicoMates">
-        <resources name="No name" />
-        <text>Oh my god, como puedes verme, estamos en dos mundo diferente, ahora mismo soy una energía como la luz, no puedes percibir con los ojos........</text>
-      </speak-char>
-      <condition />
-      <speak-player>
-        <resources name="No name" />
-        <text>Emmm. Te veo porque tengo este diario.</text>
-      </speak-player>
-      <condition />
-      <speak-char idTarget="ChicoMates">
-        <resources name="No name" />
-        <text>Diario, dejame investigar un momento, este diario actua como un agujero negro que abre la conección entre dos mundo.....</text>
-      </speak-char>
-      <condition />
-      <child nodeindex="1" />
-    </dialogue-node>
-    <option-node nodeindex="1" preListening="yes" editor-x="202" editor-y="397" x="202" y="397">
-      <speak-player>
-        <text>Una pregunta, conoces este foto?</text>
-        <resources name="No name">
-          <asset type="image" uri="assets/image/PabellonFilosofia.jpg" />
-        </resources>
-      </speak-player>
-      <condition>
-        <inactive flag="usadoFilosofia" />
-      </condition>
-      <child nodeindex="2" />
-      <speak-player>
-        <text>Tengo que irme, me encanta conocerte.</text>
-        <resources name="No name" />
-      </speak-player>
-      <condition />
-      <child nodeindex="3" />
-    </option-node>
-    <dialogue-node nodeindex="2" editor-x="720" editor-y="390">
-      <speak-char idTarget="ChicoMates">
-        <resources name="No name" />
-        <text>No</text>
-      </speak-char>
-      <condition />
-      <speak-player>
-        <resources name="No name" />
-        <text>¿Y estos?</text>
-      </speak-player>
-      <condition />
-      <speak-char idTarget="ChicoMates">
-        <resources name="No name" />
-        <text>Tampoco, vete a la facultad de enfrente, allí puede ser.</text>
-      </speak-char>
-      <condition />
-      <speak-char idTarget="ChicoMates">
-        <resources name="No name" />
-        <text>Pero puedes regalarme este diario, creo que tiene una energía muy  potente, incluso puede .........</text>
-      </speak-char>
-      <condition />
-      <speak-player>
-        <resources name="No name" />
-        <text>Diculpe, lo necesito para encontrar a mi abuelo.</text>
-      </speak-player>
-      <condition />
-      <child nodeindex="1" />
-    </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="642" editor-y="701">
-      <end-conversation />
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="IntroduccionGuia">
