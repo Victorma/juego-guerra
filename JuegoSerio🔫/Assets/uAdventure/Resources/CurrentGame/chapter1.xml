@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<eAdventure version="2">
+<eAdventure version="3">
   <player>
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
@@ -451,16 +451,16 @@
       </talk-to>
     </actions>
   </character>
-  <map-scene id="MapaJugable" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40,4364545764484 -3,74027609825133 0,0185015955099104 0,0219297409057417" center="(40.4485942709869, -3.72919589281178)" zoom="17" start="no">
-    <map-element targetId="FacultadMedicina" layer="0" scale="1" orientation="2">
+  <map-scene id="MapaJugable" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4364545764484 -3.74027609825133 0.0185015955099104 0.0219297409057417" center="(40.4485942709869, -3.72919589281178)" zoom="17" start="no">
+    <map-element targetId="FacultadMedicina" layer="0">
       <condition />
     </map-element>
-    <map-element targetId="PuntoInteres" layer="0" scale="1" orientation="2">
+    <map-element targetId="PuntoInteres" layer="0">
       <condition />
     </map-element>
-    <map-element targetId="GuiaJugador" layer="0" scale="0.2174702" orientation="0">
+    <map-element targetId="GuiaJugador" layer="0">
       <condition />
-      <ext-elem-ref transformManager="uAdventure.Geo.ScreenDescriptor">
+      <ext-elem-ref scale="0.2174702" orientation="0" transformManager="uAdventure.Geo.ScreenDescriptor">
         <param name="Position">(35.02824, 752.9675)</param>
         <param name="Rotation">0</param>
         <actions>
@@ -474,18 +474,18 @@
         </actions>
       </ext-elem-ref>
     </map-element>
-    <map-element targetId="EscuelaArquitectura" layer="0" scale="1" orientation="2">
+    <map-element targetId="EscuelaArquitectura" layer="0">
       <condition />
     </map-element>
-    <map-element targetId="CasaDeVelazquez" layer="0" scale="1" orientation="2">
+    <map-element targetId="CasaDeVelazquez" layer="0">
       <condition />
     </map-element>
-    <map-element targetId="StartingPosition" layer="0" scale="1" orientation="2">
+    <map-element targetId="StartingPosition" layer="0">
       <condition />
     </map-element>
-    <map-element targetId="SoldadoMedicina" layer="0" scale="0.1194849" orientation="0">
+    <map-element targetId="SoldadoMedicina" layer="0">
       <condition />
-      <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
+      <ext-elem-ref scale="0.1194849" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
         <param name="Position">(40.4422073364258, -3.72698044776917)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">25.34</param>
@@ -510,9 +510,9 @@
         </actions>
       </ext-elem-ref>
     </map-element>
-    <map-element targetId="RiosCapape" layer="0" scale="0.3805234" orientation="0">
+    <map-element targetId="RiosCapape" layer="0">
       <condition />
-      <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
+      <ext-elem-ref scale="0.3805234" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
         <param name="Position">(40.440013885498, -3.73116993904114)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">100</param>
@@ -530,9 +530,9 @@
         </actions>
       </ext-elem-ref>
     </map-element>
-    <map-element targetId="NinyoMedicina" layer="0" scale="0.1593944" orientation="2">
+    <map-element targetId="NinyoMedicina" layer="0">
       <condition />
-      <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
+      <ext-elem-ref scale="0.1593944" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
         <param name="Position">(40.4441986083984, -3.72692942619324)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">25</param>
@@ -542,9 +542,9 @@
         <actions />
       </ext-elem-ref>
     </map-element>
-    <map-element targetId="SoldadoComunista" layer="0" scale="0.08613304" orientation="2">
+    <map-element targetId="SoldadoComunista" layer="0">
       <condition />
-      <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
+      <ext-elem-ref scale="0.08613304" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
         <param name="Position">(40.4433059692383, -3.7275812625885)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">25</param>
@@ -554,9 +554,9 @@
         <actions />
       </ext-elem-ref>
     </map-element>
-    <map-element targetId="Polono_Velazquez" layer="0" scale="0.5186755" orientation="0">
+    <map-element targetId="Polono_Velazquez" layer="0">
       <condition />
-      <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
+      <ext-elem-ref scale="0.5186755" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
         <param name="Position">(40.4412612915039, -3.73042154312134)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">69.9</param>
@@ -566,9 +566,9 @@
         <actions />
       </ext-elem-ref>
     </map-element>
-    <map-element targetId="Naranjero" layer="0" scale="0.03791257" orientation="2">
+    <map-element targetId="Naranjero" layer="0">
       <condition />
-      <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
+      <ext-elem-ref scale="0.03791257" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
         <param name="Position">(40.4430465698242, -3.728276014328)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">26.3</param>
@@ -578,9 +578,9 @@
         <actions />
       </ext-elem-ref>
     </map-element>
-    <map-element targetId="Soldado_Perdido" layer="0" scale="1" orientation="2">
+    <map-element targetId="Soldado_Perdido" layer="0">
       <condition />
-      <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
+      <ext-elem-ref scale="1" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
         <param name="Position">(40.4421310424805, -3.72927379608154)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">25</param>
@@ -590,9 +590,9 @@
         <actions />
       </ext-elem-ref>
     </map-element>
-    <map-element targetId="ChicoMates" layer="0" scale="0.2690932" orientation="0">
+    <map-element targetId="ChicoMates" layer="0">
       <condition />
-      <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
+      <ext-elem-ref scale="0.2690932" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
         <param name="Position">(40.4490699768066, -3.72729682922363)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">40</param>
@@ -602,9 +602,9 @@
         <actions />
       </ext-elem-ref>
     </map-element>
-    <map-element targetId="PasajeroCInformacion" layer="0" scale="0.2708103" orientation="0">
+    <map-element targetId="PasajeroCInformacion" layer="0">
       <condition />
-      <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
+      <ext-elem-ref scale="0.2708103" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
         <param name="Position">(40.4459953308105, -3.72796750068665)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">50</param>
@@ -614,9 +614,9 @@
         <actions />
       </ext-elem-ref>
     </map-element>
-    <map-element targetId="ChicaFilosofia" layer="0" scale="0.2461715" orientation="2">
+    <map-element targetId="ChicaFilosofia" layer="0">
       <condition />
-      <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
+      <ext-elem-ref scale="0.2461715" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
         <param name="Position">(40.4491386413574, -3.73054504394531)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">42.29</param>
@@ -626,14 +626,14 @@
         <actions />
       </ext-elem-ref>
     </map-element>
-    <map-element targetId="FacultadMates" layer="0" scale="1" orientation="2">
+    <map-element targetId="FacultadMates" layer="0">
       <condition />
     </map-element>
   </map-scene>
-  <map-scene id="MapaIntroduccion" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40,436450958252 -3,74027609825134 0,0199999995529652 0,0199999995529652" center="(40.4472185359692, -3.72719764709527)" zoom="18" start="no">
-    <map-element targetId="GuiaJugador" layer="0" scale="0.03484683" orientation="0">
+  <map-scene id="MapaIntroduccion" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.436450958252 -3.74027609825134 0.0199999995529652 0.0199999995529652" center="(40.4472185359692, -3.72719764709527)" zoom="18" start="no">
+    <map-element targetId="GuiaJugador" layer="0">
       <condition />
-      <ext-elem-ref transformManager="uAdventure.Geo.GeopositionedDescriptor">
+      <ext-elem-ref scale="0.03484683" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
         <param name="Position">(40.4435691833496, -3.72683548927307)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">33.57</param>
@@ -644,7 +644,7 @@
       </ext-elem-ref>
     </map-element>
   </map-scene>
-  <geoelement id="FacultadMedicina">
+  <geo-element id="FacultadMedicina">
     <description>
       <name>Facultad de Medicina</name>
       <brief>
@@ -664,15 +664,15 @@
         <Polygon>
           <exterior>
             <LinearRing>
-              <posList>40,4421297039156 -3,726623654366 40,4420562167582 -3,72731029987381 40,4425134696384 -3,72737467289017 40,4425747082969 -3,7266987562184</posList>
+              <posList>40.4421297039156 -3.726623654366 40.4420562167582 -3.72731029987381 40.4425134696384 -3.72737467289017 40.4425747082969 -3.7266987562184</posList>
             </LinearRing>
           </exterior>
         </Polygon>
       </geometry>
     </geometries>
     <actions />
-  </geoelement>
-  <geoelement id="EscuelaArquitectura">
+  </geo-element>
+  <geo-element id="EscuelaArquitectura">
     <description>
       <name>
       </name>
@@ -686,15 +686,15 @@
         <Polygon>
           <exterior>
             <LinearRing>
-              <posList>40,440574016062 -3,73075296523877 40,4409235988455 -3,73109192940302 40,4410664940722 -3,73182149030681 40,4406418902091 -3,73200388051985 40,4397130599088 -3,73204411365505 40,4395824102695 -3,73042405935832 40,4399171996048 -3,73039455505916 40,4399580273339 -3,73082102629253</posList>
+              <posList>40.440574016062 -3.73075296523877 40.4409235988455 -3.73109192940302 40.4410664940722 -3.73182149030681 40.4406418902091 -3.73200388051985 40.4397130599088 -3.73204411365505 40.4395824102695 -3.73042405935832 40.4399171996048 -3.73039455505916 40.4399580273339 -3.73082102629253</posList>
             </LinearRing>
           </exterior>
         </Polygon>
       </geometry>
     </geometries>
     <actions />
-  </geoelement>
-  <geoelement id="PuntoInteres">
+  </geo-element>
+  <geo-element id="PuntoInteres">
     <description>
       <name>
       </name>
@@ -708,15 +708,15 @@
         <Polygon>
           <exterior>
             <LinearRing>
-              <posList>40,4416244724775 -3,73004883527792 40,4412754021816 -3,72960090637243 40,4408916268988 -3,72978866100347 40,4409834882032 -3,73030632734336 40,4412325337746 -3,7314489483837 40,4420654008042 -3,73105198144956</posList>
+              <posList>40.4416244724775 -3.73004883527792 40.4412754021816 -3.72960090637243 40.4408916268988 -3.72978866100347 40.4409834882032 -3.73030632734336 40.4412325337746 -3.7314489483837 40.4420654008042 -3.73105198144956</posList>
             </LinearRing>
           </exterior>
         </Polygon>
       </geometry>
     </geometries>
     <actions />
-  </geoelement>
-  <geoelement id="CasaDeVelazquez">
+  </geo-element>
+  <geo-element id="CasaDeVelazquez">
     <description>
       <name>
       </name>
@@ -734,8 +734,8 @@
       </geometry>
     </geometries>
     <actions />
-  </geoelement>
-  <geoelement id="StartingPosition">
+  </geo-element>
+  <geo-element id="StartingPosition">
     <description>
       <name>
       </name>
@@ -747,13 +747,13 @@
     <geometries>
       <geometry influence="0">
         <Point>
-          <pos>40,4437987940793 -3,72606228822173</pos>
+          <pos>40.4437987940793 -3.72606228822173</pos>
         </Point>
       </geometry>
     </geometries>
     <actions />
-  </geoelement>
-  <geoelement id="FacultadFilosofias">
+  </geo-element>
+  <geo-element id="FacultadFilosofias">
     <description>
       <name>Facultad de Filosofía y filología</name>
       <brief>
@@ -766,7 +766,7 @@
         <Polygon>
           <exterior>
             <LinearRing>
-              <posList>40,4490826513225 -3,72973917223115 40,4485621649915 -3,72964797712466 40,4483927509862 -3,73121170498023 40,4489111974469 -3,73131362892289</posList>
+              <posList>40.4490826513225 -3.72973917223115 40.4485621649915 -3.72964797712466 40.4483927509862 -3.73121170498023 40.4489111974469 -3.73131362892289</posList>
             </LinearRing>
           </exterior>
         </Polygon>
@@ -788,8 +788,8 @@
         <only-from-inside>True</only-from-inside>
       </exit-action>
     </actions>
-  </geoelement>
-  <geoelement id="FacultadMates">
+  </geo-element>
+  <geo-element id="FacultadMates">
     <description>
       <name>
       </name>
@@ -803,14 +803,14 @@
         <Polygon>
           <exterior>
             <LinearRing>
-              <posList>40,4484498351692 -3,72685696052892 40,4493684754788 -3,72703935074192 40,4495725857227 -3,72486041214823 40,4486539482032 -3,72473166611551</posList>
+              <posList>40.4484498351692 -3.72685696052892 40.4493684754788 -3.72703935074192 40.4495725857227 -3.72486041214823 40.4486539482032 -3.72473166611551</posList>
             </LinearRing>
           </exterior>
         </Polygon>
       </geometry>
     </geometries>
     <actions />
-  </geoelement>
+  </geo-element>
   <scene id="InitialScene1" hideInventory="no" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
