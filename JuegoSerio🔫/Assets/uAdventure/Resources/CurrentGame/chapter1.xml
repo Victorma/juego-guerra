@@ -451,7 +451,47 @@
       </talk-to>
     </actions>
   </character>
-  <map-scene id="MapaJugable" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4364545764484 -3.74027609825133 0.0185015955099104 0.0219297409057417" center="(40.4481697146484, -3.72956067323779)" zoom="17" start="no">
+  <character id="ColumnistaDurruti" behaviour="normal">
+    <resources name="No name">
+      <asset type="standup" uri="assets/animation/ColumnistaDurrutiUp.eaa.xml" />
+      <asset type="standdown" uri="assets/special/EmptyAnimation" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <documentation>Created with target conversation: ConversacionDurruti</documentation>
+        <effect>
+          <trigger-conversation idTarget="ConversacionDurruti" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
+  </character>
+  <map-scene id="MapaJugable" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4364545764484 -3.74027609825133 0.0185015955099104 0.0219297409057417" center="(40.4436565574292, -3.72712522745103)" zoom="18" start="no">
     <map-element targetId="FacultadMedicina" layer="0">
       <condition />
     </map-element>
@@ -629,6 +669,21 @@
     <map-element targetId="FacultadMates" layer="0">
       <condition />
     </map-element>
+    <map-element targetId="Clinico" layer="0">
+      <condition />
+    </map-element>
+    <map-element targetId="ColumnistaDurruti" layer="0">
+      <condition />
+      <ext-elem-ref scale="0.1155512" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4410514831543, -3.72166419029236)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">25</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="Hint">False</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+        <actions />
+      </ext-elem-ref>
+    </map-element>
   </map-scene>
   <map-scene id="MapaIntroduccion" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.436450958252 -3.74027609825134 0.0199999995529652 0.0199999995529652" center="(40.4472185359692, -3.72719764709527)" zoom="18" start="no">
     <map-element targetId="GuiaJugador" layer="0">
@@ -804,6 +859,33 @@
           <exterior>
             <LinearRing>
               <posList>40.4484498351692 -3.72685696052892 40.4493684754788 -3.72703935074192 40.4495725857227 -3.72486041214823 40.4486539482032 -3.72473166611551</posList>
+            </LinearRing>
+          </exterior>
+        </Polygon>
+      </geometry>
+    </geometries>
+    <actions />
+  </geo-element>
+  <geo-element id="Clinico">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="5">
+        <LineString>
+          <posList>40.4417990069456 -3.72670948505371 40.4420194708894 -3.72479975223511 40.4417745109072 -3.72373759746522 40.4411988514356 -3.72220337390871 40.4412845882651 -3.72191905975311</posList>
+        </LineString>
+      </geometry>
+      <geometry influence="10">
+        <Polygon>
+          <exterior>
+            <LinearRing>
+              <posList>40.4423092583128 -3.71989130973753 40.4402843383863 -3.71828198432859 40.4392799708637 -3.72026681899962 40.4412395978786 -3.72180104255656</posList>
             </LinearRing>
           </exterior>
         </Polygon>
@@ -1143,7 +1225,7 @@
     <dialogue-node nodeindex="7" editor-x="1133" editor-y="370">
       <speak-player>
         <resources name="No name" />
-        <text>Y por último, una foto de unos edificios tomada desde el otro lado de la calle.</text>
+        <text>Una foto de unos edificios tomada desde el otro lado de la calle.</text>
       </speak-player>
       <condition />
       <child nodeindex="8" />
@@ -1152,7 +1234,21 @@
         <condition />
       </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="8" editor-x="1368" editor-y="370">
+    <dialogue-node nodeindex="8" editor-x="1376" editor-y="368">
+      <speak-player>
+        <resources name="No name">
+          <asset type="image" uri="assets/image/El Clínico_20-10-39.jpg" />
+        </resources>
+        <text>Y por último, esta imagen aérea de un edificio destrozado.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="9" />
+      <effect>
+        <generate-object idTarget="ImagenClinico" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="9" editor-x="1647" editor-y="342">
       <speak-player>
         <resources name="No name" />
         <text>Mi objetivo es localizar estos escenarios en la Ciudad Universitaria.</text>
@@ -2999,6 +3095,112 @@
       </end-conversation>
     </dialogue-node>
   </graph-conversation>
+  <graph-conversation id="ConversacionDurruti">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="ColumnistaDurruti">
+        <resources name="No name" />
+        <text>Buenos dias, o tardes, la verdad es que no estoy seguro.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="ColumnistaDurruti">
+        <resources name="No name" />
+        <text>Bueno, ¿qué te trae por aquí?</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" preListening="yes" editor-x="666" editor-y="344" x="666" y="344">
+      <speak-player>
+        <text>¿Quién eres?</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>¿Qué sabes de esta foto?</text>
+        <resources name="No name">
+          <asset type="image" uri="assets/image/El Clínico_20-10-39.jpg" />
+        </resources>
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>
+        <text>Me tengo que ir</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="1375" editor-y="6">
+      <speak-char idTarget="ColumnistaDurruti">
+        <resources name="No name" />
+        <text>¿Yo?, pues antes de morir pertenecía a la Columna Durruti.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="ColumnistaDurruti">
+        <resources name="No name" />
+        <text>Llegamos a Madrid el 15 de noviembre, a las 9:00 de la mañana creo.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="ColumnistaDurruti">
+        <resources name="No name" />
+        <text>Veníamos desde los frentes de Aragón, eramos unos 1600 hombres.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="ColumnistaDurruti">
+        <resources name="No name" />
+        <text>Se nos asigno al Clínico, al día siguiente, hicimos un contraataque desde las Facultades hasta el Clínico. Lo logramos y avanzamos.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="ColumnistaDurruti">
+        <resources name="No name" />
+        <text>Pero al día siguiente, los nacionales contraatacaron, nos defendimos como pudimos en el ASilo de Santa Cristina. Ese edificio fue destruido durante el conflicto</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="ColumnistaDurruti">
+        <resources name="No name" />
+        <text>Tuvimos que retroceder, de hecho estuvimos retrocediendo hasta el 19, de día que Durruti murío.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="ColumnistaDurruti">
+        <resources name="No name" />
+        <text>El día 20 muero yo, una de las bombas que caen por el bombardeo a gran escala que asoló la zona.</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="1349" editor-y="422">
+      <speak-char idTarget="ColumnistaDurruti">
+        <resources name="No name" />
+        <text>Esto es el Clínico, antes de los Bombardeos a gran escala de Noviembre.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="ColumnistaDurruti">
+        <resources name="No name" />
+        <text>Fue una posición muy disputada, ya que hacía la función de cuña en el frente.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="ColumnistaDurruti">
+        <resources name="No name" />
+        <text>Estuvo ocupada por anarquistas como Durruti, la columna de quien pertenecía.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="ColumnistaDurruti">
+        <resources name="No name" />
+        <text>Desde el día 21, fue ocupada por los nacionales, el avance cesó y no huvo más cambios.</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="1424" editor-y="745">
+      <speak-char idTarget="ColumnistaDurruti">
+        <resources name="No name" />
+        <text>Hasta luego.</text>
+      </speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
   <object id="TestItem" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
       <asset type="image" uri="assets/image/1PAiTuL.jpg" />
@@ -3193,6 +3395,20 @@
     <resources name="No name">
       <asset type="image" uri="assets/image/pista1.PNG" />
       <asset type="icon" uri="assets/icon/pista1.PNG" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="ImagenClinico" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/El Clínico_20-10-39.jpg" />
+      <asset type="icon" uri="assets/icon/El Clínico_20-10-39.jpg" />
     </resources>
     <description>
       <name>
