@@ -491,10 +491,7 @@
       </talk-to>
     </actions>
   </character>
-  <map-scene id="MapaJugable" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4364545764484 -3.74027609825133 0.0185015955099104 0.0219297409057417" center="(40.4436565574292, -3.72712522745103)" zoom="18" start="no">
-    <map-element targetId="FacultadMedicina" layer="0">
-      <condition />
-    </map-element>
+  <map-scene id="MapaJugable" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4364545764484 -3.74027609825133 0.0185015955099104 0.0219297409057417" center="(40.4416969393083, -3.72455513477307)" zoom="17" start="no">
     <map-element targetId="PuntoInteres" layer="0">
       <condition />
     </map-element>
@@ -881,15 +878,6 @@
           <posList>40.4417990069456 -3.72670948505371 40.4420194708894 -3.72479975223511 40.4417745109072 -3.72373759746522 40.4411988514356 -3.72220337390871 40.4412845882651 -3.72191905975311</posList>
         </LineString>
       </geometry>
-      <geometry influence="10">
-        <Polygon>
-          <exterior>
-            <LinearRing>
-              <posList>40.4423092583128 -3.71989130973753 40.4402843383863 -3.71828198432859 40.4392799708637 -3.72026681899962 40.4412395978786 -3.72180104255656</posList>
-            </LinearRing>
-          </exterior>
-        </Polygon>
-      </geometry>
     </geometries>
     <actions />
   </geo-element>
@@ -933,11 +921,12 @@
     </name>
     <default-initial-position x="400" y="450" />
     <objects>
-      <object-ref idTarget="MapaFrente" x="324" y="287" scale="0.3817941" layer="0" hasInfluenceArea="no" />
-      <object-ref idTarget="ImagenPabellonFilosofia" x="360" y="457" scale="0.4391662" layer="2" hasInfluenceArea="no" />
-      <object-ref idTarget="ImagenEstatuaVelazquez" x="657" y="234" scale="0.4302026" layer="4" hasInfluenceArea="no" />
-      <object-ref idTarget="ImagenEscuelaArquitectura" x="790" y="377" scale="0.479534" layer="3" hasInfluenceArea="no" />
-      <object-ref idTarget="ImagenFacultadMedicina" x="686" y="506" scale="0.2481309" layer="1" hasInfluenceArea="no" />
+      <object-ref idTarget="MapaFrente" x="317" y="235" scale="0.3008644" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="ImagenPabellonFilosofia" x="340" y="369" scale="0.4391662" layer="3" hasInfluenceArea="no" />
+      <object-ref idTarget="ImagenEstatuaVelazquez" x="657" y="234" scale="0.4302026" layer="5" hasInfluenceArea="no" />
+      <object-ref idTarget="ImagenEscuelaArquitectura" x="790" y="377" scale="0.479534" layer="4" hasInfluenceArea="no" />
+      <object-ref idTarget="ImagenFacultadMedicina" x="686" y="506" scale="0.2481309" layer="2" hasInfluenceArea="no" />
+      <object-ref idTarget="ImagenClinico" x="418" y="510" scale="0.2594987" layer="1" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="FotoMapaFrente" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -1237,7 +1226,7 @@
     <dialogue-node nodeindex="8" editor-x="1376" editor-y="368">
       <speak-player>
         <resources name="No name">
-          <asset type="image" uri="assets/image/El Clínico_20-10-39.jpg" />
+          <asset type="image" uri="" />
         </resources>
         <text>Y por último, esta imagen aérea de un edificio destrozado.</text>
       </speak-player>
@@ -3131,7 +3120,7 @@
       <condition />
       <child nodeindex="4" />
     </option-node>
-    <dialogue-node nodeindex="2" editor-x="1375" editor-y="6">
+    <dialogue-node nodeindex="2" editor-x="1007" editor-y="19">
       <speak-char idTarget="ColumnistaDurruti">
         <resources name="No name" />
         <text>¿Yo?, pues antes de morir pertenecía a la Columna Durruti.</text>
@@ -3154,7 +3143,7 @@
       <condition />
       <speak-char idTarget="ColumnistaDurruti">
         <resources name="No name" />
-        <text>Pero al día siguiente, los nacionales contraatacaron, nos defendimos como pudimos en el ASilo de Santa Cristina. Ese edificio fue destruido durante el conflicto</text>
+        <text>Pero al día siguiente, los nacionales contraatacaron, nos defendimos como pudimos en el Asilo de Santa Cristina. Ese edificio fue destruido durante el conflicto</text>
       </speak-char>
       <condition />
       <speak-char idTarget="ColumnistaDurruti">
