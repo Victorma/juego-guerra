@@ -7,18 +7,18 @@
 <entry key="Chapter0.InitialScene2.Y">62</entry>
 <entry key="Chapter0.FotoMapaFrente.X">-220</entry>
 <entry key="Chapter0.FotoMapaFrente.Y">299</entry>
-<entry key="Chapter0.FotoPabellonFilosofia.X">-9</entry>
-<entry key="Chapter0.FotoPabellonFilosofia.Y">188</entry>
-<entry key="Chapter0.FotoFacultadMedicina.X">68</entry>
-<entry key="Chapter0.FotoFacultadMedicina.Y">30</entry>
+<entry key="Chapter0.FotoPabellonFilosofia.X">-35</entry>
+<entry key="Chapter0.FotoPabellonFilosofia.Y">298</entry>
+<entry key="Chapter0.FotoFacultadMedicina.X">696</entry>
+<entry key="Chapter0.FotoFacultadMedicina.Y">49</entry>
 <entry key="Chapter0.FotoEstatuaVelazquez.X">-51</entry>
 <entry key="Chapter0.FotoEstatuaVelazquez.Y">204</entry>
-<entry key="Chapter0.EscenaSoldadoMedicina.X">-193</entry>
-<entry key="Chapter0.EscenaSoldadoMedicina.Y">215</entry>
-<entry key="Chapter0.PresentacionGuia.X">-91</entry>
-<entry key="Chapter0.PresentacionGuia.Y">227</entry>
-<entry key="Chapter0.Filosofia.X">4</entry>
-<entry key="Chapter0.Filosofia.Y">220</entry>
+<entry key="Chapter0.EscenaSoldadoMedicina.X">-311</entry>
+<entry key="Chapter0.EscenaSoldadoMedicina.Y">450</entry>
+<entry key="Chapter0.PresentacionGuia.X">267</entry>
+<entry key="Chapter0.PresentacionGuia.Y">248</entry>
+<entry key="Chapter0.Filosofia.X">106</entry>
+<entry key="Chapter0.Filosofia.Y">392</entry>
 <entry key="Chapter0.FotoEscuelaArquitectura.X">135</entry>
 <entry key="Chapter0.FotoEscuelaArquitectura.Y">75</entry>
 <entry key="Chapter0.Noticia1S.X">454</entry>
@@ -31,5 +31,7 @@
 <entry key="Chapter0.Noticia4S.Y">466</entry>
 <entry key="Chapter0.Noticia5S.X">975</entry>
 <entry key="Chapter0.Noticia5S.Y">366</entry>
+<entry key="Chapter0.EscenaCasaVelazquez.X">18</entry>
+<entry key="Chapter0.EscenaCasaVelazquez.Y">485</entry>
 </properties>
 

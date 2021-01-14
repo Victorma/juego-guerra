@@ -246,6 +246,8 @@
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
         <documentation>Created with target conversation: Conversacion_Velazquez</documentation>
         <effect>
+          <trigger-scene idTarget="EscenaCasaVelazquez" x="256" y="265" transitionTime="0" transitionType="0" />
+          <condition />
           <trigger-conversation idTarget="Conversacion_Velazquez" />
           <condition />
         </effect>
@@ -294,7 +296,7 @@
   </character>
   <character id="Soldado_Perdido" behaviour="normal">
     <resources name="No name">
-      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standup" uri="assets/animation/SoldadoPerdidoAnim.eaa.xml" />
       <asset type="standdown" uri="assets/special/EmptyAnimation" />
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
@@ -451,11 +453,11 @@
       </talk-to>
     </actions>
   </character>
-  <map-scene id="MapaJugable" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4364545764484 -3.74027609825133 0.0185015955099104 0.0219297409057417" center="(40.4450894293346, -3.72757053373795)" zoom="19" start="no">
+  <map-scene id="MapaJugable" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4364545764484 -3.74027609825133 0.0185015955099104 0.0219297409057417" center="(40.4405283036038, -3.73021507264638)" zoom="17" start="no">
     <map-element targetId="FacultadMedicina" layer="0">
       <condition />
     </map-element>
-    <map-element targetId="PuntoInteres" layer="0">
+    <map-element targetId="CasaVelazquez" layer="0">
       <condition />
     </map-element>
     <map-element targetId="GuiaJugador" layer="0">
@@ -475,9 +477,6 @@
       </ext-elem-ref>
     </map-element>
     <map-element targetId="EscuelaArquitectura" layer="0">
-      <condition />
-    </map-element>
-    <map-element targetId="CasaDeVelazquez" layer="0">
       <condition />
     </map-element>
     <map-element targetId="StartingPosition" layer="0">
@@ -513,7 +512,7 @@
     <map-element targetId="RiosCapape" layer="0">
       <condition />
       <ext-elem-ref scale="0.3805234" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.440013885498, -3.73116993904114)</param>
+        <param name="Position">(40.4400634765625, -3.73134708404541)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">100</param>
         <param name="RevealOnlyOnRange">True</param>
@@ -522,7 +521,7 @@
         <actions>
           <enter-action>
             <effect>
-              <trigger-conversation idTarget="Conversacion_Arquitectura" />
+              <trigger-scene idTarget="EscenaArquitectura" x="600" y="675" transitionTime="0" transitionType="0" />
               <condition />
             </effect>
             <only-from-outside>True</only-from-outside>
@@ -557,9 +556,9 @@
     <map-element targetId="Polono_Velazquez" layer="0">
       <condition />
       <ext-elem-ref scale="0.5186755" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4412612915039, -3.73042154312134)</param>
+        <param name="Position">(40.4413032531738, -3.73058915138245)</param>
         <param name="Rotation">0</param>
-        <param name="InteractionRange">69.9</param>
+        <param name="InteractionRange">40</param>
         <param name="RevealOnlyOnRange">True</param>
         <param name="Hint">False</param>
         <param name="RevealParticleTexture">leaf_particle.png</param>
@@ -580,8 +579,8 @@
     </map-element>
     <map-element targetId="Soldado_Perdido" layer="0">
       <condition />
-      <ext-elem-ref scale="1" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4421310424805, -3.72927379608154)</param>
+      <ext-elem-ref scale="0.4755103" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4420890808105, -3.72920680046082)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">25</param>
         <param name="RevealOnlyOnRange">True</param>
@@ -690,7 +689,7 @@
       </ext-elem-ref>
     </map-element>
   </map-scene>
-  <map-scene id="MapaIntroduccion" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.436450958252 -3.74027609825134 0.0199999995529652 0.0199999995529652" center="(40.4472185359692, -3.72719764709527)" zoom="18" start="no">
+  <map-scene id="MapaIntroduccion" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.436450958252 -3.74027609825134 0.0199999995529652 0.0199999995529652" center="(40.4440138201927, -3.7264144420629)" zoom="18" start="no">
     <map-element targetId="GuiaJugador" layer="0">
       <condition />
       <ext-elem-ref scale="0.03484683" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
@@ -724,7 +723,7 @@
         <Polygon>
           <exterior>
             <LinearRing>
-              <posList>40.4421297039156 -3.726623654366 40.4420562167582 -3.72731029987381 40.4425134696384 -3.72737467289017 40.4425747082969 -3.7266987562184</posList>
+              <posList>40.4421092907087 -3.72650563716932 40.4420358035513 -3.72719228267713 40.4424930564315 -3.72725665569349 40.44255429509 -3.72658073902172</posList>
             </LinearRing>
           </exterior>
         </Polygon>
@@ -742,11 +741,11 @@
       </detailed>
     </description>
     <geometries>
-      <geometry influence="0">
+      <geometry influence="20">
         <Polygon>
           <exterior>
             <LinearRing>
-              <posList>40.440574016062 -3.73075296523877 40.4409235988455 -3.73109192940302 40.4410664940722 -3.73182149030681 40.4406418902091 -3.73200388051985 40.4397130599088 -3.73204411365505 40.4395824102695 -3.73042405935832 40.4399171996048 -3.73039455505916 40.4399580273339 -3.73082102629253</posList>
+              <posList>40.4405454365756 -3.73085757140961 40.4406173930164 -3.73190463875389 40.439745722812 -3.73201997374153 40.4396030136538 -3.73136773594614 40.4395619969441 -3.73096318338957 40.4395662683926 -3.73041823395485 40.4399090343696 -3.7303918728694 40.4399418856717 -3.73092248924966</posList>
             </LinearRing>
           </exterior>
         </Polygon>
@@ -754,7 +753,7 @@
     </geometries>
     <actions />
   </geo-element>
-  <geo-element id="PuntoInteres">
+  <geo-element id="CasaVelazquez">
     <description>
       <name>
       </name>
@@ -764,33 +763,14 @@
       </detailed>
     </description>
     <geometries>
-      <geometry influence="0">
+      <geometry influence="20">
         <Polygon>
           <exterior>
             <LinearRing>
-              <posList>40.4416244724775 -3.73004883527792 40.4412754021816 -3.72960090637243 40.4408916268988 -3.72978866100347 40.4409834882032 -3.73030632734336 40.4412325337746 -3.7314489483837 40.4420654008042 -3.73105198144956</posList>
+              <posList>40.4415489427913 -3.73025268305391 40.4411651690585 -3.73047262419315 40.4413162292695 -3.73098224466963 40.4417571595692 -3.73079448943863</posList>
             </LinearRing>
           </exterior>
         </Polygon>
-      </geometry>
-    </geometries>
-    <actions />
-  </geo-element>
-  <geo-element id="CasaDeVelazquez">
-    <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
-    </description>
-    <geometries>
-      <geometry influence="0">
-        <Point>
-          <pos>
-          </pos>
-        </Point>
       </geometry>
     </geometries>
     <actions />
@@ -805,7 +785,7 @@
       </detailed>
     </description>
     <geometries>
-      <geometry influence="0">
+      <geometry influence="20">
         <Point>
           <pos>40.4437987940793 -3.72606228822173</pos>
         </Point>
@@ -1208,6 +1188,38 @@
         </actions>
       </active-area>
     </active-areas>
+  </scene>
+  <scene id="EscenaCasaVelazquez" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/EscenaCasaVelazquez.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <objects>
+      <object-ref idTarget="BackArrow" x="462" y="356" scale="0.1" layer="0" hasInfluenceArea="no" />
+    </objects>
+    <characters>
+      <character-ref idTarget="Polono_Velazquez" x="92" y="353" scale="1" orientation="0" layer="1" hasInfluenceArea="no" />
+    </characters>
+  </scene>
+  <scene id="EscenaArquitectura" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/escenarioArquitectura.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <objects>
+      <object-ref idTarget="BackArrow" x="1098" y="879" scale="0.2596924" layer="0" hasInfluenceArea="no" />
+    </objects>
+    <characters>
+      <character-ref idTarget="RiosCapape" x="717" y="901" scale="1.176622" orientation="0" layer="1" hasInfluenceArea="no" />
+    </characters>
   </scene>
   <graph-conversation id="PruebaConversacion">
     <dialogue-node nodeindex="0" editor-x="187" editor-y="55">
@@ -3307,9 +3319,8 @@
     </description>
     <actions>
       <use needsGoTo="yes" keepDistance="35" not-effects="no">
-        <documentation>Vuelve a la escena anterior</documentation>
         <effect>
-          <trigger-scene idTarget="MapaJugable" x="539" y="455" transitionTime="1000" transitionType="5" />
+          <trigger-scene idTarget="MapaJugable" x="539" y="455" transitionTime="0" transitionType="0" />
           <condition />
           <deactivate flag="NoticiaVisto" />
           <condition />
