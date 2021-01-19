@@ -85,6 +85,46 @@
       </talk-to>
     </actions>
   </character>
+  <character id="ColumnistaDurruti" behaviour="normal">
+    <resources name="No name">
+        <asset type="standup" uri="assets/animation/ColumnistaDurrutiUp.eaa.xml" />
+        <asset type="standdown" uri="assets/special/EmptyAnimation" />
+        <asset type="standright" uri="assets/special/EmptyAnimation" />
+        <asset type="standleft" uri="assets/special/EmptyAnimation" />
+        <asset type="speakup" uri="assets/special/EmptyAnimation" />
+        <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+        <asset type="speakright" uri="assets/special/EmptyAnimation" />
+        <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+        <asset type="useright" uri="assets/special/EmptyAnimation" />
+        <asset type="useleft" uri="assets/special/EmptyAnimation" />
+        <asset type="walkup" uri="assets/special/EmptyAnimation" />
+        <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+        <asset type="walkright" uri="assets/special/EmptyAnimation" />
+        <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+      </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <documentation>Created with target conversation: ConversacionDurruti</documentation>
+        <effect>
+          <trigger-conversation idTarget="ConversacionDurruti" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
+  </character>
   <character id="SoldadoMedicina" behaviour="normal">
     <resources name="No name">
       <asset type="standup" uri="assets/animation/AnimSoldadoMedicina.eaa.xml" />
@@ -494,7 +534,7 @@
     </map-element>
     <map-element targetId="SoldadoMedicina" layer="0">
       <condition />
-      <ext-elem-ref scale="0.1194849" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+       <ext-elem-ref scale="0.1194849" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
         <param name="Position">(40.4422073364258, -3.72698044776917)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">25.34</param>
@@ -521,8 +561,8 @@
     </map-element>
     <map-element targetId="RiosCapape" layer="0">
       <condition />
-      <ext-elem-ref scale="0.3805234" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.440013885498, -3.73116993904114)</param>
+      <ext-elem-ref scale="0.1783325" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4402961730957, -3.73104333877563)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">100</param>
         <param name="RevealOnlyOnRange">True</param>
@@ -553,8 +593,8 @@
     </map-element>
     <map-element targetId="SoldadoComunista" layer="0">
       <condition />
-      <ext-elem-ref scale="0.08613304" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4433059692383, -3.7275812625885)</param>
+      <ext-elem-ref scale="0.1016138" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4433135986328, -3.7275698184967)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">25</param>
         <param name="RevealOnlyOnRange">True</param>
@@ -563,9 +603,9 @@
         <actions />
       </ext-elem-ref>
     </map-element>
-    <map-element targetId="Polono_Velazquez" layer="0">
+    map-element targetId="Polono_Velazquez" layer="0">
       <condition />
-      <ext-elem-ref scale="0.5186755" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+      <ext-elem-ref scale="0.3032366" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
         <param name="Position">(40.4412612915039, -3.73042154312134)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">69.9</param>
@@ -587,10 +627,10 @@
         <actions />
       </ext-elem-ref>
     </map-element>
-    <map-element targetId="Soldado_Perdido" layer="0">
+   <map-element targetId="Soldado_Perdido" layer="0">
       <condition />
-      <ext-elem-ref scale="1" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4421310424805, -3.72927379608154)</param>
+      <ext-elem-ref scale="0.1293791" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4421653747559, -3.72925162315369)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">25</param>
         <param name="RevealOnlyOnRange">True</param>
@@ -601,8 +641,8 @@
     </map-element>
     <map-element targetId="ChicoMates" layer="0">
       <condition />
-      <ext-elem-ref scale="0.2690932" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4490699768066, -3.72729682922363)</param>
+     <ext-elem-ref scale="0.1551866" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4491233825684, -3.72732853889465)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">40</param>
         <param name="RevealOnlyOnRange">True</param>
@@ -625,7 +665,7 @@
     </map-element>
     <map-element targetId="ChicaFilosofia" layer="0">
       <condition />
-      <ext-elem-ref scale="0.2461715" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+      <ext-elem-ref scale="0.2217542" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
         <param name="Position">(40.4491386413574, -3.73054504394531)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">42.29</param>
@@ -637,6 +677,21 @@
     </map-element>
     <map-element targetId="FacultadMates" layer="0">
       <condition />
+    </map-element>
+    <map-element targetId="Clinico" layer="0">
+      <condition />
+    </map-element>
+    <map-element targetId="ColumnistaDurruti" layer="0">
+      <condition />
+      <ext-elem-ref scale="0.06065796" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4411010742188, -3.72165036201477)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">25</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="Hint">False</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+        <actions />
+      </ext-elem-ref>
     </map-element>
   </map-scene>
   <map-scene id="MapaIntroduccion" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.436450958252 -3.74027609825134 0.0199999995529652 0.0199999995529652" center="(40.4472185359692, -3.72719764709527)" zoom="18" start="no">
@@ -816,6 +871,24 @@
             </LinearRing>
           </exterior>
         </Polygon>
+      </geometry>
+    </geometries>
+    <actions />
+  </geo-element>
+  <geo-element id="Clinico">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="5">
+        <LineString>
+          <posList>40.4417990069456 -3.72670948505371 40.4420194708894 -3.72479975223511 40.4417745109072 -3.72373759746522 40.4411988514356 -3.72220337390871 40.4412845882651 -3.72191905975311</posList>
+        </LineString>
       </geometry>
     </geometries>
     <actions />
@@ -3032,6 +3105,112 @@
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
+  <graph-conversation id="ConversacionDurruti">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="ColumnistaDurruti">
+        <resources name="No name" />
+        <text>Buenos dias, o tardes, la verdad es que no estoy seguro.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="ColumnistaDurruti">
+        <resources name="No name" />
+        <text>Bueno, ¿qué te trae por aquí?</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" preListening="yes" editor-x="666" editor-y="344" x="666" y="344">
+      <speak-player>
+        <text>¿Quién eres?</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>¿Qué sabes de esta foto?</text>
+        <resources name="No name">
+          <asset type="image" uri="assets/image/El Clínico_20-10-39.jpg" />
+        </resources>
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>
+        <text>Me tengo que ir</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="1007" editor-y="19">
+      <speak-char idTarget="ColumnistaDurruti">
+        <resources name="No name" />
+        <text>¿Yo?, pues antes de morir pertenecía a la Columna Durruti.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="ColumnistaDurruti">
+        <resources name="No name" />
+        <text>Llegamos a Madrid el 15 de noviembre, a las 9:00 de la mañana creo.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="ColumnistaDurruti">
+        <resources name="No name" />
+        <text>Veníamos desde los frentes de Aragón, eramos unos 1600 hombres.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="ColumnistaDurruti">
+        <resources name="No name" />
+        <text>Se nos asigno al Clínico, al día siguiente, hicimos un contraataque desde las Facultades hasta el Clínico. Lo logramos y avanzamos.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="ColumnistaDurruti">
+        <resources name="No name" />
+        <text>Pero al día siguiente, los nacionales contraatacaron, nos defendimos como pudimos en el Asilo de Santa Cristina. Ese edificio fue destruido durante el conflicto</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="ColumnistaDurruti">
+        <resources name="No name" />
+        <text>Tuvimos que retroceder, de hecho estuvimos retrocediendo hasta el 19, de día que Durruti murío.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="ColumnistaDurruti">
+        <resources name="No name" />
+        <text>El día 20 muero yo, una de las bombas que caen por el bombardeo a gran escala que asoló la zona.</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="1349" editor-y="422">
+      <speak-char idTarget="ColumnistaDurruti">
+        <resources name="No name" />
+        <text>Esto es el Clínico, antes de los Bombardeos a gran escala de Noviembre.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="ColumnistaDurruti">
+        <resources name="No name" />
+        <text>Fue una posición muy disputada, ya que hacía la función de cuña en el frente.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="ColumnistaDurruti">
+        <resources name="No name" />
+        <text>Estuvo ocupada por anarquistas como Durruti, la columna de quien pertenecía.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="ColumnistaDurruti">
+        <resources name="No name" />
+        <text>Desde el día 21, fue ocupada por los nacionales, el avance cesó y no huvo más cambios.</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="1424" editor-y="745">
+      <speak-char idTarget="ColumnistaDurruti">
+        <resources name="No name" />
+        <text>Hasta luego.</text>
+      </speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
   <object id="TestItem" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
       <asset type="image" uri="assets/image/1PAiTuL.jpg" />
@@ -3226,6 +3405,20 @@
     <resources name="No name">
       <asset type="image" uri="assets/image/pista1.PNG" />
       <asset type="icon" uri="assets/icon/pista1.PNG" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="ImagenClinico" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/El Clínico_20-10-39.jpg" />
+      <asset type="icon" uri="assets/icon/El Clínico_20-10-39.jpg" />
     </resources>
     <description>
       <name>
