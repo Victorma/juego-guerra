@@ -87,21 +87,21 @@
   </character>
   <character id="ColumnistaDurruti" behaviour="normal">
     <resources name="No name">
-        <asset type="standup" uri="assets/animation/ColumnistaDurrutiUp.eaa.xml" />
-        <asset type="standdown" uri="assets/special/EmptyAnimation" />
-        <asset type="standright" uri="assets/special/EmptyAnimation" />
-        <asset type="standleft" uri="assets/special/EmptyAnimation" />
-        <asset type="speakup" uri="assets/special/EmptyAnimation" />
-        <asset type="speakdown" uri="assets/special/EmptyAnimation" />
-        <asset type="speakright" uri="assets/special/EmptyAnimation" />
-        <asset type="speakleft" uri="assets/special/EmptyAnimation" />
-        <asset type="useright" uri="assets/special/EmptyAnimation" />
-        <asset type="useleft" uri="assets/special/EmptyAnimation" />
-        <asset type="walkup" uri="assets/special/EmptyAnimation" />
-        <asset type="walkdown" uri="assets/special/EmptyAnimation" />
-        <asset type="walkright" uri="assets/special/EmptyAnimation" />
-        <asset type="walkleft" uri="assets/special/EmptyAnimation" />
-      </resources>
+      <asset type="standup" uri="assets/animation/ColumnistaDurrutiUp.eaa.xml" />
+      <asset type="standdown" uri="assets/special/EmptyAnimation" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
     <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
       <frontcolor color="#FFFFFF" />
       <bordercolor color="#000000" />
@@ -500,7 +500,49 @@
       </talk-to>
     </actions>
   </character>
-  <map-scene id="MapaJugable" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4364545764484 -3.74027609825133 0.0185015955099104 0.0219297409057417" center="(40.4441036354191, -3.72683554887867)" zoom="19" start="no">
+  <character id="HombreJBontanico" behaviour="normal">
+    <resources name="No name">
+      <asset type="standup" uri="assets/animation/JBotanicaAnim.eaa.xml" />
+      <asset type="standdown" uri="assets/animation/JBotanicaAnim.eaa.xml" />
+      <asset type="standright" uri="assets/animation/JBotanicaAnim.eaa.xml" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <inactive flag="JBotanicaPresentado" />
+        </condition>
+        <effect>
+          <trigger-conversation idTarget="ConversationJBotanica" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
+  </character>
+  <map-scene id="MapaJugable" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4364545764484 -3.74027609825133 0.0185015955099104 0.0219297409057417" center="(40.4461448705985, -3.72685700655079)" zoom="17" start="no">
     <map-element targetId="FacultadMedicina" layer="0">
       <condition />
     </map-element>
@@ -627,7 +669,7 @@
         <actions />
       </ext-elem-ref>
     </map-element>
-   <map-element targetId="Soldado_Perdido" layer="0">
+    <map-element targetId="Soldado_Perdido" layer="0">
       <condition />
       <ext-elem-ref scale="0.1293791" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
         <param name="Position">(40.4421653747559, -3.72925162315369)</param>
@@ -641,7 +683,7 @@
     </map-element>
     <map-element targetId="ChicoMates" layer="0">
       <condition />
-     <ext-elem-ref scale="0.1551866" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+      <ext-elem-ref scale="0.1551866" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
         <param name="Position">(40.4491233825684, -3.72732853889465)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">40</param>
@@ -692,6 +734,83 @@
         <param name="RevealParticleTexture">leaf_particle.png</param>
         <actions />
       </ext-elem-ref>
+    </map-element>
+    <map-element targetId="Noticia1I" layer="0">
+      <condition />
+      <ext-elem-ref scale="0.1" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4481773376465, -3.72925877571106)</param>
+        <param name="Rotation">10</param>
+        <param name="InteractionRange">25</param>
+        <param name="RevealOnlyOnRange">False</param>
+        <param name="Hint">True</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+        <actions />
+      </ext-elem-ref>
+    </map-element>
+    <map-element targetId="Noticia2I" layer="0">
+      <condition />
+      <ext-elem-ref scale="0.1" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4436340332031, -3.72653293609619)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">25</param>
+        <param name="RevealOnlyOnRange">False</param>
+        <param name="Hint">True</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+        <actions />
+      </ext-elem-ref>
+    </map-element>
+    <map-element targetId="Noticia3I" layer="0">
+      <condition />
+      <ext-elem-ref scale="0.1" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4489364624023, -3.73101043701172)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">25</param>
+        <param name="RevealOnlyOnRange">False</param>
+        <param name="Hint">True</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+        <actions />
+      </ext-elem-ref>
+    </map-element>
+    <map-element targetId="Noticia4I" layer="0">
+      <condition />
+      <ext-elem-ref scale="0.1" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4472808837891, -3.72811889648438)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">25</param>
+        <param name="RevealOnlyOnRange">False</param>
+        <param name="Hint">True</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+        <actions />
+      </ext-elem-ref>
+    </map-element>
+    <map-element targetId="Noticia5I" layer="0">
+      <condition />
+      <ext-elem-ref scale="0.1" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4449920654297, -3.72757053375244)</param>
+        <param name="Rotation">-20</param>
+        <param name="InteractionRange">25</param>
+        <param name="RevealOnlyOnRange">False</param>
+        <param name="Hint">True</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+        <actions />
+      </ext-elem-ref>
+    </map-element>
+    <map-element targetId="HombreJBontanico" layer="0">
+      <condition />
+      <ext-elem-ref scale="0.1409519" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.447826385498, -3.72755980491638)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">60</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="Hint">False</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+        <actions />
+      </ext-elem-ref>
+    </map-element>
+    <map-element targetId="CaminoJ.BotaF.Filo" layer="0">
+      <condition>
+        <active flag="JBotanicaPresentado" />
+      </condition>
     </map-element>
   </map-scene>
   <map-scene id="MapaIntroduccion" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.436450958252 -3.74027609825134 0.0199999995529652 0.0199999995529652" center="(40.4472185359692, -3.72719764709527)" zoom="18" start="no">
@@ -893,6 +1012,24 @@
     </geometries>
     <actions />
   </geo-element>
+  <geo-element id="CaminoJ.BotaF.Filo">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="20">
+        <LineString>
+          <posList>40.4479020140197 -3.72749580480567 40.447832613361 -3.72823609416638 40.448089799259 -3.72871352737106 40.4482775823542 -3.72874571387923 40.4482490068946 -3.72900320594467 40.4485755860546 -3.72906221454299 40.4484531113939 -3.73036040337879 40.448942985775 -3.73046769173936</posList>
+        </LineString>
+      </geometry>
+    </geometries>
+    <actions />
+  </geo-element>
   <scene id="InitialScene1" hideInventory="no" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
@@ -1044,6 +1181,223 @@
     <default-initial-position x="400" y="450" />
     <characters>
       <character-ref idTarget="ChicaFilosofia" x="513" y="592" scale="1.436908" orientation="2" layer="0" hasInfluenceArea="no" />
+    </characters>
+  </scene>
+  <scene id="Noticia1S" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/UCM.PNG" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <objects>
+      <object-ref idTarget="BackArrow" x="614" y="765" scale="0.118164" layer="0" hasInfluenceArea="no">
+        <condition>
+          <active flag="NoticiaVisto" />
+        </condition>
+      </object-ref>
+    </objects>
+    <active-areas>
+      <active-area id="ActiveArea1" rectangular="yes" x="29" y="28" width="606" height="684" hasInfluenceArea="no" behaviour="first-action">
+        <description>
+          <name>
+          </name>
+          <brief>
+          </brief>
+          <detailed>
+          </detailed>
+        </description>
+        <actions>
+          <examine needsGoTo="no" keepDistance="0" not-effects="no">
+            <effect>
+              <activate flag="NoticiaVisto" />
+              <condition />
+            </effect>
+          </examine>
+        </actions>
+      </active-area>
+    </active-areas>
+  </scene>
+  <scene id="Noticia2S" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/ABC1.PNG" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <objects>
+      <object-ref idTarget="BackArrow" x="470" y="754" scale="0.15" layer="0" hasInfluenceArea="no">
+        <condition>
+          <active flag="NoticiaVisto" />
+        </condition>
+      </object-ref>
+    </objects>
+    <active-areas>
+      <active-area id="ActiveArea2" rectangular="yes" x="24" y="25" width="450" height="668" hasInfluenceArea="no" behaviour="first-action">
+        <description>
+          <name>
+          </name>
+          <brief>
+          </brief>
+          <detailed>
+          </detailed>
+        </description>
+        <actions>
+          <examine needsGoTo="no" keepDistance="0" not-effects="no">
+            <effect>
+              <activate flag="NoticiaVisto" />
+              <condition />
+            </effect>
+          </examine>
+        </actions>
+      </active-area>
+    </active-areas>
+  </scene>
+  <scene id="Noticia3S" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/mujer.PNG" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <objects>
+      <object-ref idTarget="BackArrow" x="451" y="698" scale="0.15" layer="0" hasInfluenceArea="no">
+        <condition>
+          <active flag="NoticiaVisto" />
+        </condition>
+      </object-ref>
+    </objects>
+    <active-areas>
+      <active-area id="ActiveArea3" rectangular="yes" x="26" y="25" width="447" height="633" hasInfluenceArea="no" behaviour="first-action">
+        <description>
+          <name>
+          </name>
+          <brief>
+          </brief>
+          <detailed>
+          </detailed>
+        </description>
+        <actions>
+          <examine needsGoTo="no" keepDistance="0" not-effects="no">
+            <effect>
+              <activate flag="NoticiaVisto" />
+              <condition />
+            </effect>
+          </examine>
+        </actions>
+      </active-area>
+    </active-areas>
+  </scene>
+  <scene id="Noticia4S" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/ABC2.PNG" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <objects>
+      <object-ref idTarget="BackArrow" x="580" y="733" scale="0.15" layer="0" hasInfluenceArea="no">
+        <condition>
+          <active flag="NoticiaVisto" />
+        </condition>
+      </object-ref>
+    </objects>
+    <active-areas>
+      <active-area id="ActiveArea4" rectangular="yes" x="26" y="44" width="579" height="615" hasInfluenceArea="no" behaviour="first-action">
+        <description>
+          <name>
+          </name>
+          <brief>
+          </brief>
+          <detailed>
+          </detailed>
+        </description>
+        <actions>
+          <examine needsGoTo="no" keepDistance="0" not-effects="no">
+            <effect>
+              <activate flag="NoticiaVisto" />
+              <condition />
+            </effect>
+          </examine>
+        </actions>
+      </active-area>
+    </active-areas>
+  </scene>
+  <scene id="Noticia5S" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/ABC4.PNG" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <objects>
+      <object-ref idTarget="BackArrow" x="448" y="718" scale="0.15" layer="0" hasInfluenceArea="no">
+        <condition>
+          <active flag="NoticiaVisto" />
+        </condition>
+      </object-ref>
+    </objects>
+    <active-areas>
+      <active-area id="ActiveArea5" rectangular="yes" x="17" y="17" width="443" height="657" hasInfluenceArea="no" behaviour="first-action">
+        <description>
+          <name>
+          </name>
+          <brief>
+          </brief>
+          <detailed>
+          </detailed>
+        </description>
+        <actions>
+          <examine needsGoTo="no" keepDistance="0" not-effects="no">
+            <effect>
+              <activate flag="NoticiaVisto" />
+              <condition />
+            </effect>
+          </examine>
+        </actions>
+      </active-area>
+    </active-areas>
+  </scene>
+  <scene id="EscenaCasaVelazquez" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/EscenaCasaVelazquez.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <objects>
+      <object-ref idTarget="BackArrow" x="462" y="356" scale="0.1" layer="0" hasInfluenceArea="no" />
+    </objects>
+    <characters>
+      <character-ref idTarget="Polono_Velazquez" x="92" y="353" scale="1" orientation="0" layer="1" hasInfluenceArea="no" />
+    </characters>
+  </scene>
+  <scene id="EscenaArquitectura" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/escenarioArquitectura.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <objects>
+      <object-ref idTarget="BackArrow" x="1098" y="879" scale="0.2596924" layer="0" hasInfluenceArea="no" />
+    </objects>
+    <characters>
+      <character-ref idTarget="RiosCapape" x="717" y="901" scale="1.176622" orientation="0" layer="1" hasInfluenceArea="no" />
     </characters>
   </scene>
   <graph-conversation id="PruebaConversacion">
@@ -3211,6 +3565,99 @@
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
+  <graph-conversation id="ConversationJBotanica">
+    <dialogue-node nodeindex="0" editor-x="171" editor-y="120">
+      <speak-player>
+        <resources name="No name" />
+        <text>Disculpa. ¿Tienes un momento?</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="HombreJBontanico">
+        <resources name="No name" />
+        <text>Espera, déjame acabar estos ...... ya estoy.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="HombreJBontanico">
+        <resources name="No name" />
+        <text>¿Necesitas algo?</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" preListening="yes" editor-x="615" editor-y="62" x="615" y="62">
+      <speak-player>
+        <text>¿Te suena esta foto?</text>
+        <resources name="No name">
+          <asset type="image" uri="assets/image/PabellonFilosofia.jpg" />
+        </resources>
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>Nada, tengo que irme.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="951" editor-y="5">
+      <speak-char idTarget="HombreJBontanico">
+        <resources name="No name" />
+        <text>Claro que si, esta aula fue diseñado por mi y mis compañeros.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>¿Usted eres?</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="HombreJBontanico">
+        <resources name="No name" />
+        <text>Manuel Sánchez Arcas</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>El Premio Nacional de Arquitectura por el proyecto de la Central Térmica de la Ciudad Universitaria.</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="HombreJBontanico">
+        <resources name="No name" />
+        <text>Eso es todo en el pasado. El central está allí, detrás de J. Botánica.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="HombreJBontanico">
+        <resources name="No name" />
+        <text>Pero fue casi destruida durante la guerra y la reconstrucción no fue como estaba diseñada.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="HombreJBontanico">
+        <resources name="No name" />
+        <text>Bien, volvamos a lo que dijimos. Este es un aula en la Facultad de Filosofía. </text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="HombreJBontanico">
+        <resources name="No name" />
+        <text>Sigue adelante y gira a la izquierda</text>
+      </speak-char>
+      <condition />
+      <end-conversation>
+        <effect>
+          <activate flag="JBotanicaPresentado" />
+          <condition />
+          <trigger-scene idTarget="MapaJugable" x="539" y="455" transitionTime="0" transitionType="0" />
+          <condition />
+          <navigate navigation-type="Ordered">
+            <step locks="False">CaminoJ.BotaF.Filo</step>
+          </navigate>
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="975" editor-y="357">
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
   <object id="TestItem" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
       <asset type="image" uri="assets/image/1PAiTuL.jpg" />
@@ -3428,6 +3875,116 @@
       <detailed>
       </detailed>
     </description>
+  </object>
+  <object id="Noticia1I" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/UCM.PNG" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <trigger-scene idTarget="Noticia1S" x="325" y="586" transitionTime="100" transitionType="1" />
+          <condition />
+        </effect>
+      </examine>
+    </actions>
+  </object>
+  <object id="Noticia2I" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/ABC1.PNG" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <trigger-scene idTarget="Noticia2S" x="254" y="567" transitionTime="100" transitionType="1" />
+          <condition />
+        </effect>
+      </examine>
+    </actions>
+  </object>
+  <object id="Noticia3I" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/mujer.PNG" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <trigger-scene idTarget="Noticia3S" x="250" y="516" transitionTime="100" transitionType="1" />
+          <condition />
+        </effect>
+      </examine>
+    </actions>
+  </object>
+  <object id="Noticia4I" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/ABC2.PNG" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <trigger-scene idTarget="Noticia4S" x="310" y="549" transitionTime="100" transitionType="1" />
+          <condition />
+        </effect>
+      </examine>
+    </actions>
+  </object>
+  <object id="Noticia5I" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/ABC4.PNG" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <trigger-scene idTarget="Noticia5S" x="244" y="544" transitionTime="100" transitionType="1" />
+          <condition />
+        </effect>
+      </examine>
+    </actions>
   </object>
   <slidescene id="PistaFacultadCInformacion" start="no" next="go-back" class="accesible" type="cutscene">
     <documentation>
