@@ -534,7 +534,7 @@
     </map-element>
     <map-element targetId="SoldadoMedicina" layer="0">
       <condition />
-       <ext-elem-ref scale="0.1194849" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+      <ext-elem-ref scale="0.1194849" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
         <param name="Position">(40.4422073364258, -3.72698044776917)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">25.34</param>
@@ -603,7 +603,7 @@
         <actions />
       </ext-elem-ref>
     </map-element>
-    map-element targetId="Polono_Velazquez" layer="0">
+    <map-element targetId="Polono_Velazquez" layer="0">
       <condition />
       <ext-elem-ref scale="0.3032366" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
         <param name="Position">(40.4412612915039, -3.73042154312134)</param>
