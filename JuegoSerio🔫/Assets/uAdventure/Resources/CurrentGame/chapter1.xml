@@ -2840,7 +2840,7 @@
         <condition />
       </effect>
     </dialogue-node>
-    <option-node nodeindex="1" preListening="yes" editor-x="524" editor-y="22" x="524" y="22">
+    <option-node nodeindex="1" preListening="yes" editor-x="414" editor-y="19" x="414" y="19">
       <speak-player>
         <text>¿Cual es tu historia?</text>
       </speak-player>
@@ -3093,7 +3093,7 @@
         </effect>
       </end-conversation>
     </dialogue-node>
-    <option-node nodeindex="3" preListening="yes" editor-x="1021" editor-y="50" x="1021" y="50">
+    <option-node nodeindex="3" preListening="yes" editor-x="998" editor-y="0" x="998" y="0">
       <speak-player>
         <text>¿Por qué no me díces dónde están?</text>
         <resources name="No name" />
@@ -3554,7 +3554,18 @@
         <text>Desde el día 21, fue ocupada por los nacionales, el avance cesó y no huvo más cambios.</text>
       </speak-char>
       <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Perfecto, me queda una fotografía menos.</text>
+      </speak-player>
+      <condition>
+        <inactive flag="usadoClinica" />
+      </condition>
       <child nodeindex="1" />
+      <effect>
+        <activate flag="usadoClinica" />
+        <condition />
+      </effect>
     </dialogue-node>
     <dialogue-node nodeindex="4" editor-x="1424" editor-y="745">
       <speak-char idTarget="ColumnistaDurruti">
@@ -3562,7 +3573,18 @@
         <text>Hasta luego.</text>
       </speak-char>
       <condition />
-      <end-conversation />
+      <end-conversation>
+        <effect>
+          <trigger-cutscene idTarget="Final" />
+          <condition>
+            <active flag="usadoAgronomos" />
+            <active flag="usadoArquitectura" />
+            <active flag="usadoClinica" />
+            <active flag="usadoFilosofia" />
+            <active flag="usadoVelazquez" />
+          </condition>
+        </effect>
+      </end-conversation>
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="ConversationJBotanica">
