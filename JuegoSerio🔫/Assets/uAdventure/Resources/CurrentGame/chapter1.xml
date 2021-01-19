@@ -294,7 +294,7 @@
   </character>
   <character id="Soldado_Perdido" behaviour="normal">
     <resources name="No name">
-      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standup" uri="assets/animation/SoldadoPerdidoUp.eaa.xml" />
       <asset type="standdown" uri="assets/special/EmptyAnimation" />
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
@@ -491,7 +491,7 @@
       </talk-to>
     </actions>
   </character>
-  <map-scene id="MapaJugable" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4364545764484 -3.74027609825133 0.0185015955099104 0.0219297409057417" center="(40.4416969393083, -3.72455513477307)" zoom="17" start="no">
+  <map-scene id="MapaJugable" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4364545764484 -3.74027609825133 0.0185015955099104 0.0219297409057417" center="(40.4452365283896, -3.72618323564527)" zoom="16" start="no">
     <map-element targetId="PuntoInteres" layer="0">
       <condition />
     </map-element>
@@ -549,8 +549,8 @@
     </map-element>
     <map-element targetId="RiosCapape" layer="0">
       <condition />
-      <ext-elem-ref scale="0.3805234" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.440013885498, -3.73116993904114)</param>
+      <ext-elem-ref scale="0.1783325" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4402961730957, -3.73104333877563)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">100</param>
         <param name="RevealOnlyOnRange">True</param>
@@ -569,8 +569,8 @@
     </map-element>
     <map-element targetId="NinyoMedicina" layer="0">
       <condition />
-      <ext-elem-ref scale="0.1593944" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4441986083984, -3.72692942619324)</param>
+      <ext-elem-ref scale="0.1745633" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4441452026367, -3.72695565223694)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">25</param>
         <param name="RevealOnlyOnRange">True</param>
@@ -581,8 +581,8 @@
     </map-element>
     <map-element targetId="SoldadoComunista" layer="0">
       <condition />
-      <ext-elem-ref scale="0.08613304" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4433059692383, -3.7275812625885)</param>
+      <ext-elem-ref scale="0.1016138" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4433135986328, -3.7275698184967)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">25</param>
         <param name="RevealOnlyOnRange">True</param>
@@ -593,8 +593,8 @@
     </map-element>
     <map-element targetId="Polono_Velazquez" layer="0">
       <condition />
-      <ext-elem-ref scale="0.5186755" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4412612915039, -3.73042154312134)</param>
+      <ext-elem-ref scale="0.3032366" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4413452148438, -3.73038101196289)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">69.9</param>
         <param name="RevealOnlyOnRange">True</param>
@@ -617,8 +617,8 @@
     </map-element>
     <map-element targetId="Soldado_Perdido" layer="0">
       <condition />
-      <ext-elem-ref scale="1" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4421310424805, -3.72927379608154)</param>
+      <ext-elem-ref scale="0.1293791" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4421653747559, -3.72925162315369)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">25</param>
         <param name="RevealOnlyOnRange">True</param>
@@ -629,8 +629,8 @@
     </map-element>
     <map-element targetId="ChicoMates" layer="0">
       <condition />
-      <ext-elem-ref scale="0.2690932" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4490699768066, -3.72729682922363)</param>
+      <ext-elem-ref scale="0.1551866" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4491233825684, -3.72732853889465)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">40</param>
         <param name="RevealOnlyOnRange">True</param>
@@ -641,8 +641,8 @@
     </map-element>
     <map-element targetId="PasajeroCInformacion" layer="0">
       <condition />
-      <ext-elem-ref scale="0.2708103" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4459953308105, -3.72796750068665)</param>
+      <ext-elem-ref scale="0.1671399" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4460372924805, -3.72797751426697)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">50</param>
         <param name="RevealOnlyOnRange">True</param>
@@ -653,8 +653,8 @@
     </map-element>
     <map-element targetId="ChicaFilosofia" layer="0">
       <condition />
-      <ext-elem-ref scale="0.2461715" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4491386413574, -3.73054504394531)</param>
+      <ext-elem-ref scale="0.2217542" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4491577148438, -3.73054981231689)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">42.29</param>
         <param name="RevealOnlyOnRange">True</param>
@@ -671,8 +671,8 @@
     </map-element>
     <map-element targetId="ColumnistaDurruti" layer="0">
       <condition />
-      <ext-elem-ref scale="0.1155512" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4410514831543, -3.72166419029236)</param>
+      <ext-elem-ref scale="0.06065796" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4411010742188, -3.72165036201477)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">25</param>
         <param name="RevealOnlyOnRange">True</param>
@@ -682,7 +682,7 @@
       </ext-elem-ref>
     </map-element>
   </map-scene>
-  <map-scene id="MapaIntroduccion" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.436450958252 -3.74027609825134 0.0199999995529652 0.0199999995529652" center="(40.4472185359692, -3.72719764709527)" zoom="18" start="no">
+  <map-scene id="MapaIntroduccion" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.436450958252 -3.74027609825134 0.0199999995529652 0.0199999995529652" center="(40.4439934075005, -3.7271547317511)" zoom="18" start="no">
     <map-element targetId="GuiaJugador" layer="0">
       <condition />
       <ext-elem-ref scale="0.03484683" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
