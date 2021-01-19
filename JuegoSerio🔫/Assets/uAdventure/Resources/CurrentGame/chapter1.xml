@@ -495,7 +495,7 @@
       </talk-to>
     </actions>
   </character>
-  <map-scene id="MapaJugable" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4364545764484 -3.74027609825133 0.0185015955099104 0.0219297409057417" center="(40.4477911225807, -3.72705543042664)" zoom="18" start="no">
+  <map-scene id="MapaJugable" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4364545764484 -3.74027609825133 0.0185015955099104 0.0219297409057417" center="(40.4483663400918, -3.72771102326635)" zoom="17" start="no">
     <map-element targetId="FacultadMedicina" layer="0">
       <condition />
     </map-element>
@@ -673,7 +673,7 @@
     <map-element targetId="Noticia1I" layer="0">
       <condition />
       <ext-elem-ref scale="0.1" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4482192993164, -3.72897052764893)</param>
+        <param name="Position">(40.4481773376465, -3.72925877571106)</param>
         <param name="Rotation">10</param>
         <param name="InteractionRange">25</param>
         <param name="RevealOnlyOnRange">False</param>
@@ -920,9 +920,9 @@
       </detailed>
     </description>
     <geometries>
-      <geometry influence="40">
+      <geometry influence="20">
         <LineString>
-          <posList>40.448959321713 -3.73061521356064 40.4484408743155 -3.73048646752792 40.4485755900511 -3.72911854093034 40.4482816646428 -3.7290058881517 40.4483102410851 -3.72868938748793 40.4480489723676 -3.72867329423385 40.4478693445207 -3.72817976777512 40.4479142538322 -3.72772379224259 40.4478693389769 -3.72735364707109</posList>
+          <posList>40.4479020140197 -3.72749580480567 40.447832613361 -3.72823609416638 40.448089799259 -3.72871352737106 40.4482775823542 -3.72874571387923 40.4482490068946 -3.72900320594467 40.4485755860546 -3.72906221454299 40.4484531113939 -3.73036040337879 40.448942985775 -3.73046769173936</posList>
         </LineString>
       </geometry>
     </geometries>
@@ -3413,7 +3413,9 @@
         <effect>
           <activate flag="JBotanicaPresentado" />
           <condition />
-          <navigate navigation-type="Closeness">
+          <trigger-scene idTarget="MapaJugable" x="539" y="455" transitionTime="0" transitionType="0" />
+          <condition />
+          <navigate navigation-type="Ordered">
             <step locks="False">CaminoJ.BotaF.Filo</step>
           </navigate>
           <condition />
