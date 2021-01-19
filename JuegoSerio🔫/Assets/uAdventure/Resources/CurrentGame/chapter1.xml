@@ -453,7 +453,49 @@
       </talk-to>
     </actions>
   </character>
-  <map-scene id="MapaJugable" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4364545764484 -3.74027609825133 0.0185015955099104 0.0219297409057417" center="(40.4405283036038, -3.73021507264638)" zoom="17" start="no">
+  <character id="HombreJBontanico" behaviour="normal">
+    <resources name="No name">
+      <asset type="standup" uri="assets/animation/JBotanicaAnim.eaa.xml" />
+      <asset type="standdown" uri="assets/animation/JBotanicaAnim.eaa.xml" />
+      <asset type="standright" uri="assets/animation/JBotanicaAnim.eaa.xml" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <inactive flag="JBotanicaPresentado" />
+        </condition>
+        <effect>
+          <trigger-conversation idTarget="ConversationJBotanica" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
+  </character>
+  <map-scene id="MapaJugable" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4364545764484 -3.74027609825133 0.0185015955099104 0.0219297409057417" center="(40.4477911225807, -3.72705543042664)" zoom="18" start="no">
     <map-element targetId="FacultadMedicina" layer="0">
       <condition />
     </map-element>
@@ -688,6 +730,23 @@
         <actions />
       </ext-elem-ref>
     </map-element>
+    <map-element targetId="HombreJBontanico" layer="0">
+      <condition />
+      <ext-elem-ref scale="0.1409519" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.447826385498, -3.72755980491638)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">60</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="Hint">False</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+        <actions />
+      </ext-elem-ref>
+    </map-element>
+    <map-element targetId="CaminoJ.BotaF.Filo" layer="0">
+      <condition>
+        <active flag="JBotanicaPresentado" />
+      </condition>
+    </map-element>
   </map-scene>
   <map-scene id="MapaIntroduccion" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.436450958252 -3.74027609825134 0.0199999995529652 0.0199999995529652" center="(40.4440138201927, -3.7264144420629)" zoom="18" start="no">
     <map-element targetId="GuiaJugador" layer="0">
@@ -847,6 +906,24 @@
             </LinearRing>
           </exterior>
         </Polygon>
+      </geometry>
+    </geometries>
+    <actions />
+  </geo-element>
+  <geo-element id="CaminoJ.BotaF.Filo">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="40">
+        <LineString>
+          <posList>40.448959321713 -3.73061521356064 40.4484408743155 -3.73048646752792 40.4485755900511 -3.72911854093034 40.4482816646428 -3.7290058881517 40.4483102410851 -3.72868938748793 40.4480489723676 -3.72867329423385 40.4478693445207 -3.72817976777512 40.4479142538322 -3.72772379224259 40.4478693389769 -3.72735364707109</posList>
+        </LineString>
       </geometry>
     </geometries>
     <actions />
@@ -2731,7 +2808,7 @@
     <dialogue-node nodeindex="3" editor-x="1193" editor-y="414">
       <speak-char idTarget="PasajeroCInformacion">
         <resources name="No name" />
-        <text>Emmm, no me suena, pero me recuerdo que en el año 36 solo existía la facultad de letra y de ciencias</text>
+        <text>Emmm, no me suena, pero me recuerdo que en el año 36 solo existía la facultad de letra y de ciencias detrás de esta zona</text>
       </speak-char>
       <condition />
       <speak-char idTarget="PasajeroCInformacion">
@@ -3254,6 +3331,97 @@
           <condition />
         </effect>
       </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="ConversationJBotanica">
+    <dialogue-node nodeindex="0" editor-x="171" editor-y="120">
+      <speak-player>
+        <resources name="No name" />
+        <text>Disculpa. ¿Tienes un momento?</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="HombreJBontanico">
+        <resources name="No name" />
+        <text>Espera, déjame acabar estos ...... ya estoy.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="HombreJBontanico">
+        <resources name="No name" />
+        <text>¿Necesitas algo?</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" preListening="yes" editor-x="615" editor-y="62" x="615" y="62">
+      <speak-player>
+        <text>¿Te suena esta foto?</text>
+        <resources name="No name">
+          <asset type="image" uri="assets/image/PabellonFilosofia.jpg" />
+        </resources>
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>Nada, tengo que irme.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="951" editor-y="5">
+      <speak-char idTarget="HombreJBontanico">
+        <resources name="No name" />
+        <text>Claro que si, esta aula fue diseñado por mi y mis compañeros.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>¿Usted eres?</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="HombreJBontanico">
+        <resources name="No name" />
+        <text>Manuel Sánchez Arcas</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>El Premio Nacional de Arquitectura por el proyecto de la Central Térmica de la Ciudad Universitaria.</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="HombreJBontanico">
+        <resources name="No name" />
+        <text>Eso es todo en el pasado. El central está allí, detrás de J. Botánica.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="HombreJBontanico">
+        <resources name="No name" />
+        <text>Pero fue casi destruida durante la guerra y la reconstrucción no fue como estaba diseñada.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="HombreJBontanico">
+        <resources name="No name" />
+        <text>Bien, volvamos a lo que dijimos. Este es un aula en la Facultad de Filosofía. </text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="HombreJBontanico">
+        <resources name="No name" />
+        <text>Sigue adelante y gira a la izquierda</text>
+      </speak-char>
+      <condition />
+      <end-conversation>
+        <effect>
+          <activate flag="JBotanicaPresentado" />
+          <condition />
+          <navigate navigation-type="Closeness">
+            <step locks="False">CaminoJ.BotaF.Filo</step>
+          </navigate>
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="975" editor-y="357">
+      <end-conversation />
     </dialogue-node>
   </graph-conversation>
   <object id="TestItem" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
