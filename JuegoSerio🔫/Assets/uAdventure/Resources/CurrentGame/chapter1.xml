@@ -1049,7 +1049,7 @@
     </geometries>
     <actions />
   </geo-element>
-  <scene id="InitialScene1" hideInventory="no" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="IntroduccionLibro1" hideInventory="no" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -1490,15 +1490,17 @@
           <condition />
           <generate-object idTarget="ImagenFacultadMedicina" />
           <condition />
-          <activate flag="IntroductionFinished" />
+          <generate-object idTarget="ImagenClinico" />
           <condition />
           <trigger-scene idTarget="MapaIntroduccion" x="539" y="455" transitionTime="1000" transitionType="5" />
           <condition />
-          <generate-object idTarget="ImagenClinico" />
+          <activate flag="IntroductionFinished" />
           <condition />
           <navigate navigation-type="Ordered">
             <step locks="False">GuiaJugador</step>
           </navigate>
+          <condition />
+          <set-value var="PuntuacionDiario" value="1" />
           <condition />
         </effect>
       </end-conversation>
@@ -1600,6 +1602,8 @@
           <navigate navigation-type="Ordered">
             <step locks="False">GuiaJugador</step>
           </navigate>
+          <condition />
+          <set-value var="PuntuacionDiario" value="100" />
           <condition />
         </effect>
       </end-conversation>
@@ -3176,6 +3180,8 @@
           <condition />
           <trigger-scene idTarget="MapaJugable" x="539" y="455" transitionTime="1000" transitionType="5" />
           <condition />
+          <set-value var="PuntuacionGuia" value="1" />
+          <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
@@ -3292,6 +3298,8 @@
           <activate flag="IntroduccionGuia" />
           <condition />
           <trigger-scene idTarget="MapaJugable" x="539" y="455" transitionTime="1000" transitionType="5" />
+          <condition />
+          <set-value var="PuntuacionGuia" value="100" />
           <condition />
         </effect>
       </end-conversation>
@@ -4110,4 +4118,29 @@
     <name>
     </name>
   </slidescene>
+  <completable id="IntroduccionDiario" repeatable="false" type="completable">
+    <start-milestone type="SCENE" targetId="IntroduccionLibro1" />
+    <end-milestone type="SCENE" targetId="MapaIntroduccion" />
+    <progress type="SPECIFIC">
+      <milestone type="CONDITION" progress="1">
+        <condition>
+          <active flag="IntroductionFinished" />
+        </condition>
+      </milestone>
+    </progress>
+    <score type="VARIABLE" method="SINGLE" id="PuntuacionDiario" />
+  </completable>
+  <completable id="IntroduccionGuiaJugador" repeatable="false" type="completable">
+    <start-milestone type="COMPLETABLE" targetId="IntroduccionDiario" />
+    <end-milestone type="SCENE" targetId="MapaJugable" />
+    <progress type="SPECIFIC">
+      <milestone type="CHARACTER" targetId="GuiaJugador" progress="0.5" />
+      <milestone type="CONDITION">
+        <condition>
+          <active flag="IntroduccionGuia" />
+        </condition>
+      </milestone>
+    </progress>
+    <score type="VARIABLE" method="SINGLE" id="PuntuacionGuia" />
+  </completable>
 </eAdventure>
