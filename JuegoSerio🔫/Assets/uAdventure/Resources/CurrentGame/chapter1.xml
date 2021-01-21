@@ -542,13 +542,7 @@
       </talk-to>
     </actions>
   </character>
-  <map-scene id="MapaJugable" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4364545764484 -3.74027609825133 0.0185015955099104 0.0219297409057417" center="(40.4421644045807, -3.72538447380167)" zoom="16" start="no">
-    <map-element targetId="FacultadMedicina" layer="0">
-      <condition />
-    </map-element>
-    <map-element targetId="PuntoInteres" layer="0">
-      <condition />
-    </map-element>
+  <map-scene id="MapaJugable" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4364545764484 -3.74027609825133 0.0185015955099104 0.0219297409057417" center="(40.4474695990583, -3.72622936964166)" zoom="18" start="no">
     <map-element targetId="GuiaJugador" layer="0">
       <condition />
       <ext-elem-ref scale="0.2174702" orientation="0" transformManager="uAdventure.Geo.ScreenDescriptor">
@@ -564,12 +558,6 @@
           </enter-action>
         </actions>
       </ext-elem-ref>
-    </map-element>
-    <map-element targetId="EscuelaArquitectura" layer="0">
-      <condition />
-    </map-element>
-    <map-element targetId="CasaDeVelazquez" layer="0">
-      <condition />
     </map-element>
     <map-element targetId="StartingPosition" layer="0">
       <condition />
@@ -659,8 +647,8 @@
     </map-element>
     <map-element targetId="Naranjero" layer="0">
       <condition />
-      <ext-elem-ref scale="0.03791257" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4430465698242, -3.728276014328)</param>
+      <ext-elem-ref scale="0.05003503" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4430236816406, -3.72825169563293)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">26.3</param>
         <param name="RevealOnlyOnRange">True</param>
@@ -717,16 +705,13 @@
         <actions />
       </ext-elem-ref>
     </map-element>
-    <map-element targetId="FacultadMates" layer="0">
-      <condition />
-    </map-element>
     <map-element targetId="Clinico" layer="0">
       <condition />
     </map-element>
     <map-element targetId="ColumnistaDurruti" layer="0">
       <condition />
-      <ext-elem-ref scale="0.06065796" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4411010742188, -3.72165036201477)</param>
+      <ext-elem-ref scale="0.09093101" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4411010742188, -3.7216911315918)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">25</param>
         <param name="RevealOnlyOnRange">True</param>
@@ -737,8 +722,8 @@
     </map-element>
     <map-element targetId="Noticia1I" layer="0">
       <condition />
-      <ext-elem-ref scale="0.1" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4481773376465, -3.72925877571106)</param>
+      <ext-elem-ref scale="0.06611995" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4482536315918, -3.7284824848175)</param>
         <param name="Rotation">10</param>
         <param name="InteractionRange">25</param>
         <param name="RevealOnlyOnRange">False</param>
@@ -749,8 +734,8 @@
     </map-element>
     <map-element targetId="Noticia2I" layer="0">
       <condition />
-      <ext-elem-ref scale="0.1" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4436340332031, -3.72653293609619)</param>
+      <ext-elem-ref scale="0.1115791" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4437599182129, -3.72658348083496)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">25</param>
         <param name="RevealOnlyOnRange">False</param>
@@ -761,8 +746,8 @@
     </map-element>
     <map-element targetId="Noticia3I" layer="0">
       <condition />
-      <ext-elem-ref scale="0.1" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4489364624023, -3.73101043701172)</param>
+      <ext-elem-ref scale="0.1566271" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4485816955566, -3.72861647605896)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">25</param>
         <param name="RevealOnlyOnRange">False</param>
@@ -773,8 +758,8 @@
     </map-element>
     <map-element targetId="Noticia4I" layer="0">
       <condition />
-      <ext-elem-ref scale="0.1" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4472808837891, -3.72811889648438)</param>
+      <ext-elem-ref scale="0.1195592" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4471473693848, -3.72737193107605)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">25</param>
         <param name="RevealOnlyOnRange">False</param>
@@ -785,8 +770,8 @@
     </map-element>
     <map-element targetId="Noticia5I" layer="0">
       <condition />
-      <ext-elem-ref scale="0.1" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4449920654297, -3.72757053375244)</param>
+      <ext-elem-ref scale="0.04744626" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4451751708984, -3.72744703292847)</param>
         <param name="Rotation">-20</param>
         <param name="InteractionRange">25</param>
         <param name="RevealOnlyOnRange">False</param>
@@ -798,7 +783,7 @@
     <map-element targetId="HombreJBontanico" layer="0">
       <condition />
       <ext-elem-ref scale="0.1409519" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.447826385498, -3.72755980491638)</param>
+        <param name="Position">(40.4478302001953, -3.72755980491638)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">60</param>
         <param name="RevealOnlyOnRange">True</param>
@@ -812,8 +797,11 @@
         <active flag="JBotanicaPresentado" />
       </condition>
     </map-element>
+    <map-element targetId="CasaDeVelazquez" layer="0">
+      <condition />
+    </map-element>
   </map-scene>
-  <map-scene id="MapaIntroduccion" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.436450958252 -3.74027609825134 0.0199999995529652 0.0199999995529652" center="(40.4472185359692, -3.72719764709527)" zoom="18" start="no">
+  <map-scene id="MapaIntroduccion" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.436450958252 -3.74027609825134 0.0199999995529652 0.0199999995529652" center="(40.4436096477347, -3.72564196586641)" zoom="19" start="no">
     <map-element targetId="GuiaJugador" layer="0">
       <condition />
       <ext-elem-ref scale="0.03484683" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
@@ -847,7 +835,7 @@
         <Polygon>
           <exterior>
             <LinearRing>
-              <posList>40.4421297039156 -3.726623654366 40.4420562167582 -3.72731029987381 40.4425134696384 -3.72737467289017 40.4425747082969 -3.7266987562184</posList>
+              <posList>40.4421297039156 -3.726623654366 40.4420562167582 -3.72731029987381 40.4425134696384 -3.72737467289017 40.4425747081712 -3.72667729854685</posList>
             </LinearRing>
           </exterior>
         </Polygon>
@@ -1024,7 +1012,7 @@
     <geometries>
       <geometry influence="20">
         <LineString>
-          <posList>40.4479020140197 -3.72749580480567 40.447832613361 -3.72823609416638 40.448089799259 -3.72871352737106 40.4482775823542 -3.72874571387923 40.4482490068946 -3.72900320594467 40.4485755860546 -3.72906221454299 40.4484531113939 -3.73036040337879 40.448942985775 -3.73046769173936</posList>
+          <posList>40.4479020140273 -3.72750116923402 40.447832613361 -3.72823609416638 40.4481183752928 -3.72854723042221 40.4482816645788 -3.72858478134842 40.4482490068946 -3.72900320594467 40.4485755860546 -3.72906221454299 40.4497104381734 -3.72924996885675 40.4495961406926 -3.73062862429038 40.4491882371325 -3.73056381940957</posList>
         </LineString>
       </geometry>
     </geometries>
@@ -1052,7 +1040,7 @@
         <actions>
           <examine needsGoTo="no" keepDistance="0" not-effects="no">
             <effect>
-              <trigger-conversation idTarget="ConversacionInicial" />
+              <trigger-conversation idTarget="IntroduccionLibro" />
               <condition />
             </effect>
           </examine>
@@ -1060,7 +1048,7 @@
       </active-area>
     </active-areas>
   </scene>
-  <scene id="InitialScene2" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="EscenaLibroAbierto" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -1070,11 +1058,12 @@
     </name>
     <default-initial-position x="400" y="450" />
     <objects>
-      <object-ref idTarget="MapaFrente" x="324" y="287" scale="0.3817941" layer="0" hasInfluenceArea="no" />
-      <object-ref idTarget="ImagenPabellonFilosofia" x="360" y="457" scale="0.4391662" layer="2" hasInfluenceArea="no" />
-      <object-ref idTarget="ImagenEstatuaVelazquez" x="657" y="234" scale="0.4302026" layer="4" hasInfluenceArea="no" />
-      <object-ref idTarget="ImagenEscuelaArquitectura" x="790" y="377" scale="0.479534" layer="3" hasInfluenceArea="no" />
-      <object-ref idTarget="ImagenFacultadMedicina" x="686" y="506" scale="0.2481309" layer="1" hasInfluenceArea="no" />
+      <object-ref idTarget="MapaFrente" x="290" y="211" scale="0.3398879" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="ImagenPabellonFilosofia" x="372" y="329" scale="0.4391662" layer="3" hasInfluenceArea="no" />
+      <object-ref idTarget="ImagenEstatuaVelazquez" x="657" y="234" scale="0.4302026" layer="5" hasInfluenceArea="no" />
+      <object-ref idTarget="ImagenEscuelaArquitectura" x="790" y="377" scale="0.479534" layer="4" hasInfluenceArea="no" />
+      <object-ref idTarget="ImagenFacultadMedicina" x="686" y="506" scale="0.2481309" layer="2" hasInfluenceArea="no" />
+      <object-ref idTarget="ImagenClinico" x="314" y="504" scale="0.2950105" layer="1" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="FotoMapaFrente" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -1400,52 +1389,7 @@
       <character-ref idTarget="RiosCapape" x="717" y="901" scale="1.176622" orientation="0" layer="1" hasInfluenceArea="no" />
     </characters>
   </scene>
-  <graph-conversation id="PruebaConversacion">
-    <dialogue-node nodeindex="0" editor-x="187" editor-y="55">
-      <speak-char idTarget="GuiaJugador">
-        <resources name="No name" />
-        <text>Hola</text>
-      </speak-char>
-      <condition />
-      <speak-player>
-        <resources name="No name" />
-        <text>Hola 1</text>
-      </speak-player>
-      <condition />
-      <child nodeindex="1" />
-    </dialogue-node>
-    <option-node nodeindex="1" preListening="yes" editor-x="611" editor-y="38" x="611" y="38">
-      <speak-player>
-        <text>1</text>
-        <resources name="No name" />
-      </speak-player>
-      <condition />
-      <child nodeindex="2" />
-      <speak-player>
-        <text>2</text>
-        <resources name="No name" />
-      </speak-player>
-      <condition />
-      <child nodeindex="3" />
-    </option-node>
-    <dialogue-node nodeindex="2" editor-x="831" editor-y="38">
-      <speak-player>
-        <resources name="No name" />
-        <text>Pretaste 1</text>
-      </speak-player>
-      <condition />
-      <end-conversation />
-    </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="831" editor-y="229">
-      <speak-player>
-        <resources name="No name" />
-        <text>Pretaste 2</text>
-      </speak-player>
-      <condition />
-      <end-conversation />
-    </dialogue-node>
-  </graph-conversation>
-  <graph-conversation id="ConversacionInicial">
+  <graph-conversation id="IntroduccionLibro">
     <option-node nodeindex="0" preListening="yes" editor-x="73" editor-y="108" x="73" y="108">
       <speak-player>
         <text>Hacer la introducción</text>
@@ -1504,7 +1448,7 @@
       <condition />
       <child nodeindex="3" />
       <effect>
-        <trigger-scene idTarget="InitialScene2" x="537" y="450" transitionTime="100" transitionType="5" />
+        <trigger-scene idTarget="EscenaLibroAbierto" x="537" y="450" transitionTime="100" transitionType="5" />
         <condition />
       </effect>
     </dialogue-node>
@@ -1524,6 +1468,12 @@
           <activate flag="IntroductionFinished" />
           <condition />
           <trigger-scene idTarget="MapaIntroduccion" x="539" y="455" transitionTime="1000" transitionType="5" />
+          <condition />
+          <generate-object idTarget="ImagenClinico" />
+          <condition />
+          <navigate navigation-type="Ordered">
+            <step locks="False">GuiaJugador</step>
+          </navigate>
           <condition />
         </effect>
       </end-conversation>
@@ -1552,43 +1502,55 @@
         <condition />
       </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="5" editor-x="601" editor-y="372">
+    <dialogue-node nodeindex="5" editor-x="642" editor-y="369">
+      <speak-player>
+        <resources name="No name" />
+        <text>Aquí se muestra un edificio completamente derruido...</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="6" />
+      <effect>
+        <generate-object idTarget="ImagenClinico" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="6" editor-x="930" editor-y="368">
       <speak-player>
         <resources name="No name" />
         <text>En esta imágen se ve una estatua de un caballo al borde de caerse al suelo.</text>
       </speak-player>
       <condition />
-      <child nodeindex="6" />
+      <child nodeindex="7" />
       <effect>
         <generate-object idTarget="ImagenEstatuaVelazquez" />
         <condition />
       </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="6" editor-x="858" editor-y="370">
+    <dialogue-node nodeindex="7" editor-x="1259" editor-y="357">
       <speak-player>
         <resources name="No name" />
-        <text>En esta, se aprecia una vista aérea de un edificio...</text>
+        <text>Esta foto muestra la vista la vista aerea de un edificio destrozado.</text>
       </speak-player>
       <condition />
-      <child nodeindex="7" />
+      <child nodeindex="8" />
       <effect>
         <generate-object idTarget="ImagenEscuelaArquitectura" />
         <condition />
       </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="7" editor-x="1133" editor-y="370">
+    <dialogue-node nodeindex="8" editor-x="1604" editor-y="337">
       <speak-player>
         <resources name="No name" />
         <text>Y por último, una foto de unos edificios tomada desde el otro lado de la calle.</text>
       </speak-player>
       <condition />
-      <child nodeindex="8" />
+      <child nodeindex="9" />
       <effect>
         <generate-object idTarget="ImagenFacultadMedicina" />
         <condition />
       </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="8" editor-x="1368" editor-y="370">
+    <dialogue-node nodeindex="9" editor-x="1896" editor-y="344">
       <speak-player>
         <resources name="No name" />
         <text>Mi objetivo es localizar estos escenarios en la Ciudad Universitaria.</text>
@@ -1599,26 +1561,23 @@
         <text>Me he guardado las fotografías en la mochila, si quiero verlas más de cerca solo tendré que rebuscar dentro.</text>
       </speak-player>
       <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Lo más inteligente será empezar a buscar desde una zona central... Por ejemplo... La boca de metro de Ciudad Universitaria...</text>
+      </speak-player>
+      <condition />
       <end-conversation>
         <effect>
-          <trigger-scene idTarget="MapaIntroduccion" x="285" y="345" transitionTime="1000" transitionType="5" />
+          <trigger-scene idTarget="MapaIntroduccion" x="539" y="455" transitionTime="1000" transitionType="5" />
           <condition />
           <activate flag="IntroductionFinished" />
           <condition />
+          <navigate navigation-type="Ordered">
+            <step locks="False">GuiaJugador</step>
+          </navigate>
+          <condition />
         </effect>
       </end-conversation>
-    </dialogue-node>
-  </graph-conversation>
-  <graph-conversation id="Conversacion_FacultadInformatica">
-    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
-      <speak-player>
-        <resources name="No name">
-          <asset type="image" uri="" />
-        </resources>
-        <text>#O </text>
-      </speak-player>
-      <condition />
-      <end-conversation />
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="ConversacionSoldadoMedicina">
@@ -1706,7 +1665,7 @@
         <condition />
       </effect>
     </dialogue-node>
-    <option-node nodeindex="1" preListening="yes" editor-x="589" editor-y="60" x="589" y="60">
+    <option-node nodeindex="1" preListening="yes" editor-x="468" editor-y="209" x="468" y="209">
       <speak-player>
         <text>¿Por qué se mantuvo el frente de esta manera?</text>
         <resources name="No name" />
@@ -1739,10 +1698,20 @@
           <asset type="image" uri="assets/image/PabellonFilosofia.jpg" />
         </resources>
       </speak-player>
-      <condition />
+      <condition>
+        <inactive flag="QuestNaranjeroActivada" />
+      </condition>
       <child nodeindex="6" />
+      <speak-player>
+        <text>Tengo el naranjero que buscabas.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition>
+        <active flag="naranjeroEncontrado" />
+      </condition>
+      <child nodeindex="7" />
     </option-node>
-    <dialogue-node nodeindex="2" editor-x="1155" editor-y="0">
+    <dialogue-node nodeindex="2" editor-x="1027" editor-y="4">
       <speak-char idTarget="SoldadoMedicina">
         <resources name="No name" />
         <text> Los sublevados no tenían los recursos necesarios para tomar Mardid. Aun así, lo intentaron.</text>
@@ -1775,7 +1744,7 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="1137" editor-y="355">
+    <dialogue-node nodeindex="3" editor-x="1338" editor-y="321">
       <speak-char idTarget="SoldadoMedicina">
         <resources name="No name" />
         <text>Me llamo Hugo Martinez. Al estallar la guerra, tomé las armas para defender Madrid contra los sublevados.</text>
@@ -1817,7 +1786,7 @@
         <condition />
       </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="4" editor-x="1150" editor-y="689">
+    <dialogue-node nodeindex="4" editor-x="1334" editor-y="662">
       <speak-char idTarget="SoldadoMedicina">
         <resources name="No name" />
         <text>Entendido, estaré por aquí si me buscas.</text>
@@ -1835,7 +1804,7 @@
         </effect>
       </end-conversation>
     </dialogue-node>
-    <dialogue-node nodeindex="5" editor-x="459" editor-y="670">
+    <dialogue-node nodeindex="5" editor-x="1311" editor-y="937">
       <speak-player>
         <resources name="No name" />
         <text>Mira, he encontrado esta foto en el diario de mi abuelo. ¿Te suena?</text>
@@ -1887,7 +1856,9 @@
         <resources name="No name" />
         <text>#O Bien. Una foto menos que tengo que localizar.</text>
       </speak-player>
-      <condition />
+      <condition>
+        <inactive flag="usadoAgronomos" />
+      </condition>
       <child nodeindex="1" />
       <effect>
         <activate flag="usadoAgronomos" />
@@ -1900,9 +1871,11 @@
           <active flag="usadoFilosofia" />
           <active flag="usadoVelazquez" />
         </condition>
+        <consume-object idTarget="ImagenFacultadMedicina" />
+        <condition />
       </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="6" editor-x="1101" editor-y="905">
+    <dialogue-node nodeindex="6" editor-x="1128" editor-y="1262">
       <speak-char idTarget="SoldadoMedicina">
         <resources name="No name" />
         <text>¡Pues claro! Aquí mismo estudié.</text>
@@ -1934,6 +1907,62 @@
           <condition />
         </effect>
       </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="7" editor-x="501" editor-y="1533">
+      <speak-char idTarget="SoldadoMedicina">
+        <resources name="No name" />
+        <text>A ver a ver...</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="SoldadoMedicina">
+        <resources name="No name" />
+        <text>¡Pero bueno! ¡Excelente trabajo!</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="SoldadoMedicina">
+        <resources name="No name" />
+        <text>El tacto, el peso... *snif snif* ¡Incluso el olor! Justo como lo recordaba...</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>...</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="SoldadoMedicina">
+        <resources name="No name" />
+        <text>...</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>...</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="SoldadoMedicina">
+        <resources name="No name" />
+        <text>¡Ah, que sigues aquí! Bueno... muchísimas gracias. Ahora nadie cruzará el frente con este viejo amigo en mis manos.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="SoldadoMedicina">
+        <resources name="No name" />
+        <text>Y sobre la foto, pues verás... Se trata del pabellón de la facultad de filosofía ni más ni menos.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="SoldadoMedicina">
+        <resources name="No name" />
+        <text>Está hacia el norte, en la parte del frente republicano. Ahí seguro que encuentras a una vieja amiga. ¡Mucha suerte!</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+      <effect>
+        <activate flag="PistaFilosofia_SoldMedicina" />
+        <condition />
+        <consume-object idTarget="Naranjero" />
+        <condition />
+        <deactivate flag="naranjeroEncontrado" />
+        <condition />
+      </effect>
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="Conversacion_Arquitectura">
@@ -2011,7 +2040,7 @@
         <condition />
       </effect>
     </dialogue-node>
-    <option-node nodeindex="4" preListening="yes" editor-x="1777" editor-y="334" x="1777" y="334">
+    <option-node nodeindex="4" preListening="yes" editor-x="1719" editor-y="299" x="1719" y="299">
       <speak-player>
         <text>¿Libros?</text>
         <resources name="No name" />
@@ -2059,7 +2088,9 @@
         <resources name="No name" />
         <text>#O Una foto menos.</text>
       </speak-player>
-      <condition />
+      <condition>
+        <inactive flag="usadoArquitectura" />
+      </condition>
       <end-conversation>
         <effect>
           <activate flag="usadoArquitectura" />
@@ -2072,6 +2103,8 @@
             <active flag="usadoFilosofia" />
             <active flag="usadoVelazquez" />
           </condition>
+          <consume-object idTarget="ImagenEscuelaArquitectura" />
+          <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
@@ -2325,12 +2358,10 @@
       </condition>
       <child nodeindex="1" />
       <speak-player>
-        <text>Pero... ¿Quién deja esto al aire libre? La dejaré aquí...</text>
+        <text>Pero... ¿Quién deja esto al aire libre?</text>
         <resources name="No name" />
       </speak-player>
-      <condition>
-        <inactive flag="QuestNaranjeroActivada" />
-      </condition>
+      <condition />
       <child nodeindex="2" />
     </option-node>
     <dialogue-node nodeindex="1" editor-x="767" editor-y="61">
@@ -2343,14 +2374,15 @@
         <effect>
           <generate-object idTarget="Naranjero" />
           <condition />
+          <activate flag="naranjeroEncontrado" />
+          <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
-    <dialogue-node nodeindex="2" editor-x="767" editor-y="252">
+    <dialogue-node nodeindex="2" editor-x="759" editor-y="280">
       <speak-player>
         <resources name="No name" />
-        <text>
-        </text>
+        <text>La dejaré aquí...</text>
       </speak-player>
       <condition />
       <end-conversation />
@@ -3000,6 +3032,8 @@
           <active flag="usadoAgronomos" />
           <active flag="usadoClinica" />
         </condition>
+        <consume-object idTarget="ImagenPabellonFilosofia" />
+        <condition />
       </effect>
     </dialogue-node>
     <dialogue-node nodeindex="5" editor-x="612" editor-y="642">
@@ -3565,6 +3599,8 @@
       <effect>
         <activate flag="usadoClinica" />
         <condition />
+        <consume-object idTarget="ImagenClinico" />
+        <condition />
       </effect>
     </dialogue-node>
     <dialogue-node nodeindex="4" editor-x="1424" editor-y="745">
@@ -3848,6 +3884,20 @@
       </examine>
     </actions>
   </object>
+  <object id="ImagenClinico" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/El Clínico_20-10-39.jpg" />
+      <asset type="icon" uri="assets/icon/El Clínico_20-10-39.jpg" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
   <object id="Naranjero" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
       <asset type="image" uri="assets/image/Naranjero.jpg" />
@@ -3874,20 +3924,6 @@
     <resources name="No name">
       <asset type="image" uri="assets/image/pista1.PNG" />
       <asset type="icon" uri="assets/icon/pista1.PNG" />
-    </resources>
-    <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
-    </description>
-  </object>
-  <object id="ImagenClinico" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
-    <resources name="No name">
-      <asset type="image" uri="assets/image/El Clínico_20-10-39.jpg" />
-      <asset type="icon" uri="assets/icon/El Clínico_20-10-39.jpg" />
     </resources>
     <description>
       <name>
