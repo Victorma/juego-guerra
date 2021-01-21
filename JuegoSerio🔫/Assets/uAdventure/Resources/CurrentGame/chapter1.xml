@@ -205,6 +205,8 @@
           <inactive flag="usadoArquitectura" />
         </condition>
         <effect>
+          <trigger-scene idTarget="EscenaArquitectura" x="600" y="675" transitionTime="1000" transitionType="5" />
+          <condition />
           <trigger-conversation idTarget="Conversacion_Arquitectura" />
           <condition />
         </effect>
@@ -215,6 +217,8 @@
           <active flag="usadoArquitectura" />
         </condition>
         <effect>
+          <trigger-scene idTarget="EscenaArquitectura" x="600" y="675" transitionTime="1000" transitionType="5" />
+          <condition />
           <trigger-conversation idTarget="Conversacion_Arquitectura_Fin" />
           <condition />
         </effect>
@@ -295,6 +299,8 @@
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
         <documentation>Created with target conversation: Conversacion_Velazquez</documentation>
         <effect>
+          <trigger-scene idTarget="EscenaCasaVelazquez" x="256" y="265" transitionTime="1000" transitionType="5" />
+          <condition />
           <trigger-conversation idTarget="Conversacion_Velazquez" />
           <condition />
         </effect>
@@ -343,7 +349,7 @@
   </character>
   <character id="Soldado_Perdido" behaviour="normal">
     <resources name="No name">
-      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standup" uri="assets/animation/AnimSoldadoPerdido.eaa.xml" />
       <asset type="standdown" uri="assets/special/EmptyAnimation" />
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
@@ -542,7 +548,7 @@
       </talk-to>
     </actions>
   </character>
-  <map-scene id="MapaJugable" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4364545764484 -3.74027609825133 0.0185015955099104 0.0219297409057417" center="(40.4474695990583, -3.72622936964166)" zoom="18" start="no">
+  <map-scene id="MapaJugable" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4364545764484 -3.74027609825133 0.0185015955099104 0.0219297409057417" center="(40.4435251417473, -3.72724060434825)" zoom="19" start="no">
     <map-element targetId="GuiaJugador" layer="0">
       <condition />
       <ext-elem-ref scale="0.2174702" orientation="0" transformManager="uAdventure.Geo.ScreenDescriptor">
@@ -600,6 +606,9 @@
         <param name="RevealParticleTexture">leaf_particle.png</param>
         <actions>
           <enter-action>
+            <condition>
+              <inactive flag="capapePresentado" />
+            </condition>
             <effect>
               <trigger-conversation idTarget="Conversacion_Arquitectura" />
               <condition />
@@ -635,10 +644,10 @@
     </map-element>
     <map-element targetId="Polono_Velazquez" layer="0">
       <condition />
-      <ext-elem-ref scale="0.3032366" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4412612915039, -3.73042154312134)</param>
+      <ext-elem-ref scale="0.1514338" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4412040710449, -3.7303626537323)</param>
         <param name="Rotation">0</param>
-        <param name="InteractionRange">69.9</param>
+        <param name="InteractionRange">60.72</param>
         <param name="RevealOnlyOnRange">True</param>
         <param name="Hint">False</param>
         <param name="RevealParticleTexture">leaf_particle.png</param>
@@ -706,7 +715,9 @@
       </ext-elem-ref>
     </map-element>
     <map-element targetId="Clinico" layer="0">
-      <condition />
+      <condition>
+        <active flag="PistaClinico" />
+      </condition>
     </map-element>
     <map-element targetId="ColumnistaDurruti" layer="0">
       <condition />
@@ -797,11 +808,13 @@
         <active flag="JBotanicaPresentado" />
       </condition>
     </map-element>
-    <map-element targetId="CasaDeVelazquez" layer="0">
-      <condition />
+    <map-element targetId="RutaC.Velazquez" layer="0">
+      <condition>
+        <active flag="PistaArquitectura_SoldComunista" />
+      </condition>
     </map-element>
   </map-scene>
-  <map-scene id="MapaIntroduccion" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.436450958252 -3.74027609825134 0.0199999995529652 0.0199999995529652" center="(40.4436096477347, -3.72564196586641)" zoom="19" start="no">
+  <map-scene id="MapaIntroduccion" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.436450958252 -3.74027609825134 0.0199999995529652 0.0199999995529652" center="(40.4430727886418, -3.72697502374683)" zoom="19" start="no">
     <map-element targetId="GuiaJugador" layer="0">
       <condition />
       <ext-elem-ref scale="0.03484683" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
@@ -1013,6 +1026,24 @@
       <geometry influence="20">
         <LineString>
           <posList>40.4479020140273 -3.72750116923402 40.447832613361 -3.72823609416638 40.4481183752928 -3.72854723042221 40.4482816645788 -3.72858478134842 40.4482490068946 -3.72900320594467 40.4485755860546 -3.72906221454299 40.4497104381734 -3.72924996885675 40.4495961406926 -3.73062862429038 40.4491882371325 -3.73056381940957</posList>
+        </LineString>
+      </geometry>
+    </geometries>
+    <actions />
+  </geo-element>
+  <geo-element id="RutaC.Velazquez">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="14.84">
+        <LineString>
+          <posList>40.4432853107259 -3.72752209927063 40.4430279652701 -3.72746309067462 40.4429993870803 -3.72772785927975 40.4428280599695 -3.72770640160763 40.4428055338469 -3.72802999283759 40.4426810140905 -3.72821774746864 40.442583031169 -3.72854497696844 40.4425422049096 -3.72914042736977 40.4421461889064 -3.72913238074256 40.4421870154063 -3.72935768629981 40.4419910479805 -3.72973855997993 40.4417746666174 -3.72970100905373 40.4417838526326 -3.72953739430357 40.4415225610374 -3.72985925938534 40.441320467623 -3.72965809370932 40.4412081932412 -3.72975197102484 40.4412388135458 -3.72995045449196 40.4411530766579 -3.73003092076241 40.4411040841015 -3.73022403981149 40.441110208173 -3.73039838339745</posList>
         </LineString>
       </geometry>
     </geometries>
@@ -1366,11 +1397,8 @@
     <name>
     </name>
     <default-initial-position x="400" y="450" />
-    <objects>
-      <object-ref idTarget="BackArrow" x="462" y="356" scale="0.1" layer="0" hasInfluenceArea="no" />
-    </objects>
     <characters>
-      <character-ref idTarget="Polono_Velazquez" x="92" y="353" scale="1" orientation="0" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="Polono_Velazquez" x="89" y="394" scale="0.3817826" orientation="0" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="EscenaArquitectura" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -1382,11 +1410,8 @@
     <name>
     </name>
     <default-initial-position x="400" y="450" />
-    <objects>
-      <object-ref idTarget="BackArrow" x="1098" y="879" scale="0.2596924" layer="0" hasInfluenceArea="no" />
-    </objects>
     <characters>
-      <character-ref idTarget="RiosCapape" x="717" y="901" scale="1.176622" orientation="0" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="RiosCapape" x="717" y="901" scale="1.176622" orientation="0" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
   <graph-conversation id="IntroduccionLibro">
@@ -1988,6 +2013,12 @@
       </speak-char>
       <condition />
       <child nodeindex="1" />
+      <effect>
+        <activate flag="capapePresentado" />
+        <condition />
+        <trigger-scene idTarget="EscenaArquitectura" x="600" y="675" transitionTime="1000" transitionType="5" />
+        <condition />
+      </effect>
     </dialogue-node>
     <option-node nodeindex="1" keepShowing="yes" preListening="yes" editor-x="562" editor-y="125" x="562" y="125">
       <speak-player>
@@ -2104,6 +2135,23 @@
             <active flag="usadoVelazquez" />
           </condition>
           <consume-object idTarget="ImagenEscuelaArquitectura" />
+          <condition />
+          <trigger-scene idTarget="MapaJugable" x="539" y="455" transitionTime="1000" transitionType="5" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="Conversacion_Arquitectura_Fin">
+    <dialogue-node nodeindex="0" editor-x="206" editor-y="58">
+      <speak-player>
+        <resources name="No name" />
+        <text>Ahora mismo estoy ocupado.</text>
+      </speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <trigger-scene idTarget="MapaJugable" x="539" y="455" transitionTime="1000" transitionType="5" />
           <condition />
         </effect>
       </end-conversation>
@@ -2258,6 +2306,8 @@
       <effect>
         <activate flag="PistaArquitectura_SoldComunista" />
         <condition />
+        <trigger-scene idTarget="MapaJugable" x="539" y="455" transitionTime="0" transitionType="0" />
+        <condition />
       </effect>
     </dialogue-node>
     <dialogue-node nodeindex="4" editor-x="941" editor-y="639">
@@ -2388,16 +2438,6 @@
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="Conversacion_Arquitectura_Fin">
-    <dialogue-node nodeindex="0" editor-x="206" editor-y="58">
-      <speak-player>
-        <resources name="No name" />
-        <text>Ahora mismo estoy ocupado.</text>
-      </speak-player>
-      <condition />
-      <end-conversation />
-    </dialogue-node>
-  </graph-conversation>
   <graph-conversation id="Conversacion_Velazquez">
     <dialogue-node nodeindex="0" editor-x="13358" editor-y="89">
       <speak-player>
@@ -2430,7 +2470,7 @@
       </condition>
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" preListening="yes" editor-x="15091" editor-y="114" x="15091" y="114">
+    <option-node nodeindex="1" preListening="yes" editor-x="15177" editor-y="122" x="15177" y="122">
       <speak-player>
         <text>¿Qué pasó aquí?</text>
         <resources name="No name" />
@@ -2572,6 +2612,8 @@
       <end-conversation>
         <effect>
           <activate flag="Fin_Polono" />
+          <condition />
+          <trigger-scene idTarget="MapaJugable" x="539" y="455" transitionTime="1000" transitionType="5" />
           <condition />
         </effect>
       </end-conversation>
@@ -3020,6 +3062,16 @@
       <condition>
         <inactive flag="usadoFilosofia" />
       </condition>
+      <speak-char idTarget="ChicaFilosofia">
+        <resources name="No name" />
+        <text>¿Aun te quedan fotos por localizar? Si es así, deberías buscar por el sur.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="ChicaFilosofia">
+        <resources name="No name" />
+        <text>En mi época no había nada interesante hacia el norte. Ahora al parecer hay una universidad de informática... ¡Que cosas!</text>
+      </speak-char>
+      <condition />
       <child nodeindex="1" />
       <effect>
         <activate flag="usadoFilosofia" />
@@ -3704,10 +3756,6 @@
           <activate flag="JBotanicaPresentado" />
           <condition />
           <trigger-scene idTarget="MapaJugable" x="539" y="455" transitionTime="0" transitionType="0" />
-          <condition />
-          <navigate navigation-type="Ordered">
-            <step locks="False">CaminoJ.BotaF.Filo</step>
-          </navigate>
           <condition />
         </effect>
       </end-conversation>
