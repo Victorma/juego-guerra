@@ -555,7 +555,46 @@
       </talk-to>
     </actions>
   </character>
-  <map-scene id="MapaJugable" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4364545764484 -3.74027609825133 0.0185015955099104 0.0219297409057417" center="(40.4494956315089, -3.72997109312488)" zoom="18" start="no">
+  <character id="Soldado_PistaClinico" behaviour="normal">
+    <resources name="No name">
+      <asset type="standup" uri="assets/animation/Anim_Soldado_PistaClinico.eaa.xml" />
+      <asset type="standdown" uri="assets/special/EmptyAnimation" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-conversation idTarget="Conversacion_Soldado_Dir_Botanica" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
+  </character>
+  <map-scene id="MapaJugable" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4364545764484 -3.74027609825133 0.0185015955099104 0.0219297409057417" center="(40.4412674440125, -3.7261972250411)" zoom="18" start="no">
     <map-element targetId="GuiaJugador" layer="0">
       <condition />
       <ext-elem-ref scale="0.2174702" orientation="0" transformManager="uAdventure.Geo.ScreenDescriptor">
@@ -723,7 +762,7 @@
     </map-element>
     <map-element targetId="Clinico" layer="0">
       <condition>
-        <active flag="PistaClinico" />
+        <active flag="DirClinico" />
       </condition>
     </map-element>
     <map-element targetId="ColumnistaDurruti" layer="0">
@@ -752,8 +791,8 @@
     </map-element>
     <map-element targetId="Noticia2I" layer="0">
       <condition />
-      <ext-elem-ref scale="0.09001017" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4434013366699, -3.72569823265076)</param>
+      <ext-elem-ref scale="0.05141776" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4434471130371, -3.72568488121033)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">50.9</param>
         <param name="RevealOnlyOnRange">True</param>
@@ -1024,8 +1063,20 @@
         <actions />
       </ext-elem-ref>
     </map-element>
+    <map-element targetId="Soldado_PistaClinico" layer="0">
+      <condition />
+      <ext-elem-ref scale="0.2805908" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4412612915039, -3.72669076919556)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">25</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="Hint">False</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+        <actions />
+      </ext-elem-ref>
+    </map-element>
   </map-scene>
-  <map-scene id="MapaIntroduccion" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.436450958252 -3.74027609825134 0.0199999995529652 0.0199999995529652" center="(40.4433504045256, -3.72696161270175)" zoom="19" start="no">
+  <map-scene id="MapaIntroduccion" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.436450958252 -3.74027609825134 0.0199999995529652 0.0199999995529652" center="(40.441264174745, -3.7269830703739)" zoom="18" start="no">
     <map-element targetId="GuiaJugador" layer="0">
       <condition />
       <ext-elem-ref scale="0.03484683" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
@@ -4135,6 +4186,122 @@
       <end-conversation>
         <effect>
           <activate flag="NoticiaVisto" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="Conversacion_Soldado_Dir_Botanica">
+    <dialogue-node nodeindex="0" editor-x="191" editor-y="70">
+      <speak-char idTarget="Soldado_PistaClinico">
+        <resources name="No name" />
+        <text>¡Usted!, ¿a dónde va?</text>
+      </speak-char>
+      <condition>
+        <inactive flag="DIr_Clinico Hablado" />
+      </condition>
+      <speak-player>
+        <resources name="No name" />
+        <text>Yo, esto...</text>
+      </speak-player>
+      <condition>
+        <inactive flag="DIr_Clinico Hablado" />
+      </condition>
+      <speak-char idTarget="Soldado_PistaClinico">
+        <resources name="No name" />
+        <text>¿No sabe usted, que esto es una zona de guerra?</text>
+      </speak-char>
+      <condition>
+        <inactive flag="DIr_Clinico Hablado" />
+      </condition>
+      <speak-player>
+        <resources name="No name" />
+        <text>Si, lo era, pero...</text>
+      </speak-player>
+      <condition>
+        <inactive flag="DIr_Clinico Hablado" />
+      </condition>
+      <speak-char idTarget="Soldado_PistaClinico">
+        <resources name="No name" />
+        <text>Si lo sabe, entonces...</text>
+      </speak-char>
+      <condition>
+        <inactive flag="DIr_Clinico Hablado" />
+      </condition>
+      <speak-char idTarget="Soldado_PistaClinico">
+        <resources name="No name" />
+        <text>(risas)</text>
+      </speak-char>
+      <condition>
+        <inactive flag="DIr_Clinico Hablado" />
+      </condition>
+      <speak-char idTarget="Soldado_PistaClinico">
+        <resources name="No name" />
+        <text>No puedo más, es broma, tranquilo.</text>
+      </speak-char>
+      <condition>
+        <inactive flag="DIr_Clinico Hablado" />
+      </condition>
+      <speak-char idTarget="Soldado_PistaClinico">
+        <resources name="No name" />
+        <text>A veces me aburro mucho aquí, lo siento.</text>
+      </speak-char>
+      <condition>
+        <inactive flag="DIr_Clinico Hablado" />
+      </condition>
+      <speak-player>
+        <resources name="No name" />
+        <text>Mas enserio, ¿qué haces aqui?</text>
+      </speak-player>
+      <condition>
+        <inactive flag="DIr_Clinico Hablado" />
+      </condition>
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" preListening="yes" editor-x="728" editor-y="86" x="728" y="86">
+      <speak-player>
+        <text>¿Sabes donde esta esto?</text>
+        <resources name="No name">
+          <asset type="image" uri="assets/image/El Clínico_20-10-39.jpg" />
+        </resources>
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>Me tengo que ir.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="1382" editor-y="140">
+      <speak-char idTarget="Soldado_PistaClinico">
+        <resources name="No name" />
+        <text>Hmmm, parece el Clínico, creo.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Soldado_PistaClinico">
+        <resources name="No name" />
+        <text>Está en la otra dirección, sigue en dirección al Metro y antes de llegar gira a la derecha.</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+      <effect>
+        <activate flag="DirClinico" />
+        <condition />
+        <trigger-scene idTarget="MapaJugable" x="539" y="455" transitionTime="0" transitionType="0" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="1387" editor-y="377">
+      <speak-char idTarget="Soldado_PistaClinico">
+        <resources name="No name" />
+        <text>Hasta luego entonces.</text>
+      </speak-char>
+      <condition />
+      <end-conversation>
+        <effect>
+          <activate flag="DIr_Clinico Hablado" />
           <condition />
         </effect>
       </end-conversation>
