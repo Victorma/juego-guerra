@@ -555,7 +555,7 @@
       </talk-to>
     </actions>
   </character>
-  <map-scene id="MapaJugable" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4364545764484 -3.74027609825133 0.0185015955099104 0.0219297409057417" center="(40.4494956315089, -3.72997109312488)" zoom="19" start="no">
+  <map-scene id="MapaJugable" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4364545764484 -3.74027609825133 0.0185015955099104 0.0219297409057417" center="(40.4494956315089, -3.72997109312488)" zoom="18" start="no">
     <map-element targetId="GuiaJugador" layer="0">
       <condition />
       <ext-elem-ref scale="0.2174702" orientation="0" transformManager="uAdventure.Geo.ScreenDescriptor">
@@ -744,8 +744,8 @@
         <param name="Position">(40.4493408203125, -3.7296679019928)</param>
         <param name="Rotation">10</param>
         <param name="InteractionRange">44.5</param>
-        <param name="RevealOnlyOnRange">False</param>
-        <param name="Hint">True</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="Hint">False</param>
         <param name="RevealParticleTexture">leaf_particle.png</param>
         <actions />
       </ext-elem-ref>
@@ -757,7 +757,7 @@
         <param name="Rotation">0</param>
         <param name="InteractionRange">50.9</param>
         <param name="RevealOnlyOnRange">True</param>
-        <param name="Hint">True</param>
+        <param name="Hint">False</param>
         <param name="RevealParticleTexture">leaf_particle.png</param>
         <actions />
       </ext-elem-ref>
@@ -768,8 +768,8 @@
         <param name="Position">(40.4483032226563, -3.72917985916138)</param>
         <param name="Rotation">-45</param>
         <param name="InteractionRange">45.5</param>
-        <param name="RevealOnlyOnRange">False</param>
-        <param name="Hint">True</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="Hint">False</param>
         <param name="RevealParticleTexture">leaf_particle.png</param>
         <actions />
       </ext-elem-ref>
@@ -781,7 +781,7 @@
         <param name="Rotation">0</param>
         <param name="InteractionRange">38.4</param>
         <param name="RevealOnlyOnRange">True</param>
-        <param name="Hint">True</param>
+        <param name="Hint">False</param>
         <param name="RevealParticleTexture">leaf_particle.png</param>
         <actions />
       </ext-elem-ref>
@@ -792,8 +792,8 @@
         <param name="Position">(40.4451599121094, -3.72743368148804)</param>
         <param name="Rotation">-20</param>
         <param name="InteractionRange">30.6</param>
-        <param name="RevealOnlyOnRange">False</param>
-        <param name="Hint">True</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="Hint">False</param>
         <param name="RevealParticleTexture">leaf_particle.png</param>
         <actions />
       </ext-elem-ref>
@@ -1484,26 +1484,26 @@
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/background/1936_LaRazon_BatallaDefinitiva.PNG" />
+      <asset type="background" uri="assets/background/1936_LaRazon_BatallaDefinitiva_Escena.png" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
     <objects>
-      <object-ref idTarget="BackArrow" x="797" y="426" scale="0.115003" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="BackArrow" x="887" y="971" scale="0.2622175" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="Noticia7S" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/background/1936_LaRazon_BombardeoMadrid.PNG" />
+      <asset type="background" uri="assets/background/1936_LaRazon_BombardeoMadrid_Escena.png" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
     <objects>
-      <object-ref idTarget="BackArrow" x="813" y="316" scale="0.1112917" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="BackArrow" x="886" y="850" scale="0.1855634" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="Noticia8S" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -1555,20 +1555,20 @@
     </name>
     <default-initial-position x="400" y="450" />
     <objects>
-      <object-ref idTarget="BackArrow" x="589" y="406" scale="0.1697417" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="BackArrow" x="688" y="934" scale="0.2717719" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="Noticia12S" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/background/1936_LaRazon_FAKENEWS.PNG" />
+      <asset type="background" uri="assets/background/1936_LaRazon_FAKENEWS_Escena.png" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
     <objects>
-      <object-ref idTarget="BackArrow" x="821" y="286" scale="0.1022634" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="BackArrow" x="848" y="833" scale="0.2935274" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="Noticia13S" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -1582,20 +1582,20 @@
     </name>
     <default-initial-position x="400" y="450" />
     <objects>
-      <object-ref idTarget="BackArrow" x="1222" y="798" scale="0.2749316" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="BackArrow" x="720" y="828" scale="0.2749316" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="Noticia14S" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/background/1936_LaRazon_MadridEvacuada.PNG" />
+      <asset type="background" uri="assets/background/1936_LaRazon_MadridEvacuada_Escena.png" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
     <objects>
-      <object-ref idTarget="BackArrow" x="444" y="314" scale="0.104878" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="BackArrow" x="830" y="857" scale="0.2416038" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="Noticia15I_" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -1621,33 +1621,33 @@
     </name>
     <default-initial-position x="400" y="450" />
     <objects>
-      <object-ref idTarget="BackArrow" x="1264" y="450" scale="0.3013855" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="BackArrow" x="1266" y="964" scale="0.3013855" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="Noticia17S" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/background/1937-Claridad_Brigadistas.PNG" />
+      <asset type="background" uri="assets/background/1937-Claridad_Brigadistas_Escena.png" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
     <objects>
-      <object-ref idTarget="BackArrow" x="260" y="140" scale="0.07178424" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="BackArrow" x="393" y="507" scale="0.1363463" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="Noticia18S" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/background/1937-Claridad_DefensaMadrid.PNG" />
+      <asset type="background" uri="assets/background/1937-Claridad_DefensaMadrid_Escena.png" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
     <objects>
-      <object-ref idTarget="BackArrow" x="537" y="188" scale="0.09794494" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="BackArrow" x="826" y="685" scale="0.2073997" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="Noticia19S" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -1699,7 +1699,7 @@
     </name>
     <default-initial-position x="400" y="450" />
     <objects>
-      <object-ref idTarget="BackArrow" x="1759" y="677" scale="0.3086772" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="BackArrow" x="773" y="701" scale="0.2503259" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="EscenaCasaVelazquez" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -2218,7 +2218,7 @@
         <condition />
       </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="6" editor-x="1128" editor-y="1262">
+    <dialogue-node nodeindex="6" editor-x="1156" editor-y="1311">
       <speak-char idTarget="SoldadoMedicina">
         <resources name="No name" />
         <text>¡Pues claro! Aquí mismo estudié.</text>
@@ -2244,12 +2244,11 @@
         <text>Ya te habrás dado cuenta que la memoria no es lo mío... Búscalo y te diré dónde sacaron esta fotografía.</text>
       </speak-char>
       <condition />
-      <end-conversation>
-        <effect>
-          <activate flag="QuestNaranjeroActivada" />
-          <condition />
-        </effect>
-      </end-conversation>
+      <child nodeindex="1" />
+      <effect>
+        <activate flag="QuestNaranjeroActivada" />
+        <condition />
+      </effect>
     </dialogue-node>
     <dialogue-node nodeindex="7" editor-x="501" editor-y="1533">
       <speak-char idTarget="SoldadoMedicina">
