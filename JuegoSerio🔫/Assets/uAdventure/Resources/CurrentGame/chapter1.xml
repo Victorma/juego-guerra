@@ -5140,4 +5140,86 @@
     </progress>
     <score type="VARIABLE" method="SINGLE" id="PuntuacionGuia" />
   </completable>
+   <completable id="CapituloFilosofia" repeatable="false" type="completable">
+    <start-milestone type="COMPLETABLE" targetId="IntroduccionGuiaJugador" />
+    <end-milestone type="CONDITION">
+      <condition>
+        <active flag="usadoFilosofia" />
+      </condition>
+    </end-milestone>
+    <progress type="SPECIFIC">
+      <milestone type="ITEM" targetId="Noticia1I" progress="0.1" />
+      <milestone type="ITEM" targetId="Noticia2I" progress="0.2" />
+      <milestone type="ITEM" targetId="Noticia3I" progress="0.3" />
+      <milestone type="ITEM" targetId="Noticia4I" progress="0.4" />
+      <milestone type="ITEM" targetId="Noticia5I" progress="0.5" />
+      <milestone type="CHARACTER" targetId="PasajeroCInformacion" progress="0.65" />
+      <milestone type="CHARACTER" targetId="HombreJBontanico" progress="0.8" />
+      <milestone type="CHARACTER" targetId="ChicaFilosofia" progress="1" />
+    </progress>
+    <score type="VARIABLE" method="SINGLE" id="PuntuacionDiario" />
+  </completable>
+  <completable id="CapituloCasaVelazquez" repeatable="false" type="completable">
+    <start-milestone type="COMPLETABLE" targetId="IntroduccionGuiaJugador" />
+    <end-milestone type="CONDITION">
+      <condition>
+        <active flag="usadoVelazquez" />
+      </condition>
+    </end-milestone>
+    <progress type="SPECIFIC">
+      <milestone type="CHARACTER" targetId="GuiaJugador" />
+      <milestone type="CHARACTER" targetId="Polono_Velazquez" progress="1" />
+    </progress>
+    <score type="VARIABLE" method="SINGLE" id="PuntuacionDiario" />
+  </completable>
+  <completable id="CapituloArquitectura" repeatable="false" type="completable">
+    <start-milestone type="COMPLETABLE" targetId="IntroduccionGuiaJugador" />
+    <end-milestone type="CONDITION">
+      <condition>
+        <active flag="usadoArquitectura" />
+      </condition>
+    </end-milestone>
+    <progress type="SPECIFIC">
+      <milestone type="CHARACTER" targetId="RiosCapape" progress="1" />
+    </progress>
+    <score type="VARIABLE" method="SINGLE" id="PuntuacionDiario" />
+  </completable>
+  <completable id="CapituloClinica" repeatable="false" type="completable">
+    <start-milestone type="COMPLETABLE" targetId="IntroduccionGuiaJugador" />
+    <end-milestone type="CONDITION">
+      <condition>
+        <active flag="usadoClinica" />
+      </condition>
+    </end-milestone>
+    <progress type="SPECIFIC">
+      <milestone type="CHARACTER" targetId="ColumnistaDurruti" progress="1" />
+    </progress>
+    <score type="VARIABLE" method="SINGLE" id="PuntuacionDiario" />
+  </completable>
+  <completable id="CapituloMedicina" repeatable="false" type="completable">
+    <start-milestone type="COMPLETABLE" targetId="IntroduccionGuiaJugador" />
+    <end-milestone type="CONDITION">
+      <condition>
+        <active flag="usadoAgronomos" />
+      </condition>
+    </end-milestone>
+    <progress type="SPECIFIC">
+      <milestone type="CHARACTER" targetId="NinyoMedicina" progress="1" />
+    </progress>
+    <score type="VARIABLE" method="SINGLE" id="PuntuacionDiario" />
+  </completable>
+  <completable id="GameCompleted" repeatable="false" type="completable">
+    <start-milestone type="CONDITION">
+      <condition>
+        <active flag="usadoAgronomos" />
+        <active flag="usadoArquitectura" />
+        <active flag="usadoClinica" />
+        <active flag="usadoFilosofia" />
+        <active flag="usadoVelazquez" />
+      </condition>
+    </start-milestone>
+    <end-milestone type="SCENE" targetId="Final" />
+    <progress type="SUM" />
+    <score type="VARIABLE" method="SINGLE" id="PuntuacionDiario" />
+  </completable>
 </eAdventure>
