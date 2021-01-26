@@ -582,7 +582,7 @@
       </talk-to>
     </actions>
   </character>
-  <map-scene id="MapaJugable" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4364545764484 -3.74027609825133 0.0185015955099104 0.0219297409057417" center="(40.4404721248014, -3.72640103101839)" zoom="19" start="no">
+  <map-scene id="MapaJugable" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4364545764484 -3.74027609825133 0.0185015955099104 0.0219297409057417" center="(40.4421582806044, -3.72622936964146)" zoom="17" start="no">
     <map-element targetId="FacultadMedicina" layer="0">
       <condition />
     </map-element>
@@ -761,7 +761,9 @@
       <condition />
     </map-element>
     <map-element targetId="Clinico" layer="0">
-      <condition />
+      <condition>
+        <active flag="DirClinico" />
+      </condition>
     </map-element>
     <map-element targetId="ColumnistaDurruti" layer="0">
       <condition />
@@ -789,8 +791,8 @@
     </map-element>
     <map-element targetId="Noticia2I" layer="0">
       <condition />
-      <ext-elem-ref scale="0.1" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4436340332031, -3.72653293609619)</param>
+      <ext-elem-ref scale="0.160951" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4430694580078, -3.72647070884705)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">25</param>
         <param name="RevealOnlyOnRange">False</param>
@@ -855,7 +857,7 @@
     <map-element targetId="Soldado_Dir_Clinico" layer="0">
       <condition />
       <ext-elem-ref scale="0.2472678" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4404487609863, -3.72655653953552)</param>
+        <param name="Position">(40.4411964416504, -3.72670149803162)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">25</param>
         <param name="RevealOnlyOnRange">True</param>
@@ -3799,7 +3801,7 @@
       </condition>
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" editor-x="728" editor-y="86" x="728" y="86">
+    <option-node nodeindex="1" preListening="yes" editor-x="728" editor-y="86" x="728" y="86">
       <speak-player>
         <text>¿Sabes donde esta esto?</text>
         <resources name="No name">
@@ -3829,6 +3831,8 @@
       <child nodeindex="1" />
       <effect>
         <activate flag="DirClinico" />
+        <condition />
+        <trigger-scene idTarget="MapaJugable" x="539" y="455" transitionTime="0" transitionType="0" />
         <condition />
       </effect>
     </dialogue-node>
