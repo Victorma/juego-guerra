@@ -343,7 +343,7 @@
   </character>
   <character id="Soldado_Perdido" behaviour="normal">
     <resources name="No name">
-      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standup" uri="assets/animation/SoldadoPerdidoAnim.eaa.xml" />
       <asset type="standdown" uri="assets/special/EmptyAnimation" />
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
@@ -542,7 +542,47 @@
       </talk-to>
     </actions>
   </character>
-  <map-scene id="MapaJugable" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4364545764484 -3.74027609825133 0.0185015955099104 0.0219297409057417" center="(40.4421644045807, -3.72538447380167)" zoom="16" start="no">
+  <character id="Soldado_Dir_Clinico" behaviour="normal">
+    <resources name="No name">
+      <asset type="standup" uri="assets/animation/Soldado_Dir_ClinicoAnim.eaa.xml" />
+      <asset type="standdown" uri="assets/special/EmptyAnimation" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <documentation>Created with target conversation: Conversacion_Soldado_Dir_Clinico</documentation>
+        <effect>
+          <trigger-conversation idTarget="Conversacion_Soldado_Dir_Botanica" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
+  </character>
+  <map-scene id="MapaJugable" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4364545764484 -3.74027609825133 0.0185015955099104 0.0219297409057417" center="(40.4404721248014, -3.72640103101839)" zoom="19" start="no">
     <map-element targetId="FacultadMedicina" layer="0">
       <condition />
     </map-element>
@@ -672,7 +712,7 @@
     <map-element targetId="Soldado_Perdido" layer="0">
       <condition />
       <ext-elem-ref scale="0.1293791" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4421653747559, -3.72925162315369)</param>
+        <param name="Position">(40.4421081542969, -3.72926831245422)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">25</param>
         <param name="RevealOnlyOnRange">True</param>
@@ -809,8 +849,20 @@
     </map-element>
     <map-element targetId="CaminoJ.BotaF.Filo" layer="0">
       <condition>
-        <active flag="JBotanicaPresentado" />
+        <active flag="DirClinico" />
       </condition>
+    </map-element>
+    <map-element targetId="Soldado_Dir_Clinico" layer="0">
+      <condition />
+      <ext-elem-ref scale="0.2472678" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4404487609863, -3.72655653953552)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">25</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="Hint">False</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+        <actions />
+      </ext-elem-ref>
     </map-element>
   </map-scene>
   <map-scene id="MapaIntroduccion" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.436450958252 -3.74027609825134 0.0199999995529652 0.0199999995529652" center="(40.4472185359692, -3.72719764709527)" zoom="18" start="no">
@@ -3678,6 +3730,120 @@
     </dialogue-node>
     <dialogue-node nodeindex="3" editor-x="975" editor-y="357">
       <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="Conversacion_Soldado_Dir_Botanica">
+    <dialogue-node nodeindex="0" editor-x="191" editor-y="70">
+      <speak-char idTarget="Soldado_Dir_Clinico">
+        <resources name="No name" />
+        <text>¡Usted!, ¿a dónde va?</text>
+      </speak-char>
+      <condition>
+        <inactive flag="DIr_Clinico Hablado" />
+      </condition>
+      <speak-player>
+        <resources name="No name" />
+        <text>Yo, esto...</text>
+      </speak-player>
+      <condition>
+        <inactive flag="DIr_Clinico Hablado" />
+      </condition>
+      <speak-char idTarget="Soldado_Dir_Clinico">
+        <resources name="No name" />
+        <text>¿No sabe usted, que esto es una zona de guerra?</text>
+      </speak-char>
+      <condition>
+        <inactive flag="DIr_Clinico Hablado" />
+      </condition>
+      <speak-player>
+        <resources name="No name" />
+        <text>Si, lo era, pero...</text>
+      </speak-player>
+      <condition>
+        <inactive flag="DIr_Clinico Hablado" />
+      </condition>
+      <speak-char idTarget="Soldado_Dir_Clinico">
+        <resources name="No name" />
+        <text>Si lo sabe, entonces...</text>
+      </speak-char>
+      <condition>
+        <inactive flag="DIr_Clinico Hablado" />
+      </condition>
+      <speak-char idTarget="Soldado_Dir_Clinico">
+        <resources name="No name" />
+        <text>(risas)</text>
+      </speak-char>
+      <condition>
+        <inactive flag="DIr_Clinico Hablado" />
+      </condition>
+      <speak-char idTarget="Soldado_Dir_Clinico">
+        <resources name="No name" />
+        <text>No puedo más, es broma, tranquilo.</text>
+      </speak-char>
+      <condition>
+        <inactive flag="DIr_Clinico Hablado" />
+      </condition>
+      <speak-char idTarget="Soldado_Dir_Clinico">
+        <resources name="No name" />
+        <text>A veces me aburro mucho aquí, lo siento.</text>
+      </speak-char>
+      <condition>
+        <inactive flag="DIr_Clinico Hablado" />
+      </condition>
+      <speak-char idTarget="Soldado_Dir_Clinico">
+        <resources name="No name" />
+        <text>Mas enserio, ¿qué haces aqui?</text>
+      </speak-char>
+      <condition>
+        <inactive flag="DIr_Clinico Hablado" />
+      </condition>
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" editor-x="728" editor-y="86" x="728" y="86">
+      <speak-player>
+        <text>¿Sabes donde esta esto?</text>
+        <resources name="No name">
+          <asset type="image" uri="assets/image/El Clínico_20-10-39.jpg" />
+        </resources>
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>Me tengo que ir.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="1382" editor-y="140">
+      <speak-char idTarget="Soldado_Dir_Clinico">
+        <resources name="No name" />
+        <text>Hmmm, parece el Clínico, creo.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Soldado_Dir_Clinico">
+        <resources name="No name" />
+        <text>Está en la otra dirección, sigue en dirección al Metro y antes de llegar gira a la derecha.</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+      <effect>
+        <activate flag="DirClinico" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="1387" editor-y="377">
+      <speak-char idTarget="Soldado_Dir_Clinico">
+        <resources name="No name" />
+        <text>Hasta luego entonces.</text>
+      </speak-char>
+      <condition />
+      <end-conversation>
+        <effect>
+          <activate flag="DIr_Clinico Hablado" />
+          <condition />
+        </effect>
+      </end-conversation>
     </dialogue-node>
   </graph-conversation>
   <object id="TestItem" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
