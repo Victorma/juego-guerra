@@ -594,7 +594,7 @@
       </talk-to>
     </actions>
   </character>
-  <map-scene id="MapaJugable" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4364545764484 -3.74027609825133 0.0185015955099104 0.0219297409057417" center="(40.4412674440125, -3.7261972250411)" zoom="18" start="no">
+  <map-scene id="MapaJugable" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4364545764484 -3.74027609825133 0.0185015955099104 0.0219297409057417" center="(40.4435455545784, -3.72652177233194)" zoom="18" start="no">
     <map-element targetId="GuiaJugador" layer="0">
       <condition />
       <ext-elem-ref scale="0.2174702" orientation="0" transformManager="uAdventure.Geo.ScreenDescriptor">
@@ -610,9 +610,6 @@
           </enter-action>
         </actions>
       </ext-elem-ref>
-    </map-element>
-    <map-element targetId="StartingPosition" layer="0">
-      <condition />
     </map-element>
     <map-element targetId="SoldadoMedicina" layer="0">
       <condition />
@@ -667,11 +664,11 @@
     <map-element targetId="NinyoMedicina" layer="0">
       <condition />
       <ext-elem-ref scale="0.1593944" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4441986083984, -3.72692942619324)</param>
+        <param name="Position">(40.4441986083984, -3.72695350646973)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">25</param>
         <param name="RevealOnlyOnRange">True</param>
-        <param name="Hint">True</param>
+        <param name="Hint">False</param>
         <param name="RevealParticleTexture">leaf_particle.png</param>
         <actions />
       </ext-elem-ref>
@@ -957,8 +954,8 @@
     </map-element>
     <map-element targetId="Noticia14I" layer="0">
       <condition />
-      <ext-elem-ref scale="0.09192123" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.44384765625, -3.72741770744324)</param>
+      <ext-elem-ref scale="0.05229304" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4438972473145, -3.72746324539185)</param>
         <param name="Rotation">25</param>
         <param name="InteractionRange">44.14</param>
         <param name="RevealOnlyOnRange">True</param>
@@ -1076,7 +1073,7 @@
       </ext-elem-ref>
     </map-element>
   </map-scene>
-  <map-scene id="MapaIntroduccion" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.436450958252 -3.74027609825134 0.0199999995529652 0.0199999995529652" center="(40.4435096248826, -3.72685432434141)" zoom="18" start="no">
+  <map-scene id="MapaIntroduccion" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.436450958252 -3.74027609825134 0.0199999995529652 0.0199999995529652" center="(40.44403219161, -3.72714400291502)" zoom="17" start="no">
     <map-element targetId="GuiaJugador" layer="0">
       <condition />
       <ext-elem-ref scale="0.03484683" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
@@ -2271,7 +2268,7 @@
         <condition />
       </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="6" editor-x="1156" editor-y="1311">
+    <dialogue-node nodeindex="6" editor-x="1129" editor-y="1303">
       <speak-char idTarget="SoldadoMedicina">
         <resources name="No name" />
         <text>¡Pues claro! Aquí mismo estudié.</text>
@@ -2351,6 +2348,10 @@
       <condition />
       <child nodeindex="1" />
       <effect>
+        <increment var="PuntuacionFilosofia" value="1" />
+        <condition>
+          <inactive flag="PistaFilosofia_SoldMedicina" />
+        </condition>
         <activate flag="PistaFilosofia_SoldMedicina" />
         <condition />
         <consume-object idTarget="Naranjero" />
@@ -3007,7 +3008,7 @@
       <speak-player>
         <text>¿Sabes que es esto?</text>
         <resources name="No name">
-          <asset type="image" uri="assets/image/PabellonFilosofia.jpg" />
+          <asset type="image" uri="assets/image/El Clínico_20-10-39.jpg" />
         </resources>
       </speak-player>
       <condition />
@@ -3025,13 +3026,17 @@
         <text>Por supuesto, es lo que nos ordenaron atacar. </text>
       </speak-char>
       <condition />
-      <speak-player>
+      <speak-char idTarget="Soldado_Perdido">
         <resources name="No name" />
-        <text>Yo no conseguí llegar a Filosofía, pero creo que el resto si.</text>
-      </speak-player>
+        <text>Esto que ves es el clínico. Yo fallecí en el asalto, pero mis compañeros lograron mantener la posición.</text>
+      </speak-char>
       <condition />
       <child nodeindex="1" />
       <effect>
+        <increment var="PuntuacionClinica" value="1" />
+        <condition>
+          <inactive flag="pistaFilosofia_SoldPerdido" />
+        </condition>
         <activate flag="pistaFilosofia_SoldPerdido" />
         <condition />
       </effect>
@@ -3136,9 +3141,11 @@
       <condition />
       <child nodeindex="1" />
       <effect>
-        <trigger-cutscene idTarget="PistaFacultadCInformacion" />
-        <condition />
-        <generate-object idTarget="PistaLetraCiencia" />
+        <increment var="PuntuacionFilosofia" value="1" />
+        <condition>
+          <inactive flag="pistaFilosofia_CInfo" />
+        </condition>
+        <activate flag="pistaFilosofia_CInfo" />
         <condition />
       </effect>
     </dialogue-node>
@@ -3228,6 +3235,10 @@
       <condition />
       <child nodeindex="1" />
       <effect>
+        <increment var="PuntuacionFilosofia" value="1" />
+        <condition>
+          <inactive flag="PistaFilosofia_Matematicas" />
+        </condition>
         <activate flag="PistaFilosofia_Matematicas" />
         <condition />
       </effect>
@@ -3883,6 +3894,10 @@
       <condition />
       <child nodeindex="1" />
       <effect>
+        <increment var="PuntuacionVelazquez" value="1" />
+        <condition>
+          <inactive flag="PistaVelazquez_NinyoMedicina" />
+        </condition>
         <activate flag="PistaVelazquez_NinyoMedicina" />
         <condition />
       </effect>
@@ -4127,6 +4142,10 @@
       <condition />
       <end-conversation>
         <effect>
+          <increment var="PuntuacionFilosofia" value="1" />
+          <condition>
+            <inactive flag="JBotanicaPresentado" />
+          </condition>
           <activate flag="JBotanicaPresentado" />
           <condition />
           <trigger-scene idTarget="MapaJugable" x="539" y="455" transitionTime="0" transitionType="0" />
@@ -4276,7 +4295,7 @@
       <condition />
       <child nodeindex="3" />
     </option-node>
-    <dialogue-node nodeindex="2" editor-x="1382" editor-y="140">
+    <dialogue-node nodeindex="2" editor-x="1257" editor-y="123">
       <speak-char idTarget="Soldado_PistaClinico">
         <resources name="No name" />
         <text>Hmmm, parece el Clínico, creo.</text>
@@ -4289,6 +4308,10 @@
       <condition />
       <child nodeindex="1" />
       <effect>
+        <increment var="PuntuacionClinica" value="1" />
+        <condition>
+          <inactive flag="DirClinico" />
+        </condition>
         <activate flag="DirClinico" />
         <condition />
         <trigger-scene idTarget="MapaJugable" x="539" y="455" transitionTime="0" transitionType="0" />
@@ -5117,78 +5140,74 @@
     <name>
     </name>
   </slidescene>
-  <completable id="IntroduccionDiario" repeatable="false" type="completable">
+  <completable id="Introduccion" repeatable="false" type="completable">
     <start-milestone type="SCENE" targetId="IntroduccionLibro1" />
-    <end-milestone type="SCENE" targetId="MapaIntroduccion" />
-    <progress type="SUM">
-      <milestone type="CONDITION" progress="0,5">
-        <condition>
-          <active flag="IntroductionFinished" />
-        </condition>
-      </milestone>
-      <milestone type="SCENE" targetId="IntroduccionLibro1" progress="1" />
-    </progress>
-    <score type="VARIABLE" method="SINGLE" id="PuntuacionDiario" />
-  </completable>
-  <completable id="IntroduccionGuiaJugador" repeatable="false" type="completable">
-    <start-milestone type="COMPLETABLE" targetId="IntroduccionDiario" />
     <end-milestone type="SCENE" targetId="MapaJugable" />
-    <progress type="SPECIFIC">
-      <milestone type="CHARACTER" targetId="GuiaJugador" progress="5" />
-      <milestone type="CONDITION">
-        <condition>
-          <active flag="IntroduccionGuia" />
-        </condition>
-      </milestone>
+    <progress type="SUM">
+      <milestone type="SCENE" targetId="MapaIntroduccion" progress="0,5" />
+      <milestone type="CHARACTER" targetId="GuiaJugador" />
+      <milestone type="SCENE" targetId="MapaJugable" progress="1" />
     </progress>
-    <score type="VARIABLE" method="SINGLE" id="PuntuacionGuia" />
+    <score type="VARIABLE" method="SUM">
+      <sub-scores>
+        <score type="VARIABLE" method="SINGLE" id="PuntuacionDiario" />
+        <score type="VARIABLE" method="SINGLE" id="PuntuacionGuia" />
+      </sub-scores>
+    </score>
   </completable>
   <completable id="CapituloFilosofia" repeatable="false" type="completable">
-    <start-milestone type="COMPLETABLE" targetId="IntroduccionGuiaJugador" />
+    <start-milestone type="COMPLETABLE" targetId="Introduccion" />
     <end-milestone type="CONDITION">
       <condition>
         <active flag="usadoFilosofia" />
       </condition>
     </end-milestone>
-    <progress type="SPECIFIC">
-      <milestone type="ITEM" targetId="Noticia1I" progress="1" />
-      <milestone type="ITEM" targetId="Noticia2I" progress="2" />
-      <milestone type="ITEM" targetId="Noticia3I" progress="3" />
-      <milestone type="ITEM" targetId="Noticia4I" progress="4" />
-      <milestone type="ITEM" targetId="Noticia5I" progress="5" />
-      <milestone type="CHARACTER" targetId="PasajeroCInformacion" progress="65" />
-      <milestone type="CHARACTER" targetId="HombreJBontanico" progress="8" />
-      <milestone type="CHARACTER" targetId="ChicaFilosofia" progress="1" />
+    <progress type="SUM">
+      <milestone type="CHARACTER" targetId="ChicaFilosofia" progress="0,5" />
+      <milestone type="CONDITION">
+        <condition>
+          <active flag="usadoFilosofia" />
+        </condition>
+      </milestone>
     </progress>
-    <score type="VARIABLE" method="SINGLE" id="PuntuacionDiario" />
+    <score type="VARIABLE" method="SINGLE" id="PuntuacionFilosofia" />
   </completable>
   <completable id="CapituloCasaVelazquez" repeatable="false" type="completable">
-    <start-milestone type="COMPLETABLE" targetId="IntroduccionGuiaJugador" />
+    <start-milestone type="COMPLETABLE" targetId="Introduccion" />
     <end-milestone type="CONDITION">
       <condition>
         <active flag="usadoVelazquez" />
       </condition>
     </end-milestone>
-    <progress type="SPECIFIC">
-      <milestone type="CHARACTER" targetId="GuiaJugador" />
-      <milestone type="CHARACTER" targetId="Polono_Velazquez" progress="1" />
+    <progress type="SUM">
+      <milestone type="CHARACTER" targetId="Polono_Velazquez" />
+      <milestone type="CONDITION" progress="1">
+        <condition>
+          <active flag="usadoVelazquez" />
+        </condition>
+      </milestone>
     </progress>
-    <score type="VARIABLE" method="SINGLE" id="PuntuacionDiario" />
+    <score type="VARIABLE" method="SINGLE" id="PuntuacionVelazquez" />
   </completable>
   <completable id="CapituloArquitectura" repeatable="false" type="completable">
-    <start-milestone type="COMPLETABLE" targetId="IntroduccionGuiaJugador" />
+    <start-milestone type="COMPLETABLE" targetId="Introduccion" />
     <end-milestone type="CONDITION">
       <condition>
         <active flag="usadoArquitectura" />
       </condition>
     </end-milestone>
-    <progress type="SPECIFIC">
+    <progress type="SUM">
       <milestone type="CHARACTER" targetId="RiosCapape" progress="1" />
+      <milestone type="CONDITION">
+        <condition>
+          <active flag="usadoArquitectura" />
+        </condition>
+      </milestone>
     </progress>
-    <score type="VARIABLE" method="SINGLE" id="PuntuacionDiario" />
+    <score type="VARIABLE" method="SINGLE" id="PuntuacionArquitectura" />
   </completable>
   <completable id="CapituloClinica" repeatable="false" type="completable">
-    <start-milestone type="COMPLETABLE" targetId="IntroduccionGuiaJugador" />
+    <start-milestone type="COMPLETABLE" targetId="Introduccion" />
     <end-milestone type="CONDITION">
       <condition>
         <active flag="usadoClinica" />
@@ -5197,19 +5216,53 @@
     <progress type="SPECIFIC">
       <milestone type="CHARACTER" targetId="ColumnistaDurruti" progress="1" />
     </progress>
-    <score type="VARIABLE" method="SINGLE" id="PuntuacionDiario" />
+    <score type="VARIABLE" method="SINGLE" id="PuntuacionClinica" />
   </completable>
   <completable id="CapituloMedicina" repeatable="false" type="completable">
-    <start-milestone type="COMPLETABLE" targetId="IntroduccionGuiaJugador" />
+    <start-milestone type="COMPLETABLE" targetId="Introduccion" />
     <end-milestone type="CONDITION">
       <condition>
         <active flag="usadoAgronomos" />
       </condition>
     </end-milestone>
-    <progress type="SPECIFIC">
-      <milestone type="CHARACTER" targetId="NinyoMedicina" progress="1" />
+    <progress type="SUM">
+      <milestone type="CHARACTER" targetId="SoldadoMedicina" progress="1" />
+      <milestone type="CONDITION">
+        <condition>
+          <active flag="usadoAgronomos" />
+        </condition>
+      </milestone>
     </progress>
-    <score type="VARIABLE" method="SINGLE" id="PuntuacionDiario" />
+    <score type="VARIABLE" method="SINGLE" id="PuntuacionOdontologia" />
+  </completable>
+  <completable id="NoticiasVistas" repeatable="false" type="completable">
+    <start-milestone type="SCENE" targetId="MapaJugable" />
+    <end-milestone type="SCENE" targetId="Final" />
+    <progress type="SUM">
+      <milestone type="SCENE" targetId="Noticia1S" />
+      <milestone type="SCENE" targetId="Noticia2S" />
+      <milestone type="SCENE" targetId="Noticia3S" />
+      <milestone type="SCENE" targetId="Noticia4S" />
+      <milestone type="SCENE" targetId="Noticia5S" />
+      <milestone type="SCENE" targetId="Noticia6S" />
+      <milestone type="SCENE" targetId="Noticia7S" />
+      <milestone type="SCENE" targetId="Noticia8S" />
+      <milestone type="SCENE" targetId="Noticia9S" />
+      <milestone type="SCENE" targetId="Noticia10S" />
+      <milestone type="SCENE" targetId="Noticia11S" />
+      <milestone type="SCENE" targetId="Noticia12S" />
+      <milestone type="SCENE" targetId="Noticia13S" />
+      <milestone type="SCENE" targetId="Noticia14S" />
+      <milestone type="SCENE" targetId="Noticia15I_" />
+      <milestone type="SCENE" targetId="Noticia16S" />
+      <milestone type="SCENE" targetId="Noticia17S" />
+      <milestone type="SCENE" targetId="Noticia18S" />
+      <milestone type="SCENE" targetId="Noticia19S" />
+      <milestone type="SCENE" targetId="Noticia20S" />
+      <milestone type="SCENE" targetId="Noticia21S" />
+      <milestone type="SCENE" targetId="Noticia22S" />
+    </progress>
+    <score type="VARIABLE" method="SINGLE" id="PuntuacionArquitectura" />
   </completable>
   <completable id="GameCompleted" repeatable="false" type="completable">
     <start-milestone type="CONDITION">
