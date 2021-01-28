@@ -7,11 +7,6 @@
     </documentation>
   </frame>
   <transition type="5" time="0" />
-  <frame uri="assets/animation/2.png" type="image" time="100" waitforclick="no" soundUri="" maxSoundTime="1000">
-    <documentation>
-    </documentation>
-  </frame>
-  <transition type="5" time="0" />
   <frame uri="assets/animation/3.png" type="image" time="60" waitforclick="no" soundUri="" maxSoundTime="1000">
     <documentation>
     </documentation>
@@ -22,7 +17,7 @@
     </documentation>
   </frame>
   <transition type="0" time="0" />
-  <frame uri="assets/animation/5.png" type="image" time="20" waitforclick="no" soundUri="" maxSoundTime="1000">
+  <frame uri="assets/animation/8.png" type="image" time="60" waitforclick="no" soundUri="" maxSoundTime="1000">
     <documentation>
     </documentation>
   </frame>
@@ -32,62 +27,12 @@
     </documentation>
   </frame>
   <transition type="0" time="0" />
-  <frame uri="assets/animation/7.png" type="image" time="20" waitforclick="no" soundUri="" maxSoundTime="1000">
-    <documentation>
-    </documentation>
-  </frame>
-  <transition type="0" time="0" />
-  <frame uri="assets/animation/8.png" type="image" time="60" waitforclick="no" soundUri="" maxSoundTime="1000">
-    <documentation>
-    </documentation>
-  </frame>
-  <transition type="0" time="0" />
-  <frame uri="assets/animation/9.png" type="image" time="20" waitforclick="no" soundUri="" maxSoundTime="1000">
-    <documentation>
-    </documentation>
-  </frame>
-  <transition type="0" time="0" />
-  <frame uri="assets/animation/10.png" type="image" time="100" waitforclick="no" soundUri="" maxSoundTime="1000">
-    <documentation>
-    </documentation>
-  </frame>
-  <transition type="0" time="0" />
-  <frame uri="assets/animation/11.png" type="image" time="20" waitforclick="no" soundUri="" maxSoundTime="1000">
-    <documentation>
-    </documentation>
-  </frame>
-  <transition type="0" time="0" />
   <frame uri="assets/animation/16.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
     <documentation>
     </documentation>
   </frame>
   <transition type="0" time="0" />
-  <frame uri="assets/animation/12.png" type="image" time="100" waitforclick="no" soundUri="" maxSoundTime="1000">
-    <documentation>
-    </documentation>
-  </frame>
-  <transition type="0" time="0" />
-  <frame uri="assets/animation/13.png" type="image" time="20" waitforclick="no" soundUri="" maxSoundTime="1000">
-    <documentation>
-    </documentation>
-  </frame>
-  <transition type="0" time="0" />
-  <frame uri="assets/animation/14.png" type="image" time="100" waitforclick="no" soundUri="" maxSoundTime="1000">
-    <documentation>
-    </documentation>
-  </frame>
-  <transition type="0" time="0" />
-  <frame uri="assets/animation/15.png" type="image" time="20" waitforclick="no" soundUri="" maxSoundTime="1000">
-    <documentation>
-    </documentation>
-  </frame>
-  <transition type="0" time="0" />
   <frame uri="assets/animation/17.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
-    <documentation>
-    </documentation>
-  </frame>
-  <transition type="0" time="0" />
-  <frame uri="assets/animation/MapaFrente.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
     <documentation>
     </documentation>
   </frame>

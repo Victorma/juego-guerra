@@ -2038,7 +2038,7 @@
       </condition>
       <speak-char idTarget="SoldadoMedicina">
         <resources name="No name">
-          <asset type="image" uri="assets/image/1PAiTuL.jpg" />
+          <asset type="image" uri="" />
         </resources>
         <text>Bueno... ¿Tienes alguna pregunta?</text>
       </speak-char>
@@ -2260,7 +2260,7 @@
         <condition>
           <active flag="usadoAgronomos" />
           <active flag="usadoArquitectura" />
-          <inactive flag="usadoClinica" />
+          <active flag="usadoClinica" />
           <active flag="usadoFilosofia" />
           <active flag="usadoVelazquez" />
         </condition>
@@ -2593,7 +2593,7 @@
       </speak-player>
       <condition />
       <child nodeindex="3" />
-      <speak-player>
+      <speak-player correct="true">
         <text>Un anarquista me dijo que no te preguntara sobre Durruti.</text>
         <resources name="No name" />
       </speak-player>
@@ -4064,6 +4064,61 @@
       </end-conversation>
     </dialogue-node>
   </graph-conversation>
+  <graph-conversation id="Introduccion_Noticias">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="GuiaJugador">
+        <resources name="No name" />
+        <text>¡Fijate! ¿Sabes qué es esto?</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>...</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="GuiaJugador">
+        <resources name="No name" />
+        <text>¿Qué pasa, acaso no leéis periódicos los de vuestra época?</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="GuiaJugador">
+        <resources name="No name" />
+        <text>Esto es prensa de la época... Aunque casi se podría llamar propaganda.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="GuiaJugador">
+        <resources name="No name" />
+        <text>¿Sabes? La guerra no solo se libraba en el frente. Las imprentas luchaban para animar a la población o para descorazonar al enemigo.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="GuiaJugador">
+        <resources name="No name" />
+        <text>Solo hacía falta que un bando perdiera una batalla para anunciarla despues como una tremenda victoria.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="GuiaJugador">
+        <resources name="No name" />
+        <text>Por el campus encontrarás prensa de toda España, de todos los colores políticos.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="GuiaJugador">
+        <resources name="No name" />
+        <text>Seguramente no resuelvan el misterio de las fotografías, pero seguro que aprendes algo.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="GuiaJugador">
+        <resources name="No name" />
+        <text>Disculpa, siempre acabo hablando más de la cuenta... Veamos esa página...</text>
+      </speak-char>
+      <condition />
+      <end-conversation>
+        <effect>
+          <activate flag="NoticiaVisto" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
   <graph-conversation id="ConversationJBotanica">
     <dialogue-node nodeindex="0" editor-x="171" editor-y="120">
       <speak-player>
@@ -4155,61 +4210,6 @@
     </dialogue-node>
     <dialogue-node nodeindex="3" editor-x="975" editor-y="357">
       <end-conversation />
-    </dialogue-node>
-  </graph-conversation>
-  <graph-conversation id="Introduccion_Noticias">
-    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
-      <speak-char idTarget="GuiaJugador">
-        <resources name="No name" />
-        <text>¡Fijate! ¿Sabes qué es esto?</text>
-      </speak-char>
-      <condition />
-      <speak-player>
-        <resources name="No name" />
-        <text>...</text>
-      </speak-player>
-      <condition />
-      <speak-char idTarget="GuiaJugador">
-        <resources name="No name" />
-        <text>¿Qué pasa, acaso no leéis periódicos los de vuestra época?</text>
-      </speak-char>
-      <condition />
-      <speak-char idTarget="GuiaJugador">
-        <resources name="No name" />
-        <text>Esto es prensa de la época... Aunque casi se podría llamar propaganda.</text>
-      </speak-char>
-      <condition />
-      <speak-char idTarget="GuiaJugador">
-        <resources name="No name" />
-        <text>¿Sabes? La guerra no solo se libraba en el frente. Las imprentas luchaban para animar a la población o para descorazonar al enemigo.</text>
-      </speak-char>
-      <condition />
-      <speak-char idTarget="GuiaJugador">
-        <resources name="No name" />
-        <text>Solo hacía falta que un bando perdiera una batalla para anunciarla despues como una tremenda victoria.</text>
-      </speak-char>
-      <condition />
-      <speak-char idTarget="GuiaJugador">
-        <resources name="No name" />
-        <text>Por el campus encontrarás prensa de toda España, de todos los colores políticos.</text>
-      </speak-char>
-      <condition />
-      <speak-char idTarget="GuiaJugador">
-        <resources name="No name" />
-        <text>Seguramente no resuelvan el misterio de las fotografías, pero seguro que aprendes algo.</text>
-      </speak-char>
-      <condition />
-      <speak-char idTarget="GuiaJugador">
-        <resources name="No name" />
-        <text>Disculpa, siempre acabo hablando más de la cuenta... Veamos esa página...</text>
-      </speak-char>
-      <condition />
-      <end-conversation>
-        <effect>
-          <activate flag="NoticiaVisto" />
-          <condition />
-        </effect>
-      </end-conversation>
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="Conversacion_Soldado_Dir_Botanica">
@@ -5131,7 +5131,7 @@
     <name>
     </name>
   </slidescene>
-  <slidescene id="Final" start="no" next="go-back" class="accesible" type="cutscene">
+  <slidescene id="Final" start="no" next="end-chapter" class="accesible" type="cutscene">
     <documentation>
     </documentation>
     <resources name="No name">
