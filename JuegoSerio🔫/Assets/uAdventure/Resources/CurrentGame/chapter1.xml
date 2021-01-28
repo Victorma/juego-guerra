@@ -1076,7 +1076,7 @@
       </ext-elem-ref>
     </map-element>
   </map-scene>
-  <map-scene id="MapaIntroduccion" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.436450958252 -3.74027609825134 0.0199999995529652 0.0199999995529652" center="(40.441264174745, -3.7269830703739)" zoom="18" start="no">
+  <map-scene id="MapaIntroduccion" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.436450958252 -3.74027609825134 0.0199999995529652 0.0199999995529652" center="(40.4435096248826, -3.72685432434141)" zoom="18" start="no">
     <map-element targetId="GuiaJugador" layer="0">
       <condition />
       <ext-elem-ref scale="0.03484683" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
@@ -2040,7 +2040,9 @@
         <inactive flag="SoldadoMedicinaVisitado" />
       </condition>
       <speak-char idTarget="SoldadoMedicina">
-        <resources name="No name" />
+        <resources name="No name">
+          <asset type="image" uri="assets/image/1PAiTuL.jpg" />
+        </resources>
         <text>Bueno... ¿Tienes alguna pregunta?</text>
       </speak-char>
       <condition>
@@ -2059,7 +2061,7 @@
         <condition />
       </effect>
     </dialogue-node>
-    <option-node nodeindex="1" preListening="yes" editor-x="468" editor-y="209" x="468" y="209">
+    <option-node nodeindex="1" keepShowing="yes" preListening="yes" max-elements-per-row="3" alignment="MiddleCenter" horizontal="yes" editor-x="688" editor-y="287" x="688" y="287">
       <speak-player>
         <text>¿Por qué se mantuvo el frente de esta manera?</text>
         <resources name="No name" />
@@ -3282,7 +3284,7 @@
         <condition />
       </effect>
     </dialogue-node>
-    <option-node nodeindex="1" preListening="yes" editor-x="414" editor-y="19" x="414" y="19">
+    <option-node nodeindex="1" question="Dialogo_Filosofia" preListening="yes" editor-x="392" editor-y="25" x="392" y="25">
       <speak-player>
         <text>¿Cual es tu historia?</text>
       </speak-player>
@@ -3294,7 +3296,7 @@
       </speak-player>
       <condition />
       <child nodeindex="3" />
-      <speak-player>
+      <speak-player correct="true">
         <text>¿Reconoces esta fotografía?</text>
         <resources name="No name">
           <asset type="image" uri="assets/image/PabellonFilosofia.jpg" />
@@ -5118,12 +5120,13 @@
   <completable id="IntroduccionDiario" repeatable="false" type="completable">
     <start-milestone type="SCENE" targetId="IntroduccionLibro1" />
     <end-milestone type="SCENE" targetId="MapaIntroduccion" />
-    <progress type="SPECIFIC">
-      <milestone type="CONDITION" progress="1">
+    <progress type="SUM">
+      <milestone type="CONDITION" progress="0,5">
         <condition>
           <active flag="IntroductionFinished" />
         </condition>
       </milestone>
+      <milestone type="SCENE" targetId="IntroduccionLibro1" progress="1" />
     </progress>
     <score type="VARIABLE" method="SINGLE" id="PuntuacionDiario" />
   </completable>
@@ -5140,7 +5143,7 @@
     </progress>
     <score type="VARIABLE" method="SINGLE" id="PuntuacionGuia" />
   </completable>
-   <completable id="CapituloFilosofia" repeatable="false" type="completable">
+  <completable id="CapituloFilosofia" repeatable="false" type="completable">
     <start-milestone type="COMPLETABLE" targetId="IntroduccionGuiaJugador" />
     <end-milestone type="CONDITION">
       <condition>
@@ -5148,13 +5151,13 @@
       </condition>
     </end-milestone>
     <progress type="SPECIFIC">
-      <milestone type="ITEM" targetId="Noticia1I" progress="0.1" />
-      <milestone type="ITEM" targetId="Noticia2I" progress="0.2" />
-      <milestone type="ITEM" targetId="Noticia3I" progress="0.3" />
-      <milestone type="ITEM" targetId="Noticia4I" progress="0.4" />
-      <milestone type="ITEM" targetId="Noticia5I" progress="0.5" />
-      <milestone type="CHARACTER" targetId="PasajeroCInformacion" progress="0.65" />
-      <milestone type="CHARACTER" targetId="HombreJBontanico" progress="0.8" />
+      <milestone type="ITEM" targetId="Noticia1I" progress="1" />
+      <milestone type="ITEM" targetId="Noticia2I" progress="2" />
+      <milestone type="ITEM" targetId="Noticia3I" progress="3" />
+      <milestone type="ITEM" targetId="Noticia4I" progress="4" />
+      <milestone type="ITEM" targetId="Noticia5I" progress="5" />
+      <milestone type="CHARACTER" targetId="PasajeroCInformacion" progress="65" />
+      <milestone type="CHARACTER" targetId="HombreJBontanico" progress="8" />
       <milestone type="CHARACTER" targetId="ChicaFilosofia" progress="1" />
     </progress>
     <score type="VARIABLE" method="SINGLE" id="PuntuacionDiario" />
