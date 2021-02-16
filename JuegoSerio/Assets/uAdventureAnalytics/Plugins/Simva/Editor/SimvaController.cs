@@ -53,7 +53,7 @@ namespace uAdventure.Simva
 
                 // Android
                 case BuildTarget.Android:
-                    var docPath = @"Assets\uAdventureAnalytics\Plugins\Simva\Plugins\Android\AndroidManifest.xml";
+                    var docPath = @"Assets\uAdventureAnalytics\Plugins\Simva\Plugins\Android\AndroidManifest_template.xml";
                     var finalPath = @"Assets/Plugins/Android/AndroidManifest.xml";
                     XDocument doc = XDocument.Load(docPath);
                     Debug.Log("Loaded!");
@@ -93,6 +93,7 @@ namespace uAdventure.Simva
                         using (var writer = XmlWriter.Create(finalPath))
                         {
                             doc.WriteTo(writer);
+                            AssetDatabase.ImportAsset(finalPath);
                             Debug.Log("Written!");
                         }
                     }

@@ -5122,15 +5122,6 @@
       </examine>
     </actions>
   </object>
-  <slidescene id="PistaFacultadCInformacion" start="no" next="go-back" class="accesible" type="cutscene">
-    <documentation>
-    </documentation>
-    <resources name="No name">
-      <asset type="slides" uri="assets/animation/PistaCInformacion.eaa.xml" />
-    </resources>
-    <name>
-    </name>
-  </slidescene>
   <slidescene id="Final" start="no" next="end-chapter" class="accesible" type="cutscene">
     <documentation>
     </documentation>
