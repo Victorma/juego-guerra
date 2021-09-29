@@ -286,17 +286,7 @@ namespace uAdventure.Runner
             var charactersShown = (int)(Data.Line.Length * Mathf.Clamp01(percent));
             string cutted = CutWithSymbols(Data.Line, charactersShown);
             var openedSymbols = FindOpenedSimbols(cutted);
-
-            string talkerName = "Tú";
-            if (Data.Talker && !Data.Talker.name.Equals("Player", StringComparison.InvariantCultureIgnoreCase))
-            {
-                var talkerRepresentable = Data.Talker.GetComponent<Representable>();
-                var talkerData = talkerRepresentable.Element.getDescriptions()
-                    .FirstOrDefault(d => ConditionChecker.check(d.getConditions()));
-
-                talkerName = talkerData != null ? talkerData.getName() : talkerRepresentable.name;
-            }
-            text.text = talkerName + ": " + cutted + CloseOpenedSymbols(openedSymbols) + "<color=#00000000>" + RemoveSymbols(Data.Line.Substring(cutted.Length)) + "</color>";
+            text.text = cutted + CloseOpenedSymbols(openedSymbols) + "<color=#00000000>" + RemoveSymbols(Data.Line.Substring(cutted.Length)) + "</color>";
         }
 
         private string CutWithSymbols(string line, int charactersShown)
