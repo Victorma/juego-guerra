@@ -3,8 +3,8 @@
   <title>Adventure title</title>
   <description>
   </description>
-  <application-identifier>com.Grupo3.JuegoSerio</application-identifier>
-  <configuration keepShowing="no" keyboard-navigation="disabled" defaultClickAction="showDetails" perspective="regular" dragBehaviour="considerNonTargets" show-save-load="yes" show-reset="yes" autosave="no" save-on-suspend="no" restore-after-open="no">
+  <application-identifier>com.eUCM.GuerraCivilUCM</application-identifier>
+  <configuration keepShowing="no" keyboard-navigation="disabled" defaultClickAction="showDetails" perspective="regular" dragBehaviour="considerNonTargets" show-save-load="yes" show-reset="yes" autosave="yes" save-on-suspend="yes" restore-after-open="yes">
     <gui type="contextual" inventoryPosition="icon" inventoryImage="assets/special/DefaultInventory.png" inventoryX="748.3333" inventoryY="591.6666" inventoryScale="0.1367188" />
     <mode playerTransparent="yes" />
     <graphics mode="windowed" />

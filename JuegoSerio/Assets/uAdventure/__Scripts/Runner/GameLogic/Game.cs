@@ -30,22 +30,24 @@ namespace uAdventure.Runner
         //#####################################################################
         #region Monobehaviour
 
-        public bool useSystemIO = true, forceScene = false, editor_mode = true;
+        public bool useSystemIO = true, forceScene = false, editor_mode = true, actionCanceled = false;
         public string gamePath = "", gameName = "", scene_name = "";
+        public static readonly Color NoColor = new Color(-1, -1, -1, -1);
 
         // Execution
         private bool waitingRunTarget = false, waitingTransition = false, waitingTargetDestroy = false;
+        private List<EffectHolderNode> background;
         private Stack<KeyValuePair<Interactuable, ExecutionEvent>> executeStack;
         private IRunnerChapterTarget runnerTarget;
         private GameState game_state;
         private uAdventureRaycaster uAdventureRaycaster;
-        private TransitionManager TransitionManager 
-        { 
-            get 
+        private TransitionManager TransitionManager
+        {
+            get
             {
                 var camera = FindObjectOfType<Camera>();
                 return camera ? camera.GetComponent<TransitionManager>() : null;
-            } 
+            }
         }
 
         // GUI
@@ -64,6 +66,7 @@ namespace uAdventure.Runner
         private int pulsing = 0;
         private bool wasShowingInventory = false;
         private int loadedChapter = -1;
+        private int previousTouchCount;
 
         public delegate void TargetChangedDelegate(IChapterTarget newTarget);
 
@@ -72,6 +75,14 @@ namespace uAdventure.Runner
         public delegate void ElementInteractedDelegate(bool finished, Element element, Core.Action action);
 
         public ElementInteractedDelegate OnElementInteracted;
+
+        public delegate void ActionCanceledDelegate();
+
+        public ActionCanceledDelegate OnActionCanceled;
+
+        /*public delegate void ShowTextDelegate(bool finished, ConversationLine line, string text, int x, int y, Color textColor, Color textOutlineColor, Color baseColor, Color outlineColor, string id);
+
+        public ShowTextDelegate OnShowText;*/
 
         public delegate void ExecutionEvent(object interactuable);
 
@@ -121,6 +132,7 @@ namespace uAdventure.Runner
                 DontDestroyOnLoad(Camera.main);
 
                 executeStack = new Stack<KeyValuePair<Interactuable, ExecutionEvent>>();
+                background = new List<EffectHolderNode>();
 
                 skin = Resources.Load("basic") as GUISkin;
 
@@ -212,12 +224,12 @@ namespace uAdventure.Runner
             GameState.Restart();
             started = true;
             Debug.Log("[START GAME] Game Resuming...");
-            if (!Application.isEditor && GameState.Data.isRestoreAfterOpen())
+            if (GameState.Data.isRestoreAfterOpen())
             {
                 GameState.OnGameResume();
             }
             Debug.Log("[START GAME] After Game Load...");
-            foreach(var g in gameExtensions)
+            foreach (var g in PriorityAttribute.OrderExtensionsByMethod("OnAfterGameLoad", gameExtensions))
             {
                 yield return StartCoroutine(g.OnAfterGameLoad());
             }
@@ -240,7 +252,7 @@ namespace uAdventure.Runner
             RunTarget(forceScene ? scene_name : GameState.CurrentTarget);
             yield return new WaitUntil(() => !waitingRunTarget);
             Debug.Log("[START GAME] Game Ready...");
-            foreach (var g in gameExtensions)
+            foreach (var g in PriorityAttribute.OrderExtensionsByMethod("OnGameReady", gameExtensions))
             {
                 yield return StartCoroutine(g.OnGameReady());
             }
@@ -267,6 +279,22 @@ namespace uAdventure.Runner
 
         protected void Update()
         {
+            if (background.Count > 0)
+            {
+                foreach(var element in background.ToList())
+                {
+                    if (!element.execute())
+                    {
+                        background.Remove(element);
+                    }
+                }
+
+                if(background.Count == 0 && executeStack.Count == 0)
+                {
+                    FinalizeExecution();
+                }
+            }
+
             if (waitingRunTarget && runnerTarget.IsReady)
             {
                 Debug.Log("[UPDATE] Target Ready!");
@@ -304,13 +332,14 @@ namespace uAdventure.Runner
             {
                 MenuMB.Instance.hide();
             }
-            else if (Input.GetKeyDown(KeyCode.Escape))
+            else if (Input.GetKeyDown(KeyCode.Escape) || (Input.touchCount != previousTouchCount && Input.touchCount == 4))
             {
                 if (!isSomethingRunning())
                 {
                     GUIManager.Instance.ShowConfigMenu();
                 }
             }
+            previousTouchCount = Input.touchCount;
         } 
 
         public IEnumerator LoadGame()
@@ -318,7 +347,7 @@ namespace uAdventure.Runner
             Debug.Log("[LOAD GAME] Restoring save...");
             GameState.RestoreFrom("save");
             Debug.Log("[LOAD GAME] After Game Load...");
-            foreach(var g in gameExtensions)
+            foreach (var g in PriorityAttribute.OrderExtensionsByMethod("OnAfterGameLoad", gameExtensions))
             {
                 yield return StartCoroutine(g.OnAfterGameLoad());
             }
@@ -328,7 +357,7 @@ namespace uAdventure.Runner
             Debug.Log("[LOAD GAME] Waiting for target to be ready...!");
             yield return new WaitUntil(() => !waitingRunTarget);
             Debug.Log("[LOAD GAME] Game Ready...");
-            foreach (var g in gameExtensions)
+            foreach (var g in PriorityAttribute.OrderExtensionsByMethod("OnGameReady", gameExtensions))
             {
                 yield return StartCoroutine(g.OnGameReady());
             }
@@ -336,36 +365,44 @@ namespace uAdventure.Runner
             Debug.Log("[LOAD GAME] Done!");
         }
 
-        public IEnumerator SaveGame()
+        public void SaveGame()
         {
-            Debug.Log("[SAVE GAME] Before saving game...");
-            foreach (var g in gameExtensions)
+            if (!GameState.GetChapterTarget(GameState.CurrentTarget).allowsSavingGame())
             {
-                yield return StartCoroutine(g.OnBeforeGameSave());
+                Debug.Log("[SAVE GAME] Current scene doesn't allow saving. Cancelling save...");
+                return;
             }
-            Debug.Log("[SAVE GAME] Saving...");
-            GameState.SerializeTo("save");
-            Debug.Log("[SAVE GAME] Done!");
+            else
+            {
+                Debug.Log("[SAVE GAME] Before saving game...");
+                foreach (var g in PriorityAttribute.OrderExtensionsByMethod("OnBeforeGameSave", gameExtensions))
+                {
+                    g.OnBeforeGameSave();
+                }
+                Debug.Log("[SAVE GAME] Saving...");
+                GameState.SerializeTo("save");
+                Debug.Log("[SAVE GAME] Done!");
+            }
         }
 
         public void AutoSave()
         {
-            if(Application.isEditor || !GameState.Data.isAutoSave())
+            if(/*Application.isEditor || */!GameState.Data.isAutoSave())
             {
                 Debug.Log("[AUTO SAVE] Auto save is disabled. Skipping...");
                 return;
             }
 
             Debug.Log("[AUTO SAVE] Performing auto-save...");
-            StartCoroutine(SaveGame());
+            SaveGame();
         }
 
         public void OnApplicationPause(bool paused)
         {
-            if (Application.isEditor)
+            /*if (Application.isEditor)
             {
                 return;
-            }
+            }*/
 
             if (!isSomethingRunning())
             {
@@ -373,20 +410,26 @@ namespace uAdventure.Runner
                 {
                     GameState.OnGameSuspend();
                 }
-                
-                if (!paused && GameState.Data.isRestoreAfterOpen())
+
+                /*if (!paused && GameState.Data.isRestoreAfterOpen())
                 {
                     // TODO REPARE RESTORE AFTER OPEN
                     GameState.OnGameResume();
                     if (started)
                     {
+                        var gameReadyOrderedExtensions = PriorityAttribute.OrderExtensionsByMethod("OnGameReady", gameExtensions);
                         RunTarget(GameState.CurrentTarget);
-                        gameExtensions.ForEach(g => g.OnGameReady());
+                        gameReadyOrderedExtensions.ForEach(g => g.OnGameReady());
                         uAdventureInputModule.LookingForTarget = null;
                     }
-                }
+                }*/
             }
 
+        }
+
+        public void RunInBackground(EffectHolderNode effect)
+        {
+            background.Add(effect);
         }
 
         public bool Execute(Interactuable interactuable, ExecutionEvent callback = null)
@@ -397,7 +440,7 @@ namespace uAdventure.Runner
                 MenuMB.Instance.hide(true);
             }
 
-            if(executeStack.Count == 0)
+            if (executeStack.Count == 0)
             {
                 AutoSave();
             }
@@ -408,7 +451,7 @@ namespace uAdventure.Runner
                 Debug.Log("Pushed " + interactuable.ToString());
                 executeStack.Push(new KeyValuePair<Interactuable, ExecutionEvent>(interactuable, callback));
             }
-            while(executeStack.Count > 0)
+            while (executeStack.Count > 0)
             {
                 var preInteractSize = executeStack.Count;
                 var toExecute = executeStack.Peek();
@@ -423,7 +466,7 @@ namespace uAdventure.Runner
                     Debug.LogError("Interacted execution exception: " + ex.Message + ex.StackTrace);
                 }
 
-                if (requiresMore)
+                if (requiresMore && !actionCanceled)
                 {
                     uAdventureRaycaster.Instance.Override = this.gameObject;
                     return true;
@@ -431,30 +474,45 @@ namespace uAdventure.Runner
                 else
                 {
                     Debug.Log("Execution finished " + toExecute.ToString());
-                    if (preInteractSize != executeStack.Count)
+                    if (!actionCanceled)
                     {
-                        Debug.Log("The size was different");
-                        var backupStack = new Stack<KeyValuePair<Interactuable, ExecutionEvent>>();
-                        // We backup the new stacked things
-                        while (executeStack.Count > preInteractSize)
+                        if (preInteractSize != executeStack.Count)
                         {
-                            backupStack.Push(executeStack.Pop());
+                            Debug.Log("The size was different");
+                            var backupStack = new Stack<KeyValuePair<Interactuable, ExecutionEvent>>();
+                            // We backup the new stacked things
+                            while (executeStack.Count > preInteractSize)
+                            {
+                                backupStack.Push(executeStack.Pop());
+                            }
+                            // Then we remove our entry
+                            executeStack.Pop();
+                            // Then we reinsert the backuped stuff
+                            while (backupStack.Count > 0)
+                            {
+                                executeStack.Push(backupStack.Pop());
+                            }
                         }
-                        // Then we remove our entry
-                        executeStack.Pop();
-                        // Then we reinsert the backuped stuff
-                        while (backupStack.Count > 0)
+                        else
                         {
-                            executeStack.Push(backupStack.Pop());
+                            executeStack.Pop();
                         }
                     }
-                    else
-                    {
-                        executeStack.Pop();
-                    }
+
                     try
                     {
-                        if (toExecute.Value != null)
+                        if (actionCanceled)
+                        {
+                            while (executeStack.Count > 0)
+                            {
+                                var removed = executeStack.Pop();
+                                if (removed.Value != null)
+                                {
+                                    removed.Value(removed.Key);
+                                }
+                            }
+                        }
+                        else if (toExecute.Value != null)
                         {
                             toExecute.Value(toExecute.Key);
                         }
@@ -462,9 +520,24 @@ namespace uAdventure.Runner
                     catch (System.Exception ex)
                     {
                         Debug.Log("Execution OnFinished execution exception: " + ex.Message);
+                        if (actionCanceled)
+                        {
+                            executeStack.Clear();
+                        }
                     }
                 }
             }
+            if(background.Count > 0)
+            {
+                return true;
+            }
+
+            FinalizeExecution();
+            return false;
+        }
+
+        private void FinalizeExecution()
+        {
             if (uAdventureRaycaster.Instance)
             {
                 uAdventureRaycaster.Instance.Override = null;
@@ -475,29 +548,34 @@ namespace uAdventure.Runner
                 {
                     Debug.LogWarning("There are still some opened change ambits! " + GameState.ChangeAmbitCount);
                 }
+                OnActionCanceled = null;
                 AutoSave();
             }
             // In case any bubble is bugged
             GUIManager.Instance.DestroyBubbles();
-            return false;
+            actionCanceled = false;
         }
 
         public void Quit()
         {
             StartCoroutine(QuitCoroutine());
         }
-
         private IEnumerator QuitCoroutine()
         {
-            var quit = true;
-            foreach (var g in gameExtensions)
+            quitAborted = false;
+            foreach (var g in PriorityAttribute.OrderExtensionsByMethod("OnGameFinished", gameExtensions))
             {
                 yield return StartCoroutine(g.OnGameFinished());
             }
-            if (quit)
+            if (!quitAborted)
             {
                 Application.Quit();
             }
+        }
+
+        public void AbortQuit()
+        {
+            quitAborted = true;
         }
 
         public void ClearAndRestart()
@@ -511,12 +589,17 @@ namespace uAdventure.Runner
         public IEnumerator Restart()
         {
             GameState.Restart();
-            foreach(var g in gameExtensions)
+            foreach (var g in PriorityAttribute.OrderExtensionsByMethod("Restart", gameExtensions))
             {
                 yield return StartCoroutine(g.Restart());
             }
             RunTarget(GameState.CurrentTarget);
             uAdventureInputModule.LookingForTarget = null;
+        }
+
+        public bool IsRunningInBackground(EffectHolderNode node)
+        {
+            return background.Contains(node);
         }
 
         public bool ContinueEffectExecution()
@@ -538,10 +621,6 @@ namespace uAdventure.Runner
             if(guistate != GUIState.BOOK)
             {
                 guistate = GUIState.NOTHING;
-                if (GUIManager.Instance.InteractWithDialogue() == InteractuableResult.REQUIRES_MORE_INTERACTION)
-                {
-                    return true;
-                }
             }
             if (executeStack.Count > 0)
             {
@@ -614,7 +693,10 @@ namespace uAdventure.Runner
                 {
                     waitingTargetDestroy = false;
                     waitingRunTarget = true;
-                    GameState.CurrentTarget = target.getId();
+                    if (trace)
+                    {
+                        GameState.CurrentTarget = target.getId();
+                    }
                     runnerTarget.RenderScene();
 
                     if (trace && OnTargetChanged != null)
@@ -791,10 +873,10 @@ namespace uAdventure.Runner
 
         public void SwitchToLastTarget()
         {
-            GeneralScene scene = GameState.GetLastScene();
+            IChapterTarget last = GameState.PreviousChapterTarget;
 
-            if (scene != null)
-                RunTarget(scene.getId());
+            if (last != null) 
+                RunTarget(last.getId(), 1000, TransitionType.FadeIn);
         }
 
         #endregion Rendering
@@ -802,6 +884,20 @@ namespace uAdventure.Runner
         //#################################################################
         //#################################################################
         #region Misc
+        public void ActionCanceled()
+        {
+            if (isSomethingRunning())
+            {
+                this.actionCanceled = true; 
+                Delegate[] delegateList = OnActionCanceled.GetInvocationList();
+                for (int counter = delegateList.Length - 1; counter >= 0; counter--)
+                {
+                    ((ActionCanceledDelegate)delegateList[counter])();
+                }
+            }
+            OnActionCanceled = null;
+        }
+
         public void showActions(List<Core.Action> actions, Vector2 position, IActionReceiver actionReceiver = null)
         {
             if (!MenuMB.Instance)
@@ -819,7 +915,7 @@ namespace uAdventure.Runner
             //this.clicked_on = position;
         }
 
-        public void showOptions(ConversationNodeHolder options)
+        public List<int> showOptions(ConversationNodeHolder options)
         {
             var optionsNode = options.getNode() as OptionConversationNode;
             if (optionsNode != null)
@@ -831,7 +927,8 @@ namespace uAdventure.Runner
 
                 // Enable blurred background
                 blur = GameObject.Instantiate(Blur_Prefab);
-                blur.transform.position = new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, Camera.main.transform.position.z + 1);
+                blur.transform.position = Camera.main.transform.position + Camera.main.transform.forward;
+                blur.transform.rotation = Camera.main.transform.rotation;
 
                 // Order shuffeling when node is configured for random
                 this.order = Enumerable.Range(0, optionsNode.getLineCount()).ToList();
@@ -852,7 +949,9 @@ namespace uAdventure.Runner
                 {
                     this.doTimeOut = false;
                 }
+                return order;
             }
+            return null;
         }
 
         public void Talk(string text, int x, int y, Color textColor, Color textOutlineColor)
@@ -867,12 +966,12 @@ namespace uAdventure.Runner
 
         public void Talk(string text, string character)
         {
-            GUIManager.Instance.Talk(text, character);
+            GUIManager.Instance.Talk(new ConversationLine(character, text));
         }
 
-        public void Talk(ConversationLine line, string character)
+        public void Talk(ConversationLine line)
         {
-            GUIManager.Instance.Talk(line, character);
+            GUIManager.Instance.Talk(line);
         }
 
         public void ShowBook(string bookId)
@@ -955,6 +1054,7 @@ namespace uAdventure.Runner
         }
 
         private List<GUILayoutOption> auxLimitList = new List<GUILayoutOption>();
+        private bool quitAborted;
 
         protected void OnGUI()
         {
@@ -1071,10 +1171,10 @@ namespace uAdventure.Runner
                                                 if (image)
                                                 {
                                                     content.image = image;
-                                                    if (image.height > buttonImageWidth)
-                                                    {
+                                                    /*if (image.height > buttonImageWidth)
+                                                    {*/
                                                         auxLimitList.Add(GUILayout.Height(buttonImageWidth - 20));
-                                                    }
+                                                    //}
                                                 }
                                             }
 

@@ -53,7 +53,7 @@ namespace uAdventure.Simva
 
                 // Android
                 case BuildTarget.Android:
-                    var docPath = @"Assets\uAdventureAnalytics\Plugins\Simva\Plugins\Android\AndroidManifest_template.xml";
+                    var docPath = @"Assets\uAdventureAnalytics\Plugins\Simva\Plugins\Android\AndroidManifest.xml";
                     var finalPath = @"Assets/Plugins/Android/AndroidManifest.xml";
                     XDocument doc = XDocument.Load(docPath);
                     Debug.Log("Loaded!");
@@ -93,7 +93,6 @@ namespace uAdventure.Simva
                         using (var writer = XmlWriter.Create(finalPath))
                         {
                             doc.WriteTo(writer);
-                            AssetDatabase.ImportAsset(finalPath);
                             Debug.Log("Written!");
                         }
                     }
@@ -202,6 +201,9 @@ namespace uAdventure.Simva
                         urlTypeDict.SetString("CFBundleURLName", PlayerSettings.applicationIdentifier);
                         var urlSchemes = urlTypeDict.CreateArray("CFBundleURLSchemes");
                         urlSchemes.AddString(PlayerSettings.applicationIdentifier);
+
+                        infoPlist.root.SetString("NSCameraUsageDescription", "Camera is required to read the QR codes in each recycling container.");
+                        infoPlist.root.SetString("NSLocationWhenInUseUsageDescription", "Location is used to position the player in the in-game map.");
                         infoPlist.WriteToFile(infoPlistPath);
                     }
 

@@ -8,6 +8,7 @@ using System;
 using AssetPackage;
 using System.Linq;
 using UniRx;
+using static AssetPackage.TrackerAsset;
 
 namespace uAdventure.Runner
 {
@@ -50,8 +51,9 @@ namespace uAdventure.Runner
         private Dictionary<string, List<ElementReference>> elementContexts;
         private Dictionary<string, int> varFlags;
         private Stack<List<KeyValuePair<string, int>>> varFlagChangeAmbits;
+        private Stack<TrackerEvent> ambitTraces;
 
-#region SerializationFields
+        #region SerializationFields
         [SerializeField]
         private List<string> varFlagKeys;
         [SerializeField]
@@ -91,7 +93,10 @@ namespace uAdventure.Runner
             }
             set
             {
-                lastTarget = currentTarget;
+                if(!currentTarget.StartsWith("Simva."))
+                {
+                    lastTarget = currentTarget;
+                }
                 currentTarget = value;
             }
         }
@@ -137,6 +142,7 @@ namespace uAdventure.Runner
             varFlags = new Dictionary<string, int>();
             elementContexts = new Dictionary<string, List<ElementReference>>();
             varFlagChangeAmbits = new Stack<List<KeyValuePair<string, int>>>();
+            ambitTraces = new Stack<TrackerEvent>();
             memories = new Dictionary<string, Memory>();
             currentChapter = 0;
             playerContext = null;
@@ -322,12 +328,16 @@ namespace uAdventure.Runner
                 }
                 else
                 {
-                    m.MoveFreely(position, observer, data =>
+                    Action<object> endMovement = data =>
                     {
                         EffectHolderNode tmp = (EffectHolderNode)data;
                         tmp.doPulse();
-                        Game.Instance.ContinueEffectExecution();
-                    }, null);
+                        if (!Game.Instance.IsRunningInBackground(tmp))
+                        {
+                            Game.Instance.ContinueEffectExecution();
+                        }
+                    };
+                    m.MoveFreely(position, observer, data => endMovement(data), data => endMovement(data));
                 }
             }else
             {
@@ -452,8 +462,9 @@ namespace uAdventure.Runner
         internal int ChangeAmbitCount { get { return varFlagChangeAmbits.Count; } }
 
         // Var flag change ambits
-        public void BeginChangeAmbit()
+        public void BeginChangeAmbit(TrackerEvent trace)
         {
+            this.ambitTraces.Push(trace);
             this.varFlagChangeAmbits.Push(new List<KeyValuePair<string, int>>());
             Debug.Log("Opened change ambit " + varFlagChangeAmbits.Count);
         }
@@ -480,12 +491,22 @@ namespace uAdventure.Runner
             return currentAmbit;
         }
 
-        public void EndChangeAmbitAsExtensions()
+        public void EndChangeAmbitAsExtensions(TrackerEvent trace)
         {
+            var currentAmbitTrace = this.ambitTraces.Pop();
             var currentChanges = EndChangeAmbit(false);
+            if(currentAmbitTrace != trace)
+            {
+                Debug.LogError("Closed trace ambit is not the topmost trace!!");
+            }
+
             foreach(var varChange in currentChanges)
             {
                 TrackerAsset.Instance.setVar(varChange.Key, varChange.Value);
+            }
+            if(trace != null)
+            {
+                TrackerAsset.Instance.AddExtensionsToTrace(trace);
             }
         }
 
