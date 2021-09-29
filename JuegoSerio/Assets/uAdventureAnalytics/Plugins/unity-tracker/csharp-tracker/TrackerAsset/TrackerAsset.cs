@@ -708,7 +708,7 @@ namespace AssetPackage
                             {
                                 c();
                             }
-                        });
+                        }, flushAllRequested);
                     }
                 }, complete);
             }
@@ -911,9 +911,10 @@ namespace AssetPackage
         /// Starts Tracking with: 1) An already extracted UserToken (from Login) and
         /// 2) TrackingCode (Shown at Game on a2 server).
         /// </summary>
-		public void Start()
+		public void Start(Action done = null)
         {
-            StartAux(false, null);
+            StartAux(false, done);
+            Completable.Initialized("application");
         }
 
         /// <summary>
@@ -949,7 +950,7 @@ namespace AssetPackage
 
                             Connected = tmp != null;
                             Active = tmp != null;
-                            done();
+                            if(done != null) done();
                         }
                         break;
                 }
@@ -1086,6 +1087,7 @@ namespace AssetPackage
         /// </summary>
         public void Exit(Action done)
         {
+            Completable.Completed("application");
             FlushAll(done);
         }
 
@@ -1173,11 +1175,7 @@ namespace AssetPackage
 
             if(trace.Result.Extensions == null)
             {
-                trace.Result.Extensions = new Dictionary<string, object>();
-                foreach (var extension in extensions)
-                {
-                    trace.Result.Extensions.Add(extension.Key, extension.Value);
-                }
+                trace.Result.Extensions = new Dictionary<string, object>(extensions);
             }
             else
             {
