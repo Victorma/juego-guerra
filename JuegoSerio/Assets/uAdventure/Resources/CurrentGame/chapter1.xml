@@ -213,8 +213,17 @@
     <actions>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
         <documentation>Created with target conversation: Soldado_Perdido_Conversacion</documentation>
+        <condition>
+          <active flag="CercaSoldadoPerdido" />
+        </condition>
         <effect>
           <trigger-conversation idTarget="ConvSoldadoPerdido" guid="f0a89c7b-7457-4f74-9253-e73a92a5f467" />
+          <condition />
+        </effect>
+      </talk-to>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-conversation idTarget="DemasiadoLejos" guid="5ab3a782-3739-48e0-803c-563742ccb175" />
           <condition />
         </effect>
       </talk-to>
@@ -699,7 +708,7 @@
     </description>
     <voice name="" synthesizeAlways="no" />
   </character>
-  <map-scene id="MapaJugable" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4374255092019 -3.73608116526059 0.0161991456510222 0.0177348079159732" center="(40.4437088498689, -3.72629654408944)" zoom="19" start="no">
+  <map-scene id="MapaJugable" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.4374255092019 -3.73608116526059 0.0161991456510222 0.0177348079159732" center="(40.4431862806277, -3.72713875771973)" zoom="17" start="no">
     <map-element targetId="GuiaJugador" layer="0">
       <condition />
       <ext-elem-ref scale="0.2174702" orientation="0" transformManager="uAdventure.Geo.ScreenDescriptor">
@@ -738,21 +747,27 @@
               <trigger-conversation idTarget="ConvSoldadoMedicina" guid="f3ae4503-e64d-49b4-9aec-b7bec5e828fc" />
               <condition />
             </effect>
-            <only-from-outside>True</only-from-outside>
+            <only-from-outside>False</only-from-outside>
           </enter-action>
           <enter-action>
+            <condition>
+              <inactive flag="CercaSoldadoMedicina" />
+            </condition>
             <effect>
               <activate flag="CercaSoldadoMedicina" guid="9c689020-b4fb-4bd0-8505-5b2b9a9c6bd7" />
               <condition />
             </effect>
-            <only-from-outside>True</only-from-outside>
+            <only-from-outside>False</only-from-outside>
           </enter-action>
           <exit-action>
+            <condition>
+              <active flag="CercaSoldadoMedicina" />
+            </condition>
             <effect>
               <deactivate flag="CercaSoldadoMedicina" guid="7c3a9925-361f-4be0-97ae-49e533ef73d5" />
               <condition />
             </effect>
-            <only-from-inside>True</only-from-inside>
+            <only-from-inside>False</only-from-inside>
           </exit-action>
         </actions>
       </ext-elem-ref>
@@ -768,18 +783,24 @@
         <param name="RevealParticleTexture">leaf_particle.png</param>
         <actions>
           <exit-action>
+            <condition>
+              <active flag="CercaRiosCapape" />
+            </condition>
             <effect>
               <deactivate flag="CercaRiosCapape" guid="62541167-89a9-42e6-9a75-c140c64aa33a" />
               <condition />
             </effect>
-            <only-from-inside>True</only-from-inside>
+            <only-from-inside>False</only-from-inside>
           </exit-action>
           <enter-action>
+            <condition>
+              <inactive flag="CercaRiosCapape" />
+            </condition>
             <effect>
               <activate flag="CercaRiosCapape" guid="a1bc57a0-73fc-4582-9efa-24f059f9ca3a" />
               <condition />
             </effect>
-            <only-from-outside>True</only-from-outside>
+            <only-from-outside>False</only-from-outside>
           </enter-action>
           <enter-action>
             <condition>
@@ -789,7 +810,7 @@
               <trigger-conversation idTarget="ConvArquitectura" guid="6b2c36ff-6786-4373-a66b-498e459d73eb" />
               <condition />
             </effect>
-            <only-from-outside>True</only-from-outside>
+            <only-from-outside>False</only-from-outside>
           </enter-action>
         </actions>
       </ext-elem-ref>
@@ -805,18 +826,24 @@
         <param name="RevealParticleTexture">leaf_particle.png</param>
         <actions>
           <enter-action>
+            <condition>
+              <inactive flag="CercaNinyoMedicina" />
+            </condition>
             <effect>
               <activate flag="CercaNinyoMedicina" guid="bcebc88c-9222-411e-97a7-3a9fe548d8a6" />
               <condition />
             </effect>
-            <only-from-outside>True</only-from-outside>
+            <only-from-outside>False</only-from-outside>
           </enter-action>
           <exit-action>
+            <condition>
+              <active flag="CercaNinyoMedicina" />
+            </condition>
             <effect>
               <deactivate flag="CercaNinyoMedicina" guid="1ba72fe8-ccef-4c51-8078-12928bfcfef1" />
               <condition />
             </effect>
-            <only-from-inside>True</only-from-inside>
+            <only-from-inside>False</only-from-inside>
           </exit-action>
         </actions>
       </ext-elem-ref>
@@ -832,18 +859,24 @@
         <param name="RevealParticleTexture">leaf_particle.png</param>
         <actions>
           <enter-action>
+            <condition>
+              <inactive flag="CercaSoldadoComunista" />
+            </condition>
             <effect>
               <activate flag="CercaSoldadoComunista" guid="5a134a59-ed8a-42a1-a371-c5236eb4c877" />
               <condition />
             </effect>
-            <only-from-outside>True</only-from-outside>
+            <only-from-outside>False</only-from-outside>
           </enter-action>
           <exit-action>
+            <condition>
+              <active flag="CercaSoldadoComunista" />
+            </condition>
             <effect>
               <deactivate flag="CercaSoldadoComunista" guid="09944d3b-5877-4765-98af-43922589bc10" />
               <condition />
             </effect>
-            <only-from-inside>True</only-from-inside>
+            <only-from-inside>False</only-from-inside>
           </exit-action>
         </actions>
       </ext-elem-ref>
@@ -859,18 +892,24 @@
         <param name="RevealParticleTexture">leaf_particle.png</param>
         <actions>
           <enter-action>
+            <condition>
+              <inactive flag="CercaPolono" />
+            </condition>
             <effect>
               <activate flag="CercaPolono" guid="8ae003c0-ff15-47f4-843a-1857ea8d968d" />
               <condition />
             </effect>
-            <only-from-outside>True</only-from-outside>
+            <only-from-outside>False</only-from-outside>
           </enter-action>
           <exit-action>
+            <condition>
+              <active flag="CercaPolono" />
+            </condition>
             <effect>
               <deactivate flag="CercaPolono" guid="28207137-c394-45c3-a454-5a9b8dd40c9a" />
               <condition />
             </effect>
-            <only-from-inside>True</only-from-inside>
+            <only-from-inside>False</only-from-inside>
           </exit-action>
         </actions>
       </ext-elem-ref>
@@ -909,15 +948,35 @@
               <trigger-conversation idTarget="ConvSoldadoPerdido" guid="2e490f69-925f-450e-a17c-d406303eb7a3" />
               <condition />
             </effect>
-            <only-from-outside>True</only-from-outside>
+            <only-from-outside>False</only-from-outside>
           </enter-action>
+          <enter-action>
+            <condition>
+              <inactive flag="CercaSoldadoPerdido" />
+            </condition>
+            <effect>
+              <activate flag="CercaSoldadoPerdido" guid="8ff7d35b-a3bd-4d2f-b40e-e27a89cea1d7" />
+              <condition />
+            </effect>
+            <only-from-outside>False</only-from-outside>
+          </enter-action>
+          <exit-action>
+            <condition>
+              <active flag="CercaSoldadoPerdido" />
+            </condition>
+            <effect>
+              <deactivate flag="CercaSoldadoPerdido" guid="d37aeab9-4da6-4d40-836b-b27c7154d01d" />
+              <condition />
+            </effect>
+            <only-from-inside>False</only-from-inside>
+          </exit-action>
         </actions>
       </ext-elem-ref>
     </map-element>
     <map-element targetId="ChicoMates" layer="0">
       <condition />
-      <ext-elem-ref scale="0.2123905" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4491195678711, -3.72731566429138)</param>
+      <ext-elem-ref scale="0.1702654" orientation="0" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4491653442383, -3.72732663154602)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">40</param>
         <param name="RevealOnlyOnRange">False</param>
@@ -925,18 +984,24 @@
         <param name="RevealParticleTexture">leaf_particle.png</param>
         <actions>
           <enter-action>
+            <condition>
+              <inactive flag="CercaMates" />
+            </condition>
             <effect>
               <activate flag="CercaMates" guid="65844046-b479-4c0f-bdc8-ced9aa16a5cb" />
               <condition />
             </effect>
-            <only-from-outside>True</only-from-outside>
+            <only-from-outside>False</only-from-outside>
           </enter-action>
           <exit-action>
+            <condition>
+              <active flag="CercaMates" />
+            </condition>
             <effect>
               <deactivate flag="CercaMates" guid="017d1149-8c79-4df6-bb80-ba8ab4f87b7c" />
               <condition />
             </effect>
-            <only-from-inside>True</only-from-inside>
+            <only-from-inside>False</only-from-inside>
           </exit-action>
         </actions>
       </ext-elem-ref>
@@ -952,18 +1017,24 @@
         <param name="RevealParticleTexture">leaf_particle.png</param>
         <actions>
           <enter-action>
+            <condition>
+              <inactive flag="CercaPasajero" />
+            </condition>
             <effect>
               <activate flag="CercaPasajero" guid="bdccc060-e689-4eb8-9c56-99d6416ad9d7" />
               <condition />
             </effect>
-            <only-from-outside>True</only-from-outside>
+            <only-from-outside>False</only-from-outside>
           </enter-action>
           <exit-action>
+            <condition>
+              <active flag="CercaPasajero" />
+            </condition>
             <effect>
               <deactivate flag="CercaPasajero" guid="45da20f2-a91f-4ae3-8f98-8e4063f7ed8e" />
               <condition />
             </effect>
-            <only-from-inside>True</only-from-inside>
+            <only-from-inside>False</only-from-inside>
           </exit-action>
         </actions>
       </ext-elem-ref>
@@ -979,18 +1050,24 @@
         <param name="RevealParticleTexture">leaf_particle.png</param>
         <actions>
           <enter-action>
+            <condition>
+              <inactive flag="CercaChicaFilosofia" />
+            </condition>
             <effect>
               <activate flag="CercaChicaFilosofia" guid="b285b787-4aba-4da7-8764-d64bd08bd60d" />
               <condition />
             </effect>
-            <only-from-outside>True</only-from-outside>
+            <only-from-outside>False</only-from-outside>
           </enter-action>
           <exit-action>
+            <condition>
+              <active flag="CercaChicaFilosofia" />
+            </condition>
             <effect>
               <deactivate flag="CercaChicaFilosofia" guid="b988410a-65de-469f-8d0c-4f38d3d4ce00" />
               <condition />
             </effect>
-            <only-from-inside>True</only-from-inside>
+            <only-from-inside>False</only-from-inside>
           </exit-action>
         </actions>
       </ext-elem-ref>
@@ -1094,18 +1171,24 @@
         <param name="RevealParticleTexture">leaf_particle.png</param>
         <actions>
           <enter-action>
+            <condition>
+              <inactive flag="CercaBotanico" />
+            </condition>
             <effect>
               <activate flag="CercaBotanico" guid="17e80723-41b0-4ee8-807b-a70e9a0b0e74" />
               <condition />
             </effect>
-            <only-from-outside>True</only-from-outside>
+            <only-from-outside>False</only-from-outside>
           </enter-action>
           <exit-action>
+            <condition>
+              <active flag="CercaBotanico" />
+            </condition>
             <effect>
               <deactivate flag="CercaBotanico" guid="c39feee9-d023-48d6-a524-9f44c16e7eb4" />
               <condition />
             </effect>
-            <only-from-inside>True</only-from-inside>
+            <only-from-inside>False</only-from-inside>
           </exit-action>
         </actions>
       </ext-elem-ref>
@@ -1371,18 +1454,24 @@
         <param name="RevealParticleTexture">leaf_particle.png</param>
         <actions>
           <enter-action>
+            <condition>
+              <inactive flag="CercaGuardiaCivil" />
+            </condition>
             <effect>
               <activate flag="CercaGuardiaCivil" guid="0e7dc985-f6d4-489c-9661-6b6349cdafd0" />
               <condition />
             </effect>
-            <only-from-outside>True</only-from-outside>
+            <only-from-outside>False</only-from-outside>
           </enter-action>
           <exit-action>
+            <condition>
+              <active flag="CercaGuardiaCivil" />
+            </condition>
             <effect>
               <deactivate flag="CercaGuardiaCivil" guid="0976edfc-4fa5-46f9-b1e5-d5d6dac360f0" />
               <condition />
             </effect>
-            <only-from-inside>True</only-from-inside>
+            <only-from-inside>False</only-from-inside>
           </exit-action>
         </actions>
       </ext-elem-ref>
@@ -1935,7 +2024,7 @@
         <Polygon>
           <exterior>
             <LinearRing>
-              <posList>40.4496425877903 -3.72649234600016 40.444866241086 -3.72584861583715 40.4450152551585 -3.72722995347982 40.444580469813 -3.7283752567293 40.4472095508519 -3.72863811321274 40.4486056979246 -3.73004090852897 40.4488016422658 -3.73163145847332 40.4502794033901 -3.73155635662089 40.4505325006952 -3.72860592670451</posList>
+              <posList>40.4496344232012 -3.72648698158208 40.4448580764969 -3.72584325141907 40.4450070905694 -3.72722458906174 40.4445723052239 -3.72836989231122 40.4472013862628 -3.72863274879466 40.4485975333355 -3.73003554411089 40.4487934776767 -3.73162609405524 40.450271238801 -3.73155099220281 40.4505243361061 -3.72860056228643</posList>
             </LinearRing>
           </exterior>
         </Polygon>
@@ -1969,7 +2058,7 @@
         <Polygon>
           <exterior>
             <LinearRing>
-              <posList>40.442218702898 -3.72115206719814 40.4404304748812 -3.7212164402135 40.4414756517314 -3.7257922887946 40.442506528748 -3.72499030829915</posList>
+              <posList>40.442218702898 -3.72116279603422 40.4404304748812 -3.72122716904958 40.4414756517314 -3.72580301763068 40.442506528748 -3.72500103713523</posList>
             </LinearRing>
           </exterior>
         </Polygon>
@@ -1998,7 +2087,7 @@
         <Polygon>
           <exterior>
             <LinearRing>
-              <posList>40.4410245015158 -3.7284691333088 40.4413572562947 -3.72913163893545 40.4400773317603 -3.72982096681581 40.4399262550157 -3.73012673864353 40.4400038279061 -3.73090994367587 40.4401385595554 -3.73142492780672 40.4403998706094 -3.73146247873295 40.4420492562791 -3.73074901121641 40.443355707896 -3.72886610048794 40.443772129563 -3.72827601450462 40.4421737912149 -3.72841280691948 40.4418553437758 -3.72855228178824</posList>
+              <posList>40.4410245015158 -3.72847449772684 40.4413572562947 -3.72913700335349 40.4400773317603 -3.72982633123385 40.4399262550157 -3.73013210306157 40.4400038279061 -3.73091530809391 40.4401385595554 -3.73143029222476 40.4403998706094 -3.73146784315099 40.4420492562791 -3.73075437563445 40.443355707896 -3.72887146490598 40.443772129563 -3.72828137892266 40.4421737912149 -3.72841817133752 40.4418553437758 -3.72855764620628</posList>
             </LinearRing>
           </exterior>
         </Polygon>
@@ -7783,7 +7872,7 @@
     <inactive flag="UsadoFilosofia" />
   </global-state>
   <macro id="BusquedasMapa">
-    <documentation>El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Marcos me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Marcos me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Marcos me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Manuel me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Manuel me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Manuel me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Manuel me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Manuel me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...</documentation>
+    <documentation>El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Marcos me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Marcos me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Marcos me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Manuel me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Manuel me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Manuel me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Manuel me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Manuel me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Manuel me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Manuel me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...</documentation>
     <speak-player guid="ca2859d2-fab0-4892-be6b-9539cc2d37c0">El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...</speak-player>
     <condition>
       <global-state-ref id="BusquedaMapaVelazquezArquitectura" value="true" />
