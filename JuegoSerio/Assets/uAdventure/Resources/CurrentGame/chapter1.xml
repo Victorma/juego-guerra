@@ -2091,7 +2091,7 @@
     </name>
     <default-initial-position x="400" y="450" />
     <objects>
-      <object-ref idTarget="BackArrow" x="499" y="471" scale="0.4460757" glow="no" layer="1" hasInfluenceArea="no">
+      <object-ref idTarget="MapBackArrow" x="499" y="471" scale="0.4460757" glow="no" layer="1" hasInfluenceArea="no">
         <condition>
           <active flag="IntroduccionTerminada" />
         </condition>
@@ -2265,7 +2265,7 @@
     </name>
     <default-initial-position x="400" y="450" />
     <objects>
-      <object-ref idTarget="BackArrow" x="741" y="586" scale="0.587427" glow="no" layer="2" hasInfluenceArea="no">
+      <object-ref idTarget="BackArrow" x="734" y="582" scale="0.5852249" glow="no" layer="2" hasInfluenceArea="no">
         <condition>
           <active flag="IntroduccionTerminada" />
           <inactive flag="TerminandoFotoClinico" />
@@ -2291,7 +2291,7 @@
     </name>
     <default-initial-position x="400" y="450" />
     <objects>
-      <object-ref idTarget="BackArrow" x="565" y="358" scale="0.3375168" glow="no" layer="2" hasInfluenceArea="no">
+      <object-ref idTarget="BackArrow" x="566" y="357" scale="0.33" glow="no" layer="2" hasInfluenceArea="no">
         <condition>
           <active flag="IntroduccionTerminada" />
           <inactive flag="TerminandoFotoFilosofia" />
@@ -2317,7 +2317,7 @@
     </name>
     <default-initial-position x="400" y="450" />
     <objects>
-      <object-ref idTarget="BackArrow" x="446" y="374" scale="0.3567513" glow="no" layer="2" hasInfluenceArea="no">
+      <object-ref idTarget="BackArrow" x="445" y="378" scale="0.3567513" glow="no" layer="2" hasInfluenceArea="no">
         <condition>
           <active flag="IntroduccionTerminada" />
           <inactive flag="TerminandoFotoVelazquez" />
@@ -2344,7 +2344,7 @@
     </name>
     <default-initial-position x="400" y="450" />
     <objects>
-      <object-ref idTarget="BackArrow" x="441" y="387" scale="0.3647716" glow="no" layer="2" hasInfluenceArea="no">
+      <object-ref idTarget="BackArrow" x="443" y="387" scale="0.3567513" glow="no" layer="2" hasInfluenceArea="no">
         <condition>
           <active flag="IntroduccionTerminada" />
           <inactive flag="TerminandoFotoArquitectura" />
@@ -2370,7 +2370,7 @@
     </name>
     <default-initial-position x="400" y="450" />
     <objects>
-      <object-ref idTarget="BackArrow" x="867" y="668" scale="0.6245425" glow="no" layer="2" hasInfluenceArea="no">
+      <object-ref idTarget="BackArrow" x="889" y="688" scale="0.6245425" glow="no" layer="2" hasInfluenceArea="no">
         <condition>
           <active flag="IntroduccionTerminada" />
           <inactive flag="TerminandoFotoMedicina" />
@@ -2467,7 +2467,7 @@
       </exit>
     </exits>
     <objects>
-      <object-ref idTarget="BackArrow" x="-90" y="133" scale="0.5500098" glow="no" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="MapBackArrow" x="-90" y="133" scale="0.5500098" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="Noticia2S" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -2485,7 +2485,7 @@
       </exit>
     </exits>
     <objects>
-      <object-ref idTarget="BackArrow" x="-73" y="110" scale="0.4153719" glow="no" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="MapBackArrow" x="-73" y="110" scale="0.4153719" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="Noticia3S" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -2503,7 +2503,7 @@
       </exit>
     </exits>
     <objects>
-      <object-ref idTarget="BackArrow" x="-79" y="110" scale="0.4655056" glow="no" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="MapBackArrow" x="-79" y="110" scale="0.4655056" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="Noticia4S" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -2521,7 +2521,7 @@
       </exit>
     </exits>
     <objects>
-      <object-ref idTarget="BackArrow" x="-76" y="111" scale="0.4727751" glow="no" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="MapBackArrow" x="-76" y="111" scale="0.4727751" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="Noticia5S" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -2539,7 +2539,7 @@
       </exit>
     </exits>
     <objects>
-      <object-ref idTarget="BackArrow" x="-71" y="106" scale="0.45743" glow="no" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="MapBackArrow" x="-71" y="106" scale="0.45743" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="Noticia6S" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -2557,7 +2557,7 @@
       </exit>
     </exits>
     <objects>
-      <object-ref idTarget="BackArrow" x="-120" y="188" scale="0.7660065" glow="no" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="MapBackArrow" x="-120" y="188" scale="0.7660065" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="Noticia7S" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -2575,7 +2575,7 @@
       </exit>
     </exits>
     <objects>
-      <object-ref idTarget="BackArrow" x="-69" y="204" scale="0.7986026" glow="no" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="MapBackArrow" x="-69" y="204" scale="0.7986026" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="Noticia8S" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -2593,7 +2593,7 @@
       </exit>
     </exits>
     <objects>
-      <object-ref idTarget="BackArrow" x="-110" y="162" scale="0.6805277" glow="no" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="MapBackArrow" x="-110" y="162" scale="0.6805277" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="Noticia9S" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -2611,7 +2611,7 @@
       </exit>
     </exits>
     <objects>
-      <object-ref idTarget="BackArrow" x="-123" y="170" scale="0.7283803" glow="no" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="MapBackArrow" x="-123" y="170" scale="0.7283803" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="Noticia10S" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -2629,7 +2629,7 @@
       </exit>
     </exits>
     <objects>
-      <object-ref idTarget="BackArrow" x="-139" y="208" scale="0.9001431" glow="no" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="MapBackArrow" x="-139" y="208" scale="0.9001431" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="Noticia11S" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -2647,7 +2647,7 @@
       </exit>
     </exits>
     <objects>
-      <object-ref idTarget="BackArrow" x="-123" y="182" scale="0.7612948" glow="no" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="MapBackArrow" x="-123" y="182" scale="0.7612948" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="Noticia12S" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -2665,7 +2665,7 @@
       </exit>
     </exits>
     <objects>
-      <object-ref idTarget="BackArrow" x="-73" y="190" scale="0.7315013" glow="no" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="MapBackArrow" x="-73" y="190" scale="0.7315013" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="Noticia13S" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -2684,7 +2684,7 @@
       </exit>
     </exits>
     <objects>
-      <object-ref idTarget="BackArrow" x="-114" y="175" scale="0.7499511" glow="no" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="MapBackArrow" x="-114" y="175" scale="0.7499511" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="Noticia14S" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -2702,7 +2702,7 @@
       </exit>
     </exits>
     <objects>
-      <object-ref idTarget="BackArrow" x="-118" y="183" scale="0.7634137" glow="no" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="MapBackArrow" x="-118" y="183" scale="0.7634137" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="Noticia15S" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -2720,7 +2720,7 @@
       </exit>
     </exits>
     <objects>
-      <object-ref idTarget="BackArrow" x="95" y="693" scale="0.6257238" glow="no" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="MapBackArrow" x="95" y="693" scale="0.6257238" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="Noticia16S" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -2738,7 +2738,7 @@
       </exit>
     </exits>
     <objects>
-      <object-ref idTarget="BackArrow" x="133" y="244" scale="0.8869048" glow="no" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="MapBackArrow" x="133" y="244" scale="0.8869048" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="Noticia17S" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -2756,7 +2756,7 @@
       </exit>
     </exits>
     <objects>
-      <object-ref idTarget="BackArrow" x="-49" y="120" scale="0.4418685" glow="no" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="MapBackArrow" x="-49" y="120" scale="0.4418685" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="Noticia18S" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -2774,7 +2774,7 @@
       </exit>
     </exits>
     <objects>
-      <object-ref idTarget="BackArrow" x="88" y="162" scale="0.5557264" glow="no" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="MapBackArrow" x="88" y="162" scale="0.5557264" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="Noticia19S" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -2792,7 +2792,7 @@
       </exit>
     </exits>
     <objects>
-      <object-ref idTarget="BackArrow" x="-43" y="62" scale="0.248577" glow="no" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="MapBackArrow" x="-43" y="62" scale="0.248577" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="Noticia20S" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -2810,7 +2810,7 @@
       </exit>
     </exits>
     <objects>
-      <object-ref idTarget="BackArrow" x="-43" y="59" scale="0.2466132" glow="no" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="MapBackArrow" x="-43" y="59" scale="0.2466132" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="Noticia21S" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -2828,7 +2828,7 @@
       </exit>
     </exits>
     <objects>
-      <object-ref idTarget="BackArrow" x="-38" y="56" scale="0.2324516" glow="no" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="MapBackArrow" x="-38" y="56" scale="0.2324516" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="Noticia22S" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -2846,7 +2846,7 @@
       </exit>
     </exits>
     <objects>
-      <object-ref idTarget="BackArrow" x="-23" y="163" scale="0.5923516" glow="no" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="MapBackArrow" x="-23" y="163" scale="0.5923516" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="NoticiasPortada" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -2873,7 +2873,7 @@
       </exit>
     </exits>
     <objects>
-      <object-ref idTarget="BackArrow" x="251" y="284" scale="1" glow="no" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="MapBackArrow" x="251" y="284" scale="1" glow="no" layer="0" hasInfluenceArea="no" />
       <object-ref idTarget="Noticia1I" x="543" y="1035" scale="1.039195" glow="no" layer="1" hasInfluenceArea="no">
         <condition>
           <active flag="Noticia1" />
@@ -2934,7 +2934,7 @@
           <active flag="Noticia15" />
         </condition>
       </object-ref>
-      <object-ref idTarget="BackArrow" x="188" y="271" scale="0.9071875" glow="no" layer="5" hasInfluenceArea="no" />
+      <object-ref idTarget="MapBackArrow" x="188" y="271" scale="0.9071875" glow="no" layer="5" hasInfluenceArea="no" />
       <object-ref idTarget="Portadas" x="1796" y="329" scale="0.9684424" glow="no" layer="6" hasInfluenceArea="no" />
     </objects>
   </scene>
@@ -2968,7 +2968,7 @@
           <active flag="Noticia10" />
         </condition>
       </object-ref>
-      <object-ref idTarget="BackArrow" x="186" y="273" scale="0.9009147" glow="no" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="MapBackArrow" x="186" y="273" scale="0.9009147" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="NoticiasClaridad" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -3021,7 +3021,7 @@
           <active flag="Noticia22" />
         </condition>
       </object-ref>
-      <object-ref idTarget="BackArrow" x="234" y="243" scale="0.8983163" glow="no" layer="1" hasInfluenceArea="no" />
+      <object-ref idTarget="MapBackArrow" x="234" y="243" scale="0.8983163" glow="no" layer="1" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="NoticiasABC" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -3059,7 +3059,7 @@
           <active flag="Noticia5" />
         </condition>
       </object-ref>
-      <object-ref idTarget="BackArrow" x="162" y="247" scale="0.8338728" glow="no" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="MapBackArrow" x="162" y="247" scale="0.8338728" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="HogarDelCombatiente" hideInventory="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -6547,6 +6547,28 @@
     </description>
     <actions>
       <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-last-scene guid="833297b0-2bd1-4050-91d8-81b20d53061c" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </object>
+  <object id="MapBackArrow" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/exit.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
         <documentation>Vuelve a la escena anterior</documentation>
         <condition>
           <global-state-ref id="BusquedaMapaVelazquezArquitectura" value="false" />
@@ -7761,7 +7783,7 @@
     <inactive flag="UsadoFilosofia" />
   </global-state>
   <macro id="BusquedasMapa">
-    <documentation>El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Marcos me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Marcos me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Marcos me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Manuel me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Manuel me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Manuel me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Manuel me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...</documentation>
+    <documentation>El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Marcos me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Marcos me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Marcos me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Manuel me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Manuel me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Manuel me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Manuel me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Manuel me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...</documentation>
     <speak-player guid="ca2859d2-fab0-4892-be6b-9539cc2d37c0">El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...</speak-player>
     <condition>
       <global-state-ref id="BusquedaMapaVelazquezArquitectura" value="true" />
