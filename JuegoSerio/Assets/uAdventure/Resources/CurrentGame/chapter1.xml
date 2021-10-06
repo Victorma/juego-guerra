@@ -3668,7 +3668,7 @@
       <condition />
       <end-conversation />
     </dialogue-node>
-    <dialogue-node nodeindex="4" editor-x="1216" editor-y="432">
+    <dialogue-node nodeindex="4" editor-x="879" editor-y="446">
       <speak-char idTarget="GuiaJugador">
         <resources name="No name" />
         <text>Veamos...</text>
@@ -3719,7 +3719,27 @@
         <text>Esta foto...</text>
       </speak-char>
       <condition>
-        <active flag="PistaFilosofia_Matematicas" />
+        <either>
+          <active flag="PistaFilosofia_Matematicas" />
+          <active flag="QuestNaranjeroActivada" />
+          <active flag="PistaFilosofia_HombreBotanico" />
+        </either>
+        <inactive flag="UsadoFilosofia" />
+      </condition>
+      <speak-char idTarget="GuiaJugador">
+        <resources name="No name" />
+        <text>El soldado anarquista está buscando su Naranjero... Debería de recuperarlo para que me de la pista.</text>
+      </speak-char>
+      <condition>
+        <active flag="QuestNaranjeroActivada" />
+        <inactive flag="PistaFilosofia_SoldMedicina" />
+      </condition>
+      <speak-char idTarget="GuiaJugador">
+        <resources name="No name" />
+        <text>Manuel te dijo que era un aula de filosofía. Deberías ir allí.</text>
+      </speak-char>
+      <condition>
+        <active flag="PistaFilosofia_HombreBotanico" />
         <inactive flag="UsadoFilosofia" />
       </condition>
       <speak-char idTarget="GuiaJugador">
@@ -3736,7 +3756,7 @@
       </speak-char>
       <condition>
         <active flag="PistaFrente_SoldadoPerdido_Previa" />
-        <inactive flag="UsadoFilosofia" />
+        <inactive flag="UsadoArquitectura" />
       </condition>
       <speak-char idTarget="GuiaJugador">
         <resources name="No name" />
@@ -6101,15 +6121,15 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="1195" editor-y="424">
+    <dialogue-node nodeindex="3" editor-x="940" editor-y="420">
       <speak-char idTarget="HombreBontanico">
         <resources name="No name" />
-        <text>Claro que si, esta aula fue diseñada por mis compañeros y yo.</text>
+        <text>Claro que sí, ¡esta aula la diseñaron unos amigos míos!</text>
       </speak-char>
       <condition />
       <speak-char idTarget="HombreBontanico">
         <resources name="No name" />
-        <text>Es una sala la Facultad de Filosofía. </text>
+        <text>Es una sala la Facultad de Filosofía, que está aquí cerca.</text>
       </speak-char>
       <condition />
       <speak-player>
@@ -6749,6 +6769,10 @@
           </condition>
           <trigger-scene idTarget="Noticia1S" x="323" y="534" transitionTime="1000" transitionType="5" guid="0e96eb9d-541a-48c2-a157-58b077b5914a" />
           <condition />
+          <increment var="PuntuacionNoticias" value="1" guid="bfb16afd-565a-43a7-abc0-005623a6ba89" />
+          <condition>
+            <inactive flag="Noticia1" />
+          </condition>
           <activate flag="Noticia1" guid="67c2999b-f16d-4f57-9a6c-2e6b648bbe88" />
           <condition />
         </effect>
@@ -6777,6 +6801,10 @@
           </condition>
           <trigger-scene idTarget="Noticia2S" x="234" y="498" transitionTime="1000" transitionType="5" guid="490cfc1b-ab04-4424-b131-17d2eac95b39" />
           <condition />
+          <increment var="PuntuacionNoticias" value="1" guid="bf236afd-565a-43a7-abc0-005623a6ba44" />
+          <condition>
+            <inactive flag="Noticia2" />
+          </condition>
           <activate flag="Noticia2" guid="cb4b55f2-6d0c-4f34-b6ee-dcd1d173612b" />
           <condition />
         </effect>
@@ -6805,6 +6833,10 @@
           </condition>
           <trigger-scene idTarget="Noticia3S" x="250" y="516" transitionTime="1000" transitionType="5" guid="11fbaa4d-9411-4f37-86dc-b8000119a373" />
           <condition />
+          <increment var="PuntuacionNoticias" value="1" guid="bfb16afd-asda-43a7-abc0-00562323ba89" />
+          <condition>
+            <inactive flag="Noticia3" />
+          </condition>
           <activate flag="Noticia3" guid="f6aac1c0-1630-4215-900d-78fa8a6337e7" />
           <condition />
         </effect>
@@ -6833,6 +6865,10 @@
           </condition>
           <trigger-scene idTarget="Noticia4S" x="308" y="489" transitionTime="1000" transitionType="5" guid="7cd4ae27-69bc-4ad5-8b41-1f3ccc85d43a" />
           <condition />
+          <increment var="PuntuacionNoticias" value="1" guid="bfb16afd-565a-43a7-a241-00562231ba89" />
+          <condition>
+            <inactive flag="Noticia4" />
+          </condition>
           <activate flag="Noticia4" guid="c341198d-e583-4d6e-b0da-b40669910c2a" />
           <condition />
         </effect>
@@ -6861,6 +6897,10 @@
           </condition>
           <trigger-scene idTarget="Noticia5S" x="242" y="472" transitionTime="1000" transitionType="5" guid="2dd30422-1231-4af9-8bc5-11ba781fd9d2" />
           <condition />
+          <increment var="PuntuacionNoticias" value="1" guid="bfb12313-565a-43a7-abc0-005dgdtrsa89" />
+          <condition>
+            <inactive flag="Noticia1" />
+          </condition>
           <activate flag="Noticia5" guid="4b5264fb-fc0f-4d2f-a689-b2b02b303fce" />
           <condition />
         </effect>
@@ -6889,6 +6929,10 @@
           </condition>
           <trigger-scene idTarget="Noticia6S" x="429" y="324" transitionTime="1000" transitionType="5" guid="2464a919-18ad-429e-94a9-f45506aea4f1" />
           <condition />
+          <increment var="PuntuacionNoticias" value="1" guid="bfb16a13-5dfs-43bv-abc0-005635mcd489" />
+          <condition>
+            <inactive flag="Noticia6" />
+          </condition>
           <activate flag="Noticia6" guid="54ecf4b7-4dd0-4271-98c1-92686b201e36" />
           <condition />
         </effect>
@@ -6917,6 +6961,10 @@
           </condition>
           <trigger-scene idTarget="Noticia7S" x="422" y="237" transitionTime="1000" transitionType="5" guid="7bec9989-76e5-4e03-b01c-2f59c54cc0a5" />
           <condition />
+          <increment var="PuntuacionNoticias" value="1" guid="bwer6afd-565a-43a7-abc0-005rtva6ba89" />
+          <condition>
+            <inactive flag="Noticia7" />
+          </condition>
           <activate flag="Noticia7" guid="50454378-49ec-42cb-9a05-b7e4d847d875" />
           <condition />
         </effect>
@@ -6945,6 +6993,10 @@
           </condition>
           <trigger-scene idTarget="Noticia8S" x="352" y="844" transitionTime="1000" transitionType="5" guid="60028609-0432-4e05-9979-dd8a34a12beb" />
           <condition />
+          <increment var="PuntuacionNoticias" value="1" guid="asdfcefd-565a-43a7-abc0-00534sf6ba89" />
+          <condition>
+            <inactive flag="Noticia8" />
+          </condition>
           <activate flag="Noticia8" guid="800cbcbe-55e1-4ced-8adb-b163dca51fdb" />
           <condition />
         </effect>
@@ -6973,6 +7025,10 @@
           </condition>
           <trigger-scene idTarget="Noticia9S" x="414" y="747" transitionTime="1000" transitionType="5" guid="4e5cfb9d-d935-4314-ae96-8b1d2ca478d7" />
           <condition />
+          <increment var="PuntuacionNoticias" value="1" guid="yunb6afd-565a-43a7-abc0-005623a6ba89" />
+          <condition>
+            <inactive flag="Noticia9" />
+          </condition>
           <activate flag="Noticia9" guid="a4e25ad0-2d24-4949-9d9d-50870d2a117d" />
           <condition />
         </effect>
@@ -7001,6 +7057,10 @@
           </condition>
           <trigger-scene idTarget="Noticia10S" x="423" y="844" transitionTime="1000" transitionType="5" guid="aab426e2-cf5e-4e78-bc4c-c4b439adc09a" />
           <condition />
+          <increment var="PuntuacionNoticias" value="1" guid="q2b16pfd-565a-4rty-sdc0-0056233vbert" />
+          <condition>
+            <inactive flag="Noticia10" />
+          </condition>
           <activate flag="Noticia10" guid="3e12bc1b-cf0b-4217-8801-1253c80c08a6" />
           <condition />
         </effect>
@@ -7029,6 +7089,10 @@
           </condition>
           <trigger-scene idTarget="Noticia11S" x="325" y="317" transitionTime="1000" transitionType="5" guid="ee6fa895-e9ed-4dfc-bcd1-5bbbbbaac324" />
           <condition />
+          <increment var="PuntuacionNoticias" value="1" guid="q2bsdpfd-565a-4rty-sdc0-0053433vbert" />
+          <condition>
+            <inactive flag="Noticia11" />
+          </condition>
           <activate flag="Noticia11" guid="548cbc8e-1caa-4317-bb6e-71667574afe4" />
           <condition />
         </effect>
@@ -7057,6 +7121,10 @@
           </condition>
           <trigger-scene idTarget="Noticia12S" x="425" y="219" transitionTime="1000" transitionType="5" guid="9734096f-9980-4fe5-a08b-9c267af31fdd" />
           <condition />
+          <increment var="PuntuacionNoticias" value="1" guid="q2b63pfd-565a-4rty-s450-005fgh3vbert" />
+          <condition>
+            <inactive flag="Noticia12" />
+          </condition>
           <activate flag="Noticia12" guid="bf1d7630-aed6-4565-a223-9c4f23a0ce03" />
           <condition />
         </effect>
@@ -7085,6 +7153,10 @@
           </condition>
           <trigger-scene idTarget="Noticia13S" x="664" y="600" transitionTime="1000" transitionType="5" guid="df65e9fd-efc7-4158-a266-6e6a694f5204" />
           <condition />
+          <increment var="PuntuacionNoticias" value="1" guid="q2416pfd-565a-4rey-src0-0056234dsert" />
+          <condition>
+            <inactive flag="Noticia13" />
+          </condition>
           <activate flag="Noticia13" guid="5cc2f662-08b0-40be-861a-1588730eb272" />
           <condition />
         </effect>
@@ -7113,6 +7185,10 @@
           </condition>
           <trigger-scene idTarget="Noticia14S" x="425" y="286" transitionTime="1000" transitionType="5" guid="40369410-66df-44cb-8d0e-1314dbc0c5f9" />
           <condition />
+          <increment var="PuntuacionNoticias" value="1" guid="x2b16pfd-565a-nghj-sgr0-005613dfrert" />
+          <condition>
+            <inactive flag="Noticia14" />
+          </condition>
           <activate flag="Noticia14" guid="ee010364-c1f1-4872-a3dc-c58803c9e4f6" />
           <condition />
         </effect>
@@ -7141,6 +7217,10 @@
           </condition>
           <trigger-scene idTarget="Noticia15S" x="485" y="501" transitionTime="1000" transitionType="5" guid="f4329622-b6ec-488a-937b-3563bd3594b9" />
           <condition />
+          <increment var="PuntuacionNoticias" value="1" guid="x2b16pfd-565a-nghj-sgr0-005sd3dfrert" />
+          <condition>
+            <inactive flag="Noticia15" />
+          </condition>
           <activate flag="Noticia15" guid="80fdbc03-76d0-4b5c-b820-720620e1b10f" />
           <condition />
         </effect>
@@ -7169,6 +7249,10 @@
           </condition>
           <trigger-scene idTarget="Noticia16S" x="680" y="341" transitionTime="1000" transitionType="5" guid="8c9de2c7-c662-450b-96b8-39e51e600a8f" />
           <condition />
+          <increment var="PuntuacionNoticias" value="1" guid="x2b16pfd-565a-nghj-sgr0-00561236rert" />
+          <condition>
+            <inactive flag="Noticia16" />
+          </condition>
           <activate flag="Noticia16" guid="bac87fc7-d0b8-4393-b855-9495b4d0cbeb" />
           <condition />
         </effect>
@@ -7197,6 +7281,10 @@
           </condition>
           <trigger-scene idTarget="Noticia17S" x="140" y="106" transitionTime="1000" transitionType="5" guid="cf35cc3f-f9ac-4b9d-bde9-e1345ae14c5b" />
           <condition />
+          <increment var="PuntuacionNoticias" value="1" guid="x2123pfd-565a-nghj-sgr0-005173dfrert" />
+          <condition>
+            <inactive flag="Noticia17" />
+          </condition>
           <activate flag="Noticia17" guid="5f9194c1-d732-4be2-86ad-7f7028924cb3" />
           <condition />
         </effect>
@@ -7225,6 +7313,10 @@
           </condition>
           <trigger-scene idTarget="Noticia18S" x="285" y="145" transitionTime="1000" transitionType="5" guid="071ae909-4c60-4222-a589-4f041ef5b63f" />
           <condition />
+          <increment var="PuntuacionNoticias" value="1" guid="x1816pfd-565a-nghj-sgr0-00561323rert" />
+          <condition>
+            <inactive flag="Noticia18" />
+          </condition>
           <activate flag="Noticia18" guid="c95c5ee1-7e94-4c93-92b8-5f829a8b3e17" />
           <condition />
         </effect>
@@ -7253,6 +7345,10 @@
           </condition>
           <trigger-scene idTarget="Noticia19S" x="143" y="281" transitionTime="1000" transitionType="5" guid="802ce100-b30e-468c-9325-cc8fa164151c" />
           <condition />
+          <increment var="PuntuacionNoticias" value="1" guid="19b32pfd-565a-nghj-sgr0-00563451rert" />
+          <condition>
+            <inactive flag="Noticia19" />
+          </condition>
           <activate flag="Noticia19" guid="027c7a48-f43a-47c1-8a9f-0c925d32d2c9" />
           <condition />
         </effect>
@@ -7281,6 +7377,10 @@
           </condition>
           <trigger-scene idTarget="Noticia20S" x="141" y="293" transitionTime="1000" transitionType="5" guid="3bad9e90-6de5-4cef-a771-1ade7a3dedcd" />
           <condition />
+          <increment var="PuntuacionNoticias" value="1" guid="x2313tod-565a-ng34-sgr0-005613dfr24t" />
+          <condition>
+            <inactive flag="Noticia20" />
+          </condition>
           <activate flag="Noticia20" guid="adb3a3ea-c0cc-4b3a-b33d-876b45b000c5" />
           <condition />
         </effect>
@@ -7309,6 +7409,10 @@
           </condition>
           <trigger-scene idTarget="Noticia21S" x="144" y="266" transitionTime="1000" transitionType="5" guid="55f0cffa-dd09-4579-9899-5b91e3e49592" />
           <condition />
+          <increment var="PuntuacionNoticias" value="1" guid="x2b16pfd-521a-nghj-sgr0-005621dfrert" />
+          <condition>
+            <inactive flag="Noticia21" />
+          </condition>
           <activate flag="Noticia21" guid="ab640d86-4d6f-48b5-aac0-e7dc0f397a23" />
           <condition />
         </effect>
@@ -7337,6 +7441,10 @@
           </condition>
           <trigger-scene idTarget="Noticia22S" x="922" y="508" transitionTime="1000" transitionType="5" guid="03331710-87e3-43a5-9e11-3c21b627bd36" />
           <condition />
+          <increment var="PuntuacionNoticias" value="1" guid="x2216pfd-565a-nghj-s220-005613d22ert" />
+          <condition>
+            <inactive flag="Noticia22" />
+          </condition>
           <activate flag="Noticia22" guid="96b1e3d0-1723-46f9-8ada-4412270474a2" />
           <condition />
         </effect>
@@ -7571,7 +7679,7 @@
       <milestone type="SCENE" targetId="Noticia21S" />
       <milestone type="SCENE" targetId="Noticia22S" />
     </progress>
-    <score type="VARIABLE" method="SINGLE" id="PuntuacionArquitectura" />
+    <score type="VARIABLE" method="SINGLE" id="PuntuacionNoticias" />
   </completable>
   <completable id="GameCompleted" repeatable="false" type="completable">
     <start-milestone type="CONDITION">
@@ -7653,8 +7761,7 @@
     <inactive flag="UsadoFilosofia" />
   </global-state>
   <macro id="BusquedasMapa">
-    <documentation>
-    </documentation>
+    <documentation>El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Marcos me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Marcos me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Marcos me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Manuel me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Manuel me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Manuel me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Manuel me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...</documentation>
     <speak-player guid="ca2859d2-fab0-4892-be6b-9539cc2d37c0">El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...</speak-player>
     <condition>
       <global-state-ref id="BusquedaMapaVelazquezArquitectura" value="true" />
@@ -7667,7 +7774,7 @@
     <condition>
       <global-state-ref id="BusquedaMapaClinico" value="true" />
     </condition>
-    <speak-player guid="c59e0009-f990-4278-94ac-72f3e0cc1d03">Marcos me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...</speak-player>
+    <speak-player guid="c59e0009-f990-4278-94ac-72f3e0cc1d03">Manuel me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...</speak-player>
     <condition>
       <global-state-ref id="BusquedaMapaFilosofia" value="true" />
     </condition>
