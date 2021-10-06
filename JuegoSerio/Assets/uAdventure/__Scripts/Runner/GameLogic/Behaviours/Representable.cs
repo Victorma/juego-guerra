@@ -175,7 +175,7 @@ namespace uAdventure.Runner
                 Game.Instance.GameState.OnConditionChanged -= OnConditionChanged;
             }
         }
-
+        
         private void OnConditionChanged(string condition, int value)
         {
             checkResources();
@@ -454,6 +454,13 @@ namespace uAdventure.Runner
                 {
                     this.NextFrame();
                 }
+            }
+
+            // Callback to update when zooming (scroll and pinch cases)
+            if ((Input.mouseScrollDelta != Vector2.zero)
+                || (Input.touchCount >= 2 && Input.touches[0].deltaPosition != Vector2.zero && Input.touches[1].deltaPosition != Vector2.zero))
+            {
+                this.Adaptate();
             }
         }
     }
