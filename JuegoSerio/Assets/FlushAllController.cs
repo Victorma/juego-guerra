@@ -9,6 +9,7 @@ using Simva;
 using UnityFx.Async;
 using uAdventure.Analytics;
 using System.Collections;
+using AssetPackage;
 
 namespace uAdventure.Simva
 {
@@ -16,6 +17,7 @@ namespace uAdventure.Simva
     public class FlushAllController : MonoBehaviour, IRunnerChapterTarget
     {
         private bool ready;
+        public Text trackerStatusText;
 
         public object Data { get { return null; } set { } }
 
@@ -58,6 +60,21 @@ namespace uAdventure.Simva
 
         public void setInteractuable(bool state)
         {
+        }
+
+        private void Update()
+        {
+            if (!trackerStatusText || !trackerStatusText.IsActive())
+            {
+                return;
+            }
+
+            string text = "";
+            foreach(var kv in TrackerAsset.Instance.GetTrackerStatus())
+            {
+                text += kv.Key + ": " + kv.Value; 
+            }
+            trackerStatusText.text = text;
         }
     }
 }
