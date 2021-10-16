@@ -2122,7 +2122,7 @@
       </enter-action>
     </actions>
   </geo-element>
-  <scene id="EscenaLibro" hideInventory="yes" allowsSavingGame="yes" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="EscenaLibro" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -2152,7 +2152,7 @@
       </active-area>
     </active-areas>
   </scene>
-  <scene id="EscenaLibroAbierto" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="EscenaLibroAbierto" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -2170,7 +2170,7 @@
       <object-ref idTarget="ImagenClinico" x="315" y="498" scale="0.2950105" glow="no" layer="1" hasInfluenceArea="no" />
     </objects>
   </scene>
-  <scene id="EscenaMapaFrente" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="EscenaMapaFrente" hideInventory="yes" allowsZoom="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -2344,7 +2344,7 @@
       </active-area>
     </active-areas>
   </scene>
-  <scene id="EscenaFotoClinico" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="EscenaFotoClinico" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -2370,7 +2370,7 @@
       </character-ref>
     </characters>
   </scene>
-  <scene id="EscenaFotoFilosofia" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="EscenaFotoFilosofia" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -2396,7 +2396,7 @@
       </character-ref>
     </characters>
   </scene>
-  <scene id="EscenaFotoVelazquez" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="EscenaFotoVelazquez" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -2422,7 +2422,7 @@
       </character-ref>
     </characters>
   </scene>
-  <scene id="EscenaFotoArquitectura" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="EscenaFotoArquitectura" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -2449,7 +2449,7 @@
       </character-ref>
     </characters>
   </scene>
-  <scene id="EscenaFotoAgronomos" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="EscenaFotoAgronomos" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -2475,7 +2475,7 @@
       </character-ref>
     </characters>
   </scene>
-  <scene id="EscenaCasaVelazquez" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="EscenaCasaVelazquez" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -2488,7 +2488,7 @@
       <character-ref idTarget="PolacoVelazquez" x="89" y="394" scale="0.3817826" orientation="0" glow="yes" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
-  <scene id="EscenaSoldadoMedicina" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="EscenaSoldadoMedicina" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -2501,7 +2501,7 @@
       <character-ref idTarget="SoldadoMedicina" x="666" y="721" scale="0.6399145" orientation="0" glow="yes" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
-  <scene id="EscenaArquitectura" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="EscenaArquitectura" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -2514,7 +2514,7 @@
       <character-ref idTarget="RiosCapape" x="717" y="901" scale="1.176622" orientation="0" glow="yes" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
-  <scene id="EscenaFilosofia" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="EscenaFilosofia" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -2528,7 +2528,7 @@
       <character-ref idTarget="ChicaFilosofia" x="513" y="592" scale="1.436908" orientation="2" glow="yes" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
-  <scene id="PresentacionGuia" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="PresentacionGuia" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -2541,7 +2541,7 @@
       <character-ref idTarget="GuiaJugador" x="540" y="810" scale="0.3252032" orientation="0" glow="yes" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
-  <scene id="Noticia1S" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Noticia1S" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -2559,7 +2559,7 @@
       <object-ref idTarget="MapBackArrow" x="-90" y="133" scale="0.5500098" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
-  <scene id="Noticia2S" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Noticia2S" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -2577,7 +2577,7 @@
       <object-ref idTarget="MapBackArrow" x="-73" y="110" scale="0.4153719" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
-  <scene id="Noticia3S" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Noticia3S" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -2595,7 +2595,7 @@
       <object-ref idTarget="MapBackArrow" x="-79" y="110" scale="0.4655056" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
-  <scene id="Noticia4S" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Noticia4S" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -2613,7 +2613,7 @@
       <object-ref idTarget="MapBackArrow" x="-76" y="111" scale="0.4727751" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
-  <scene id="Noticia5S" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Noticia5S" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -2631,7 +2631,7 @@
       <object-ref idTarget="MapBackArrow" x="-71" y="106" scale="0.45743" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
-  <scene id="Noticia6S" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Noticia6S" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -2649,7 +2649,7 @@
       <object-ref idTarget="MapBackArrow" x="-120" y="188" scale="0.7660065" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
-  <scene id="Noticia7S" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Noticia7S" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -2667,7 +2667,7 @@
       <object-ref idTarget="MapBackArrow" x="-69" y="204" scale="0.7986026" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
-  <scene id="Noticia8S" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Noticia8S" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -2685,7 +2685,7 @@
       <object-ref idTarget="MapBackArrow" x="-110" y="162" scale="0.6805277" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
-  <scene id="Noticia9S" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Noticia9S" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -2703,7 +2703,7 @@
       <object-ref idTarget="MapBackArrow" x="-123" y="170" scale="0.7283803" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
-  <scene id="Noticia10S" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Noticia10S" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -2721,7 +2721,7 @@
       <object-ref idTarget="MapBackArrow" x="-139" y="208" scale="0.9001431" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
-  <scene id="Noticia11S" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Noticia11S" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -2739,7 +2739,7 @@
       <object-ref idTarget="MapBackArrow" x="-123" y="182" scale="0.7612948" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
-  <scene id="Noticia12S" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Noticia12S" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -2757,7 +2757,7 @@
       <object-ref idTarget="MapBackArrow" x="-73" y="190" scale="0.7315013" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
-  <scene id="Noticia13S" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Noticia13S" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -2776,7 +2776,7 @@
       <object-ref idTarget="MapBackArrow" x="-114" y="175" scale="0.7499511" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
-  <scene id="Noticia14S" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Noticia14S" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -2794,7 +2794,7 @@
       <object-ref idTarget="MapBackArrow" x="-118" y="183" scale="0.7634137" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
-  <scene id="Noticia15S" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Noticia15S" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -2812,7 +2812,7 @@
       <object-ref idTarget="MapBackArrow" x="95" y="693" scale="0.6257238" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
-  <scene id="Noticia16S" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Noticia16S" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -2830,7 +2830,7 @@
       <object-ref idTarget="MapBackArrow" x="133" y="244" scale="0.8869048" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
-  <scene id="Noticia17S" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Noticia17S" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -2848,7 +2848,7 @@
       <object-ref idTarget="MapBackArrow" x="-49" y="120" scale="0.4418685" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
-  <scene id="Noticia18S" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Noticia18S" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -2866,7 +2866,7 @@
       <object-ref idTarget="MapBackArrow" x="88" y="162" scale="0.5557264" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
-  <scene id="Noticia19S" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Noticia19S" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -2884,7 +2884,7 @@
       <object-ref idTarget="MapBackArrow" x="-43" y="62" scale="0.248577" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
-  <scene id="Noticia20S" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Noticia20S" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -2902,7 +2902,7 @@
       <object-ref idTarget="MapBackArrow" x="-43" y="59" scale="0.2466132" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
-  <scene id="Noticia21S" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Noticia21S" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -2920,7 +2920,7 @@
       <object-ref idTarget="MapBackArrow" x="-38" y="56" scale="0.2324516" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
-  <scene id="Noticia22S" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Noticia22S" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -2938,7 +2938,7 @@
       <object-ref idTarget="MapBackArrow" x="-23" y="163" scale="0.5923516" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
-  <scene id="NoticiasPortada" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="NoticiasPortada" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -2970,7 +2970,7 @@
       </object-ref>
     </objects>
   </scene>
-  <scene id="NoticiasLaUnion1" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="NoticiasLaUnion1" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -3027,7 +3027,7 @@
       <object-ref idTarget="Portadas" x="1796" y="329" scale="0.9684424" glow="no" layer="6" hasInfluenceArea="no" />
     </objects>
   </scene>
-  <scene id="NoticiasLaUnion2" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="NoticiasLaUnion2" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -3060,7 +3060,7 @@
       <object-ref idTarget="MapBackArrow" x="186" y="273" scale="0.9009147" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
-  <scene id="NoticiasClaridad" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="NoticiasClaridad" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -3113,7 +3113,7 @@
       <object-ref idTarget="MapBackArrow" x="234" y="243" scale="0.8983163" glow="no" layer="1" hasInfluenceArea="no" />
     </objects>
   </scene>
-  <scene id="NoticiasABC" hideInventory="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="NoticiasABC" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -3151,7 +3151,7 @@
       <object-ref idTarget="MapBackArrow" x="162" y="247" scale="0.8338728" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
-  <scene id="HogarDelCombatiente" hideInventory="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="HogarDelCombatiente" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -3164,7 +3164,7 @@
       <character-ref idTarget="RiosCapape" x="830" y="883" scale="1.33" orientation="0" glow="no" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
-  <scene id="AgronomosDetrasAntiguamente" hideInventory="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="AgronomosDetrasAntiguamente" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
