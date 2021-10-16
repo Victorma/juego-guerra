@@ -3199,12 +3199,12 @@
       <condition />
       <speak-player>
         <resources name="No name" />
-        <text>Hoy no es un día normal en la Universidad Complutense. Hoy has venido con un objetivo muy distinto al de otros días.</text>
+        <text>Hoy no es un día normal en la Universidad Complutense. Estás aquí con un objetivo muy distinto al de otros días.</text>
       </speak-player>
       <condition />
       <speak-player>
         <resources name="No name" />
-        <text>Al rebuscar entre las cosas de tu difunto abuelo, has encontrado un libro bastante peculiar.</text>
+        <text>Rebuscando entre las cosas de tu difunto abuelo, encontraste un libro bastante peculiar.</text>
       </speak-player>
       <condition />
       <speak-player>
@@ -3214,7 +3214,7 @@
       <condition />
       <speak-player>
         <resources name="No name" />
-        <text>En su caso le tocó pelear en el frente de la Ciudad Universitaria. No es que sepa demasiado del tema, pero he venido aquí para intentar aprender más sobre ello.</text>
+        <text>En su caso le tocó pelear en el frente de la Ciudad Universitaria. No es que sepas demasiado del tema, y por eso has venido aquí, para intentar aprender más sobre la lo que vivió tu abuelo en la Guerra Civil.</text>
       </speak-player>
       <condition />
       <speak-player>
@@ -3341,7 +3341,7 @@
     <dialogue-node nodeindex="8" editor-x="930" editor-y="368">
       <speak-char idTarget="PlayerPos">
         <resources name="No name" />
-        <text>En esta imágen se ve una estatua de un caballo al borde de caerse al suelo.</text>
+        <text>En esta imagen se ve una estatua de un caballo al borde de caerse al suelo.</text>
       </speak-char>
       <condition />
       <child nodeindex="9" />
@@ -3355,7 +3355,7 @@
     <dialogue-node nodeindex="9" editor-x="1272" editor-y="370">
       <speak-char idTarget="PlayerPos">
         <resources name="No name" />
-        <text>Esta foto muestra la vista la vista aerea de un edificio destrozado.</text>
+        <text>Esta foto muestra a vista aérea de un edificio destrozado.</text>
       </speak-char>
       <condition />
       <child nodeindex="10" />
@@ -3369,7 +3369,7 @@
     <dialogue-node nodeindex="10" editor-x="1604" editor-y="337">
       <speak-char idTarget="PlayerPos">
         <resources name="No name" />
-        <text>Y por último, una foto de unos edificios tomada desde el otro lado de la calle.</text>
+        <text>Y, por último, una foto de unos edificios tomada desde el otro lado de la calle.</text>
       </speak-char>
       <condition />
       <child nodeindex="11" />
@@ -3383,12 +3383,12 @@
     <dialogue-node nodeindex="11" editor-x="1990" editor-y="294">
       <speak-player>
         <resources name="No name" />
-        <text>Mi objetivo es localizar estos escenarios en la Ciudad Universitaria.</text>
+        <text>Seguro que, encontrando la situación real desde donde se tomaron estas fotografías, en la Ciudad Universitaria, puedes aprender más.</text>
       </speak-player>
       <condition />
       <speak-player>
         <resources name="No name" />
-        <text>Me he guardado las fotografías en la mochila, si quiero verlas más de cerca solo tendré que rebuscar dentro.</text>
+        <text>Las has guardado en la mochila, si quieres verlas más de cerca solo tendrás que rebuscar dentro.</text>
       </speak-player>
       <condition />
       <speak-player>
@@ -3414,12 +3414,12 @@
   <graph-conversation id="IntroduccionGuia">
     <option-node nodeindex="0" question="Introduccion_Guia_Saltar" preListening="yes" editor-x="126" editor-y="94" x="126" y="94">
       <speak-player>
-        <text>Hacer la introduccion</text>
+        <text>Hacer la introducción</text>
       </speak-player>
       <condition />
       <child nodeindex="1" />
       <speak-player>
-        <text>Saltarse la introduccion</text>
+        <text>Saltarse la introducción</text>
         <resources name="No name" />
       </speak-player>
       <condition />
@@ -3428,7 +3428,7 @@
     <dialogue-node nodeindex="1" editor-x="492" editor-y="88">
       <speak-player>
         <resources name="No name" />
-        <text>#O Madre mia... ¿Y las pintas de este señor?</text>
+        <text>#O Madre mía... ¿Y las pintas de este señor?</text>
       </speak-player>
       <condition />
       <speak-player>
@@ -3448,7 +3448,7 @@
       <condition />
       <speak-char idTarget="GuiaJugador">
         <resources name="No name" />
-        <text>Por tu expresión diría que tampoco tienes ni idea de cómo es que puedes hablar conmigo...</text>
+        <text>¿Y esa cara? Por tu expresión diría que no sabes a qué me refiero.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="GuiaJugador">
@@ -3458,7 +3458,7 @@
       <condition />
       <speak-char idTarget="GuiaJugador">
         <resources name="No name" />
-        <text>He estado vagando estas calles por décadas, viendo su reconstrucción y su evolución...</text>
+        <text>He estado vagando por estas calles décadas, viendo su reconstrucción y su evolución...</text>
       </speak-char>
       <condition />
       <speak-char idTarget="GuiaJugador">
@@ -3468,12 +3468,12 @@
       <condition />
       <speak-player>
         <resources name="No name" />
-        <text>Mi abuelo luchó aquí en la guerra y tenía guardadas 5 fotos tomadas aquí. He venido a averiguar dónde fueron tomadas.</text>
+        <text>Mi abuelo luchó aquí en la guerra y tenía guardadas 5 fotos de esta zona. Quiero saber desde dónde fueron tomadas y conocer más sobre lo que aquí pasó.</text>
       </speak-player>
       <condition />
       <speak-char idTarget="GuiaJugador">
         <resources name="No name" />
-        <text>A ver a ver... ¡Relámpagos! Que recuerdos... Mira, te puedo ayudar a encontrarlas. Nos lo pasaremos bien.</text>
+        <text>A ver a ver... ¡Relámpagos! Qué recuerdos... Mira, te puedo ayudar a encontrar dónde se tomaron. Nos lo pasaremos bien.</text>
       </speak-char>
       <condition />
       <child nodeindex="3" />
@@ -3492,7 +3492,7 @@
     </dialogue-node>
     <option-node nodeindex="3" question="Introduccion_Guia_DondeEstan" preListening="yes" editor-x="998" editor-y="0" x="998" y="0">
       <speak-player>
-        <text>¿Por qué no me díces dónde están?</text>
+        <text>¿Me dirás desde dónde se tomaron?</text>
         <resources name="No name" />
       </speak-player>
       <condition />
@@ -3517,7 +3517,7 @@
       <condition />
       <speak-char idTarget="GuiaJugador">
         <resources name="No name" />
-        <text>No te vas a desprender de mí tán fácilmente.</text>
+        <text>No te vas a desprender de mí tan fácilmente. Te daré alguna pista y te acompañaré mientras buscas. Tengo que aprovechar que por fin alguien me escucha. </text>
       </speak-char>
       <condition />
       <speak-player>
@@ -3535,14 +3535,14 @@
       <condition />
       <speak-char idTarget="GuiaJugador">
         <resources name="No name" />
-        <text>Deberías preguntar a la gente de por aquí. A estas horas deberían estar levantándose...</text>
+        <text>No soy el único aquí que conoce los lugares que buscas. Quiero que también los conozcas. Busquémoslos y hablemos con ellos. A estas horas deberían estar levantándose...</text>
       </speak-char>
       <condition />
       <child nodeindex="6" />
     </dialogue-node>
     <option-node nodeindex="6" question="Conversacion_Guia_Fantasmas" preListening="yes" editor-x="1466" editor-y="424" x="1466" y="424">
       <speak-player>
-        <text>¿Estudiantes?</text>
+        <text>¿El resto de los estudiantes?</text>
         <resources name="No name" />
       </speak-player>
       <condition />
@@ -3557,12 +3557,12 @@
     <dialogue-node nodeindex="7" editor-x="2146" editor-y="293">
       <speak-char idTarget="GuiaJugador">
         <resources name="No name" />
-        <text>¡Claro que no!</text>
+        <text>¿Estudiantes? ¡Claro que no!</text>
       </speak-char>
       <condition />
       <speak-char idTarget="GuiaJugador">
         <resources name="No name" />
-        <text>Eres el primero de esta época con el que hablo, pero os conozco bién.</text>
+        <text>Eres el primero de esta época con el que hablo, pero os conozco bien.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="GuiaJugador">
@@ -3572,7 +3572,7 @@
       <condition />
       <speak-char idTarget="GuiaJugador">
         <resources name="No name" />
-        <text>Mira, hay más gente como yo.</text>
+        <text>Mira, hay más gente como yo…</text>
       </speak-char>
       <condition />
       <child nodeindex="8" />
@@ -3585,7 +3585,7 @@
       <condition />
       <speak-char idTarget="GuiaJugador">
         <resources name="No name" />
-        <text>Civiles, soldados, ricos y pobres. Intenta buscarles por el campus. Pregúntales por las fotografías y seguro que te ayudan.</text>
+        <text>Civiles, soldados, ricos y pobres. Intenta buscarlos por el campus. Pregúntales por las fotografías y seguro que te ayudan.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="GuiaJugador">
@@ -3619,7 +3619,7 @@
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
       <speak-char idTarget="GuiaJugador">
         <resources name="No name" />
-        <text>¡Fijate! ¿Sabes qué es esto?</text>
+        <text>¡Fíjate! ¿Sabes qué es esto?</text>
       </speak-char>
       <condition />
       <speak-player>
@@ -3629,7 +3629,7 @@
       <condition />
       <speak-char idTarget="GuiaJugador">
         <resources name="No name" />
-        <text>¿Qué pasa, acaso no leéis periódicos los de vuestra época?</text>
+        <text>¿Qué pasa, acaso no leéis periódicos, los de vuestra época?</text>
       </speak-char>
       <condition />
       <speak-char idTarget="GuiaJugador">
@@ -3639,12 +3639,12 @@
       <condition />
       <speak-char idTarget="GuiaJugador">
         <resources name="No name" />
-        <text>¿Sabes? La guerra no solo se libraba en el frente. Las imprentas luchaban para animar a la población o para descorazonar al enemigo.</text>
+        <text>¿Sabes? La guerra no se libraba solamente en el frente. Las imprentas luchaban para animar a la población o para descorazonar al enemigo.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="GuiaJugador">
         <resources name="No name" />
-        <text>Solo hacía falta que un bando perdiera una batalla para anunciarla despues como una tremenda victoria.</text>
+        <text>Sólo hacía falta que un bando perdiera una batalla para anunciarla después como una tremenda victoria.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="GuiaJugador">
@@ -3654,7 +3654,7 @@
       <condition />
       <speak-char idTarget="GuiaJugador">
         <resources name="No name" />
-        <text>Seguramente no resuelvan el misterio de las fotografías, pero seguro que aprendes algo.</text>
+        <text>Leerla no resolverá el misterio de las fotografías, pero seguro que aprendes algo.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="GuiaJugador">
@@ -3708,7 +3708,7 @@
       <condition />
       <child nodeindex="3" />
       <speak-player>
-        <text>No se a donde ir.</text>
+        <text>No sé a dónde ir.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
@@ -3795,7 +3795,7 @@
       </condition>
       <speak-char idTarget="GuiaJugador">
         <resources name="No name" />
-        <text> El soldado comunista te dijo que el edificio de al lado de la foto es la Casa de Velazquez. También recomendó que pasaras por allí.</text>
+        <text> El soldado comunista te dijo que el edificio de al lado de la foto es la Casa de Velázquez. También recomendó que pasaras por allí.</text>
       </speak-char>
       <condition>
         <active flag="PistaArquitectura_SoldComunista" />
@@ -3833,7 +3833,7 @@
       </condition>
       <speak-char idTarget="GuiaJugador">
         <resources name="No name" />
-        <text>El chico este tan... borde... Te dijo que probaras a buscar en la facultad de enfrente. Supongo que se refería a la de filosofía.</text>
+        <text>El chico éste tan... borde... Te dijo que probaras a buscar en la facultad de enfrente. Supongo que se refería a la de filosofía.</text>
       </speak-char>
       <condition>
         <active flag="PistaFilosofia_Matematicas" />
@@ -3948,7 +3948,7 @@
     <dialogue-node nodeindex="2" editor-x="926" editor-y="3">
       <speak-char idTarget="SoldadoComunista">
         <resources name="No name" />
-        <text>Me llamo Perdo Gómez, y fuí militante en el Partido Comunista Español.</text>
+        <text>Me llamo Pedro Gómez, y fui militante en el Partido Comunista Español.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="SoldadoComunista">
@@ -3962,7 +3962,7 @@
       <condition />
       <speak-char idTarget="SoldadoComunista">
         <resources name="No name" />
-        <text>Tras cruzar el Manzanares, los sublevados ocuparon prácticamente la mitad de Ciudad Universitaria. Incluído el Hospital Clínico.</text>
+        <text>Tras cruzar el Manzanares, los sublevados ocuparon prácticamente la mitad de Ciudad Universitaria. Incluido el Hospital Clínico.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="SoldadoComunista">
@@ -3991,12 +3991,12 @@
     <dialogue-node nodeindex="3" editor-x="1251" editor-y="384">
       <speak-char idTarget="SoldadoComunista">
         <resources name="No name" />
-        <text>Este edificio... No estoy seguro de cuál es exáctamente...</text>
+        <text>Este edificio... No estoy seguro de cuál es exactamente...</text>
       </speak-char>
       <condition />
       <speak-char idTarget="SoldadoComunista">
         <resources name="No name" />
-        <text>Estoy seguro que el edificio que tiene a su lado es la Casa de Velazquez.</text>
+        <text>Estoy seguro de que el edificio que tiene a su lado es la Casa de Velázquez.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="SoldadoComunista">
@@ -4025,17 +4025,17 @@
       <condition />
       <speak-char idTarget="SoldadoComunista">
         <resources name="No name" />
-        <text>Mira, nuestra relacion con los anarquistas nunca ha sido buena.</text>
+        <text>Mira, nuestra relación con los anarquistas nunca ha sido buena.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="SoldadoComunista">
         <resources name="No name" />
-        <text>Si, en un principio la CNT era mucho más popular que el PCE, y podía movilizar a más personas...</text>
+        <text>Si, en un principio los anarquistas de la CNT (Confederación Nacional del Trabajo) eran mucho más populares que el PCE (Partido Comunista Español), y podía movilizar a más personas...</text>
       </speak-char>
       <condition />
       <speak-char idTarget="SoldadoComunista">
         <resources name="No name" />
-        <text>¡Pero hacían lo que les daba la gana! Si no fuera por nosotros, los comunistas, los soviéticos no nos hubieran ayudado.</text>
+        <text>¡Pero hacían lo que les daba la gana! Si no fuera por nosotros, los comunistas, los soviéticos no nos hubieran ayudado en la guerra con sus asesores, voluntarios y armas.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="SoldadoComunista">
@@ -4045,12 +4045,12 @@
       <condition />
       <speak-char idTarget="SoldadoComunista">
         <resources name="No name" />
-        <text>Igual fue uno de sus compañeros anarquistas, o un desertor, o un trotskysta.</text>
+        <text>Igual fue uno de sus compañeros anarquistas, o un desertor, o un trotskista.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="SoldadoComunista">
         <resources name="No name" />
-        <text>#! ¡Malditos trotskystas!</text>
+        <text>#! ¡Malditos trotskistas!</text>
       </speak-char>
       <condition />
       <speak-char idTarget="SoldadoComunista">
@@ -4105,7 +4105,7 @@
     <dialogue-node nodeindex="6" editor-x="1310" editor-y="911">
       <speak-player>
         <resources name="No name" />
-        <text>Bueno... Ahora que tengo la pista del edificio velazquez debería de buscar en el mapa que tengo en la mochila abajo a la derecha...</text>
+        <text>Bueno... Ahora que tengo la pista de la Casa de Velázquez debería de buscarla en el mapa que tengo en la mochila abajo a la derecha...</text>
       </speak-player>
       <condition>
         <active flag="PistaArquitectura_SoldComunista" />
@@ -4202,7 +4202,7 @@
       <condition />
       <speak-char idTarget="NinyoMedicina">
         <resources name="No name" />
-        <text>Porque casi nadie sabe cuantas balas han volado sobre nuestras cabezas jaja</text>
+        <text>Porque casi nadie sabe cuántas balas han volado sobre nuestras cabezas jaja</text>
       </speak-char>
       <condition />
       <speak-char idTarget="NinyoMedicina">
@@ -4227,12 +4227,12 @@
       <condition />
       <speak-player>
         <resources name="No name" />
-        <text>Que va, la estatua de la foto no es la de esta plaza.</text>
+        <text>Qué va, la estatua de la foto no es la de esta plaza.</text>
       </speak-player>
       <condition />
       <speak-char idTarget="NinyoMedicina">
         <resources name="No name" />
-        <text>No recuerdo exáctamente el nombre del edificio...</text>
+        <text>No recuerdo exactamente el nombre del edificio...</text>
       </speak-char>
       <condition />
       <speak-char idTarget="NinyoMedicina">
@@ -4268,12 +4268,12 @@
       <condition />
       <speak-char idTarget="NinyoMedicina">
         <resources name="No name" />
-        <text>¡Madre mia, menudo destrozo!</text>
+        <text>¡Madre mía, menudo destrozo!</text>
       </speak-char>
       <condition />
       <speak-char idTarget="NinyoMedicina">
         <resources name="No name" />
-        <text>Esto saca pinta de ser un pabellón de una facultad.</text>
+        <text>Esto tiene pinta de ser un pabellón de una facultad.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="NinyoMedicina">
@@ -4396,7 +4396,7 @@
       <condition />
       <speak-char idTarget="SoldadoPerdido">
         <resources name="No name" />
-        <text>Allí hay un Guardia Civil que te indicará cómo llegar al lugar sano y salvo.</text>
+        <text>Allí hay un Guardia Civil que te indicará cómo avanzar hasta el lugar sano y salvo siguiendo la ruta de avance nacional.</text>
       </speak-char>
       <condition />
       <child nodeindex="5" />
@@ -4464,7 +4464,7 @@
       </condition>
       <speak-char idTarget="PolacoVelazquez">
         <resources name="No name" />
-        <text>Cześć, ¿qué haces por aqui?</text>
+        <text>Cześć, ¿qué haces por aquí?</text>
       </speak-char>
       <condition>
         <inactive flag="IntroducidoPolaco" />
@@ -4522,7 +4522,7 @@
     <dialogue-node nodeindex="2" editor-x="1091" editor-y="0">
       <speak-char idTarget="PolacoVelazquez">
         <resources name="No name" />
-        <text>Esto de aqui es la Casa de Velazquez.</text>
+        <text>Esto de aquí es la Casa de Velázquez.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="PolacoVelazquez">
@@ -4537,7 +4537,7 @@
       <condition />
       <speak-char idTarget="PolacoVelazquez">
         <resources name="No name" />
-        <text>Durante la guerra este edificio fue completamente destrozado. Poco después de ser tomada, sufrió un incendio que la dejó destorzada.</text>
+        <text>Durante la guerra este edificio fue completamente destruido. Poco después de ser tomado, sufrió un incendio que lo dejó en ruinas.</text>
       </speak-char>
       <condition />
       <child nodeindex="1" />
@@ -4550,7 +4550,7 @@
       <condition />
       <speak-char idTarget="PolacoVelazquez">
         <resources name="No name" />
-        <text>Forme parte del Batallón Dabrowski. Nos establecimos en esta posición dos dias antes del ataque de los sublevados.</text>
+        <text>Formé parte del Batallón Dabrowski. Nos establecimos en esta posición dos días antes del ataque de los sublevados.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="PolacoVelazquez">
@@ -4560,12 +4560,12 @@
       <condition />
       <speak-char idTarget="PolacoVelazquez">
         <resources name="No name" />
-        <text>Dos tercios de nuestros compañeros cayeron. Despúes de cinco horas de combate, solo quedaban en pie seis hombres entre los cuales me encontraba.</text>
+        <text>Dos tercios de nuestros compañeros cayeron. Después de cinco horas de combate, solo quedaban en pie seis hombres entre los cuales me encontraba.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="PolacoVelazquez">
         <resources name="No name" />
-        <text>Yo cai en combate y terminamos perdiendo la posición.</text>
+        <text>Yo caí en combate y terminamos perdiendo la posición.</text>
       </speak-char>
       <condition />
       <child nodeindex="1" />
@@ -4573,7 +4573,7 @@
     <dialogue-node nodeindex="4" editor-x="1050" editor-y="596">
       <speak-player>
         <resources name="No name" />
-        <text>Me la encontre en el diario de mi abuelo. Participó en la guerra.</text>
+        <text>Me la encontré en el diario de mi abuelo. Participó en la guerra.</text>
       </speak-player>
       <condition />
       <speak-char idTarget="PolacoVelazquez">
@@ -4611,17 +4611,17 @@
       <condition />
       <speak-char idTarget="PolacoVelazquez">
         <resources name="No name" />
-        <text>Anda si es el caballo de la Casa de Velzaquez. Lleva aqui mucho tiempo. Milagrosamente consiguio sobrevivir a la guerra, aun que acabó un poco torcida.</text>
+        <text>Anda si es el caballo de la Casa de Velázquez. Lleva aquí mucho tiempo. Milagrosamente consiguió sobrevivir a la guerra, aunque la estatua acabó un poco torcida.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="PolacoVelazquez">
         <resources name="No name" />
-        <text>Menuda tristeza ver el sitio de esta manera. ¿Sabes?, aquello que se ve al fondo es la escuela de Arquitectura.</text>
+        <text>Menuda tristeza ver el sitio de esta manera. ¿Sabes? Aquello que se ve al fondo es la escuela de Arquitectura.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="PolacoVelazquez">
         <resources name="No name" />
-        <text>También la mantuvieron los franquistas durante toda la guerra. Ve a echar un vistazo, seguro que te necuentras algún charlatán.</text>
+        <text>También la mantuvieron los franquistas durante toda la guerra. Ve a echar un vistazo, seguro que te encuentras algún charlatán.</text>
       </speak-char>
       <condition />
       <speak-player>
@@ -4654,7 +4654,7 @@
     <dialogue-node nodeindex="7" editor-x="1070" editor-y="1034">
       <speak-player>
         <resources name="No name" />
-        <text>Bien. Si esta era la Casa de Velazquez entonces un poco más adelante estará la siguiente foto, en Arquitectura.</text>
+        <text>Bien. Si esta era la Casa de Velázquez, entonces un poco más adelante estará la siguiente foto, en Arquitectura.</text>
       </speak-player>
       <condition>
         <active flag="UsadoVelazquez" />
@@ -4677,12 +4677,12 @@
       <condition />
       <speak-char idTarget="RiosCapape">
         <resources name="No name" />
-        <text>Rios Capapé, y esto es el puesto de mando de la escuela de Arquitectura.</text>
+        <text>Ríos Capapé, y éste es el puesto de mando de la escuela de Arquitectura.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="RiosCapape">
         <resources name="No name" />
-        <text>Ahora, ¿qué ocurre?, ¿otra vez han atacado la pasarela de la muerte o estas aqui para relevar a los soldados?</text>
+        <text>Ahora, ¿qué ocurre?, ¿otra vez han atacado la pasarela de la muerte o estás aquí para relevar a los soldados?</text>
       </speak-char>
       <condition />
       <child nodeindex="1" />
@@ -4722,7 +4722,7 @@
       <condition />
       <speak-char idTarget="RiosCapape">
         <resources name="No name" />
-        <text>Ah, es verdad. Pues verás, la pasarela de la muerte es el paso al frente desde el río manzanares.</text>
+        <text>Ah, es verdad. Pues verás, la pasarela de la muerte es el paso al frente desde el río Manzanares.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="RiosCapape">
@@ -4741,7 +4741,7 @@
       <condition />
       <speak-char idTarget="RiosCapape">
         <resources name="No name" />
-        <text>Pero basta de chachara. Ve a la biblioteca y trae libros, después si quieres te puedes ir al hogar del combatiente a descansar.</text>
+        <text>Pero basta de cháchara. Ve a la biblioteca y trae libros, después si quieres te puedes ir al Hogar del Combatiente a descansar.</text>
       </speak-char>
       <condition />
       <child nodeindex="4" />
@@ -4754,7 +4754,7 @@
       <condition />
       <speak-player>
         <resources name="No name" />
-        <text>Mas o menos, la cosa es que usted está muerto.</text>
+        <text>Más o menos, la cosa es que usted está muerto.</text>
       </speak-player>
       <condition />
       <speak-char idTarget="RiosCapape">
@@ -4806,7 +4806,7 @@
       <condition />
       <speak-char idTarget="RiosCapape">
         <resources name="No name" />
-        <text>Una pena que se echen a perder, pero la situacion lo requiere.</text>
+        <text>Una pena que se echen a perder, pero la situación lo requiere.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="RiosCapape">
@@ -4818,12 +4818,12 @@
         <resources name="No name">
           <asset type="image" uri="assets/image/librobala.png" />
         </resources>
-        <text>Aquí tengo un libro que me salvó la vida el otro día. Fíjate que aún tiene la bala en su interior...</text>
+        <text>Aquí tengo un libro que me salvó la vida el otro día. Fíjate, aún tiene la bala en su interior...</text>
       </speak-char>
       <condition />
       <speak-char idTarget="RiosCapape">
         <resources name="No name" />
-        <text>Asusta. Pero tenemos que seguir luchando para defender esta posición privilegiada.</text>
+        <text>Asusta, pero tenemos que seguir luchando para defender esta posición privilegiada.</text>
       </speak-char>
       <condition />
       <child nodeindex="4" />
@@ -4831,7 +4831,7 @@
     <dialogue-node nodeindex="6" editor-x="2077" editor-y="321">
       <speak-char idTarget="RiosCapape">
         <resources name="No name" />
-        <text>Si, el bar que tenemos aqui. Mira ven...</text>
+        <text>Sí, el bar que tenemos aquí. Mira ven...</text>
       </speak-char>
       <condition />
       <child nodeindex="9" />
@@ -4884,12 +4884,12 @@
       <condition />
       <speak-player>
         <resources name="No name" />
-        <text>*glup*</text>
+        <text>*Glup*</text>
       </speak-player>
       <condition />
       <speak-char idTarget="RiosCapape">
         <resources name="No name" />
-        <text>Pero bueno, aprovecha para leer nuestros murales y proyectos, aunque si no sabes leer y escribir seguro que alguien allí te podrá enseñar.</text>
+        <text>Pero bueno, aprovecha para leer nuestros murales y proyectos, aunque si no sabes leer y escribir, como nos pasa a la mayoría de por aquí, pregunta, seguro que alguien allí podrá ayudarte.</text>
       </speak-char>
       <condition />
       <child nodeindex="4" />
@@ -4901,7 +4901,7 @@
     <dialogue-node nodeindex="10" editor-x="1394" editor-y="580">
       <speak-char idTarget="RiosCapape">
         <resources name="No name" />
-        <text>Claro, si es este lugar, mira, ahi abajo a la derecha se ve la pasarela de la muerte y todo.</text>
+        <text>Claro, si es este lugar, mira, ahí abajo a la derecha se ve la pasarela de la muerte y todo.</text>
       </speak-char>
       <condition />
       <speak-player>
@@ -4989,7 +4989,7 @@
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
       <speak-char idTarget="SoldadoMedicina">
         <resources name="No name" />
-        <text>¿Pero qué haces caminando en tierra de nadie? ¿No sabes que te pueden disparar?</text>
+        <text>Pero ¿qué haces caminando en tierra de nadie? ¿No sabes que te pueden disparar?</text>
       </speak-char>
       <condition>
         <inactive flag="SoldadoMedicinaVisitado" />
@@ -5010,28 +5010,28 @@
       </condition>
       <speak-char idTarget="SoldadoMedicina">
         <resources name="No name" />
-        <text>#! ¿ Qué ?</text>
+        <text>#! ¿Qué?</text>
       </speak-char>
       <condition>
         <inactive flag="SoldadoMedicinaVisitado" />
       </condition>
       <speak-char idTarget="SoldadoMedicina">
         <resources name="No name" />
-        <text>Ah si, es verdad... A veces me cuesta recordar.</text>
+        <text>Ah sí, es verdad... A veces me cuesta recordar.</text>
       </speak-char>
       <condition>
         <inactive flag="SoldadoMedicinaVisitado" />
       </condition>
       <speak-player>
         <resources name="No name" />
-        <text>No pasa nada. ¿Qué pasó aquí?</text>
+        <text>No le des más vueltas. ¿Qué pasó aquí?</text>
       </speak-player>
       <condition>
         <inactive flag="SoldadoMedicinaVisitado" />
       </condition>
       <speak-char idTarget="SoldadoMedicina">
         <resources name="No name" />
-        <text>Tras cruzar el Manzanares en Noviembre del 36, los Sublevados tomaron varios edificios del campus, incluida la Escuela de Agronomos.</text>
+        <text>Tras cruzar el Manzanares en noviembre del 36, los Sublevados tomaron varios edificios del campus, incluida la Escuela de Agrónomos.</text>
       </speak-char>
       <condition>
         <inactive flag="SoldadoMedicinaVisitado" />
@@ -5045,7 +5045,7 @@
       </condition>
       <speak-char idTarget="SoldadoMedicina">
         <resources name="No name" />
-        <text>Separados por poco más de 80 metros durante los 4 años que se mantuvo el frente... Ya te puedes imaginar el horror que tuvo lugar aquí.</text>
+        <text>Separados por poco más de 80 metros durante los 4 años que se mantuvo el frente... Imagínate el horror que tuvo lugar aquí.</text>
       </speak-char>
       <condition>
         <inactive flag="SoldadoMedicinaVisitado" />
@@ -5080,7 +5080,7 @@
       <condition />
       <child nodeindex="2" />
       <speak-player>
-        <text>¿Cual es tu historia?</text>
+        <text>¿Cuál es tu historia?</text>
         <resources name="No name" />
       </speak-player>
       <condition />
@@ -5140,7 +5140,7 @@
       <condition />
       <speak-char idTarget="SoldadoMedicina">
         <resources name="No name" />
-        <text>Sin embargo, el frente de la Ciudad Universitaria se mantuvo inmovil. Se convirtió en un símbolo de la lucha en Madrid.</text>
+        <text>Sin embargo, el frente de la Ciudad Universitaria se mantuvo inmóvil. Se convirtió en un símbolo de la lucha en Madrid.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="SoldadoMedicina">
@@ -5158,7 +5158,7 @@
     <dialogue-node nodeindex="3" editor-x="1458" editor-y="170">
       <speak-char idTarget="SoldadoMedicina">
         <resources name="No name" />
-        <text>Me llamo Hugo Martinez. Al estallar la guerra, tomé las armas para defender Madrid contra los sublevados.</text>
+        <text>Me llamo Hugo Martínez. Al estallar la guerra, tomé las armas para defender Madrid contra los sublevados.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="SoldadoMedicina">
@@ -5168,22 +5168,22 @@
       <condition />
       <speak-char idTarget="SoldadoMedicina">
         <resources name="No name" />
-        <text>Fue una de las personas más importantes de la CNT y del anarquismo español.</text>
+        <text>Fue una de las personas más importantes de la CNT (Confederación Nacional del Trabajo) y del anarquismo español.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="SoldadoMedicina">
         <resources name="No name" />
-        <text>El 19 de Noviembre de 1936, una bala fascista le atravesó el pecho en la calle Isaac Peral, cerca del Clínico.</text>
+        <text>El 19 de noviembre de 1936, una bala fascista le atravesó el pecho en la calle Isaac Peral, cerca del Hospital Clínico.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="SoldadoMedicina">
         <resources name="No name" />
-        <text>Su cuerpo fue embalsado y trasladado a Barcelona. ¡A su funeral acudieron miles de personas!</text>
+        <text>Su cuerpo fue embalsamado y trasladado a Barcelona. ¡A su funeral acudieron miles de personas!</text>
       </speak-char>
       <condition />
       <speak-char idTarget="SoldadoMedicina">
         <resources name="No name" />
-        <text>Seguro que por aquí encuentras a mas personas que te contarán cosas interesantes sobre él.</text>
+        <text>Seguro que por aquí encuentras a más personas que te contarán cosas interesantes sobre él.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="SoldadoMedicina">
@@ -5247,12 +5247,12 @@
       <condition />
       <speak-char idTarget="SoldadoMedicina">
         <resources name="No name" />
-        <text>Llevo unos días buscando mi "Naranjero". Así llamábamos a el modelo de subfusil que usábamos.</text>
+        <text>Llevo unos días buscando mi "Naranjero". Así llamábamos al modelo de subfusil que usábamos.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="SoldadoMedicina">
         <resources name="No name" />
-        <text>Ya te habrás dado cuenta que la memoria no es lo mío... Búscalo y te diré dónde sacaron esta fotografía.</text>
+        <text>Ya te habrás dado cuenta de que la memoria no es lo mío... Búscalo y te diré dónde sacaron esta fotografía.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="SoldadoMedicina">
@@ -5265,7 +5265,7 @@
       </condition>
       <speak-char idTarget="SoldadoMedicina">
         <resources name="No name" />
-        <text>Yo juraría que lo perdí hacia el sur, por el frente enemigo...</text>
+        <text>Yo juraría que lo perdí hacia el sur, en el frente enemigo...</text>
       </speak-char>
       <condition>
         <active flag="UsadoArquitectura" />
@@ -5320,17 +5320,17 @@
       <condition />
       <speak-char idTarget="SoldadoMedicina">
         <resources name="No name" />
-        <text>Como te pillen con esas marcas en un registro de la persona equivocada... Mejor no pensarlo.</text>
+        <text>Y si te pillan la persona equivocada con unas marcas así en un registro ... Mejor no pensarlo.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="SoldadoMedicina">
         <resources name="No name" />
-        <text>Y sobre la foto, pues verás... Conozco a alguien que te puede decir dónde es.</text>
+        <text>Y sobre la foto, pues verás... Conozco a alguien que te puede decir dónde la sacaron.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="SoldadoMedicina">
         <resources name="No name" />
-        <text>Camina hacia el norte por esta misma calle y encontrarás al hombre junto al jardín botánico. ¡Mucha suerte!</text>
+        <text>Camina hacia el norte por esta misma calle. Junto al jardín botánico encontrarás a alguien que puede ayudarte. ¡Mucha suerte!</text>
       </speak-char>
       <condition />
       <end-conversation>
@@ -5359,12 +5359,12 @@
         <resources name="No name">
           <asset type="image" uri="" />
         </resources>
-        <text>¡Anda! Justo como lo recordada.</text>
+        <text>¡Anda! Justo como lo recordaba.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="SoldadoMedicina">
         <resources name="No name" />
-        <text>¡Pero bueno! Está sacada desde aquí mismo, desde agrónomos, mirando hacia Odontología.</text>
+        <text>¡Pero bueno! Está sacada desde aquí mismo, desde Agrónomos, mirando hacia Odontología.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="SoldadoMedicina">
@@ -5443,7 +5443,7 @@
       </condition>
       <speak-char idTarget="GuardiaCivil">
         <resources name="No name" />
-        <text>¿No sabe usted, que esto es una zona de guerra?</text>
+        <text>¿No sabe usted que esto es una zona de guerra?</text>
       </speak-char>
       <condition>
         <inactive flag="PresentadoGuardiaCivil" />
@@ -5485,7 +5485,7 @@
       </condition>
       <speak-player>
         <resources name="No name" />
-        <text>Mas enserio, ¿qué haces aqui?</text>
+        <text>En serio, ¿qué haces aquí?</text>
       </speak-player>
       <condition>
         <inactive flag="PresentadoGuardiaCivil" />
@@ -5500,7 +5500,7 @@
       <condition />
       <child nodeindex="2" />
       <speak-player>
-        <text>¿Sabes donde esta esto?</text>
+        <text>¿Sabes dónde está esto?</text>
         <resources name="No name">
           <asset type="image" uri="assets/image/El Clínico_20-10-39.jpg" />
         </resources>
@@ -5596,12 +5596,12 @@
         <resources name="No name">
           <asset type="image" uri="assets/image/agronomosahora.jpg" />
         </resources>
-        <text>Pero señor, aqui sólo hay un edificio  </text>
+        <text>Pero señor... Aquí sólo hay un edificio  </text>
       </speak-player>
       <condition />
       <speak-char idTarget="GuardiaCivil">
         <resources name="No name" />
-        <text>Ese edificio que ves no existía antiguamente. Fué reconstruido tras la guerra.</text>
+        <text>Ese edificio que ves no existía antiguamente. Fue reconstruido tras la guerra.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="GuardiaCivil">
@@ -5647,7 +5647,7 @@
       <condition />
       <speak-char idTarget="ColumnistaDurruti">
         <resources name="No name" />
-        <text>Buenos dias, o tardes, la verdad es que no estoy seguro.</text>
+        <text>Buenos días, o tardes, la verdad es que no estoy seguro.</text>
       </speak-char>
       <condition />
       <speak-player>
@@ -5657,7 +5657,7 @@
       <condition />
       <speak-char idTarget="ColumnistaDurruti">
         <resources name="No name" />
-        <text>¡Ah si! La vieja radio bajo la colina... Deja que coja mis prismaticos...</text>
+        <text>¡Ah sí! La vieja radio bajo la colina... Deja que coja mis prismáticos...</text>
       </speak-char>
       <condition />
       <speak-player>
@@ -5737,12 +5737,12 @@
       <condition />
       <speak-char idTarget="ColumnistaDurruti">
         <resources name="No name" />
-        <text>Veníamos desde los frentes de Aragón, eramos unos 1600 hombres.</text>
+        <text>Veníamos desde los frentes de Aragón, éramos unos 1600 hombres.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="ColumnistaDurruti">
         <resources name="No name" />
-        <text>Se nos asigno al Clínico, al día siguiente, hicimos un contraataque desde las Facultades hasta el Clínico. Lo logramos y avanzamos.</text>
+        <text>Se nos asignó al Clínico, al día siguiente, hicimos un contraataque desde las Facultades hasta el Clínico. Lo logramos y avanzamos.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="ColumnistaDurruti">
@@ -5752,7 +5752,7 @@
       <condition />
       <speak-char idTarget="ColumnistaDurruti">
         <resources name="No name" />
-        <text>Tuvimos que retroceder, de hecho estuvimos retrocediendo hasta el 19, de día que Durruti murío.</text>
+        <text>Tuvimos que retroceder, de hecho, estuvimos retrocediendo hasta el 19, el día que Durruti murió.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="ColumnistaDurruti">
@@ -5789,7 +5789,7 @@
       </condition>
       <speak-char idTarget="ColumnistaDurruti">
         <resources name="No name" />
-        <text>A Durruti se le calló su fusíl Naranjero al salir del coche y se le disparó sin querer hiriéndole de muerte.</text>
+        <text>A Durruti se le cayó su fusil Naranjero al salir del coche y se le disparó sin querer hiriéndole de muerte.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="ColumnistaDurruti">
@@ -5852,7 +5852,7 @@
     <dialogue-node nodeindex="6" editor-x="1827" editor-y="863">
       <speak-char idTarget="ColumnistaDurruti">
         <resources name="No name" />
-        <text>Esto es el Clínico, antes de los Bombardeos a gran escala de Noviembre.</text>
+        <text>Esto es el Clínico, antes de los Bombardeos a gran escala de noviembre.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="ColumnistaDurruti">
@@ -5862,17 +5862,17 @@
       <condition />
       <speak-char idTarget="ColumnistaDurruti">
         <resources name="No name" />
-        <text>Estuvo ocupada por anarquistas como Durruti, la columna de quien pertenecía.</text>
+        <text>Nosotros, los mercenarios de la columna de Durruti, ocupamos la posición y la defendimos hasta que…</text>
       </speak-char>
       <condition />
       <speak-char idTarget="ColumnistaDurruti">
         <resources name="No name" />
-        <text>Desde el día 21, fue ocupada por los nacionales, el avance cesó y no huvo más cambios.</text>
+        <text>Desde el día 21 de noviembre, lo ocuparon los nacionales y el avance cesó. Nunca conseguimos recuperar la posición…</text>
       </speak-char>
       <condition />
       <speak-player>
         <resources name="No name" />
-        <text>Perfecto, me queda una fotografía menos.</text>
+        <text>Bueno, al menos ya me queda una fotografía menos que encontrar.</text>
       </speak-player>
       <condition>
         <inactive flag="UsadoClinico" />
@@ -5899,7 +5899,7 @@
       <condition />
       <speak-char idTarget="GuardiaCivil">
         <resources name="No name" />
-        <text>¡Eh tú! Las manos dónde pueda verlas, necesito ese arma para nuestra ofensiva.</text>
+        <text>¡Eh tú! Las manos dónde pueda verlas, necesito esa arma para nuestra ofensiva.</text>
       </speak-char>
       <condition />
       <child nodeindex="1" />
@@ -6000,7 +6000,7 @@
     <dialogue-node nodeindex="6" editor-x="1794" editor-y="50">
       <speak-char idTarget="GuardiaCivil">
         <resources name="No name" />
-        <text>¿Ah si? Qué cosas tiene el más allá... Puedes llevárselo entonces...</text>
+        <text>¿Ah sí? Qué cosas tiene el más allá... Puedes llevárselo entonces...</text>
       </speak-char>
       <condition />
       <speak-player>
@@ -6052,7 +6052,7 @@
       </condition>
       <child nodeindex="3" />
       <speak-player>
-        <text>Gracias, adios</text>
+        <text>Gracias, adiós</text>
         <resources name="No name" />
       </speak-player>
       <condition />
@@ -6061,7 +6061,7 @@
     <dialogue-node nodeindex="2" editor-x="708" editor-y="26">
       <speak-char idTarget="SoldadoCienciasInformacion">
         <resources name="No name" />
-        <text>Soy Vitores Rosales, un soldado de la II República.</text>
+        <text>Soy Vítores Rosales, un soldado de la II República.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="SoldadoCienciasInformacion">
@@ -6108,7 +6108,7 @@
     <dialogue-node nodeindex="3" editor-x="900" editor-y="440">
       <speak-char idTarget="SoldadoCienciasInformacion">
         <resources name="No name" />
-        <text>Emmm, no me suena... </text>
+        <text>Ehm, no me suena... </text>
       </speak-char>
       <condition />
       <speak-char idTarget="SoldadoCienciasInformacion">
@@ -6218,7 +6218,7 @@
       <condition />
       <speak-char idTarget="HombreBontanico">
         <resources name="No name" />
-        <text>Es una sala la Facultad de Filosofía, que está aquí cerca.</text>
+        <text>Es una sala de la Facultad de Filosofía, que está aquí cerca.</text>
       </speak-char>
       <condition />
       <speak-player>
@@ -6255,12 +6255,12 @@
       <condition />
       <speak-player>
         <resources name="No name" />
-        <text>Te quería pregunta una cosa</text>
+        <text>Te quería preguntar una cosa</text>
       </speak-player>
       <condition />
       <speak-char idTarget="ChicoMates">
         <resources name="No name" />
-        <text>¿Me estás hablando a mi?</text>
+        <text>¿Me estás hablando a mí?</text>
       </speak-char>
       <condition />
       <speak-player>
@@ -6275,17 +6275,17 @@
       <condition />
       <speak-player>
         <resources name="No name" />
-        <text>Emmm. Te veo porque tengo este diario.</text>
+        <text>Ehm... Pues no lo sé... Supongo que es cosa de este diario. Era de mi abuelo.</text>
       </speak-player>
       <condition />
       <speak-char idTarget="ChicoMates">
         <resources name="No name" />
-        <text>¿Diario?, dejame investigar un momento.</text>
+        <text>¿Diario?, déjame investigar un momento…</text>
       </speak-char>
       <condition />
       <speak-char idTarget="ChicoMates">
         <resources name="No name" />
-        <text>Ni idea de por que funciona.</text>
+        <text>Ajá. Ya veo. El diario es un agujero de gusano temporal que conecta ambas reali… Nah, es broma, no tengo ni idea de cómo funciona... Aunque me cueste admitirlo.</text>
       </speak-char>
       <condition />
       <child nodeindex="1" />
@@ -6334,7 +6334,7 @@
     <dialogue-node nodeindex="3" editor-x="887" editor-y="395">
       <speak-char idTarget="ChicoMates">
         <resources name="No name" />
-        <text>Adios</text>
+        <text>Adiós</text>
       </speak-char>
       <condition />
       <end-conversation />
@@ -6385,12 +6385,12 @@
     </dialogue-node>
     <option-node nodeindex="1" question="Conversacion_Filosofia_Principal" preListening="yes" editor-x="392" editor-y="25" x="392" y="25">
       <speak-player>
-        <text>¿Cual es tu historia?</text>
+        <text>¿Cuál es tu historia?</text>
       </speak-player>
       <condition />
       <child nodeindex="2" />
       <speak-player>
-        <text>¿Cual es la historia de este lugar?</text>
+        <text>¿Cuál es la historia de este lugar?</text>
         <resources name="No name" />
       </speak-player>
       <condition />
@@ -6430,7 +6430,7 @@
       <condition />
       <speak-char idTarget="ChicaFilosofia">
         <resources name="No name" />
-        <text>Y cuando llegó la guerra... Ya te puedes imaginar que lado escogí.</text>
+        <text>Y cuando llegó la guerra... Ya te puedes imaginar qué lado escogí.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="ChicaFilosofia">
@@ -6562,7 +6562,7 @@
       <condition />
       <speak-char idTarget="ChicaFilosofia">
         <resources name="No name" />
-        <text>En mi época no había nada interesante hacia el norte. Ahora al parecer hay una universidad de informática... ¡Que cosas!</text>
+        <text>En mi época no había nada interesante hacia el norte. Ahora al parecer hay una universidad de informática... ¡Qué cosas!</text>
       </speak-char>
       <condition />
       <child nodeindex="1" />
