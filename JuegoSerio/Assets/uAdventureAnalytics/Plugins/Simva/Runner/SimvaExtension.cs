@@ -32,6 +32,7 @@ namespace uAdventure.Simva
         private string savedGameTarget;
         private bool wasAutoSave;
         private bool firstTimeDisabling = true;
+        private FlushAllScene flushAllScene;
 
         private AuthorizationInfo auth;
         private Schedule schedule;
@@ -130,7 +131,7 @@ namespace uAdventure.Simva
                 {
                     new LoginScene(),
                     new SurveyScene(),
-                    new FlushAllScene(),
+                    flushAllScene = new FlushAllScene(),
                     new BackupScene(),
                     new EndScene()
                 });
@@ -184,6 +185,7 @@ namespace uAdventure.Simva
         [Priority(10)]
         public override IEnumerator OnGameFinished()
         {
+            yield return new WaitWhile(() => Game.Instance.isSomethingRunning());
             if (IsActive)
             {
                 var readyToClose = false;
@@ -198,6 +200,43 @@ namespace uAdventure.Simva
             else
             {
                 yield return AnalyticsExtension.Instance.OnGameFinished();
+            }
+        }
+
+        public void OnGameCompleted()
+        {
+            StartCoroutine(OnGameCompletedRoutine());
+        }
+
+        private IEnumerator OnGameCompletedRoutine()
+        {
+            yield return new WaitWhile(() => Game.Instance.isSomethingRunning());
+
+            if (IsActive)
+            {
+                DisableAutoSave();
+                flushAllScene.onlyFlushAndBackup = true;
+                Game.Instance.RunTarget("Simva.FlushAll", null, false);
+                yield return new WaitUntil(() => afterFlush);
+                flushAllScene.onlyFlushAndBackup = false;
+                StartBackupIfNeeded();
+
+                UpdateSchedule()
+                    .Then(schedule =>
+                    {
+                        var result = new AsyncCompletionSource();
+                        StartCoroutine(AsyncCoroutine(LaunchActivity(schedule.Next), result));
+                        return result;
+                    })
+                    .Finally(() =>
+                    {
+                        NotifyLoading(false);
+                    })
+                    .Catch(error =>
+                    {
+                        NotifyLoading(false);
+                        NotifyManagers(error.Message);
+                    });
             }
         }
 
@@ -391,20 +430,7 @@ namespace uAdventure.Simva
             return API.Api.SetCompletion(activityId, API.AuthorizationInfo.Username, completed)
                 .Then(() =>
                 {
-                    backupActivity = GetActivity(CurrentActivityId);
-                    string activityType = backupActivity.Type;
-                    if (activityType.Equals("gameplay", StringComparison.InvariantCultureIgnoreCase)
-                    && backupActivity.Details != null && backupActivity.Details.ContainsKey("backup") && (bool)backupActivity.Details["backup"])
-                    {
-                        string traces = SimvaBridge.Load(((TrackerAssetSettings)TrackerAsset.Instance.Settings).BackupFile);
-                        Instantiate(Resources.Load("SimvaBackupPopup"));
-                        backupOperation = SaveActivity(CurrentActivityId, traces, true);
-                        backupOperation.Then(() =>
-                        {
-                            afterBackup = true;
-                        });
-                    }
-
+                    StartBackupIfNeeded();
                     return UpdateSchedule();
                 })
                 .Then(schedule =>
@@ -422,6 +448,23 @@ namespace uAdventure.Simva
                     NotifyLoading(false);
                     NotifyManagers(error.Message);
                 });
+        }
+
+        private void StartBackupIfNeeded()
+        {
+            backupActivity = GetActivity(CurrentActivityId);
+            string activityType = backupActivity.Type;
+            if (activityType.Equals("gameplay", StringComparison.InvariantCultureIgnoreCase)
+            && backupActivity.Details != null && backupActivity.Details.ContainsKey("backup") && (bool)backupActivity.Details["backup"])
+            {
+                string traces = SimvaBridge.Load(((TrackerAssetSettings)TrackerAsset.Instance.Settings).BackupFile);
+                Instantiate(Resources.Load("SimvaBackupPopup"));
+                backupOperation = SaveActivity(CurrentActivityId, traces, true);
+                backupOperation.Then(() =>
+                {
+                    afterBackup = true;
+                });
+            }
         }
 
         public Activity GetActivity(string activityId)
@@ -503,11 +546,26 @@ namespace uAdventure.Simva
 
                             Debug.Log("[SIMVA] Starting Gameplay...");
                             RestoreAutoSave();
-                            Game.Instance.RunTarget(savedGameTarget, this);
-                            if(Game.Instance.GameState.CheckFlag("DisclaimerEnabled") == FlagCondition.FLAG_ACTIVE)
+
+                            int nFotos = 5 - (uAdventure.Runner.Game.Instance.GameState.CheckFlag("UsadoAgronomos") +
+                                        uAdventure.Runner.Game.Instance.GameState.CheckFlag("UsadoArquitectura") +
+                                        uAdventure.Runner.Game.Instance.GameState.CheckFlag("UsadoClinico") +
+                                        uAdventure.Runner.Game.Instance.GameState.CheckFlag("UsadoFilosofia") +
+                                        uAdventure.Runner.Game.Instance.GameState.CheckFlag("UsadoVelazquez"));
+
+                            if (nFotos == 5)
                             {
-                                Game.Instance.GameState.SetFlag("SeeingDisclaimer", FlagCondition.FLAG_ACTIVE);
+                                Game.Instance.Execute(new EffectHolder(new Effects()
+                                {
+                                    new TriggerSceneEffect("MapaJugable", 0, 0),
+                                    new TriggerConversationEffect("ConvGuiaFinal")
+                                }));
                             }
+                            else
+                            {
+                                Game.Instance.RunTarget(savedGameTarget, this);
+                            }
+
                             break;
                     }
                 }

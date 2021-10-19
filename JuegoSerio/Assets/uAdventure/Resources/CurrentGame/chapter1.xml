@@ -63,6 +63,20 @@
     <voice name="" synthesizeAlways="no" />
     <actions>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <documentation>Created with target conversation: ConvGuiaFinal</documentation>
+        <condition>
+          <active flag="UsadoAgronomos" />
+          <active flag="UsadoArquitectura" />
+          <active flag="UsadoClinico" />
+          <active flag="UsadoFilosofia" />
+          <active flag="UsadoVelazquez" />
+        </condition>
+        <effect>
+          <trigger-conversation idTarget="ConvGuiaFinal" guid="0ba519b8-eb44-4cc9-b106-42e48d431fd8" />
+          <condition />
+        </effect>
+      </talk-to>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
         <documentation>Created with target conversation: IntroduccionGuia</documentation>
         <condition>
           <inactive flag="IntroduccionGuia" />
@@ -2344,7 +2358,7 @@
       </active-area>
     </active-areas>
   </scene>
-  <scene id="EscenaFotoClinico" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="EscenaFotoClinico" hideInventory="yes" allowsZoom="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -2370,7 +2384,7 @@
       </character-ref>
     </characters>
   </scene>
-  <scene id="EscenaFotoFilosofia" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="EscenaFotoFilosofia" hideInventory="yes" allowsZoom="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -2396,7 +2410,7 @@
       </character-ref>
     </characters>
   </scene>
-  <scene id="EscenaFotoVelazquez" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="EscenaFotoVelazquez" hideInventory="yes" allowsZoom="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -2422,7 +2436,7 @@
       </character-ref>
     </characters>
   </scene>
-  <scene id="EscenaFotoArquitectura" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="EscenaFotoArquitectura" hideInventory="yes" allowsZoom="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -2449,7 +2463,7 @@
       </character-ref>
     </characters>
   </scene>
-  <scene id="EscenaFotoAgronomos" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="EscenaFotoAgronomos" hideInventory="yes" allowsZoom="yes" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -5072,7 +5086,7 @@
         <condition />
       </effect>
     </dialogue-node>
-    <option-node nodeindex="1" keepShowing="yes" preListening="yes" max-elements-per-row="3" alignment="MiddleCenter" horizontal="yes" editor-x="404" editor-y="268" x="404" y="268">
+    <option-node nodeindex="1" question="OpcionesMedicina" keepShowing="yes" preListening="yes" max-elements-per-row="3" alignment="MiddleCenter" horizontal="yes" editor-x="404" editor-y="268" x="404" y="268">
       <speak-player>
         <text>¿Por qué se mantuvo el frente de esta manera?</text>
         <resources name="No name" />
@@ -5113,6 +5127,17 @@
       </condition>
       <child nodeindex="6" />
       <speak-player>
+        <text>¿Qué estoy buscando?</text>
+        <resources name="No name">
+          <asset type="image" uri="assets/image/PabellonFilosofia.jpg" />
+        </resources>
+      </speak-player>
+      <condition>
+        <inactive flag="NaranjeroEncontrado" />
+        <active flag="QuestNaranjeroActivada" />
+      </condition>
+      <child nodeindex="7" />
+      <speak-player>
         <text>Tengo el naranjero que buscabas.</text>
         <resources name="No name" />
       </speak-player>
@@ -5120,7 +5145,7 @@
         <active flag="NaranjeroEncontrado" />
         <inactive flag="PistaFilosofia_SoldMedicina" />
       </condition>
-      <child nodeindex="7" />
+      <child nodeindex="8" />
     </option-node>
     <dialogue-node nodeindex="2" editor-x="1138" editor-y="0">
       <speak-char idTarget="SoldadoMedicina">
@@ -5221,7 +5246,7 @@
         <text>Mira, he encontrado esta foto en el diario de mi abuelo. ¿Te suena?</text>
       </speak-player>
       <condition />
-      <child nodeindex="8" />
+      <child nodeindex="9" />
       <effect>
         <activate flag="TerminandoFotoMedicina" guid="d6f64284-a501-4389-bad1-8903b4d01da0" />
         <condition />
@@ -5277,7 +5302,31 @@
         <condition />
       </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="7" editor-x="301" editor-y="1562">
+    <dialogue-node nodeindex="7" editor-x="625" editor-y="1850">
+      <speak-char idTarget="SoldadoMedicina">
+        <resources name="No name" />
+        <text>Mi "Naranjero", es un arma... ¡Pero ni se te ocurra tocarlo!</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="SoldadoMedicina">
+        <resources name="No name" />
+        <text>Aunque ya te aviso que no está por aquí cerca... Yo que tú seguiría a lo tuyo y ya aparecerá.</text>
+      </speak-char>
+      <condition>
+        <inactive flag="UsadoArquitectura" />
+        <inactive flag="UsadoVelazquez" />
+      </condition>
+      <speak-char idTarget="SoldadoMedicina">
+        <resources name="No name" />
+        <text>Yo juraría que lo perdí hacia el sur, en el frente enemigo...</text>
+      </speak-char>
+      <condition>
+        <active flag="UsadoArquitectura" />
+        <active flag="UsadoVelazquez" />
+      </condition>
+      <child nodeindex="1" />
+    </dialogue-node>
+    <dialogue-node nodeindex="8" editor-x="301" editor-y="1562">
       <speak-char idTarget="SoldadoMedicina">
         <resources name="No name" />
         <text>A ver a ver...</text>
@@ -5354,7 +5403,7 @@
         </effect>
       </end-conversation>
     </dialogue-node>
-    <dialogue-node nodeindex="8" editor-x="1725" editor-y="990">
+    <dialogue-node nodeindex="9" editor-x="1725" editor-y="990">
       <speak-char idTarget="SoldadoMedicina">
         <resources name="No name">
           <asset type="image" uri="" />
@@ -5908,7 +5957,7 @@
         <condition />
       </effect>
     </dialogue-node>
-    <option-node nodeindex="1" preListening="yes" editor-x="363" editor-y="425" x="363" y="425">
+    <option-node nodeindex="1" question="OpcionesNaranjero1" preListening="yes" editor-x="363" editor-y="425" x="363" y="425">
       <speak-player>
         <text>Perdona, esto debe de ser el naranjero de mi amigo Pedro.</text>
         <resources name="No name" />
@@ -5981,7 +6030,7 @@
     <dialogue-node nodeindex="4" editor-x="1726" editor-y="846">
       <end-conversation />
     </dialogue-node>
-    <option-node nodeindex="5" preListening="yes" editor-x="1351" editor-y="55" x="1351" y="55">
+    <option-node nodeindex="5" question="OpcionesNaranjero2" preListening="yes" editor-x="1351" editor-y="55" x="1351" y="55">
       <speak-player>
         <text>El ataque del clínico ya terminó.</text>
         <resources name="No name" />
@@ -6584,6 +6633,168 @@
         <deactivate flag="TerminandoFotoFilosofia" guid="69478345-95c6-47a4-9858-5d620577ff52" />
         <condition />
       </effect>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="ConvGuiaFinal">
+    <dialogue-node nodeindex="0" editor-x="228" editor-y="118">
+      <speak-char idTarget="GuiaJugador">
+        <resources name="No name" />
+        <text>Bueno bueno... Parece que nuestra pequeña aventura llega a su fin...</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" question="EndChoice" preListening="yes" editor-x="873" editor-y="154" x="873" y="154">
+      <speak-player>
+        <text>¡No! Aún quiero que recorramos un poco más el campus.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>Sí, creo que es el momento de despedirnos.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="1454" editor-y="61">
+      <speak-char idTarget="GuiaJugador">
+        <resources name="No name" />
+        <text>¡Diablos! ¡Esa es la energía!</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="GuiaJugador">
+        <resources name="No name" />
+        <text>Te acompañaré hasta que te aburras de explorar.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="GuiaJugador">
+        <resources name="No name" />
+        <text>Total, yo peso sólo un suspiro... ¡A mí no me duelen los pies como a ti! Jajaja</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="GuiaJugador">
+        <resources name="No name" />
+        <text>Pero, cuando quieras terminar, háblame. Me gustaría despedirme de ti.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>¡Vale! Antes de irme hablaré contigo.</text>
+      </speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="1298" editor-y="411">
+      <child nodeindex="4" />
+      <effect>
+        <trigger-scene idTarget="PresentacionGuia" x="576" y="540" transitionTime="500" transitionType="5" guid="ae8ffdb3-86b3-4d0a-8889-aa0706570978" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="1630" editor-y="469">
+      <speak-char idTarget="GuiaJugador">
+        <resources name="No name" />
+        <text> Espera... No digas nada.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>...</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="GuiaJugador">
+        <resources name="No name" />
+        <text>Antes de despedirnos, aunque sé que te vas a enfadar conmigo tengo algo que contarte.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="GuiaJugador">
+        <resources name="No name" />
+        <text>No es casualidad que yo fuera el primer fantasma que vieras...</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>¿Cómo?</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="GuiaJugador">
+        <resources name="No name" />
+        <text>Verás... Ese diario era mío. Se lo dí a tu abuelo poco antes de morir.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="GuiaJugador">
+        <resources name="No name" />
+        <text>Sé que son sólo recuerdos y fotos del pasado, pero todo aquello fue real. Yo sólo quise sacar todas las fotos que pude y, tu abuelo, al verme, quedó impresionado con mis fotos.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="GuiaJugador">
+        <resources name="No name" />
+        <text>Apenas recuerdo su cara y, aunque le viera, no podría reconocerlo, pues él sólo era un niño cuando se lo di.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="GuiaJugador">
+        <resources name="No name" />
+        <text>Pero su fascinación por conocer lo que pasó aquí...</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="GuiaJugador">
+        <resources name="No name" />
+        <text>Esa curiosidad es algo os une, y aunque al principio tenía mis dudas sobre ti, ha sido un placer haber podido recordar aquellos lugares donde tomé las fotos por aquel entonces.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="GuiaJugador">
+        <resources name="No name" />
+        <text>¿Sabes? En estos casi 100 años desde que morí en la guerra nunca había estado tan vivo como hoy.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="GuiaJugador">
+        <resources name="No name" />
+        <text>Hemos conocido gente interesante... ¡Y de todos los bandos!</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="GuiaJugador">
+        <resources name="No name" />
+        <text>Y, aunque sigo pensando que los estudiantes de hoy en día sois unos cazurros... Debo admitir que daría cualquier cosa por tener tu energía y tus ganas de aprender.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="GuiaJugador">
+        <resources name="No name" />
+        <text>Habéis tomado el relevo y estáis cambiando el mundo, ¡y no os hacen falta armas ni guerras!</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="GuiaJugador">
+        <resources name="No name" />
+        <text>Hacía mucho tiempo que no estaba tan vivo. ¡Diablos!</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>jajaja</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="GuiaJugador">
+        <resources name="No name" />
+        <text>Y ahora sí, es el momento de despedirse.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="GuiaJugador">
+        <resources name="No name" />
+        <text>Sigue viviendo y cambiando el mundo.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="GuiaJugador">
+        <resources name="No name" />
+        <text>¡Nos veremos en el más allá!</text>
+      </speak-char>
+      <condition />
+      <end-conversation>
+        <effect>
+          <trigger-scene idTarget="End" x="539" y="455" transitionTime="500" transitionType="5" guid="ea7be486-dfc0-4e42-ba56-2f8af91794dd" />
+          <condition />
+        </effect>
+      </end-conversation>
     </dialogue-node>
   </graph-conversation>
   <object id="MapaFrente" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
@@ -7872,7 +8083,7 @@
     <inactive flag="UsadoFilosofia" />
   </global-state>
   <macro id="BusquedasMapa">
-    <documentation>El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Marcos me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Marcos me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Marcos me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Manuel me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Manuel me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Manuel me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Manuel me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Manuel me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Manuel me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Manuel me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...</documentation>
+    <documentation>El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Marcos me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Marcos me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Marcos me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Manuel me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Manuel me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Manuel me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Manuel me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Manuel me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Manuel me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Manuel me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Manuel me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Manuel me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Manuel me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...El soldado perdido dijo que un Guardia civil, que sabe más sobre la foto, estaba en el frente nacional, tras agrónomos. Debo encontrar el lugar en el mapa...El guardia civil dijo que debía de ir hacia el clínico. Debo de encontrarlo en el mapa...Manuel me dijo que la foto era de una sala de la facultad de filosofía. Debo de encontrarlo en el mapa...</documentation>
     <speak-player guid="ca2859d2-fab0-4892-be6b-9539cc2d37c0">El soldado comunista dijo que la foto se había tomado al lado del edificio Velázquez. Debo de encontrar el lugar en el mapa...</speak-player>
     <condition>
       <global-state-ref id="BusquedaMapaVelazquezArquitectura" value="true" />
@@ -7890,4 +8101,5 @@
       <global-state-ref id="BusquedaMapaFilosofia" value="true" />
     </condition>
   </macro>
+  <unity-scene id="End" scene="Assets/Scenes/EndScene.unity" />
 </eAdventure>
