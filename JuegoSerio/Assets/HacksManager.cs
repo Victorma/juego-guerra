@@ -12,60 +12,24 @@ public class HacksManager : MonoBehaviour {
         GeoExtension.Instance.SwitchDebugLocation();
     }
 
-    public void IrARecogida()
+    public void DevuelvemeAlMapaDeJuego()
     {
         GUIManager.Instance.ShowConfigMenu();
-        Game.Instance.Execute(new EffectHolder(new Effects()
+        if (uAdventure.Runner.Game.Instance.GameState.CheckFlag("IntroduccionTerminada") == FlagCondition.FLAG_ACTIVE)
         {
-            new TriggerSceneEffect("Plaza", 0, 0),
-            new ActivateEffect("Intro"),
-            new ActivateEffect("Alive"),
-            new ActivateEffect("Normal"),
-            new ActivateEffect("Bolsi"),
-            new ActivateEffect("Recogida")
-        }));
-    }
+            Game.Instance.Execute(new EffectHolder(new Effects()
+            {
+                new TriggerSceneEffect("MapaJugable", 0, 0),
 
-    public void IrAFarmacia()
-    {
-        GUIManager.Instance.ShowConfigMenu();
-        Game.Instance.Execute(new EffectHolder(new Effects()
+                new DeactivateEffect("UsadoFilosofia")
+            }));
+        }
+        else
         {
-            new TriggerSceneEffect("FacultadFarmacia", 0, 0),
-            new ActivateEffect("Intro"),
-            new ActivateEffect("Alive"),
-            new ActivateEffect("Normal"),
-            new ActivateEffect("Bolsi"),
-            new ActivateEffect("Recogida")
-        }));
-    }
-
-    public void IrAMedicina()
-    {
-        GUIManager.Instance.ShowConfigMenu();
-        Game.Instance.Execute(new EffectHolder(new Effects()
-        {
-            new TriggerSceneEffect("FacultadMedicina", 0, 0),
-            new ActivateEffect("Intro"),
-            new ActivateEffect("Alive"),
-            new ActivateEffect("Normal"),
-            new ActivateEffect("Bolsi"),
-            new ActivateEffect("Recogida")
-        }));
-    }
-
-    public void IrAlFinal()
-    {
-        GUIManager.Instance.ShowConfigMenu();
-        Game.Instance.Execute(new EffectHolder(new Effects()
-        {
-            new TriggerSceneEffect("Ending", 0, 0),
-            new ActivateEffect("Intro"),
-            new ActivateEffect("Alive"),
-            new ActivateEffect("Normal"),
-            new ActivateEffect("Bolsi"),
-            new ActivateEffect("Recogida"),
-            new TriggerConversationEffect("BatallaFinal")
-        }));
+            Game.Instance.Execute(new EffectHolder(new Effects()
+            {
+                new TriggerSceneEffect("MapaIntroduccion", 0, 0)
+            }));
+        }
     }
 }
